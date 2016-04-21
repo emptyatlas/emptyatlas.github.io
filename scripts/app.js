@@ -33,7 +33,7 @@ angular
         templateUrl: 'views/news.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
-      })
+      }).when('/contact-form.php', {})
       .otherwise({
         redirectTo: '/'
       });
