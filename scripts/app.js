@@ -24,16 +24,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/store', {
-        templateUrl: 'views/store.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
       .when('/news', {
         templateUrl: 'views/news.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
-      }).when('/contact-form.php', {})
+      }).when('contact-form.php', {})
       .otherwise({
         redirectTo: '/'
       });

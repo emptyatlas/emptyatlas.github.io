@@ -16,9 +16,6 @@
   <!-- endbuild -->
 </head>
 <body ng-app="emptyatlasgithubioApp" ng-controller="MainCtrl">
-<!--&lt;!&ndash;[if lte IE 8]>-->
-<!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
-<!--<![endif]&ndash;&gt;-->
 
 <!-- Add your site or application content here -->
 <div class="header">
@@ -38,7 +35,8 @@
 
         <ul class="nav navbar-nav">
           <li><a ng-href="#/" ng-click="hideMenu()">HOME</a></li>
-          <li><a ng-href="#/store" ng-click="hideMenu()">STORE</a></li>
+          <li><a href="https://squareup.com/store/empty-atlas-music" target="_blank" ng-click="hideMenu()">STORE</a>
+          </li>
           <li><a ng-href="#/news" ng-click="hideMenu()">NEWS</a></li>
           <li><a href="" ng-click="hideMenu(); showContactForm();">CONTACT</a></li>
         </ul>
@@ -68,8 +66,7 @@
 </div>
 
 <div class="footer">
-  <div class="container">
-  </div>
+  <div class="container"></div>
 </div>
 
 
@@ -82,15 +79,12 @@ r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
 
 ga('create', 'UA-XXXXX-X');
 ga('send', 'pageview');
-
-
 </script>
 
 <script>
 (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
 t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
 })(window, document, '_gscq','script','//widgets.getsitecontrol.com/41808/script.js');
-
 </script>
 
 <!-- build:js(.) scripts/vendor.js -->
