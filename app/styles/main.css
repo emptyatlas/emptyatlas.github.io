@@ -6,9 +6,9 @@
 }
 body {
   padding: 0;  /*background-image: url("/images/Hestia.jpg");
-                background-color: rgb(235, 235, 235);
-                background-size: cover;
-                background-position: 44.1379% 0%;*/
+                    background-color: rgb(235, 235, 235);
+                    background-size: cover;
+                    background-position: 44.1379% 0%;*/
   background-image: url("/images/Hestia_dark.jpg");
   background-color: black;
   background-position: top center;
