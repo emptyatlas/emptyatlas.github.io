@@ -6,9 +6,9 @@
 }
 body {
   padding: 0;  /*background-image: url("/images/Hestia.jpg");
-                    background-color: rgb(235, 235, 235);
-                    background-size: cover;
-                    background-position: 44.1379% 0%;*/
+                                      background-color: rgb(235, 235, 235);
+                                      background-size: cover;
+                                      background-position: 44.1379% 0%;*/
   background-image: url("/images/Hestia_dark.jpg");
   background-color: black;
   background-position: top center;
@@ -191,6 +191,97 @@ a:hover {
   text-decoration: none;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+.item-frame {
+  background-color: rgba(0, 0, 0, 0.40);
+  border-radius: 4px;
+  max-width: 550px;
+}
+.item-image {
+  position: relative;
+  display: inline-block;
+}
+.item-image > a > img {
+  width: 100%;
+}
+.item-image-overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.2rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.item-image-overlay:hover {
+  opacity: 1;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+button > a, button > a:hover {
+  color: white;
+}
+.btn-dark {
+  color: #fff !important;
+  background-color: #353535;
+  border: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-dark:hover {
+  color: #fff !important;
+  background-color: #000;
+  border: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.buy-button {
+  margin-top: 50%;
+  /* left: 50%;
+  top: 50%; */
+  width: 200px;
+  /* margin-left: -124px; */
+}
+/* .buy-button:hover, .buy-button:focus, .buy-button.hover, .buy-button.focus {
+  background-color: #2ac2ac;
+  color: #fff;
+  outline: none;
+} */
+.item-info {
+  background-color: black;
+  border-radius: 0 0 4px 4px;
+  height: 76px;
+  padding: 10px 14px;
+  position: relative;
+  left: -1px;
+  top: 0;
+  width: 100%;
+}
+.item-info > a {
+  color: white;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.item-info:hover > a:hover {
+  color: white;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.item-info:hover > a:not(:hover) {
+  color: white;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.col-md-4 {
+  padding: 10px;
 }
 
 /* Responsive: Portrait tablets and up */
