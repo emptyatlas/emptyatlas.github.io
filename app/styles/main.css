@@ -5,16 +5,13 @@
   padding: 0.2em 0;
 }
 body {
-  padding: 0;  /*background-image: url("/images/Hestia.jpg");
-                                          background-color: rgb(235, 235, 235);
-                                          background-size: cover;
-                                          background-position: 44.1379% 0%;*/
+  padding: 0;
   background: #000 url("/images/Hestia_dark.jpg") !important;
   background-repeat: no-repeat !important;
-  background-position: 50% 50% !important;
+  background-position: 0% 0% !important;
   background-attachment: fixed !important;
   background-color: black !important;
-  background-size: cover !important;  /*background-color: black;
+  background-size: cover !important; /*background-color: black;
       background-position: top center;
       background-size: cover;
       background-attachment: fixed;
@@ -96,13 +93,7 @@ div#js-navbar-collapse {
   height: 50px;
 }
 .wsite-social-item {
-  /* background: url('/images/icon_set.png') no-repeat;
-  background-position-y: -5px;
-  background-size: 360px;
-  padding: 0 20px !important;
-  max-width: 25px !important; */
   background-size: 50px !important;
-  /* background-position: center !important; */
   padding: 0 20px !important;
   overflow: hidden;
 }

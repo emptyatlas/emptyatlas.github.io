@@ -15,7 +15,8 @@ angular.module('emptyatlasgithubioApp').controller('MainCtrl', function($http, $
 	};
 
 	$scope.hideMenu = function() {
-		angular.element('#js-navbar-collapse').collapse('hide')
+		angular.element('#js-navbar-collapse').collapse('hide');
+		return true;
 	};
 
 });
