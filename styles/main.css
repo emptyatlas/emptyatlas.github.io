@@ -36,6 +36,8 @@ body::before {
   background-size: cover;
   will-change: transform;
   z-index: -1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 h1, h2, h3, h4 {
   color: white;
