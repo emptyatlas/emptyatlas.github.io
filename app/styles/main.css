@@ -6,10 +6,9 @@
 }
 body {
   padding: 0;
-  background: #000 url("/images/Hestia_dark.jpg") !important;
+  background: #000 url("/images/Hestia_dark.jpg") fixed !important;
   background-repeat: no-repeat !important;
   background-position: 0% 0% !important;
-  background-attachment: fixed !important;
   background-color: black !important;
   background-size: cover !important; /*background-color: black;
       background-position: top center;
