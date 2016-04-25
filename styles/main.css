@@ -46,6 +46,9 @@ h1, h2, h3, h4 {
   color: white;
   background-color: black;
   z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 div#js-navbar-collapse {
   overflow: scroll;  /* height: 100vh; */
