@@ -34,7 +34,7 @@
         <form action="//emptyatlas.us13.list-manage.com/subscribe/post?u=ab78edd056a1703ec9077b2b0&amp;id=14ff368932" method="post"
           id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding:10px !important;">
           <div id="mc_embed_signup_scroll" align="center">
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width:100%;" required>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width:100%; font-family: Didot;" required>
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ab78edd056a1703ec9077b2b0_14ff368932" tabindex="-1"
               value=""></div>
@@ -54,6 +54,17 @@
       <a id="contact"></a>
       <h1>CONTACT</h1>
       <h4>micah@emptyatlas.com</h4>
+    </div>
+  </div>
+
+  <div class="col-md-12 latest-news" id="news-row" ng-init="getLatestNews()">
+    <h1 style="padding-top: 30px;">LATEST NEWS
+      <a href="#/news" style="font-size: 10pt;">READ MORE</a>
+    </h1>
+    <div class="blog-post" ng-repeat="n in latestNews" ng-bind-html="n.innerHTML">
+    </div>
+    <div class="blog-post" align="center">
+      <a href="#/news" style="font-size: 10pt;">READ MORE</a>
     </div>
   </div>
 </div>

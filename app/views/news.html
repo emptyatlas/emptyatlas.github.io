@@ -1,5 +1,4 @@
-<div class="col-md-12 news" style="color: white; font-size: 12pt;" align="center">
-
+<script type="text/ng-template" id="newsTemplate">
   <div class="blog-post">
     <h2>4.7.16</h2>
     Forgive me, for it has been a ridiculously long time since my last blog post-slash-confession. But! Big news across the board, so hopefully it was worth the
@@ -110,6 +109,10 @@
     news, we wanted to make sure it wouldn't be. We're heading into Blue Sky Studio on July 5th to record our new single, "Waiting Games," with the brilliant
     producer Casey Combest, and we couldn't be more excited to share our hard work with you all. Thanks for your love and faith in us. <br><br>-Micah</p>
   </div>
+</script>
+
+<div class="col-md-12 news" style="color: white; font-size: 12pt;" align="center">
+  <div ng-include src="'newsTemplate'"></div>
 </div>
 
 <div style="clear:both;"></div>

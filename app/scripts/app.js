@@ -28,6 +28,8 @@ angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource',
     .otherwise({
       redirectTo: '/'
     });
+}).run(function($templateCache) {
+  // $templateCache.put('news', 'views/news.html');
 });
 
 /**
@@ -37,15 +39,24 @@ angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource',
  * # MainCtrl
  * Controller of the emptyatlasgithubioApp
  */
-angular.module('emptyatlasgithubioApp').controller('MainCtrl', function($scope) {
+angular.module('emptyatlasgithubioApp').controller('MainCtrl', function($scope, $http, $templateCache, $templateRequest, $sce, $compile, $sanitize) {
 
   $scope.showContactForm = function() {
-    _gscq.push(['trackPage','/contact']);
+    _gscq.push(['trackPage', '/contact']);
   };
 
   $scope.hideMenu = function() {
     angular.element('#js-navbar-collapse').collapse('hide');
     return true;
+  };
+
+  $scope.getLatestNews = function() {
+    console.log('attempting to get news template');
+    var template = $templateCache.get('newsTemplate')
+      // console.log(template);
+    var latest = $(template).filter('div.blog-post').splice(0, 2);
+    // console.log(latest);
+    $scope.latestNews = latest;
   };
 
 });
