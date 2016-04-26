@@ -8,7 +8,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -52,27 +52,46 @@
       <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-model="menu">
 
         <ul class="nav navbar-nav">
-          <li><a ng-href="#/" ng-click="hideMenu()">HOME</a></li>
-          <li><a ng-href="#/store" ng-click="hideMenu()">STORE</a></li>
+          <li>
+            <a ng-href="#/" ng-click="hideMenu()">HOME</a>
+          </li>
+          <li>
+            <a ng-href="#/store" ng-click="hideMenu()">STORE</a>
+          </li>
           <!--<li><a href="https://squareup.com/store/empty-atlas-music" target="_blank" ng-click="hideMenu()">STORE</a>-->
           <!--</li>-->
-          <li><a ng-href="#/news" ng-click="hideMenu()">NEWS</a></li>
-          <li><a href="" ng-click="hideMenu(); showContactForm();">CONTACT</a></li>
+          <li>
+            <a ng-href="#/news" ng-click="hideMenu()">NEWS</a>
+          </li>
+          <li>
+            <a href="" ng-click="hideMenu(); showContactForm();">CONTACT</a>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="wsite-social-item wsite-social-facebook" ng-href="http://facebook.com/emptyatlasmusic"
-                 target="_blank" title="Facebook"></a></li>
-          <li><a class="wsite-social-item wsite-social-twitter" href="http://twitter.com/emptyatlas" target="_blank"
-                 title="Twitter"></a></li>
-          <li><a class="wsite-social-item wsite-social-instagram" href="http://instagram.com/emptyatlas" target="_blank"
-                 title="Instagram"></a></li>
-          <li><a class="wsite-social-item wsite-social-itunes"
-                 href="https://itunes.apple.com/us/artist/empty-atlas/id902603393" target="_blank" title="iTunes"></a>
+          <li>
+            <a class="wsite-social-item wsite-social-facebook" ng-href="http://facebook.com/emptyatlasmusic"
+              target="_blank" title="Facebook"></a>
           </li>
-          <li><a class="wsite-social-item wsite-social-spotify"
-                 href="http://open.spotify.com/album/7eSkqCk3UG2OUHxrrh0YFc" target="_blank" title="Spotify"></a></li>
-          <li><a class="wsite-social-item wsite-social-soundcloud" href="https://soundcloud.com/empty-atlas"
-                 target="_blank" title="SoundCloud"></a></li>
+          <li>
+            <a class="wsite-social-item wsite-social-twitter" href="http://twitter.com/emptyatlas" target="_blank"
+              title="Twitter"></a>
+          </li>
+          <li>
+            <a class="wsite-social-item wsite-social-instagram" href="http://instagram.com/emptyatlas" target="_blank"
+              title="Instagram"></a>
+          </li>
+          <li>
+            <a class="wsite-social-item wsite-social-itunes"
+              href="https://itunes.apple.com/us/artist/empty-atlas/id902603393" target="_blank" title="iTunes"></a>
+          </li>
+          <li>
+            <a class="wsite-social-item wsite-social-spotify"
+              href="http://open.spotify.com/album/7eSkqCk3UG2OUHxrrh0YFc" target="_blank" title="Spotify"></a>
+          </li>
+          <li>
+            <a class="wsite-social-item wsite-social-soundcloud" href="https://soundcloud.com/empty-atlas"
+              target="_blank" title="SoundCloud"></a>
+          </li>
         </ul>
       </div>
     </div>
@@ -80,12 +99,12 @@
 </div>
 
 <div class="container">
-  <a id="top"></a>
-  <div ng-view="" style="padding-top: 50px;"></div>
+  <div ng-view="" style="padding: 100px 0;"></div>
 </div>
 
-<div class="footer">
-  <div class="container"></div>
+<div class="footer" align="center">
+  <div class="container"><p><span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;EMPTY ATLAS 2016 All Rights
+    Reserved</p></div>
 </div>
 
 
@@ -98,12 +117,14 @@ r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
 
 ga('create', 'UA-XXXXX-X');
 ga('send', 'pageview');
+
 </script>
 
 <script>
 (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
 t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
 })(window, document, '_gscq','script','//widgets.getsitecontrol.com/41808/script.js');
+
 </script>
 </body>
 </html>
