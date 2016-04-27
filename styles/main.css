@@ -127,6 +127,10 @@ div#js-navbar-collapse {
 .container-narrow > hr {
   margin: 30px 0;
 }
+.container > .content {
+  padding: 100px 0;
+  min-height: 100vh;
+}
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -280,10 +284,6 @@ button > a, button > a:hover {
 @media screen and (min-width:768px) {
   .container {
     max-width: 1200px;
-  }
-  .container > .content {
-    padding: 100px 0;
-    min-height: 100vh;
   }
 
   /* Remove the padding we set earlier */
