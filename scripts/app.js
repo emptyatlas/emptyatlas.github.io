@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch']).config(function($routeProvider) {
+angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'angular-click-outside']).config(function($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
@@ -28,8 +28,7 @@ angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource',
     .otherwise({
       redirectTo: '/'
     });
-}).run(function() {
-});
+}).run(function() {});
 
 /**
  * @ngdoc function

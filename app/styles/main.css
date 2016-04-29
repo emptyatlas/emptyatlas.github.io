@@ -57,7 +57,7 @@ div#js-navbar-collapse {
   border: none;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: gray;
+  border: none;
 }
 .navbar-default .navbar-nav > li > a {
   color: white !important;

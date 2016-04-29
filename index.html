@@ -27,6 +27,7 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-click-outside/clickoutside.directive.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -49,7 +50,7 @@
         <!-- <a class="navbar-brand" href="#/">emptyatlasgithubio</a> -->
       </div>
 
-      <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-model="menu">
+      <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-model="menu" click-outside="hideMenu()">
 
         <ul class="nav navbar-nav">
           <li>
