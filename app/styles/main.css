@@ -235,6 +235,8 @@ input#mce-EMAIL:focus {
 .item-image {
   position: relative;
   display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 .item-image > a > img {
   width: 100%;
