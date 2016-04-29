@@ -128,7 +128,7 @@ div#js-navbar-collapse {
   margin: 30px 0;
 }
 .container > .content {
-  padding: 100px 0;
+  padding: 50px 0 100px 0;
   min-height: 100vh;
 }
 
@@ -163,6 +163,20 @@ div#js-navbar-collapse {
   font-size: 12pt;
   background-color: rgba(0, 0, 0, 0.40);
   border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.latest-news::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.latest-news-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  padding: 10px;
 }
 .blog-post {
   padding-bottom: 40px;
@@ -278,6 +292,16 @@ button > a, button > a:hover {
 }
 .col-md-4 {
   padding: 10px;
+}
+.bit-widget-container {
+  font-family: Didot !important;
+  font-size: 14px !important;
+}
+label.bit-uiButton.bit-uiButtonDefault {
+  height: auto !important;
+  margin-bottom: 0 !important;
+  border: 1px solid #eee !important;
+  font-family: Didot !important;
 }
 
 /* Responsive: Portrait tablets and up */

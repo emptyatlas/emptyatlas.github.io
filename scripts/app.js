@@ -28,8 +28,7 @@ angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource',
     .otherwise({
       redirectTo: '/'
     });
-}).run(function($templateCache) {
-  // $templateCache.put('news', 'views/news.html');
+}).run(function() {
 });
 
 /**
@@ -39,7 +38,11 @@ angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource',
  * # MainCtrl
  * Controller of the emptyatlasgithubioApp
  */
-angular.module('emptyatlasgithubioApp').controller('MainCtrl', function($scope, $http, $templateCache, $templateRequest, $sce, $compile, $sanitize) {
+angular.module('emptyatlasgithubioApp').controller('MainCtrl', function($scope, $templateCache, $window) {
+
+  $scope.$on('$viewContentLoaded', function() {
+    $window.scrollTo(0, 0);
+  });
 
   $scope.showContactForm = function() {
     _gscq.push(['trackPage', '/contact']);
@@ -51,9 +54,9 @@ angular.module('emptyatlasgithubioApp').controller('MainCtrl', function($scope, 
   };
 
   $scope.getLatestNews = function() {
-    console.log('attempting to get news template');
-    var template = $templateCache.get('newsTemplate')
-      // console.log(template);
+    // console.log('attempting to get news template');
+    var template = $templateCache.get('newsTemplate');
+    // console.log(template);
     var latest = $(template).filter('div.blog-post').splice(0, 2);
     // console.log(latest);
     $scope.latestNews = latest;
