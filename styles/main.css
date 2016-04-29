@@ -18,6 +18,14 @@ body::before {
   will-change: transform;
   z-index: -1;
 }
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width:768px) {
+  body::before {
+    width: 775px;
+    height: 775px;
+  }
+}
+
 h1, h2, h3, h4 {
   color: white;
 }
@@ -139,10 +147,24 @@ div#js-navbar-collapse {
 .jumbotron {
   text-align: center;
   background: none;
+  height: calc(100vh - 110px);
+  display: flex;
+  justify-content: center;
 }
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
+}
+.jumbotron > div {
+  height: 100%;
+  width: 100%;
+}
+.jumbotron > div > img {
+  object-fit: contain;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 356px;
 }
 
 /* Supporting marketing content */
@@ -152,13 +174,6 @@ div#js-navbar-collapse {
 .marketing p + h4 {
   margin-top: 28px;
 }
-
-/* #mc_embed_signup input.email {
-  margin: 0 0 10px 0 !important;
-}
-#mc_embed_signup input.button {
-  margin: 0 !important;
-} */
 .cell {
   padding: 10px 0;
 }
