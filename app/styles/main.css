@@ -12,19 +12,21 @@ body::before {
   top: 0;
   left: 0;
   background-color: black;
-  background: url('/images/Hestia_dark.jpg') no-repeat center center;
+  background: url('/images/Ocean_dark.jpg') no-repeat center center;
   background-position: 0% 0%;
   background-size: cover;
   will-change: transform;
   z-index: -1;
 }
+
 /* Responsive: Portrait tablets and up */
-@media screen and (max-width:768px) {
+
+/* @media screen and (max-width:768px) {
   body::before {
     width: 775px;
     height: 775px;
   }
-}
+} */
 
 h1, h2, h3, h4 {
   color: white;
