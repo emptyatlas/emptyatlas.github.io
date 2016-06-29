@@ -79,8 +79,7 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
         is available on iTunes.`
     }, {
         date: '7.14.14',
-        content: `Put a shirt on. Ours, to be specific.<br>
-        <a href="http://www.emptyatlas.com/#/store"><img src="/images/ea-t-shirts.png" style="width:100%"></a>`
+        content: 'Put a shirt on. Ours, to be specific.<br><a href="http://www.emptyatlas.com/#/store"><img src="/images/ea-t-shirts.png" class="image-100"></a>'
     }, {
         date: '7.1.14',
         content: `<a href="https://www.youtube.com/watch?v=4KxY9yWYTq4" target="_blank">An impromptu acoustic performance of our song "Plurals".</a>
