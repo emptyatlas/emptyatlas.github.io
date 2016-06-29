@@ -7,17 +7,19 @@
 <div class="row marketing" align="center">
 
   <div class="col-md-12 col-sm-12 col-xs-12" id="spotify-and-shows">
-    <div class="col-md-6 col-sm-6" id="spotify">
+    <div class="col-md-6 col-sm-12" id="spotify" style="overflow:scroll;">
       <h1>MUSIC</h1>
       <iframe src="https://embed.spotify.com/?uri=spotify:album:7eSkqCk3UG2OUHxrrh0YFc" width="300" height="380" frameborder="0"
         allowtransparency="true"></iframe>
     </div>
 
-    <div class="col-md-6 col-sm-6" id="shows">
+    <div class="col-md-6 col-sm-12" id="shows">
       <h1>SHOWS</h1>
-      <script type='text/javascript' src='http://widget.bandsintown.com/javascripts/bit_widget.js'></script>
-      <a href="http://www.bandsintown.com/Empty%20Atlas" class="bit-widget-initializer" data-artist="Empty Atlas" data-text-color="white"
-        data-link-color="#E49959" data-facebook-page-id="309261972560524"></a>
+      <div class="shadow" style="overflow:scroll;">
+        <script type='text/javascript' src='http://widget.bandsintown.com/javascripts/bit_widget.js'></script>
+        <a href="http://www.bandsintown.com/Empty%20Atlas" class="bit-widget-initializer" data-artist="Empty Atlas" data-text-color="white"
+          data-link-color="#E49959" data-facebook-page-id="309261972560524"></a>
+      </div>
     </div>
   </div>
 
@@ -30,11 +32,14 @@
         allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
     </div>
 
-    <div class="col-md-6 col-sm-6" id="news" ng-init="getLatestNews()">
+    <div class="col-md-6 col-sm-6" id="news">
       <h1>LATEST NEWS</h1>
       <div class="latest-news" align="center">
         <div class="latest-news-content">
-          <div class="blog-post" ng-repeat="n in latestNews" ng-bind-html="n.innerHTML"></div>
+          <div class="blog-post" ng-repeat="n in latestNews">
+            <h2>{{n.date}}</h2>
+            <div ng-bind-html="n.content"></div>
+          </div>
           <div class="blog-post">
             <a href="#/news" style="font-size: 10pt;">READ MORE</a>
           </div>

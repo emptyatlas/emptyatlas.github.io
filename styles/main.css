@@ -1,347 +1,433 @@
 body {
-  padding: 0;
-  background-color: black !important;
-  z-index: 1;
-  font-family: Didot !important;
-}
-body::before {
-  content: '';
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: black;
-  background: url('/images/Ocean_dark.jpg') no-repeat center center;
-  background-position: 0% 0%;
-  background-size: cover;
-  will-change: transform;
-  z-index: -1;
+    padding: 0;
+    background-color: black !important;
+    z-index: 1;
+    font-family: Didot !important;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background: url('/images/Ocean_dark.jpg') no-repeat center center;
+    background-position: 0% 0%;
+    background-size: cover;
+    will-change: transform;
+    z-index: -1;
+}
+
+
 /* Responsive: Portrait tablets and up */
+
 @media screen and (max-width:768px) {
-  body::before {
-    width: 775px;
-    height: 775px;
-  }
+    body::before {
+        width: 775px;
+        height: 775px;
+    }
 }
-h1, h2, h3, h4 {
-  color: white;
+
+h1,
+h2,
+h3,
+h4 {
+    color: white;
 }
+
 h1 {
-  margin-top: 50px;
+    margin-top: 50px;
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header, .marketing, .footer {
-}
+
+.header,
+.marketing,
+.footer {}
+
 
 /* Custom page header */
+
 .header {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .navbar {
-  position: fixed;
-  width: 100%;
-  color: white;
-  background-color: black;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
+    position: fixed;
+    width: 100%;
+    color: white;
+    background-color: black;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+
 div#js-navbar-collapse {
-  overflow: scroll;
+    overflow: scroll;
 }
-.navbar-nav > li, .navbar-nav > li > a {
-  height: 50px;
+
+.navbar-nav > li,
+.navbar-nav > li > a {
+    height: 50px;
 }
+
 .navbar-default {
-  border: none;
+    border: none;
 }
+
 .navbar-default .navbar-toggle {
-  border: none;
+    border: none;
 }
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border: none;
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border: none;
 }
+
 .navbar-default .navbar-nav > li > a {
-  color: white !important;
-  opacity: 1;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: white !important;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 .navbar-default .navbar-nav:hover > li > a {
-  color: white;
-  opacity: 1;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: white;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 .navbar-default .navbar-nav:hover > li > a:not(:hover) {
-  color: white;
-  opacity: 0.5;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: white;
+    opacity: 0.5;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: white;
-  background: none;
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+    background: none;
 }
+
 .navbar-right > li {
-  display: inline-flex;
-  height: 50px;
+    display: inline-flex;
+    height: 50px;
 }
+
 .navbar-right > li > a {
-  display: inline-flex;
-  height: 50px;
+    display: inline-flex;
+    height: 50px;
 }
+
 .wsite-social-item {
-  background-size: 50px !important;
-  padding: 0 20px !important;
-  overflow: hidden;
+    background-size: 50px !important;
+    padding: 0 20px !important;
+    overflow: hidden;
 }
+
 .wsite-social-facebook {
-  background: url('/images/social/icon_facebook.png') no-repeat;
+    background: url('/images/social/icon_facebook.png') no-repeat;
 }
+
 .wsite-social-twitter {
-  background: url('/images/social/icon_twitter.png') no-repeat;
+    background: url('/images/social/icon_twitter.png') no-repeat;
 }
+
 .wsite-social-instagram {
-  background: url('/images/social/icon_instagram.png') no-repeat;
+    background: url('/images/social/icon_instagram.png') no-repeat;
 }
+
 .wsite-social-itunes {
-  background: url('/images/social/icon_apple.png') no-repeat;
+    background: url('/images/social/icon_apple.png') no-repeat;
 }
+
 .wsite-social-spotify {
-  background: url('/images/social/icon_spotify.png') no-repeat;
+    background: url('/images/social/icon_spotify.png') no-repeat;
 }
+
 .wsite-social-soundcloud {
-  background: url('/images/social/icon_soundcloud.png') no-repeat;
+    background: url('/images/social/icon_soundcloud.png') no-repeat;
 }
+
 
 /* Make the masthead heading the same height as the navigation */
+
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
 }
+
 
 /* Custom page footer */
+
 .footer {
-  padding-top: 19px;
-  color: #777;
-  background-color: black;
+    padding-top: 19px;
+    color: #777;
+    background-color: black;
 }
+
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
+
 .container > .content {
-  padding: 50px 0 100px 0;
-  min-height: 100vh;
+    padding: 50px 0 100px 0;
+    min-height: 100vh;
 }
+
 
 /* Main marketing message and sign up button */
+
 .jumbotron {
-  text-align: center;
-  background: none;
-  height: calc(100vh - 110px);
-  display: flex;
-  justify-content: center;
+    text-align: center;
+    background: none;
+    height: calc(100vh - 110px);
+    display: flex;
+    justify-content: center;
 }
+
 .jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+    font-size: 21px;
+    padding: 14px 24px;
 }
+
 .jumbotron > div {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
+
 .jumbotron > div > img {
-  object-fit: contain;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  max-width: 356px;
+    object-fit: contain;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 356px;
 }
+
 
 /* Supporting marketing content */
+
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
+
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
+
 .cell {
-  padding: 10px 0;
+    padding: 10px 0;
 }
+
 .latest-news {
-  color: white;
-  font-size: 12pt;
-  background-color: rgba(0, 0, 0, 0.40);
-  border-radius: 4px;
-  width: 100%;
-  position: relative;
+    color: white;
+    font-size: 12pt;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
 }
+
 .latest-news::after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
+
 .latest-news-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px;
 }
+
+.shadow {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+    padding: 10px;
+}
+
 .blog-post {
-  padding-bottom: 40px;
+    padding-bottom: 40px;
 }
+
 @media (min-width:992px) {
-  .col-md-12.news {
-    width: 50%;
-  }
+    .col-md-12.news {
+        width: 50%;
+    }
 }
+
 label {
-  color: white;
+    color: white;
 }
+
 a {
-  color: #E49959;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: #E49959;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 a:hover {
-  color: #FFB06C;
-  text-decoration: none;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: #FFB06C;
+    text-decoration: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 input#mce-EMAIL {
-  background-color: rgba(0, 0, 0, 0.40);
-  border: 1px solid transparent;
-  color: white;
+    background-color: rgba(0, 0, 0, 0.40);
+    border: 1px solid transparent;
+    color: white;
 }
+
 input#mce-EMAIL:focus {
-  border: 1px solid #282828;
-  outline: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+    border: 1px solid #282828;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
+
 .btn-dark {
-  color: #fff !important;
-  background-color: #000;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+    color: #fff !important;
+    background-color: #000;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
+
 .btn-dark:hover {
-  color: #fff !important;
-  background-color: #282828;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+    color: #fff !important;
+    background-color: #282828;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
+
 .item-frame {
-  background-color: rgba(0, 0, 0, 0.40);
-  border-radius: 4px;
-  max-width: 550px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+    max-width: 550px;
 }
+
 .item-image {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
+
 .item-image > a > img {
-  width: 100%;
+    width: 100%;
 }
+
 .item-image-overlay {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 1.2rem;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
+
 .item-image-overlay:hover {
-  opacity: 1;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+    opacity: 1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
-button > a, button > a:hover {
-  color: white;
+
+button > a,
+button > a:hover {
+    color: white;
 }
+
 .buy-button {
-  margin-top: 50%;
-  width: 200px;
+    margin-top: 50%;
+    width: 200px;
 }
+
 .item-info {
-  background-color: black;
-  border-radius: 0 0 4px 4px;
-  height: 76px;
-  padding: 10px 14px;
-  position: relative;
-  left: -1px;
-  top: 0;
-  width: 100%;
+    background-color: black;
+    border-radius: 0 0 4px 4px;
+    height: 76px;
+    padding: 10px 14px;
+    position: relative;
+    left: -1px;
+    top: 0;
+    width: 100%;
 }
+
 .item-info > a {
-  color: white;
-  opacity: 1;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: white;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 .item-info:hover > a:hover {
-  color: white;
-  opacity: 1;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: white;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 .item-info:hover > a:not(:hover) {
-  color: white;
-  opacity: 0.5;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    color: white;
+    opacity: 0.5;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 .col-md-4 {
-  padding: 10px;
+    padding: 10px;
 }
+
 .bit-widget-container {
-  font-family: Didot !important;
-  font-size: 14px !important;
+    font-family: Didot !important;
+    font-size: 14px !important;
 }
+
 label.bit-uiButton.bit-uiButtonDefault {
-  height: auto !important;
-  margin-bottom: 0 !important;
-  border: 1px solid #eee !important;
-  font-family: Didot !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    border: 1px solid #eee !important;
+    font-family: Didot !important;
 }
+
 
 /* Responsive: Portrait tablets and up */
+
 @media screen and (min-width:768px) {
-  .container {
-    max-width: 1200px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header, .marketing, .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    .container {
+        max-width: 1200px;
+    }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
 }
