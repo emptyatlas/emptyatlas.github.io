@@ -20,10 +20,10 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
     this.merchList = [{
         name: 'CREME LOGO T SHIRT',
         siteName: 'Empty Atlas Music',
-        buyFor: 'Buy for $10.00',
-        action: 'BUY ONLINE',
+        buyFor: 'SOLD OUT',
+        action: 'SOLD OUT',
         link: cremeLogoTShirtLink,
-        imagePath: '/images/merch/creme_logo.png'
+        imagePath: '/images/merch/creme_logo_sold_out.png'
                         }, {
         name: 'RED COMPASS T SHIRT',
         siteName: 'Empty Atlas Music',
