@@ -30,21 +30,21 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
         buyFor: 'Buy for $10.00',
         action: 'BUY ONLINE',
         link: redCompassTShirtLink,
-        imagePath: '/images/merch/red_compass.png'
+        imagePath: '/images/merch/red_compass_low_stock.png'
                         }, {
         name: 'GREY LOGO T SHIRT',
         siteName: 'Empty Atlas Music',
         buyFor: 'Buy for $10.00',
         action: 'BUY ONLINE',
         link: lightGreyLogoTShirtLink,
-        imagePath: '/images/merch/grey_logo.png'
+        imagePath: '/images/merch/grey_logo_low_stock.png'
                         }, {
         name: 'BLUE COMPASS T SHIRT',
         siteName: 'Empty Atlas Music',
         buyFor: 'Buy for $10.00',
         action: 'BUY ONLINE',
         link: blueCompassTShirtLink,
-        imagePath: '/images/merch/blue_compass.png'
+        imagePath: '/images/merch/blue_compass_low_stock.png'
                         }, {
         name: 'ANNIVERSARY CD',
         siteName: 'Empty Atlas Music',
