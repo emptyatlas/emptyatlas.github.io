@@ -16,48 +16,54 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
     var blueCompassTShirtLink = squareStoreLink + '/item/blue-compass-t-shirt';
     var anniversaryCdLink = squareStoreLink + '/item/anniversary-cd';
     var supportTheBandLink = squareStoreLink + '/item/support-the-band';
+    var merchImgDir = '/images/merch';
 
     this.merchList = [{
-        name: 'CREME LOGO T SHIRT',
+        name: 'CREME LOGO T-SHIRT',
         siteName: 'Empty Atlas Music',
-        buyFor: 'SOLD OUT',
+        price: 'SOLD OUT',
         action: 'SOLD OUT',
         link: cremeLogoTShirtLink,
-        imagePath: '/images/merch/creme_logo_sold_out.png'
+        imagePath: merchImgDir + '/creme_logo_sold_out.png',
+        desc: '100% Cotton'
                         }, {
-        name: 'RED COMPASS T SHIRT',
+        name: 'RED COMPASS T-SHIRT',
         siteName: 'Empty Atlas Music',
-        buyFor: 'Buy for $10.00',
+        price: '$10.00',
         action: 'BUY ONLINE',
         link: redCompassTShirtLink,
-        imagePath: '/images/merch/red_compass_low_stock.png'
+        imagePath: merchImgDir + '/red_compass_low_stock.png',
+        desc: '100% Cotton'
                         }, {
-        name: 'GREY LOGO T SHIRT',
+        name: 'GREY LOGO T-SHIRT',
         siteName: 'Empty Atlas Music',
-        buyFor: 'Buy for $10.00',
+        price: '$10.00',
         action: 'BUY ONLINE',
         link: lightGreyLogoTShirtLink,
-        imagePath: '/images/merch/grey_logo_low_stock.png'
+        imagePath: merchImgDir + '/grey_logo_low_stock.png',
+        desc: '100% Cotton'
                         }, {
-        name: 'BLUE COMPASS T SHIRT',
+        name: 'BLUE COMPASS T-SHIRT',
         siteName: 'Empty Atlas Music',
-        buyFor: 'Buy for $10.00',
+        price: '$10.00',
         action: 'BUY ONLINE',
         link: blueCompassTShirtLink,
-        imagePath: '/images/merch/blue_compass_low_stock.png'
+        imagePath: merchImgDir + '/blue_compass_low_stock.png',
+        desc: '100% Cotton'
                         }, {
         name: 'ANNIVERSARY CD',
         siteName: 'Empty Atlas Music',
-        buyFor: 'Buy for $5.00',
+        price: '$5.00',
         action: 'BUY ONLINE',
         link: anniversaryCdLink,
-        imagePath: '/images/merch/anniversary.png'
+        imagePath: merchImgDir + '/anniversary.png',
+        desc: '9 tracks including 3 B-sides'
                         }, {
         name: 'SUPPORT THE BAND',
         siteName: 'Empty Atlas Music',
-        buyFor: 'Any Amount',
+        price: 'Any Amount',
         action: 'DONATE',
         link: supportTheBandLink,
-        imagePath: '/images/merch/donate.png'
+        imagePath: merchImgDir + '/donate.png'
     }];
 });

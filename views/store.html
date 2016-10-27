@@ -2,22 +2,21 @@
   <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="m in merchList">
     <div class="item-frame">
       <div class="item-image">
-        <a href="{{m.link}}"><img src="{{m.imagePath}}" target="_blank"></a>
-        <div class="item-image-overlay">
-          <button ng-click="openLink(m.link)" class="btn btn-dark buy-button">
-            <a href="{{m.link}}" target="_blank">{{m.action}}</a>
-          </button>
-        </div>
+        <a ng-if="m.price !== 'SOLD OUT'" href="{{m.link}}" target="_blank"><img src="{{m.imagePath}}"></a>
+        <a ng-if="m.price === 'SOLD OUT'"><img src="{{m.imagePath}}"></a>
       </div>
       <div class="item-info" align="left">
-        <a href="{{m.link}}" target="_blank">{{m.name}}
-        </a>
+        <h5 style="margin: 0; color:#fff;">{{m.name}}</h5>
+        <small style="color:#a8a8a8;">{{m.desc}}</small>
         <br>
-        <a href="{{squareStoreLink}}" style="font-size:11px;" target="_blank">{{m.siteName}}
-        </a>
-        <br>
-        <a href="{{m.link}}" style="font-size:11px;" target="_blank">{{m.buyFor}}
-        </a>
+        <div align="right">
+          <a ng-if="m.price !== 'SOLD OUT'" type="button" class="btn btn-gray" href="{{m.link}}" target="_blank">
+            <span class="glyphicon glyphicon-shopping-cart"></span> {{m.price}}
+          </a>
+          <button ng-disabled="true" ng-if="m.price === 'SOLD OUT'" type="button" class="btn btn-gray">
+            {{m.price}}
+          </button>
+        </div>
       </div>
     </div>
   </div>

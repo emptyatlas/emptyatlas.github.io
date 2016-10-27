@@ -312,6 +312,20 @@ input#mce-EMAIL:focus {
     transition: all .3s;
 }
 
+.btn-gray {
+    color: #fff !important;
+    background-color: #282828;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-gray:hover {
+    color: #fff !important;
+    background-color: #282828;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
 .item-frame {
     background-color: rgba(0, 0, 0, 0.40);
     border-radius: 4px;
@@ -367,7 +381,7 @@ button > a:hover {
 .item-info {
     background-color: black;
     border-radius: 0 0 4px 4px;
-    height: 76px;
+    /*    height: 76px;*/
     padding: 10px 14px;
     position: relative;
     left: -1px;
