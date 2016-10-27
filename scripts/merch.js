@@ -51,7 +51,7 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
         imagePath: merchImgDir + '/blue_compass_low_stock.png',
         desc: '100% Cotton'
                         }, {
-        name: 'ANNIVERSARY CD',
+        name: 'ANNIVERSARY ALBUM',
         siteName: 'Empty Atlas Music',
         price: '$5.00',
         action: 'BUY ONLINE',
