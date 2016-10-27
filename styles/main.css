@@ -330,6 +330,16 @@ input#mce-EMAIL:focus {
     background-color: rgba(0, 0, 0, 0.40);
     border-radius: 4px;
     max-width: 550px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.item-frame:hover {
+    background-color: rgba(0, 0, 0, 0.70);
+    border-radius: 4px;
+    max-width: 550px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
 .item-image {
