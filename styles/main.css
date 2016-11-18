@@ -13,7 +13,7 @@ body::before {
     top: 0;
     left: 0;
     background-color: black;
-    background: url('/images/Ocean_dark.jpg') no-repeat center center;
+    background: url('/images/Hestiared_dark.png') no-repeat center center;
     background-position: 0% 0%;
     background-size: cover;
     will-change: transform;
@@ -190,7 +190,7 @@ div#js-navbar-collapse {
 .jumbotron {
     text-align: center;
     background: none;
-    height: calc(100vh - 110px);
+    /* height: calc(100vh - 110px); */
     display: flex;
     justify-content: center;
 }
