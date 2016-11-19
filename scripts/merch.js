@@ -10,20 +10,28 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
 
     this.squareStoreLink = 'https://squareup.com/store/empty-atlas-music';
     var squareStoreLink = this.squareStoreLink;
+    var hestiaTShirtLink = squareStoreLink + '/item/hestia-t-shirt';
     var cremeLogoTShirtLink = squareStoreLink + '/item/creme-logo-t-shirt';
     var redCompassTShirtLink = squareStoreLink + '/item/red-compass-t-shirt';
     var lightGreyLogoTShirtLink = squareStoreLink + '/item/light-grey-logo-t-shirt';
     var blueCompassTShirtLink = squareStoreLink + '/item/blue-compass-t-shirt';
     var anniversaryCdLink = squareStoreLink + '/item/anniversary-cd';
+    var hestiaCdLink = squareStoreLink + '/item/hestia-album-pre-order';
     var supportTheBandLink = squareStoreLink + '/item/support-the-band';
     var merchImgDir = '/images/merch';
 
     this.merchList = [{
-        name: 'CREME LOGO T-SHIRT',
+        name: 'HESTIA T-SHIRT',
         desc: '100% Cotton',
-        price: 'SOLD OUT',
-        link: cremeLogoTShirtLink,
-        imagePath: merchImgDir + '/creme_logo_sold_out.png'
+        price: '$15.00',
+        link: hestiaTShirtLink,
+        imagePath: merchImgDir + '/hestia_t_shirt.png'
+                        }, {
+        name: 'HESTIA ALBUM PRE-ORDER',
+        desc: '10 tracks',
+        price: '$10.00',
+        link: hestiaCdLink,
+        imagePath: merchImgDir + '/hestia_album.png'
                         }, {
         name: 'RED COMPASS T-SHIRT',
         desc: '100% Cotton',
