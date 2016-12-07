@@ -273,7 +273,7 @@ label {
 }
 
 a {
-    color: #E49959;
+    color: #E49959 !important;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
