@@ -23,12 +23,12 @@ body::before {
 
 /* Responsive: Portrait tablets and up */
 
-/*@media screen and (max-width:768px) {
+@media screen and (max-width:768px) {
     body::before {
-        width: 775px;
-        height: 775px;
+        width: 1584px;
+        height: 2048px;
     }
-}*/
+}
 
 h1,
 h2,
