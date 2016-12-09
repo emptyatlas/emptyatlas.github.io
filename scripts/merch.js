@@ -16,7 +16,7 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
     var lightGreyLogoTShirtLink = squareStoreLink + '/item/light-grey-logo-t-shirt';
     var blueCompassTShirtLink = squareStoreLink + '/item/blue-compass-t-shirt';
     var anniversaryCdLink = squareStoreLink + '/item/anniversary-cd';
-    var hestiaCdLink = squareStoreLink + '/item/hestia-album-pre-order';
+    var hestiaCdLink = squareStoreLink + '/item/hestia-album';
     var supportTheBandLink = squareStoreLink + '/item/support-the-band';
     var merchImgDir = '/images/merch';
 
@@ -27,7 +27,7 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
         link: hestiaTShirtLink,
         imagePath: merchImgDir + '/hestia_t_shirt.png'
                         }, {
-        name: 'HESTIA ALBUM PRE-ORDER',
+        name: 'HESTIA ALBUM',
         desc: '10 tracks',
         price: '$10.00',
         link: hestiaCdLink,
