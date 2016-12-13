@@ -28,7 +28,7 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
         imagePath: merchImgDir + '/hestia_t_shirt.png'
                         }, {
         name: 'HESTIA ALBUM',
-        desc: '10 tracks',
+        desc: 'Physical Copy, 10 Tracks',
         price: '$10.00',
         link: hestiaCdLink,
         imagePath: merchImgDir + '/hestia_album.png'
@@ -51,7 +51,7 @@ angular.module('emptyatlasgithubioApp').service('MerchService', function () {
         imagePath: merchImgDir + '/blue_compass_low_stock.png'
                         }, {
         name: 'ANNIVERSARY ALBUM',
-        desc: '9 tracks including 3 B-sides',
+        desc: 'Physical Copy, 9 Tracks Including 3 B-sides',
         price: '$5.00',
         link: anniversaryCdLink,
         imagePath: merchImgDir + '/anniversary.png'
