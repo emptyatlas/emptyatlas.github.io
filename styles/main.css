@@ -1,5 +1,6 @@
-html, html:hover {
-  -ms-overflow-style: none !important;
+html,
+html:hover {
+    -ms-overflow-style: none !important;
 }
 
 body {
@@ -428,6 +429,9 @@ button > a:hover {
     padding: 10px;
 }
 
+
+/* Bands In Town Widget */
+
 .bit-widget-container {
     font-family: Didot !important;
     font-size: 14px !important;
@@ -438,7 +442,58 @@ label.bit-uiButton.bit-uiButtonDefault {
     margin-bottom: 0 !important;
     border: 1px solid #eee !important;
     font-family: Didot !important;
+    background: black !important;
+    border: none !important;
+    padding: 6px 18px !important;
+    color: white !important;
+    border-radius: 4px !important;
 }
+
+#bit-events td .bit-uiButtonDefault a {
+    color: white !important;
+}
+
+a.bit-buy-tix {
+    background: black !important;
+    padding: 6px 18px !important;
+    color: white !important;
+    border-radius: 4px !important;
+}
+
+#bit-events tr[data-bit-event-id] td,
+#bit-events table {
+    border: none !important;
+}
+
+#bit-events tr[data-bit-event-id] td {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+th.bit-tickets {
+    display: none !important;
+}
+
+span.bit-share-text {
+    margin: 0 5px !important;
+}
+
+#bit-events .bit-fb-share {
+    background: url(/images/social/icon_facebook_nospace.png) center no-repeat !important;
+    background-size: contain !important;
+    margin: 0 5px !important;
+    height: 18px !important;
+}
+
+#bit-events .bit-twitter-share {
+    background: url(/images/social/icon_twitter_nospace.png) center no-repeat !important;
+    background-size: contain !important;
+    margin: 0 5px !important;
+    height: 18px !important;
+}
+
+
+/* End Bands In Town Widget */
 
 
 /* Responsive: Portrait tablets and up */
