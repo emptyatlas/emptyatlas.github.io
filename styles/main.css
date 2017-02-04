@@ -46,6 +46,11 @@ h1 {
     margin-top: 50px;
 }
 
+h4 {
+    font-size: 12pt;
+    line-height: normal;
+}
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 
@@ -230,14 +235,11 @@ div#js-navbar-collapse {
 }
 
 .cell {
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .latest-news {
-    color: white;
     font-size: 12pt;
-    background-color: rgba(0, 0, 0, 0.40);
-    border-radius: 4px;
     width: 100%;
     position: relative;
 }
@@ -260,7 +262,6 @@ div#js-navbar-collapse {
     color: white;
     background-color: rgba(0, 0, 0, 0.40);
     border-radius: 4px;
-    padding: 10px;
 }
 
 .blog-post {
@@ -430,11 +431,64 @@ button > a:hover {
 }
 
 
-/* Bands In Town Widget */
+/* BANDS IN TOWN WIDGET */
 
 .bit-widget-container {
     font-family: Didot !important;
-    font-size: 14px !important;
+    /*    font-size: 14px !important;*/
+}
+
+.bit-track-artist-header {
+    display: none !important;
+}
+
+#bit-events td.bit-description-links,
+#bit-events th.bit-description-links {
+    display: none;
+}
+
+
+/*
+,
+#bit-events th.bit-date,
+#bit-events th.bit-venue,
+#bit-events th.bit-location,
+#bit-events th.bit-tickets
+*/
+
+.bit-events th,
+.bit-events td,
+#bit-events tr[data-bit-event-id] td,
+#bit-events table {
+    /*    padding: 0 !important;*/
+    border: none !important;
+}
+
+#bit-events table {
+    border: none !important;
+}
+
+.bit-events-narrow td {
+    padding: 10px 4px !important;
+}
+
+.bit-wrapper {
+/*    margin: 20px 0;*/
+}
+
+.bit-constrictor {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.bit-constrictor480 {
+    margin: 0 auto;
+}
+
+.bit-constrictor-half {
+    width: 50%;
+    margin: 0 auto;
 }
 
 label.bit-uiButton.bit-uiButtonDefault {
@@ -453,29 +507,79 @@ label.bit-uiButton.bit-uiButtonDefault {
     color: white !important;
 }
 
-a.bit-buy-tix {
-    background: black !important;
-    padding: 6px 18px !important;
+td.bit-date a {
+    font-size: 16pt !important;
+}
+
+a.bit-event-data {
     color: white !important;
-    border-radius: 4px !important;
+    line-height: normal !important;
 }
 
-#bit-events tr[data-bit-event-id] td,
-#bit-events table {
-    border: none !important;
+td.bit-concert div a {
+    font-size: 10pt !important;
+    line-height: normal !important;
 }
 
-#bit-events tr[data-bit-event-id] td {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+@media only screen and (max-width: 768px) {
+    .bit-constrictor .narrow {
+        display: block;
+    }
+    .bit-constrictor .wide {
+        display: none;
+    }
+    .float-left {
+        float: none;
+    }
+    .bit-constrictor-half {
+        width: 100%;
+    }
 }
 
-th.bit-tickets {
-    display: none !important;
+@media only screen and (min-width: 768px) {
+    .bit-constrictor .narrow {
+        display: none;
+    }
+    .bit-constrictor .wide {
+        display: block;
+    }
+    #bit-events tr[data-bit-event-id] td,
+    #bit-events th.bit-date,
+    #bit-events th.bit-venue,
+    #bit-events th.bit-location,
+    #bit-events th.bit-tickets {
+        padding: 10px !important;
+    }
 }
 
-span.bit-share-text {
-    margin: 0 5px !important;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #bit-events tr[data-bit-event-id] td,
+    #bit-events th.bit-date,
+    #bit-events th.bit-venue,
+    #bit-events th.bit-location,
+    #bit-events th.bit-tickets {
+        padding: 10px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #bit-events tr[data-bit-event-id] td,
+    #bit-events th.bit-date,
+    #bit-events th.bit-venue,
+    #bit-events th.bit-location,
+    #bit-events th.bit-tickets {
+        padding: 10px !important;
+    }
+}
+
+@media only screen and (min-width: 1330px) {
+    #bit-events tr[data-bit-event-id] td,
+    #bit-events th.bit-date,
+    #bit-events th.bit-venue,
+    #bit-events th.bit-location,
+    #bit-events th.bit-tickets {
+        padding: 10px !important;
+    }
 }
 
 #bit-events .bit-fb-share {
@@ -492,8 +596,12 @@ span.bit-share-text {
     height: 18px !important;
 }
 
+div#shows {
+    padding: 0 !important;
+}
 
-/* End Bands In Town Widget */
+
+/* END BANDS IN TOWN WIDGET */
 
 
 /* Responsive: Portrait tablets and up */
