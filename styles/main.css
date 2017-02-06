@@ -34,18 +34,13 @@ body::before {
     .logo-lg {
         display: none;
     }
-    .logo-sm {}
 }
 
 @media (min-width: 768px) {
-    .logo-lg {}
     .logo-sm {
         display: none;
     }
 }
-
-
-/* Responsive: Portrait tablets and up */
 
 @media screen and (max-width:768px) {
     body::before {
@@ -69,16 +64,6 @@ h4 {
     font-size: 12pt;
     line-height: normal;
 }
-
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-
-.header,
-.marketing,
-.footer {}
-
-
-/* Custom page header */
 
 .header {
     margin-bottom: 10px;
@@ -185,18 +170,12 @@ div#js-navbar-collapse {
     background: url('/images/social/icon_soundcloud.png') no-repeat;
 }
 
-
-/* Make the masthead heading the same height as the navigation */
-
 .header h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
 }
-
-
-/* Custom page footer */
 
 .footer {
     padding-top: 19px;
@@ -213,13 +192,9 @@ div#js-navbar-collapse {
     min-height: 100vh;
 }
 
-
-/* Main marketing message and sign up button */
-
 .jumbotron {
     text-align: center;
     background: none;
-    /* height: calc(100vh - 110px); */
     display: flex;
     justify-content: center;
 }
@@ -241,9 +216,6 @@ div#js-navbar-collapse {
     width: 100%;
     max-width: 356px;
 }
-
-
-/* Supporting marketing content */
 
 .marketing {
     margin: 40px 0;
@@ -416,7 +388,6 @@ button > a:hover {
 .item-info {
     background-color: black;
     border-radius: 0 0 4px 4px;
-    /*    height: 76px;*/
     padding: 10px 14px;
     position: relative;
     left: -1px;
@@ -449,12 +420,8 @@ button > a:hover {
     padding: 10px;
 }
 
-
-/* BANDS IN TOWN WIDGET */
-
 .bit-widget-container {
     font-family: Didot !important;
-    /*    font-size: 14px !important;*/
 }
 
 .bit-track-artist-header {
@@ -471,7 +438,6 @@ th.bit-tickets {
 .bit-events td,
 #bit-events tr[data-bit-event-id] td,
 #bit-events table {
-    /*    padding: 0 !important;*/
     border: none !important;
 }
 
@@ -481,10 +447,6 @@ th.bit-tickets {
 
 .bit-events-narrow td {
     padding: 10px 4px !important;
-}
-
-.bit-wrapper {
-    /*    margin: 20px 0;*/
 }
 
 .bit-constrictor {
@@ -611,28 +573,19 @@ div#shows {
     padding: 0 !important;
 }
 
-
-/* END BANDS IN TOWN WIDGET */
-
-
-/* Responsive: Portrait tablets and up */
-
 @media screen and (min-width:768px) {
     .container {
         max-width: 1200px;
     }
-    /* Remove the padding we set earlier */
     .header,
     .marketing,
     .footer {
         padding-left: 0;
         padding-right: 0;
     }
-    /* Space out the masthead */
     .header {
         margin-bottom: 30px;
     }
-    /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
         border-bottom: 0;
     }
