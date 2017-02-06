@@ -25,6 +25,25 @@ body::before {
     z-index: -1;
 }
 
+.fill {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .logo-lg {
+        display: none;
+    }
+    .logo-sm {}
+}
+
+@media (min-width: 768px) {
+    .logo-lg {}
+    .logo-sm {
+        display: none;
+    }
+}
+
 
 /* Responsive: Portrait tablets and up */
 
@@ -443,18 +462,10 @@ button > a:hover {
 }
 
 #bit-events td.bit-description-links,
-#bit-events th.bit-description-links {
+#bit-events th.bit-description-links,
+th.bit-tickets {
     display: none;
 }
-
-
-/*
-,
-#bit-events th.bit-date,
-#bit-events th.bit-venue,
-#bit-events th.bit-location,
-#bit-events th.bit-tickets
-*/
 
 .bit-events th,
 .bit-events td,
@@ -473,7 +484,7 @@ button > a:hover {
 }
 
 .bit-wrapper {
-/*    margin: 20px 0;*/
+    /*    margin: 20px 0;*/
 }
 
 .bit-constrictor {
