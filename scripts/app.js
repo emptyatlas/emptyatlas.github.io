@@ -62,4 +62,13 @@ angular.module('emptyatlasgithubioApp').controller('MainCtrl', function ($scope,
     $scope.newsList = NewsService.newsList;
     $scope.latestNews = NewsService.newsList.slice(0, 2);
 
+    $scope.getCurrentYear = function () {
+        try {
+            return new Date().getFullYear();
+        } catch (err) {
+            console.error(err);
+            return "2017";
+        }
+    };
+
 });
