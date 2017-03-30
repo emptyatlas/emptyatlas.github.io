@@ -1,83 +1,98 @@
-html,
-html:hover {
-    -ms-overflow-style: none !important;
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
 body {
     padding: 0;
     background-color: black !important;
-    z-index: 1;
-    font-family: Didot !important;
+    font-family: "Palatino";
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: black;
-    background: url('/images/Hestiared_dark.png') no-repeat center center;
-    background-position: 0% 0%;
-    background-size: cover;
-    will-change: transform;
-    z-index: -1;
-}
-
-.fill {
-    height: 100%;
-    width: 100%;
-}
-
-@media (max-width: 767px) {
-    .logo-lg {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .logo-sm {
-        display: none;
-    }
-}
-
-@media screen and (max-width:768px) {
-    body::before {
-        width: 1584px;
-        height: 2048px;
-    }
-}
-
-h1,
-h2,
-h3,
-h4 {
-    color: white;
-}
-
-h1 {
-    margin-top: 50px;
-}
-
-h4 {
-    font-size: 12pt;
-    line-height: normal;
-}
+.header,
+.marketing,
+.footer {}
 
 .header {
     margin-bottom: 10px;
+}
+
+h1,
+h2 {
+    font-family: Didot;
+    color: white !important;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: Didot;
+    color: white !important;
+}
+
+m {
+    text-transform: uppercase;
+}
+
+a {
+    color: #c6ac6f !important;
+    transition: all 0.3s linear;
+}
+
+a:hover {
+    color: #FFB06C;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+a.buy {
+    color: white !important;
+    margin: 0 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s linear;
+    text-transform: uppercase;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.shadow {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+}
+
+a.buy:hover {
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
 }
 
 .navbar {
     position: fixed;
     width: 100%;
     color: white;
-    background-color: black;
+    background-color: #000;
     z-index: 999;
     top: 0;
     left: 0;
     right: 0;
+    border: none;
+    border-radius: 0;
 }
 
 div#js-navbar-collapse {
@@ -105,21 +120,18 @@ div#js-navbar-collapse {
 .navbar-default .navbar-nav > li > a {
     color: white !important;
     opacity: 1;
-    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
 .navbar-default .navbar-nav:hover > li > a {
     color: white;
     opacity: 1;
-    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
 .navbar-default .navbar-nav:hover > li > a:not(:hover) {
     color: white;
     opacity: 0.5;
-    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
@@ -130,6 +142,15 @@ div#js-navbar-collapse {
     background: none;
 }
 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #181818;
+}
+
+.navbar-right {
+    margin: 0;
+}
+
 .navbar-right > li {
     display: inline-flex;
     height: 50px;
@@ -138,11 +159,11 @@ div#js-navbar-collapse {
 .navbar-right > li > a {
     display: inline-flex;
     height: 50px;
+    width: 50px;
 }
 
 .wsite-social-item {
     background-size: 50px !important;
-    padding: 0 20px !important;
     overflow: hidden;
 }
 
@@ -170,51 +191,26 @@ div#js-navbar-collapse {
     background: url('/images/social/icon_soundcloud.png') no-repeat;
 }
 
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.container {
+    width: 90%;
 }
 
-.footer {
-    padding-top: 19px;
-    color: #777;
-    background-color: black;
+.clearfix {
+    clear: both;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+.parallax-container {
+    height: 100%;
 }
 
-.container > .content {
-    padding: 50px 0 100px 0;
-    min-height: 100vh;
+.parallax img {
+    display: block;
 }
 
 .jumbotron {
     text-align: center;
-    background: none;
-    display: flex;
-    justify-content: center;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
-.jumbotron > div {
-    height: 100%;
-    width: 100%;
-}
-
-.jumbotron > div > img {
-    object-fit: contain;
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    max-width: 356px;
+    background-color: transparent;
+    margin: 0;
 }
 
 .marketing {
@@ -225,203 +221,8 @@ div#js-navbar-collapse {
     margin-top: 28px;
 }
 
-.cell {
-    padding: 10px;
-}
-
-.latest-news {
-    font-size: 12pt;
-    width: 100%;
-    position: relative;
-}
-
-.latest-news::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-
-.latest-news-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    padding: 10px;
-}
-
-.shadow {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.40);
-    border-radius: 4px;
-}
-
-.blog-post {
-    padding-bottom: 40px;
-}
-
-@media (min-width:992px) {
-    .col-md-12.news {
-        width: 50%;
-    }
-}
-
-label {
-    color: white;
-}
-
-a {
-    color: #E49959 !important;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-a:hover {
-    color: #FFB06C;
-    text-decoration: none;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-input#mce-EMAIL {
-    background-color: rgba(0, 0, 0, 0.40);
-    border: 1px solid transparent;
-    color: white;
-}
-
-input#mce-EMAIL:focus {
-    border: 1px solid #282828;
-    outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.btn-dark {
-    color: #fff !important;
-    background-color: #000;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.btn-dark:hover {
-    color: #fff !important;
-    background-color: #282828;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.btn-gray {
-    color: #fff !important;
-    background-color: #282828;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.btn-gray:hover {
-    color: #fff !important;
-    background-color: #282828;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.item-frame {
-    background-color: rgba(0, 0, 0, 0.40);
-    border-radius: 4px;
-    max-width: 550px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-
-.item-frame:hover {
-    background-color: rgba(0, 0, 0, 0.70);
-    border-radius: 4px;
-    max-width: 550px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-
-.item-image {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-.item-image > a > img {
-    width: 100%;
-}
-
-.image-100 {
-    width: 100%;
-}
-
-.item-image-overlay {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 1.2rem;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.item-image-overlay:hover {
-    opacity: 1;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-button > a,
-button > a:hover {
-    color: white;
-}
-
-.buy-button {
-    margin-top: 50%;
-    width: 200px;
-}
-
-.item-info {
-    background-color: black;
-    border-radius: 0 0 4px 4px;
-    padding: 10px 14px;
-    position: relative;
-    left: -1px;
-    top: 0;
-    width: 100%;
-}
-
-.item-info > a {
-    color: white;
-    opacity: 1;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.item-info:hover > a:hover {
-    color: white;
-    opacity: 1;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.item-info:hover > a:not(:hover) {
-    color: white;
-    opacity: 0.5;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.col-md-4 {
-    padding: 10px;
-}
-
 .bit-widget-container {
-    font-family: Didot !important;
+    font-family: "Palatino" !important;
 }
 
 .bit-track-artist-header {
@@ -468,12 +269,17 @@ label.bit-uiButton.bit-uiButtonDefault {
     height: auto !important;
     margin-bottom: 0 !important;
     border: 1px solid #eee !important;
-    font-family: Didot !important;
-    background: black !important;
+    background: #282828 !important;
     border: none !important;
     padding: 6px 18px !important;
     color: white !important;
     border-radius: 4px !important;
+}
+
+label.bit-uiButton.bit-uiButtonDefault:hover {
+    color: #fff !important;
+    background-color: #282828 !important;
+    transition: all .3s;
 }
 
 #bit-events td .bit-uiButtonDefault a {
@@ -569,14 +375,175 @@ td.bit-concert div a {
     height: 18px !important;
 }
 
-div#shows {
-    padding: 0 !important;
+.lightwidget--hover-caption-slide-up .lightwidget__caption,
+figcaption.lightwidget__caption,
+.lightwidget__caption,
+.lightwidget--hover-caption-slide-up .lightwidget__link--hover .lightwidget__caption {
+    background: #000 !important;
 }
 
-@media screen and (min-width:768px) {
-    .container {
-        max-width: 1200px;
-    }
+input#mce-EMAIL {
+    color: white;
+}
+
+input#mce-EMAIL:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #c6ac6f !important;
+}
+
+m {
+    vertical-align: middle;
+}
+
+.btn,
+.btn:hover {
+    box-shadow: none;
+    text-transform: none;
+}
+
+.btn-dark {
+    color: #fff !important;
+    background-color: #000;
+    transition: all .3s;
+}
+
+.btn-dark:hover {
+    color: #fff !important;
+    background-color: #292929;
+    transition: all .3s;
+}
+
+button:focus,
+.btn:focus {
+    color: #fff !important;
+    background-color: #181818;
+    transition: all .3s;
+}
+
+.btn-gray {
+    color: #fff !important;
+    background-color: #181818;
+    transition: all .3s;
+}
+
+.btn-gray:hover {
+    color: #fff !important;
+    background-color: #282828;
+    transition: all .3s;
+}
+
+.btn-reactive {
+    width: 95%;
+    white-space: normal;
+}
+
+.item-frame {
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+    max-width: 550px;
+    transition: all .5s;
+}
+
+.item-frame:hover {
+    background-color: rgba(0, 0, 0, 0.70);
+    border-radius: 4px;
+    max-width: 550px;
+    transition: all .5s;
+}
+
+.item-image {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.item-image > a > img {
+    width: 100%;
+}
+
+.image-100 {
+    width: 100%;
+}
+
+.item-image-overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem;
+    transition: all .3s;
+}
+
+.item-image-overlay:hover {
+    opacity: 1;
+    transition: all .3s;
+}
+
+button > a,
+button > a:hover {
+    color: white;
+}
+
+.buy-button {
+    margin-top: 50%;
+    width: 200px;
+}
+
+.item-info {
+    background-color: black;
+    border-radius: 0 0 4px 4px;
+    padding: 10px 14px;
+    position: relative;
+    left: -1px;
+    top: 0;
+    width: 100%;
+}
+
+.item-info > a {
+    color: white;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+.item-info:hover > a:hover {
+    color: white;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+.item-info:hover > a:not(:hover) {
+    color: white;
+    opacity: 0.5;
+    transition: all 0.3s linear;
+}
+
+.footer {
+    padding: 15px 0;
+    color: #777;
+    background-color: black;
+}
+
+.footer > p {
+    margin: 0;
+}
+
+.fill {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {}
     .header,
     .marketing,
     .footer {
@@ -584,7 +551,7 @@ div#shows {
         padding-right: 0;
     }
     .header {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
     .jumbotron {
         border-bottom: 0;
