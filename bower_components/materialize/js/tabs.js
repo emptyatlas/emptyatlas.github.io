@@ -8,8 +8,11 @@
         responsiveThreshold: Infinity, // breakpoint for swipeable
       };
       options = $.extend(defaults, options);
+      var namespace = Materialize.objectSelectorString($(this));
 
-      return this.each(function() {
+      return this.each(function(i) {
+
+      var uniqueNamespace = namespace+i;
 
       // For each set of tabs, we want to keep track of
       // which tab is active and its associated content
@@ -22,7 +25,8 @@
           $tabs_wrapper,
           $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links.length,
           $indicator,
-          index = prev_index = 0,
+          index = 0,
+          prev_index = 0,
           clicked = false,
           clickedTimeout,
           transition = 300;
@@ -30,14 +34,14 @@
 
       // Finds right attribute for indicator based on active tab.
       // el: jQuery Object
-      var calcRightPos = function(el) {
-        return $tabs_width - el.position().left - el.outerWidth() - $this.scrollLeft();
+        var calcRightPos = function(el) {
+          return Math.ceil($tabs_width - el.position().left - el[0].getBoundingClientRect().width - $this.scrollLeft());
       };
 
       // Finds left attribute for indicator based on active tab.
       // el: jQuery Object
       var calcLeftPos = function(el) {
-        return el.position().left + $this.scrollLeft();
+        return Math.floor(el.position().left + $this.scrollLeft());
       };
 
       // Animates Indicator to active tab.
@@ -85,7 +89,7 @@
 
       // append indicator then set indicator width to tab width
       if (!$this.find('.indicator').length) {
-        $this.append('<div class="indicator"></div>');
+        $this.append('<li class="indicator"></li>');
       }
       $indicator = $this.find('.indicator');
 
@@ -100,7 +104,7 @@
           $indicator.css({"left": calcLeftPos($active) });
         }, 0);
       }
-      $(window).off('resize.tabs').on('resize.tabs', function () {
+      $(window).off('resize.tabs-'+uniqueNamespace).on('resize.tabs-'+uniqueNamespace, function () {
         $tabs_width = $this.width();
         $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links.length;
         if (index < 0) {
@@ -129,8 +133,13 @@
             if (!clicked) {
               var prev_index = index;
               index = $tabs_wrapper.index(item);
+              $active.removeClass('active');
               $active = $links.eq(index);
+              $active.addClass('active');
               animateIndicator(prev_index);
+              if (typeof(options.onShow) === "function") {
+                options.onShow.call($this[0], $content);
+              }
             }
           },
         });
@@ -181,7 +190,11 @@
         // Swap content
         if (options.swipeable) {
           if ($tabs_content.length) {
-            $tabs_content.carousel('set', index);
+            $tabs_content.carousel('set', index, function() {
+              if (typeof(options.onShow) === "function") {
+                options.onShow.call($this[0], $content);
+              }
+            });
           }
         } else {
           if ($content !== undefined) {

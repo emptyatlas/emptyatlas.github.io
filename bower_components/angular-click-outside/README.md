@@ -4,9 +4,16 @@ An angular directive to detect a click outside of an elements scope. Great for c
 
 ###Recent changes
 
-- Thanks to @Anatejms for suggestion to delay link to allow for dynamically created id's
-- Absolute check on class and id names instead of indexOf to fix issues where parts of click-outside names were found in other classes
-- Added fix to cater for devices with both touch and mouse
+- Thanks to @Lorelei for the pull request to pass the event back in the callback function
+- Thanks to @CosticaPuntaru for the improvement to now allow the directive to no longer need an id on the element for this to work
+- Added basic ngdocs documentation
+- Removed the addition of the element id to the classes array as now it no longer needs to be checked
+
+###Roadmap
+
+- Addition of outside-if attribute. Ability to restrict click outside registering to defined elements (opposite of outside-if-not) rather than anywhere outside an element
+- Look into the worth of converting directive to Angular 1 component
+- Conversion of directive to Angular 2 component
 
 ###Installation
 
@@ -31,7 +38,6 @@ Also be sure to include the module in your app.js file with:
     bower install angular-click-outside --save
 
 ###Usage
-__To use this directive, ensure the element you want to detect a close outside of has an id__.
 
 The directive will work with either id's or classes, however be wary of using classes as quite often some unwanted elements may have the same class, and so will be excluded/included unintentionally. 
 
@@ -43,13 +49,13 @@ Add the directive via the `click-outside` attribute, and give exceptions via the
 
 Basic example:
 
-    <div class="menu" id="main-menu" click-outside="closeThis">
+    <div class="menu" click-outside="closeThis">
         ...
     </div>
 
 This is of little use though without a callback function to do something with that click:
 
-    <div class="menu" id="main-menu" click-outside="closeThis()">
+    <div class="menu" click-outside="closeThis()">
         ...
     </div>
 
@@ -67,7 +73,7 @@ Where `closeThis()` is the function assigned to the scope via the controller suc
 
     <button id="my-button">Menu Trigger Button</button>
     <div ng-controller="MenuController">
-        <div class="menu" id="main-menu" click-outside="closeThis()" outside-if-not="my-button">
+        <div class="menu" click-outside="closeThis()" outside-if-not="my-button">
             ...
         </div>
     </div>

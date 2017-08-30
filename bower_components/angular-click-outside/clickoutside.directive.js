@@ -1,36 +1,45 @@
-/*global angular*/
+/*global angular, navigator*/
 
 (function() {
     'use strict';
 
     angular
         .module('angular-click-outside', [])
-        .directive('clickOutside', ['$document', '$parse', '$timeout', clickOutside]);
-
+        .directive('clickOutside', [
+            '$document', '$parse', '$timeout',
+            clickOutside
+        ]);
+    
+    /**
+     * @ngdoc directive
+     * @name angular-click-outside.directive:clickOutside
+     * @description Directive to add click outside capabilities to DOM elements
+     * @requires $document
+     * @requires $parse
+     * @requires $timeout
+     **/
     function clickOutside($document, $parse, $timeout) {
         return {
             restrict: 'A',
             link: function($scope, elem, attr) {
-                
+
                 // postpone linking to next digest to allow for unique id generation
                 $timeout(function() {
-                    var classList = (attr.outsideIfNot !== undefined) ? attr.outsideIfNot.replace(', ', ',').split(',') : [],
+                    var classList = (attr.outsideIfNot !== undefined) ? attr.outsideIfNot.split(/[ ,]+/) : [],
                         fn;
 
-                    // add the elements id so it is not counted in the click listening
-                    if (attr.id !== undefined) {
-                        classList.push(attr.id);
-                    }
-
                     function eventHandler(e) {
+                        var i,
+                            element,
+                            r,
+                            id,
+                            classNames,
+                            l;
 
                         // check if our element already hidden and abort if so
                         if (angular.element(elem).hasClass("ng-hide")) {
                             return;
                         }
-
-                        var i = 0,
-                            element;
 
                         // if there is no click target, no point going on
                         if (!e || !e.target) {
@@ -39,29 +48,42 @@
 
                         // loop through the available elements, looking for classes in the class list that might match and so will eat
                         for (element = e.target; element; element = element.parentNode) {
-                            var id = element.id,
-                                classNames = element.className,
-                                l = classList.length;
+                            // check if the element is the same element the directive is attached to and exit if so (props @CosticaPuntaru)
+                            if (element === elem[0]) {
+                                return;
+                            }
+                            
+                            // now we have done the initial checks, start gathering id's and classes
+                            id = element.id,
+                            classNames = element.className,
+                            l = classList.length;
 
                             // Unwrap SVGAnimatedString classes
                             if (classNames && classNames.baseVal !== undefined) {
                                 classNames = classNames.baseVal;
                             }
 
-                            // loop through the elements id's and classnames looking for exceptions
-                            for (i = 0; i < l; i++) {
-                                // check for exact matches on id's or classes, but only if they exist in the first place
-                                if ((id !== undefined && id === classList[i]) || (classNames && classNames === classList[i])) {
-                                    // now let's exit out as it is an element that has been defined as being ignored for clicking outside
-                                    return;
+                            // if there are no class names on the element clicked, skip the check
+                            if (classNames || id) {
+
+                                // loop through the elements id's and classnames looking for exceptions
+                                for (i = 0; i < l; i++) {
+                                    //prepare regex for class word matching
+                                    r = new RegExp('\\b' + classList[i] + '\\b');
+
+                                    // check for exact matches on id's or classes, but only if they exist in the first place
+                                    if ((id !== undefined && id === classList[i]) || (classNames && r.test(classNames))) {
+                                        // now let's exit out as it is an element that has been defined as being ignored for clicking outside
+                                        return;
+                                    }
                                 }
                             }
                         }
 
                         // if we have got this far, then we are good to go with processing the command passed in via the click-outside attribute
-                        $scope.$apply(function() {
+                        $timeout(function() {
                             fn = $parse(attr['clickOutside']);
-                            fn($scope);
+                            fn($scope, { event: e });
                         });
                     }
 
@@ -82,7 +104,10 @@
                         $document.off('click', eventHandler);
                     });
 
-                    // private function to attempt to figure out if we are on a touch device
+                    /**
+                     * @description Private function to attempt to figure out if we are on a touch device
+                     * @private
+                     **/
                     function _hasTouch() {
                         // works on most browsers, IE10/11 and Surface
                         return 'ontouchstart' in window || navigator.maxTouchPoints;

@@ -8,19 +8,10 @@
  *
  * Main module of the application.
  */
-angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'angular-click-outside']).config(function ($routeProvider, $locationProvider) {
-    $locationProvider.hashPrefix('');
 
-        $routeProvider
-            .when('/', {
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl'
-            })
-            .when('contact-form.php', {})
-            .otherwise({
-                redirectTo: '/'
-            });
-}).run(function () {});
+var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside']);
+
+app.run(function () {});
 
 /**
  * @ngdoc function
@@ -29,42 +20,80 @@ angular.module('emptyatlasgithubioApp', ['ngAnimate', 'ngCookies', 'ngResource',
  * # MainCtrl
  * Controller of the emptyatlasgithubioApp
  */
-angular.module('emptyatlasgithubioApp').controller('MainCtrl', function ($scope, $templateCache, $window) {
+app.controller('MainCtrl', function ($scope, $templateCache, $window, $document) {
 
     $(document).ready(function () {
-            $('.parallax').parallax();
-        });
+        $('.parallax').parallax();
+    });
 
-        $scope.$on('$viewContentLoaded', function () {
-            $window.scrollTo(0, 0);
-        });
+    $scope.$on('$viewContentLoaded', function () {
+        $window.scrollTo(0, 0);
+    });
 
-        $scope.showContactForm = function () {
-            _gscq.push(['trackPage', '/contact']);
+    $scope.showContactForm = function () {
+        _gscq.push(['trackPage', '/contact']);
+    };
+
+    $scope.hideMenu = function () {
+        angular.element('#js-navbar-collapse').collapse('hide');
+        return true;
+    };
+
+    $scope.openLink = function (link) {
+        console.log('attempting to open link [' + link + ']');
+        $window.open(link, '_blank');
+    };
+
+    $scope.getCurrentYear = function () {
+        try {
+            return new Date().getFullYear();
+        } catch (err) {
+            console.error(err);
+            return "2017";
+        }
+    };
+
+    $scope.scrollTo = function (id) {
+        console.log('attempting to scroll to element: ' + id);
+        var target = document.getElementById(id);
+        var targetPosition = getPosition(target);
+        var navBar = document.getElementById('nav');
+        var navBarHeight = navBar.offsetHeight;
+        if (targetPosition.y === navBarHeight) {
+            console.log('target already in frame');
+        } else {
+            $('html, body').animate({
+                scrollTop: (target.offsetTop - navBarHeight),
+                easing: 'slow'
+            }, 1000, function () {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+            });
+        }
+    };
+
+    function getPosition(element) {
+        var xPosition = 0;
+        var yPosition = 0;
+
+        while (element) {
+            xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+            element = element.offsetParent;
+        }
+
+        return {
+            x: xPosition,
+            y: yPosition
         };
-
-        $scope.hideMenu = function () {
-            angular.element('#js-navbar-collapse').collapse('hide');
-            return true;
-        };
-
-        $scope.openLink = function (link) {
-            console.log('attempting to open link [' + link + ']');
-            $window.open(link, '_blank');
-        };
-
-//        $scope.merchList = MerchService.merchList;
-//        $scope.squareStoreLink = MerchService.squareStoreLink;
-//        $scope.newsList = NewsService.newsList;
-//        $scope.latestNews = NewsService.newsList.slice(0, 2);
-
-        $scope.getCurrentYear = function () {
-            try {
-                return new Date().getFullYear();
-            } catch (err) {
-                console.error(err);
-                return "2017";
-            }
-        };
+    }
 
 });

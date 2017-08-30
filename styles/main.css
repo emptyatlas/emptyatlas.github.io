@@ -11,6 +11,10 @@ body {
     font-family: "Palatino";
 }
 
+:focus {
+    outline: none;
+}
+
 .header,
 .marketing,
 .footer {}
@@ -102,6 +106,14 @@ div#js-navbar-collapse {
 .navbar-nav > li,
 .navbar-nav > li > a {
     height: 50px;
+    display: inline-flex;
+}
+
+.footer > ul > li,
+.footer > ul > li > a {
+    height: 60px;
+    width: 60px;
+    display: inline-flex;
 }
 
 .navbar-default {
@@ -117,19 +129,22 @@ div#js-navbar-collapse {
     border: none;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a,
+.footer > ul > li > a {
     color: white !important;
     opacity: 1;
     transition: all 0.3s linear;
 }
 
-.navbar-default .navbar-nav:hover > li > a {
+.navbar-default .navbar-nav:hover > li > a,
+.footer:hover > ul > li > a {
     color: white;
     opacity: 1;
     transition: all 0.3s linear;
 }
 
-.navbar-default .navbar-nav:hover > li > a:not(:hover) {
+.navbar-default .navbar-nav:hover > li > a:not(:hover),
+.footer:hover > ul > li > a:not(:hover) {
     color: white;
     opacity: 0.5;
     transition: all 0.3s linear;
@@ -137,7 +152,10 @@ div#js-navbar-collapse {
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a:focus,
+.footer > .active > a,
+.footer > .active > a:hover,
+.footer > .active > a:focus {
     color: white;
     background: none;
 }
@@ -147,23 +165,24 @@ div#js-navbar-collapse {
     background-color: #181818;
 }
 
-.navbar-right {
-    margin: 0;
+.social-footer {
+    height: 60px;
 }
 
-.navbar-right > li {
+.footer > ul > li {
     display: inline-flex;
-    height: 50px;
+    height: 60px;
 }
 
+
+/*
 .navbar-right > li > a {
-    display: inline-flex;
-    height: 50px;
-    width: 50px;
+    text-align: right;
 }
+*/
 
 .wsite-social-item {
-    background-size: 50px !important;
+    background-size: 65px !important;
     overflow: hidden;
 }
 
@@ -213,6 +232,10 @@ div#js-navbar-collapse {
     margin: 0;
 }
 
+.jumbotron p {
+    font-size: 10.5pt;
+}
+
 .marketing {
     margin: 40px 0;
 }
@@ -227,6 +250,10 @@ div#js-navbar-collapse {
 
 .bit-track-artist-header {
     display: none !important;
+}
+
+.bit-offers.bit-button {
+    background-color: #3D3D3D !important;
 }
 
 #bit-events td.bit-description-links,
@@ -312,6 +339,10 @@ td.bit-concert div a {
     }
     .bit-constrictor-half {
         width: 100%;
+    }
+    .jumbotron {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
 }
 
