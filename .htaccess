@@ -96,6 +96,13 @@ ErrorDocument 404 /404.html
     </FilesMatch>
 </IfModule>
 
+<IfModule mod_headers.c>
+    # 1 Month for most static assets
+    <FilesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+         Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
 # ------------------------------------------------------------------------------
 # | Cookie setting from iframes                                                |
 # ------------------------------------------------------------------------------
@@ -498,11 +505,6 @@ FileETag None
 
 # To understand why this is important and a better idea than `*.css?v231`, read:
 # http://stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring
-
-# 1 Month for most static assets
-<FilesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
-     Header set Cache-Control "max-age=2592000, public"
-</FilesMatch>
 
 # <IfModule mod_rewrite.c>
 #    RewriteCond %{REQUEST_FILENAME} !-f

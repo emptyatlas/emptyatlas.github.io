@@ -11,6 +11,10 @@
 
 var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside']);
 
+app.config(function($httpProvider) {
+    $httpProvider.defaults.headers.common['Cache-Control'] = 'max-age=2592000, public';
+});
+
 app.run(function () {});
 
 /**
