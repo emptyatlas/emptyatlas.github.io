@@ -25,7 +25,6 @@
     "commit": "588f5a7d931f0cfb30aec52d0fc6b97ac4cf1c37"
   },
   "_source": "https://github.com/IamAdamJowett/angular-click-outside.git",
-  "_target": "^2.10.2",
-  "_originalSource": "angular-click-outside",
-  "_direct": true
+  "_target": "2.10.2",
+  "_originalSource": "angular-click-outside"
 }

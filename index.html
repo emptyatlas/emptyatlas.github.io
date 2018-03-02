@@ -11,26 +11,12 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular-click-outside/clickoutside.directive.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-    <script src="scripts/app.js"></script>
     <!-- endbuild -->
 </head>
 
@@ -61,6 +47,9 @@
                         </li>
                         <li>
                             <a ng-href="https://squareup.com/store/empty-atlas-music" target="_blank" ng-click="hideMenu()">STORE</a>
+                        </li>
+                        <li>
+                            <a ng-click="scrollTo('lyrics')">LYRICS</a>
                         </li>
                         <li>
                             <a href="" ng-click="hideMenu(); showContactForm();">CONTACT</a>
@@ -130,7 +119,7 @@
                     <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0LiGP71p9bEpbV7cY4DwLd" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
                 </div>
             </div>
-            <div class="parallax"><img src="/images/IMG_0518.png"></div>
+            <div class="parallax"><img src="/images/IMG_0518.jpg"></div>
         </div>
 
         <div class="parallax-container valign-wrapper" style="background: #181818;" id="shows">
@@ -189,7 +178,32 @@
                     </div>
                 </div>
             </div>
-            <div class="parallax"><img src="/images/IMG_1808_3.png"></div>
+            <div class="parallax"><img src="/images/IMG_1808_3.jpeg"></div>
+        </div>
+
+        <div class="parallax-container valign-wrapper" style="background: #181818;" id="lyrics">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>LYRICS</h1>
+                    <div class="center-align">
+                        <!--
+                        <div ng-repeat="s in songs" class="col-md-3 center-align" style="margin-bottom: 5px;">
+                            <a class="btn btn-dark btn-reactive waves-effect">&nbsp;{{s.title}}&nbsp;</a>&nbsp;&nbsp;
+                        </div>
+-->
+
+                        <ul class="collapsible popout" data-collapsible="accordion">
+                            <li ng-repeat="s in songs">
+                                <div id="{{s.id}}" class="collapsible-header valign-wrapper">
+                                    <h style="vertical-align: text-top">{{s.title}}</h><i ng-if="!elementIsActive(s.id)" class="medium material-icons">keyboard_arrow_down</i><i ng-if="elementIsActive(s.id)" class="medium material-icons">keyboard_arrow_up</i></div>
+
+                                <div class="collapsible-body"><span ng-bind-html="s.lyrics"></span></div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="parallax-container valign-wrapper">
@@ -199,7 +213,7 @@
                     <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                 </div>
             </div>
-            <div class="parallax"><img src="/images/IMG_0521.png"></div>
+            <div class="parallax"><img src="/images/IMG_0521.jpg"></div>
         </div>
 
         <div class="parallax-container valign-wrapper" style="background-color: #181818;" id="newsletter">
@@ -246,9 +260,9 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
-        (function (i, s, o, g, r, a, m) {
+        (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
+            i[r] = i[r] || function() {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
@@ -261,10 +275,11 @@
         ga('create', 'UA-51847004-1', 'emptyatlas.com');
         ga('require', 'displayfeatures');
         ga('send', 'pageview');
+
     </script>
 
     <script>
-        (function (w, i, d, g, e, t, s) {
+        (function(w, i, d, g, e, t, s) {
             w[d] = w[d] || [];
             t = i.createElement(g);
             t.async = 1;
@@ -272,7 +287,25 @@
             s = i.getElementsByTagName(g)[0];
             s.parentNode.insertBefore(t, s);
         })(window, document, '_gscq', 'script', '//widgets.getsitecontrol.com/41808/script.js');
+
     </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-click-outside/clickoutside.directive.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/lyrics.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

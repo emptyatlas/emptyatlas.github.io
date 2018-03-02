@@ -9,9 +9,9 @@
  * Main module of the application.
  */
 
-var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside']);
+var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngSanitize']);
 
-app.config(function($httpProvider) {
+app.config(function ($httpProvider) {
     $httpProvider.defaults.headers.common['Cache-Control'] = 'max-age=2592000, public';
 });
 
@@ -24,7 +24,9 @@ app.run(function () {});
  * # MainCtrl
  * Controller of the emptyatlasgithubioApp
  */
-app.controller('MainCtrl', function ($scope, $templateCache, $window, $document) {
+app.controller('MainCtrl', function ($scope, $templateCache, $window, $document, MusicService) {
+    
+    $scope.songs = MusicService.songs;
 
     $(document).ready(function () {
         $('.parallax').parallax();
@@ -55,6 +57,11 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document)
             console.error(err);
             return "2017";
         }
+    };
+    
+    $scope.elementIsActive = function(element) {
+        var el = document.getElementById(element);
+        return angular.element(el).hasClass('active');
     };
 
     $scope.scrollTo = function (id) {
@@ -98,6 +105,10 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document)
             x: xPosition,
             y: yPosition
         };
-    }
+    };
+
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
+    });
 
 });
