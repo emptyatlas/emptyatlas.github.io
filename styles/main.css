@@ -596,7 +596,7 @@ button > a:hover {
 .collapsible-body,
 .collapsible-body > span {
     color: white;
-    background: url('/images/flowers_darker.png');
+    background: url('/images/flowers_darker.jpg');
     border-bottom-color: #181818;
 }
 
