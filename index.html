@@ -11,14 +11,15 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 
@@ -186,14 +187,111 @@
             <div class="container">
                 <div class="jumbotron">
                     <h1>LYRICS</h1>
-                    <div class="center-align">
-                        <!--
-                        <div ng-repeat="s in songs" class="col-md-3 center-align" style="margin-bottom: 5px;">
-                            <a class="btn btn-dark btn-reactive waves-effect">&nbsp;{{s.title}}&nbsp;</a>&nbsp;&nbsp;
-                        </div>
--->
+                    <div id="svg-test" class="hidden-xs">
+                        <svg id="Map" style="height: 500px; width: 600px;">
+                            <path d="M92 306 L 222 364 L 150 82 L 92 306 L 244 481 L 480 360 L 492 110 L 428 28 L 254 142 L 320 138 L 294 244" fill="transparent" stroke="white"/>
+                            
+                            <!-- Major stars -->
+                            <!-- Boxing -->
+                            <circle cx="92" cy="306" r="6" ng-click="showLyrics('Boxing')"/>
+                            <text x="100" y="302" text-anchor="left">Boxing</text>
+                            <!-- House Fire -->
+                            <circle cx="222" cy="364" r="6" ng-click="showLyrics('House Fire')"/>
+                            <text x="232" y="358" text-anchor="left">House Fire</text>
+                            <!-- Thousand -->
+                            <circle cx="150" cy="82" r="6" ng-click="showLyrics('Thousand')"/>
+                            <text x="156" y="74" text-anchor="left">Thousand</text>
+                            <!-- Cold Shoulder -->
+                            <circle cx="244" cy="481" r="6" ng-click="showLyrics('Cold Shoulder')"/>
+                            <text x="252" y="496" text-anchor="left">Cold Shoulder</text>
+                            <!-- All Right -->
+                            <circle cx="480" cy="360" r="6" ng-click="showLyrics('All Right')"/>
+                            <text x="490" y="360" text-anchor="left">All Right</text>
+                            <!-- Amen -->
+                            <circle cx="492" cy="110" r="6" ng-click="showLyrics('Amen')"/>
+                            <text x="500" y="104" text-anchor="left">Amen</text>
+                            <!-- Elements -->
+                            <circle cx="428" cy="28" r="6" ng-click="showLyrics('Elements')"/>
+                            <text x="434" y="20" text-anchor="left">Elements</text>
+                            <!-- Palindrome -->
+                            <circle cx="254" cy="142" r="6" ng-click="showLyrics('Palindrome')"/>
+                            <text x="176" y="134" text-anchor="left">Palindrome</text>
+                            <!-- Plurals -->
+                            <circle cx="320" cy="138" r="6" ng-click="showLyrics('Plurals')"/>
+                            <text x="328" y="130" text-anchor="left">Plurals</text>
+                            <!-- Masterpiece -->
+                            <circle cx="294" cy="244" r="6" ng-click="showLyrics('Masterpiece')"/>
+                            <text x="304" y="238" text-anchor="left">Masterpiece</text>
+                            
+                            <!-- Decorative stars -->
+                            <circle cx="132" cy="10" r="2"/>
+                            <circle cx="4" cy="4" r="1"/>
+                            <circle cx="8" cy="34" r="2"/>
+                            <circle cx="6" cy="150" r="1"/>
+                            <circle cx="16" cy="289" r="2"/>
+                            <circle cx="3" cy="353" r="2"/>
+                            <circle cx="4" cy="470" r="1"/>
+                            <circle cx="12" cy="488" r="2"/>
+                            <circle cx="173" cy="44" r="1"/>
+                            <circle cx="233" cy="102" r="1"/>
+                            <circle cx="284" cy="68" r="2"/>
+                            <circle cx="324" cy="12" r="2"/>
+                            <circle cx="378" cy="23" r="2"/>
+                            <circle cx="458" cy="2" r="2"/>
+                            <circle cx="485" cy="9" r="1"/>
+                            <circle cx="485" cy="56" r="2"/>
+                            <circle cx="489" cy="92" r="2"/>
+                            <circle cx="539" cy="82" r="1"/>
+                            <circle cx="592" cy="12" r="1"/>
+                            <circle cx="580" cy="44" r="2"/>
+                            <circle cx="570" cy="84" r="2"/>
+                            <circle cx="570" cy="140" r="2"/>
+                            <circle cx="596" cy="225" r="1"/>
+                            <circle cx="596" cy="450" r="1"/>
+                            <circle cx="588" cy="350" r="2"/>
+                            <circle cx="546" cy="302" r="2"/>
+                            <circle cx="501" cy="222" r="2"/>
+                            <circle cx="531" cy="193" r="1"/>
+                            <circle cx="527" cy="488" r="2"/>
+                            <circle cx="407" cy="427" r="1"/>
+                            <circle cx="380" cy="487" r="1"/>
+                            <circle cx="457" cy="477" r="2"/>
+                            <circle cx="488" cy="456" r="1"/>
+                            <circle cx="518" cy="409" r="1"/>
+                            <circle cx="525" cy="385" r="1"/>
+                            <circle cx="540" cy="395" r="2"/>
+                            <circle cx="425" cy="300" r="2"/>
+                            <circle cx="354" cy="238" r="2"/>
+                            <circle cx="405" cy="196" r="1"/>
+                            <circle cx="417" cy="184" r="2"/>
+                            <circle cx="378" cy="102" r="1"/>
+                            <circle cx="289" cy="8" r="1"/>
+                            <circle cx="52" cy="64" r="2"/>
+                            <circle cx="66" cy="72" r="2"/>
+                            <circle cx="52" cy="200" r="2"/>
+                            <circle cx="74" cy="274" r="1"/>
+                            <circle cx="52" cy="306" r="1"/>
+                            <circle cx="52" cy="444" r="2"/>
+                            <circle cx="82" cy="404" r="2"/>
+                            <circle cx="150" cy="414" r="1"/>
+                            <circle cx="150" cy="494" r="2"/>
+                            <circle cx="272" cy="392" r="2"/>
+                            <circle cx="282" cy="382" r="2"/>
+                            <circle cx="250" cy="300" r="1"/>
+                            <circle cx="177" cy="277" r="1"/>
+                            <circle cx="212" cy="240" r="2"/>
+                            
+                        </svg>
+                    </div>
 
-                        <ul class="collapsible popout" data-collapsible="accordion">
+                    <div id="lyrics-display" class="lyrics-display collapse hidden-xs" data-collapsible="expandable" style="border: 0; margin: 20px;">
+                        <h2>{{activeSong.title}}</h2>
+                        <p ng-bind-html="activeSong.lyrics"></p>
+                    </div>
+
+                    <div class="center-align">
+
+                        <ul class="collapsible popout hidden-sm hidden-md hidden-lg" data-collapsible="accordion">
                             <li ng-repeat="s in songs">
                                 <div id="{{s.id}}" class="collapsible-header valign-wrapper">
                                     <h style="vertical-align: text-top">{{s.title}}</h><i ng-if="!elementIsActive(s.id)" class="medium material-icons">keyboard_arrow_down</i><i ng-if="elementIsActive(s.id)" class="medium material-icons">keyboard_arrow_up</i></div>
@@ -293,11 +391,11 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-click-outside/clickoutside.directive.js"></script>
     <!-- endbower -->
     <!-- endbuild -->

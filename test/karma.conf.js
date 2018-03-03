@@ -24,6 +24,7 @@ module.exports = function(config) {
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
+      'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/materialize/dist/js/materialize.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-click-outside/clickoutside.directive.js',

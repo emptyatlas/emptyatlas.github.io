@@ -623,3 +623,40 @@ button > a:hover {
     -webkit-box-shadow: 0 2px 5px 0 rgb(0, 0, 0), 0 2px 10px 0 rgb(0, 0, 0);
     box-shadow: 0 2px 5px 0 rgb(0, 0, 0), 0 2px 10px 0 rgb(0, 0, 0);
 }
+
+svg#Map {
+    background-size: cover;
+}
+
+#Map polygon {
+    fill: rgba(0, 0, 0, 0)
+}
+
+#Map polygon:hover {
+    fill: rgba(0, 0, 0, 0.3)
+}
+
+text {
+    fill: white;
+}
+
+circle {
+    fill: white;
+    stroke: white;
+    stroke-opacity: 0.5;
+    stroke-width: 3px;
+    transition: stroke-opacity 0.5s, stroke-width 0.5s, transform 0.5s;
+    transform-origin: 50% 50%;
+}
+
+circle:hover {
+    stroke-width: 20px;
+    cursor: pointer;
+}
+
+.lyrics-display {
+    border: 0px;
+    margin: 20px;
+    color: white;
+    transition: all 1s linear;
+}

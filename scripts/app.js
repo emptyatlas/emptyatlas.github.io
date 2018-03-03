@@ -24,8 +24,8 @@ app.run(function () {});
  * # MainCtrl
  * Controller of the emptyatlasgithubioApp
  */
-app.controller('MainCtrl', function ($scope, $templateCache, $window, $document, MusicService) {
-    
+app.controller('MainCtrl', function ($scope, $templateCache, $window, $document, $timeout, MusicService) {
+
     $scope.songs = MusicService.songs;
 
     $(document).ready(function () {
@@ -58,8 +58,8 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
             return "2017";
         }
     };
-    
-    $scope.elementIsActive = function(element) {
+
+    $scope.elementIsActive = function (element) {
         var el = document.getElementById(element);
         return angular.element(el).hasClass('active');
     };
@@ -109,6 +109,31 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
 
     $(document).ready(function () {
         $('.collapsible').collapsible();
+        $('#lyrics-display').collapsible();
     });
+
+    $scope.activeSong = undefined;
+
+    $scope.showLyrics = function (song) {
+        console.log('Imma show da [' + song + '] lyrics!');
+        var songs = MusicService.songs;
+        var index = songs.findIndex(function (obj) {
+            return obj.title === song;
+        });
+        var song = angular.copy(songs[index]);
+        if ($scope.activeSong !== undefined && song.title === $scope.activeSong.title) {
+            console.log('closing lyric box');
+            $('#lyrics-display').collapse('hide');
+            $timeout(function () {
+                $scope.activeSong = undefined;
+            }, 1000);
+        } else {
+            console.log('opening lyric box');
+            $scope.activeSong = song;
+            $timeout(function () {
+                $('#lyrics-display').collapse('show');
+            }, 250);
+        }
+    };
 
 });
