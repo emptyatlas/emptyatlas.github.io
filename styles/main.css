@@ -111,10 +111,6 @@ div#js-navbar-collapse {
 
 .footer > ul > li,
 .footer > ul > li > a {
-    /*
-    height: 60px;
-    width: 60px;
-*/
     display: inline-flex;
 }
 
@@ -180,43 +176,6 @@ div#js-navbar-collapse {
 
 .footer > ul > li {
     display: inline-flex;
-    /*    height: 60px;*/
-}
-
-
-/*
-.navbar-right > li > a {
-    text-align: right;
-}
-*/
-
-.wsite-social-item {
-    background-size: 65px !important;
-    overflow: hidden;
-}
-
-.wsite-social-facebook {
-    background: url('/images/social/icon_facebook.png') no-repeat;
-}
-
-.wsite-social-twitter {
-    background: url('/images/social/icon_twitter.png') no-repeat;
-}
-
-.wsite-social-instagram {
-    background: url('/images/social/icon_instagram.png') no-repeat;
-}
-
-.wsite-social-itunes {
-    background: url('/images/social/icon_apple.png') no-repeat;
-}
-
-.wsite-social-spotify {
-    background: url('/images/social/icon_spotify.png') no-repeat;
-}
-
-.wsite-social-soundcloud {
-    background: url('/images/social/icon_soundcloud.png') no-repeat;
 }
 
 .container {
@@ -618,7 +577,6 @@ button > a:hover {
 .collapsible-header > i {
     color: white;
     vertical-align: middle;
-    /*    font-size: 20px;*/
 }
 
 .collapsible-header {
