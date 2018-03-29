@@ -56,7 +56,7 @@ angular.module('emptyatlasgithubioApp').service('MusicService', function () {
         {
             title: 'Masterpiece',
             id: 'masterpiece-lyrics',
-            lyrics: 'All the words come quickly now. Hold my head, I’m spilling out.<br>And I’m raising the scaffolding, floating up to the ceiling,<br>and I’m painting a masterpiece to be ignored for centuries.<br> <br>Feel divine and then divide when the brilliance does subside.<br>Close my eyes and I swing right, like I’m locked in a bar fight.<br>I spent venom most nights and never seem to know why.<br> <br>I’m only a moment, but I am a masterpiece in waiting. Don’t you want it?<br>'
+            lyrics: 'All the words come quickly now. Hold my head, I’m spilling out.<br>And I’m raising the scaffolding, floating up to the ceiling,<br>and I’m painting a masterpiece to be ignored for centuries.<br> <br>Feel divine and then divide when the brilliance does subside.<br>Close my eyes and I swing right, like I’m locked in a bar fight.<br>I spit venom most nights and never seem to know why.<br> <br>I’m only a moment, but I am a masterpiece in waiting. Don’t you want it?<br>'
         }
     ];
 
