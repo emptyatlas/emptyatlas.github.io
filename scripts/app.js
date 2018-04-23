@@ -9,10 +9,21 @@
  * Main module of the application.
  */
 
-var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngSanitize']);
+var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngRoute', 'ngSanitize']).config(function ($httpProvider, $routeProvider, $locationProvider) {
 
-app.config(function ($httpProvider) {
-    $httpProvider.defaults.headers.common['Cache-Control'] = 'max-age=2592000, public';
+    $locationProvider.hashPrefix('');
+
+    $routeProvider
+        .when('/', {
+            templateUrl: 'views/main.html'
+        })
+        .when('/download', {
+            templateUrl: 'views/download.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+
 });
 
 app.run(function () {});
@@ -86,7 +97,7 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
                 } else {
                     $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                     $target.focus(); // Set focus again
-                };
+                }
             });
         }
     };
@@ -105,7 +116,7 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
             x: xPosition,
             y: yPosition
         };
-    };
+    }
 
     $(document).ready(function () {
         $('.collapsible').collapsible();
@@ -114,11 +125,11 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
 
     $scope.activeSong = undefined;
 
-    $scope.showLyrics = function (song) {
-        console.log('Imma show da [' + song + '] lyrics!');
+    $scope.showLyrics = function (s) {
+        console.log('Imma show da [' + s + '] lyrics!');
         var songs = MusicService.songs;
         var index = songs.findIndex(function (obj) {
-            return obj.title === song;
+            return obj.title === s;
         });
         var song = angular.copy(songs[index]);
         if ($scope.activeSong !== undefined && song.title === $scope.activeSong.title) {
