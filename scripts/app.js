@@ -12,7 +12,6 @@
 var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngRoute', 'ngSanitize']).config(function ($httpProvider, $routeProvider, $locationProvider) {
 
     $locationProvider.hashPrefix('');
-    $locationProvider.html5Mode(true);
 
     $routeProvider
         .when('/', {
@@ -37,6 +36,20 @@ app.run(function () {});
  * Controller of the emptyatlasgithubioApp
  */
 app.controller('MainCtrl', function ($scope, $templateCache, $window, $document, $timeout, MusicService) {
+
+    // Social links
+    $scope.facebookUrl = 'http://facebook.com/emptyatlasmusic';
+    $scope.instagramUrl = 'http://instagram.com/emptyatlas';
+    $scope.contactUrl = 'mailto:hello@emptyatlas.com';
+
+    // Music Links
+    $scope.iTunesUrl = 'https://itunes.apple.com/us/album/hestia/id1172021169';
+    //    $scope.iTunesUrl = 'https://itunes.apple.com/us/artist/empty-atlas/id902603393';
+    $scope.appleMusicUrl = 'https://geo.itunes.apple.com/us/album/hestia/1172021169?mt=1&app=music';
+    $scope.googlePlayUrl = 'https://play.google.com/store/music/album/Empty_Atlas_Hestia?id=Bhygwq7rdqe6sabtmvvescbk4ce&hl=en';
+    $scope.spotifyUrl = 'https://play.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
+    $scope.amazonMusicUrl = 'https://www.amazon.com/dp/B01N1NZFMU/ref=cm_sw_r_cp_ep_dp_U8RsybQ59WXJQ';
+    $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
 
     $scope.songs = MusicService.songs;
 
