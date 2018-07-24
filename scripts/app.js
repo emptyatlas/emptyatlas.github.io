@@ -14,8 +14,17 @@ var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngR
     $locationProvider.hashPrefix('');
     $locationProvider.html5Mode(true);
 
-app.config(function ($httpProvider) {
-    $httpProvider.defaults.headers.common['Cache-Control'] = 'max-age=2592000, public';
+    $routeProvider
+        .when('/', {
+            templateUrl: 'views/main.html'
+        })
+        .when('/download', {
+            templateUrl: 'views/download.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+
 });
 
 app.run(function () {});
@@ -89,7 +98,7 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
                 } else {
                     $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                     $target.focus(); // Set focus again
-                };
+                }
             });
         }
     };
@@ -108,7 +117,7 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
             x: xPosition,
             y: yPosition
         };
-    };
+    }
 
     $(document).ready(function () {
         $('.collapsible').collapsible();
