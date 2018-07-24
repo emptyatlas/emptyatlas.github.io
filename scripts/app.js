@@ -9,7 +9,10 @@
  * Main module of the application.
  */
 
-var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngSanitize']);
+var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngRoute', 'ngSanitize']).config(function ($httpProvider, $routeProvider, $locationProvider) {
+
+    $locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(true);
 
 app.config(function ($httpProvider) {
     $httpProvider.defaults.headers.common['Cache-Control'] = 'max-age=2592000, public';
