@@ -1,174 +1,220 @@
-<div class="header" ng-controller="MainCtrl">
-    <div class="navbar navbar-default" role="navigation">
-        <div id="nav" class="container">
-            <div class="navbar-header">
+<nav id="nav" class="site-header sticky-top py-1" ng-controller="MainCtrl">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <a class="py-2" href="#" ng-click="scrollTo('home')" align="center">
+            <img src="/images/ea-logo-vertical-white.svg" style="height: 36px"/>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('about')">about</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('live')">live</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('newsletter')">newsletter</a>
+        <a class="py-2 d-none d-md-inline-block" href="https://squareup.com/store/empty-atlas-music" target="_blank">shop</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('lyrics')">lyrics</a>
+        <a class="py-2 d-none d-md-inline-block" href="{{sendMail}}">contact</a>
+    </div>
+</nav>
 
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    </button>
+<div class="position-relative overflow-hidden p-5 p-md-5 text-center bg-light row" id="home">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-md-12">
+                <img class="p-5 band-logo" src="/images/ea-logo-vertical-white.svg" />
+                <br>
+                <div style="margin-top: 35rem !important;"></div>
+
             </div>
-
-            <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-model="menu" click-outside="hideMenu()">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a ng-click="scrollTo('about')">ABOUT</a>
-                    </li>
-                    <li>
-                        <a ng-click="scrollTo('shows')">SHOWS</a>
-                    </li>
-                    <li>
-                        <a ng-click="scrollTo('newsletter')">NEWSLETTER</a>
-                    </li>
-                    <li>
-                        <a ng-href="https://squareup.com/store/empty-atlas-music" target="_blank" ng-click="hideMenu()">STORE</a>
-                    </li>
-                    <li>
-                        <a ng-click="scrollTo('lyrics')">LYRICS</a>
-                    </li>
-                    <li>
-                        <a href="{{contactUrl}}">CONTACT</a>
-<!--
-                    </li>
-                        <a href="" ng-click="hideMenu(); showContactForm();">CONTACT</a>
-                    </li>
+        </div>
+    </div>
+    <!--
+    <div class="col-md-6">
+        <img class="col-md-12" src="/images/Short-Fiction-Cover.png" />
+    </div>
+    <div class="col-md-6 p-4">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">
+                    <iframe src="https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY" width="80%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <br>
+                    <div id="links" class="links">
+                        <ul class="listen-links p-0">
+                            <li>
+                                <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i class="fab fa-apple fa-2x"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play fa-2x"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon fa-2x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 -->
+</div>
+
+<div class="d-md-flex flex-md-equal w-100">
+    <div class="bg-green pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="col-md-6 offset-md-3 col-sm-12">
+            <svg viewBox="0 0 100 3">
+                <rect width="90" height="0.5" x="5" y="0" fill="white"></rect>
+                <rect width="100" height="0.5" x="0" y="2" fill="white"></rect>
+            </svg>
+        </div>
+        <!--
+        <div class="col-md-6 offset-md-3 col-sm-12">
+        </div>
+-->
+        <h1 class="display-5 short-fiction"><i>short fiction</i></h1>
+        <div class="col-md-6 offset-md-3 col-sm-12">
+            <svg viewBox="0 0 100 3">
+                <rect width="100" height="0.5" x="0" y="0" fill="white"></rect>
+                <rect width="90" height="0.5" x="5" y="2" fill="white"></rect>
+            </svg>
+        </div>
+        <div class="my-3 py-3">
+            <div class="col-md-6 offset-md-3 col-sm-12">
+                <iframe src="https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <br>
+            <h3>Available now on all major platforms</h3>
+            <div id="links" class="links">
+                <ul class="listen-links p-0">
+                    <li>
+                        <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i class="fab fa-apple fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon fa-2x"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-<div class="content">
-    <div id="home" class="parallax-container">
-        <div class="container" style="margin-top: 15vh; margin-bottom: 15vh;">
-            <div class="jumbotron" align="center">
-                <img class="fill hidden-xs" src="./images/ea_hestia_logo_2.png">
-                <img class="fill hidden-sm hidden-md hidden-lg" src="./images/ea_hestia_logo_2_vertical.png">
-                <br>
-                <br>
-                <h3 class="hidden-xs" style="margin-bottom: 12px; text-transform: uppercase;">Available Now</h3>
-                <div class="hidden-xs">
-                    <a class="btn btn-gray" href="{{iTunesUrl}}" target="_blank" style="margin: 0 10px;"><i class="fab fa-itunes-note"></i><m>&nbsp;&nbsp;iTunes</m>
-                        </a>
-                    <a class="btn btn-gray" href="{{appleMusicUrl}}" target="_blank" style="margin: 0 10px;"><i class="fab fa-apple"></i><m>&nbsp;&nbsp;Apple Music</m>
-                        </a>
-                    <a class="btn btn-gray" href="{{googlePlayUrl}}" target="_blank" style="margin: 0 10px;"><i class="fab fa-google-play"></i><m>&nbsp;&nbsp;Google Play</m>
-                        </a>
-                    </a>
-                    <a class="btn btn-gray" href="{{spotifyUrl}}" target="_blank" style="margin: 0 10px;"><i class="fab fa-spotify"></i><m>&nbsp;&nbsp;Spotify</m>
-                        </a>
-                    <a class="btn btn-gray" href="{{amazonMusicUrl}}" target="_blank" style="margin: 0 10px;"><i class="fab fa-amazon"></i><m>&nbsp;&nbsp;Amazon Music</m>
-                        </a>
-                    <div class="clearfix"></div>
-                </div>
-
-                <h4 class="hidden-sm hidden-md hidden-lg" style="margin-bottom: 12px; text-transform: uppercase;">Available Now</h4>
-                <div class="hidden-sm hidden-md hidden-lg">
-                    <a class="btn btn-gray col-xs-12 col-sm-8 col-sm-offset-2" style="margin-bottom: 10px;" href="{{iTunesUrl}}" target="_blank"><i class="fab fa-itunes-note"></i><m>&nbsp;&nbsp;iTunes</m>
-                        </a>
-                    <a class="btn btn-gray col-xs-12 col-sm-8 col-sm-offset-2" style="margin-bottom: 10px;" href="{{appleMusicUrl}}" target="_blank"><i class="fab fa-apple"></i><m>&nbsp;&nbsp;Apple Music</m>
-                        </a>
-                    <a class="btn btn-gray col-xs-12 col-sm-8 col-sm-offset-2" style="margin-bottom: 10px;" href="{{googlePlayUrl}}" target="_blank"><i class="fab fa-google-play"></i><m>&nbsp;&nbsp;Google Play</m>
-                        </a>
-                    <a class="btn btn-gray col-xs-12 col-sm-8 col-sm-offset-2" style="margin-bottom: 10px;" href="{{spotifyUrl}}" target="_blank"><i class="fab fa-spotify"></i><m>&nbsp;&nbsp;Spotify</m>
-                        </a>
-                    <a class="btn btn-gray col-xs-12 col-sm-8 col-sm-offset-2" href="{{amazonMusicUrl}}" target="_blank"><i class="fab fa-amazon"></i><m>&nbsp;&nbsp;Amazon Music</m>
-                        </a>
-                    <div class="clearfix"></div>
-                </div>
-
-                <div class="clearfix"></div>
+<div id="lyrics" class="d-md-flex flex-md-equal w-100">
+    <div class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <h2 class="display-5">LYRICS</h2>
+        <div class="row my-3 py-3">
+            <div id="anniversary-constellation" class="col-sm-12 col-md-6">
+                <!--                <svg id="Map" style="height: 500px; width: 600px;">-->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" class="svg-content-responsive" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 500">
+                    
+                    <path d=" M 154.407 72.807 L 75.841 142.495 L 105.069 221.41 L 197.599 217.374 L 223.13 145.623 L 154.407 72.807 Z " fill="transparent" stroke="white" /><path d=" M 425.681 382.936 L 377.428 428.065 L 283.943 318.536 L 197.599 217.374" fill="transparent" stroke="white" />
+                    
+                    <!-- Major stars -->
+                    <!-- Headline -->
+                    <circle cx="196.5" cy="218" r="6" ng-click="showLyrics('Headline')"></circle>
+                    <text x="208.5" y="218" text-anchor="left">Headline</text>
+                    <!-- Merit -->
+                    <circle cx="222" cy="146.5" r="6" ng-click="showLyrics('Merit')"></circle>
+                    <text x="234" y="146.5" text-anchor="left">Merit</text>
+                    <!-- A Great Cloud -->
+                    <circle cx="154" cy="72" r="6" ng-click="showLyrics('A Great Cloud')"></circle>
+                    <text x="168" y="72" text-anchor="left">A Great Cloud</text>
+                    <!-- Strangers -->
+                    <circle cx="75.5" cy="144" r="6" ng-click="showLyrics('Strangers')"></circle>
+                    <text x="88.5" y="154" text-anchor="left">Strangers</text>
+                    <!-- Take -->
+                    <circle cx="105" cy="221.5" r="6" ng-click="showLyrics('Take')"></circle>
+                    <text x="110" y="248.5" text-anchor="left">Take</text>
+                    <!-- Vultures -->
+                    <circle cx="281.5" cy="317" r="6" ng-click="showLyrics('Vultures')"></circle>
+                    <text x="288.5" y="310" text-anchor="left">Vultures</text>
+                    <!-- Catch & Release -->
+                    <circle cx="378.5" cy="334" r="6" ng-click="showLyrics('Catch & Release')"></circle>
+                    <text x="390.5" y="334" text-anchor="left">Catch &amp; Release</text>
+                    <!-- Good Angels -->
+                    <circle cx="376" cy="428" r="6" ng-click="showLyrics('Good Angels')"></circle>
+                    <text x="386" y="444" text-anchor="left">Good Angels</text>
+                    <!-- Small House -->
+                    <circle cx="424" cy="383" r="6" ng-click="showLyrics('Small House')"></circle>
+                    <text x="436" y="383" text-anchor="left">Small House</text>
+                    
+                    <!-- Decorative stars -->
+                            <circle cx="132" cy="10" r="2"/>
+                            <circle cx="4" cy="4" r="1"/>
+                            <circle cx="8" cy="34" r="2"/>
+                            <circle cx="6" cy="150" r="1"/>
+                            <circle cx="16" cy="289" r="2"/>
+                            <circle cx="3" cy="353" r="2"/>
+                            <circle cx="4" cy="470" r="1"/>
+                            <circle cx="12" cy="488" r="2"/>
+                            <circle cx="173" cy="44" r="1"/>
+                            <circle cx="233" cy="102" r="1"/>
+                            <circle cx="284" cy="68" r="2"/>
+                            <circle cx="324" cy="12" r="2"/>
+                            <circle cx="378" cy="23" r="2"/>
+                            <circle cx="458" cy="2" r="2"/>
+                            <circle cx="485" cy="9" r="1"/>
+                            <circle cx="485" cy="56" r="2"/>
+                            <circle cx="489" cy="92" r="2"/>
+                            <circle cx="539" cy="82" r="1"/>
+                            <circle cx="592" cy="12" r="1"/>
+                            <circle cx="580" cy="44" r="2"/>
+                            <circle cx="570" cy="84" r="2"/>
+                            <circle cx="570" cy="140" r="2"/>
+                            <circle cx="596" cy="225" r="1"/>
+                            <circle cx="596" cy="450" r="1"/>
+                            <circle cx="588" cy="350" r="2"/>
+                            <circle cx="546" cy="302" r="2"/>
+                            <circle cx="501" cy="222" r="2"/>
+                            <circle cx="531" cy="193" r="1"/>
+                            <circle cx="527" cy="488" r="2"/>
+                            <circle cx="407" cy="427" r="1"/>
+                            <circle cx="380" cy="487" r="1"/>
+                            <circle cx="457" cy="477" r="2"/>
+                            <circle cx="488" cy="456" r="1"/>
+                            <circle cx="518" cy="409" r="1"/>
+                            <circle cx="525" cy="385" r="1"/>
+                            <circle cx="540" cy="395" r="2"/>
+                            <circle cx="425" cy="300" r="2"/>
+                            <circle cx="354" cy="238" r="2"/>
+                            <circle cx="405" cy="196" r="1"/>
+                            <circle cx="417" cy="184" r="2"/>
+                            <circle cx="378" cy="102" r="1"/>
+                            <circle cx="289" cy="8" r="1"/>
+                            <circle cx="52" cy="64" r="2"/>
+                            <circle cx="66" cy="72" r="2"/>
+                            <circle cx="52" cy="200" r="2"/>
+                            <circle cx="74" cy="274" r="1"/>
+                            <circle cx="52" cy="306" r="1"/>
+                            <circle cx="52" cy="444" r="2"/>
+                            <circle cx="82" cy="404" r="2"/>
+                            <circle cx="150" cy="414" r="1"/>
+                            <circle cx="150" cy="494" r="2"/>
+                            <circle cx="272" cy="392" r="2"/>
+                            <circle cx="282" cy="382" r="2"/>
+                            <circle cx="250" cy="300" r="1"/>
+                            <circle cx="177" cy="277" r="1"/>
+                            <circle cx="212" cy="240" r="2"/>
+                    
+                </svg>
             </div>
-        </div>
-        <div class="parallax"><img src="/images/Hestiared_dark_square.jpg"></div>
-    </div>
 
-    <div class="parallax-container valign-wrapper" style="background: #181818;">
-        <div class="container">
-            <div class="jumbotron" align="center">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PMqkFWLdcO8"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="parallax-container valign-wrapper" id="spotify">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>MUSIC</h1>
-                <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0LiGP71p9bEpbV7cY4DwLd" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
-            </div>
-        </div>
-        <div class="parallax"><img src="./images/IMG_0518.jpg"></div>
-    </div>
-
-    <div class="parallax-container valign-wrapper" style="background: #181818;" id="shows">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>SHOWS</h1>
-                <div>
-                    <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
-                    <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true" data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#c6ac6f" data-popup-background-color="#181818" data-background-color="#181818" data-display-limit="10" data-link-text-color="#FFFFFF"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="parallax-container valign-wrapper" id="about">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>ABOUT</h1>
-                <div class="hidden-xs" style="color: white;">
-                    <p>Mississippi is a state known for its storytellers. That certainly applies to its rich history of groundbreaking musicians, but not all of these fall in the realms of roots genres like blues and Americana, and not all of them are in the past. </p>
-
-                    <p>Formed in central Mississippi in 2014, independent act Empty Atlas packs poignant narratives of personal growth and life experiences into gripping melodic indie-rock music.</p>
-
-                    <p>Lyricist and vocalist Micah Smith fronts the outfit, which released its debut full-length album, “Hestia,” in December 2016, shortly before bassist Alex Ingram, guitarist Brennan Michael White and drummer Robert Currie Hansford joined the group.</p>
-
-                    <p>Smith began writing “Hestia,” a follow-up to Empty Atlas’s 2014 double-EP, “Anniversary,” shortly after he and his wife married and moved into their first house, which inspired the central theme of the album – home, and what that concept can mean. However, “Hestia” steers clear of love songs entirely, opting instead for stories of self-discovery and human connection.</p>
-
-                    <p>Empty Atlas is currently performing throughout their region to promote the album, while also preparing new material for a sophomore full-length.</p>
-
-                    <p>The band has shared the stage with national touring acts such as Jared & the Mill, Broadside, Secret Stuff, Cardinal Sons, Ivadell, Hodera and Young Natives, and worked with producers such as Joe Causey (Colony House, Steven Curtis Chapman) and Eric Woolard (For a Season, Courier).</p>
-
-                    <p>“Hestia” is available now on
-                        <a href="{{iTunesUrl}}" target="_blank">iTunes</a>,
-                        <a href="{{googlePlayUrl}}" target="_blank">Google Play</a>,
-                        <a href="{{amazonMusicUrl}}>" target="_blank">Amazon</a>,
-                        <a href="{{spotifyUrl}}" target="_blank">Spotify</a> and most digital music retailers.</p>
-                </div>
-                <div class="hidden-sm hidden-md hidden-lg" style="color: white; height: 300px; overflow: scroll; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 4px;">
-                    <p>Mississippi is a state known for its storytellers. That certainly applies to its rich history of groundbreaking musicians, but not all of these fall in the realms of roots genres like blues and Americana, and not all of them are in the past. </p>
-
-                    <p>Formed in central Mississippi in 2014, independent act Empty Atlas packs poignant narratives of personal growth and life experiences into gripping melodic indie-rock music.</p>
-
-                    <p>Lyricist and vocalist Micah Smith fronts the outfit, which released its debut full-length album, “Hestia,” in December 2016, shortly before bassist Alex Ingram, guitarist Brennan Michael White and drummer Robert Currie Hansford joined the group.</p>
-
-                    <p>Smith began writing “Hestia,” a follow-up to Empty Atlas’s 2014 double-EP, “Anniversary,” shortly after he and his wife married and moved into their first house, which inspired the central theme of the album – home, and what that concept can mean. However, “Hestia” steers clear of love songs entirely, opting instead for stories of self-discovery and human connection.</p>
-
-                    <p>Empty Atlas is currently performing throughout their region to promote the album, while also preparing new material for a sophomore full-length.</p>
-
-                    <p>The band has shared the stage with national touring acts such as Jared & the Mill, Broadside, Secret Stuff, Cardinal Sons, Ivadell, Hodera and Young Natives, and worked with producers such as Joe Causey (Colony House, Steven Curtis Chapman) and Eric Woolard (For a Season, Courier).</p>
-
-                    <p>“Hestia” is available now on
-                        <a href="{{iTunesUrl}}" target="_blank">iTunes</a>,
-                        <a href="{{googlePlayUrl}}" target="_blank">Google Play</a>,
-                        <a href="{{amazonMusicUrl}}>" target="_blank">Amazon</a>,
-                        <a href="{{spotifyUrl}}" target="_blank">Spotify</a> and most digital music retailers.</p>
-                </div>
-            </div>
-        </div>
-        <div class="parallax"><img src="./images/IMG_1808_3.jpeg"></div>
-    </div>
-
-    <div class="parallax-container valign-wrapper" style="background: #181818;" id="lyrics">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>LYRICS</h1>
-                <div id="svg-test" class="hidden-xs">
-                    <svg id="Map" style="height: 500px; width: 600px;">
+            <div id="hestia-constellation" class="col-sm-12 col-md-6">
+                <svg id="star-map" class="svg-content-responsive" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 500">
                             <path d="M92 306 L 222 364 L 150 82 L 92 306 L 244 481 L 480 360 L 492 110 L 428 28 L 254 142 L 320 138 L 294 244" fill="transparent" stroke="white"/>
 
                             <!-- Major stars -->
@@ -262,88 +308,182 @@
                             <circle cx="212" cy="240" r="2"/>
 
                         </svg>
-                </div>
-
-                <div id="lyrics-display" class="lyrics-display collapse hidden-xs" data-collapsible="expandable" style="border: 0; margin: 20px;">
-                    <h2>{{activeSong.title}}</h2>
-                    <p ng-bind-html="activeSong.lyrics"></p>
-                </div>
-
-                <div class="center-align">
-
-                    <ul class="collapsible popout hidden-sm hidden-md hidden-lg" data-collapsible="accordion">
-                        <li ng-repeat="s in songs">
-                            <div id="{{s.id}}" class="collapsible-header valign-wrapper">
-                                <h style="vertical-align: text-top">{{s.title}}</h>&nbsp;<i ng-if="!elementIsActive(s.id)" class="fas fa-chevron-down"></i><i ng-if="elementIsActive(s.id)" class="fas fa-chevron-up"></i></div>
-
-                            <div class="collapsible-body"><span ng-bind-html="s.lyrics"></span></div>
-                        </li>
-                    </ul>
-
-                </div>
             </div>
         </div>
-    </div>
 
-    <div class="parallax-container valign-wrapper">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>INSTAGRAM</h1>
-                <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        <div class="row my-3 py-3">
+            <div id="lyrics-display" class="col-12 lyrics-display collapse" data-collapsible="expandable">
+                <h2>{{activeSong.title}}</h2>
+                <p ng-bind-html="activeSong.lyrics"></p>
             </div>
         </div>
-        <div class="parallax"><img src="./images/IMG_0521.jpg"></div>
-    </div>
 
-    <div class="parallax-container valign-wrapper" style="background-color: #181818;" id="newsletter">
-        <div class="container">
-            <div class="jumbotron">
-                <h1>NEWSLETTER</h1>
-                <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup" class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" style="padding: 0;">
-                    <form action="//emptyatlas.us13.list-manage.com/subscribe/post?u=ab78edd056a1703ec9077b2b0&amp;id=14ff368932" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="padding:0px !important;">
-                        <div class="input-group" id="mc_embed_signup_scroll" align="center">
-                            <input style="height:36px; margin-bottom: 4px;" type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                <input type="text" name="b_ab78edd056a1703ec9077b2b0_14ff368932" tabindex="-1" value="">
+    </div>
+</div>
+
+<div id="live" class="d-md-flex flex-md-equal w-100">
+    <div class="bg-green pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <h2 class="display-5">LIVE</h2>
+        <div class="my-3 py-3">
+            <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+            <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true" data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#eccc44" data-popup-background-color="" data-background-color="" data-display-limit="10" data-link-text-color="#FFFFFF"></a>
+        </div>
+    </div>
+</div>
+
+<div id="newsletter" class="d-md-flex flex-md-equal w-100">
+    <div class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <h2 class="display-5">NEWSLETTER</h2>
+        <div class="my-3 py-3">
+            <div class="col-xs-12 col-sm-6 offset-sm-3">
+                <!-- Begin Mailchimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup {
+                        /*                    background: #fff;*/
+                        clear: left;
+                        /*                    font: 14px Helvetica, Arial, sans-serif;*/
+                    }
+
+                    #mc_embed_signup form {
+                        padding-left: 0 !important;
+                    }
+
+                    #mc_embed_signup input {
+                        color: white !important;
+                        border: 3px solid white;
+                        border-radius: 0 !important;
+                        -webkit-appearance: none;
+                    }
+
+                    #mc_embed_signup input:focus {
+                        border-color: #fbd400 !important;
+                    }
+
+                    #mc_embed_signup .button {
+                        background-color: white !important;
+                        color: black !important;
+                    }
+
+                    #mc_embed_signup input.button {
+                        border: 3px solid white;
+                        display: block;
+                        padding: 0 0.4em;
+                        margin: 0 4% 10px 0;
+                        min-height: 38px;
+                        width: 100%;
+                        min-width: 130px;
+                    }
+
+                    #mc_embed_signup input.email {
+                        width: calc(100% - 0.8em);
+                    }
+
+                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+                </style>
+                <div id="mc_embed_signup">
+                    <form action="https://emptyatlas.us13.list-manage.com/subscribe/post?u=ab78edd056a1703ec9077b2b0&amp;id=14ff368932" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <!--
+                        <div class="row m-0">
+                            <div class="col-md-6">
+-->
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                            <!--
                             </div>
-                            <span class="input-group-btn"><button class="btn btn-dark btn-sm" type="submit" name="subscribe" id="mc-embedded-subscribe" style="margin: 0px; box-shadow: none;">SUBSCRIBE</button>
-                        </span>
+                        </div>
+-->
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ab78edd056a1703ec9077b2b0_14ff368932" tabindex="-1" value=""></div>
+
+                            <!--
+                        <div class="row">
+                            <div class="clear col-md-6 m-0">
+-->
+                            <div class="clear">
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                            </div>
+                            <!--                        </div>-->
                         </div>
                     </form>
                 </div>
-                <div class="clearfix"></div>
+
+                <!--End mc_embed_signup-->
             </div>
         </div>
     </div>
 </div>
 
-<div class="footer" align="center">
-    <ul class="social-footer">
-        <li>
-            <a ng-href="{{facebookUrl}}" target="_blank" title="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
-        </li>
-        <li>
-            <a href="{{instagramUrl}}" target="_blank" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
-        </li>
-        <li>
-            <a href="{{appleMusicUrl}}" target="_blank" title="Spotify"><i class="fab fa-apple fa-2x"></i></a>
-        </li>
-        <li>
-            <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
-        </li>
-        <li>
-            <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
-        </li>
-    </ul>
-    <p><span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;EMPTY ATLAS {{getCurrentYear()}} All Rights Reserved</p>
+<div id="about" class="d-md-flex flex-md-equal w-100">
+    <div class="bg-green pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <h2 class="display-5">ABOUT</h2>
+        <div class="my-3 py-3">
+            <div class="d-xs-none" style="color: white;">
+                <p>Mississippi is a state known for its storytellers and a rich history of groundbreaking musicians. Both terms certainly apply to Jackson indie-rockers Empty Atlas.</p>
+
+                <p>Formed in central Mississippi in 2014, Empty Atlas packs poignant narratives of personal growth and life experience into gripping, melodic indie-rock music. Lyricist and vocalist Micah Smith fronts the outfit, which released its debut full-length album, “Hestia,” in December 2016, shortly before bassist Alex Ingram, guitarist Brennan Michael White and drummer Robert Currie Hansford joined, cementing the band’s lineup.</p>
+
+                <p>Empty Atlas released their latest single, “Short Fiction” – a catchy, driving ode to lost love and summers past – in August 2018. They are currently reteaming with engineer Nick Smith at Dipping Vat Studio to record their sophomore full-length while also performing throughout the region.</p>
+
+                <p>In recent years, the band has shared the stage with popular acts such as Jared & the Mill, The Bright Light Social Hour, Broadside, Secret Stuff, The Vegabonds, Hodera and Sweet Crude, and worked with industry professionals as Mark Needham (Fleetwood Mac, The Killers), Joe Causey (Colony House, Steven Curtis Chapman) and Eric Woolard (For a Season, Courier).</p>
+
+                <p>“Short Fiction” is available now on
+                    <a href="{{iTunesUrl}}" target="_blank">iTunes</a>,
+                    <a href="{{googlePlayUrl}}" target="_blank">Google Play</a>,
+                    <a href="{{amazonMusicUrl}}>" target="_blank">Amazon</a>,
+                    <a href="{{spotifyUrl}}" target="_blank">Spotify</a> and most digital music retailers.</p>
+
+            </div>
+            
+        </div>
+    </div>
 </div>
 
-<!--
-<script>
-    $(document).ready(function() {
-        $('.parallax').parallax();
-    });
-</script>
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <img src="/images/ea-logo-vertical-black.svg" style="height: 36px;" />
+            <small class="d-block mb-3 text-muted">© 2014-{{getCurrentYear()}}</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Listen</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="{{iTunesUrl}}" target="_blank">iTunes</a></li>
+                <li><a class="text-muted" href="{{appleMusicUrl}}" target="_blank">Apple Music</a></li>
+                <li><a class="text-muted" href="{{spotifyUrl}}" target="_blank">Spotify</a></li>
+                <li><a class="text-muted" href="{{googlePlayUrl}}" target="_blank">Google Play</a></li>
+                <li><a class="text-muted" href="{{amazonMusicUrl}}" target="_blank">Amazon Music</a></li>
+                <li><a class="text-muted" href="{{soundCloudUrl}}" target="_blank">SoundCloud</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="{{facebookUrl}}" target="_blank">Facebook</a></li>
+                <li><a class="text-muted" href="{{instagramUrl}}" target="_blank">Instagram</a></li>
+                <li><a class="text-muted" href="{{youTubeUrl}}" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Credit</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="{{emmiSprayberryUrl}}" target="_blank">Art by Emmi Sprayberry</a></li>
+                <li><a class="text-muted" href="" target="_blank">Photos by J.B. Lawrence</a></li>
+                <li><a class="text-muted" href="{{bestOkDesignsUrl}}" target="_blank">Site by Best Ok Designs</a></li>
+            </ul>
+        </div>
+        <!--
+        <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Team</a></li>
+                <li><a class="text-muted" href="#">Locations</a></li>
+                <li><a class="text-muted" href="#">Privacy</a></li>
+                <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+        </div>
 -->
+    </div>
+</footer>

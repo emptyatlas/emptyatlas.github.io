@@ -9,8 +9,9 @@
  * Main module of the application.
  */
 
-var app = angular.module('emptyatlasgithubioApp', ['angular-click-outside', 'ngRoute', 'ngSanitize']).config(function ($httpProvider, $routeProvider, $locationProvider) {
+var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).config(function ($httpProvider, $routeProvider, $locationProvider) {
 
+    //    $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('');
 
     $routeProvider
@@ -37,43 +38,52 @@ app.run(function () {});
  */
 app.controller('MainCtrl', function ($scope, $templateCache, $window, $document, $timeout, MusicService) {
 
+    $scope.hideOldContainers = true;
+    
+    // This link is separated to fool spam bots
+    $scope.sendMail = 'mai' + 'lto' + ':' + 'hello' + '@emptyatlas.com';
+
     // Social links
     $scope.facebookUrl = 'http://facebook.com/emptyatlasmusic';
     $scope.instagramUrl = 'http://instagram.com/emptyatlas';
-    $scope.contactUrl = 'mailto:hello@emptyatlas.com';
+    $scope.youTubeUrl = 'https://www.youtube.com/user/emptyatlasmusic';
 
     // Music Links
-    $scope.iTunesUrl = 'https://itunes.apple.com/us/album/hestia/id1172021169';
+    $scope.iTunesUrl = 'http://itunes.apple.com/album/id1412982650?ls=1&app=itunes';
     //    $scope.iTunesUrl = 'https://itunes.apple.com/us/artist/empty-atlas/id902603393';
-    $scope.appleMusicUrl = 'https://geo.itunes.apple.com/us/album/hestia/1172021169?mt=1&app=music';
-    $scope.googlePlayUrl = 'https://play.google.com/store/music/album/Empty_Atlas_Hestia?id=Bhygwq7rdqe6sabtmvvescbk4ce&hl=en';
-    $scope.spotifyUrl = 'https://play.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
-    $scope.amazonMusicUrl = 'https://www.amazon.com/dp/B01N1NZFMU/ref=cm_sw_r_cp_ep_dp_U8RsybQ59WXJQ';
+    $scope.appleMusicUrl = 'http://itunes.apple.com/album/id/1412982650';
+    $scope.googlePlayUrl = 'https://play.google.com/store/music/album/Empty_Atlas_Short_Fiction?id=Bb3soszugorqekta7yew4vfbe34&hl=en';
+    $scope.spotifyUrl = 'https://open.spotify.com/track/10dP2wOiZgRXC7cku6nrpy';
+    $scope.amazonMusicUrl = 'https://www.amazon.com/Short-Fiction-Empty-Atlas/dp/B07FMLJTJF/ref=sr_1_2';
     $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
+    
+    // Credit
+    $scope.emmiSprayberryUrl = 'https://www.emmisprayberry.com/';
+    $scope.bestOkDesignsUrl = 'https://bestokdesigns.com/#/';
 
     $scope.songs = MusicService.songs;
 
-    $(document).ready(function () {
-        $('.parallax').parallax();
-    });
-
-    $scope.$on('$viewContentLoaded', function () {
-        $window.scrollTo(0, 0);
-    });
-
-    $scope.showContactForm = function () {
-        _gscq.push(['trackPage', '/contact']);
-    };
-
-    $scope.hideMenu = function () {
-        angular.element('#js-navbar-collapse').collapse('hide');
-        return true;
-    };
-
-    $scope.openLink = function (link) {
-        console.log('attempting to open link [' + link + ']');
-        $window.open(link, '_blank');
-    };
+    //    $(document).ready(function () {
+    //        $('.parallax').parallax();
+    //    });
+    //
+    //    $scope.$on('$viewContentLoaded', function () {
+    //        $window.scrollTo(0, 0);
+    //    });
+    //
+    //    $scope.showContactForm = function () {
+    //        _gscq.push(['trackPage', '/contact']);
+    //    };
+    //
+    //    $scope.hideMenu = function () {
+    //        angular.element('#js-navbar-collapse').collapse('hide');
+    //        return true;
+    //    };
+    //
+    //    $scope.openLink = function (link) {
+    //        console.log('attempting to open link [' + link + ']');
+    //        $window.open(link, '_blank');
+    //    };
 
     $scope.getCurrentYear = function () {
         try {
@@ -132,10 +142,10 @@ app.controller('MainCtrl', function ($scope, $templateCache, $window, $document,
         };
     }
 
-    $(document).ready(function () {
-        $('.collapsible').collapsible();
-        $('#lyrics-display').collapsible();
-    });
+    //    $(document).ready(function () {
+    //        $('.collapsible').collapsible();
+    //        $('#lyrics-display').collapsible();
+    //    });
 
     $scope.activeSong = undefined;
 
