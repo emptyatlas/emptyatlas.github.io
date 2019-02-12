@@ -27,6 +27,7 @@ a:hover {
 .short-fiction {
     font-size: 4.5em;
     line-height: 0.75em;
+    margin-top: 0.5rem;
 }
 
 .container {
@@ -76,39 +77,29 @@ a.reverse {
     direction: rtl;
 }
 
-/*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-.product-device {
-    position: absolute;
-    right: 10%;
-    bottom: -30%;
-    width: 300px;
-    height: 540px;
-    background-color: #333;
-    border-radius: 21px;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
+button,
+.button {
+    text-decoration: none;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    text-align: center !important;
+    line-height: 44px !important;
+    font-weight: bold !important;
+    box-shadow: none;
+    border-radius: 0 !important;
 }
 
-.product-device::before {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    bottom: 10%;
-    left: 10px;
-    content: "";
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: 5px;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.button:focus {
+    outline: none;
 }
 
-.product-device-2 {
-    top: -25%;
-    right: auto;
-    bottom: 0;
-    left: 5%;
-    background-color: #e5e5e5;
+.btn-gold {
+    color: #eccc44 !important;
+    border: 1px solid #eccc44 !important;
 }
 
 .bg-green {
@@ -202,6 +193,10 @@ text {
     fill: white;
 }
 
+text:hover {
+    cursor: pointer;
+}
+
 circle {
     fill: white;
     stroke: white;
@@ -219,6 +214,34 @@ circle:hover {
 .lyrics-display {
     color: white;
     transition: all 1s linear;
+}
+
+flip {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    display: inline-block;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+    font-family: inherit;
+}
+
+.bb-1 {
+    border-bottom: 1px solid white;
+}
+
+#spotify-player,
+#apple-music-player,
+#video-player{
+    background: url('/images/loading.gif');
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /*
