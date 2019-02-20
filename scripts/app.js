@@ -52,10 +52,11 @@ app.service("ModuleService", function () {
  * # MainCtrl
  * Controller of the emptyatlasgithubioApp
  */
-app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $window, $document, $timeout, $sce, LyricService, ModuleService, VideoService) {
+app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $window, $document, $timeout, $sce, $location, LyricService, ModuleService, VideoService) {
 
     // This link is separated to fool spam bots
     $scope.sendMail = 'mai' + 'lto' + ':' + 'hello' + '@emptyatlas.com';
+    $scope.downloadHelp = $scope.sendMail + '?subject=Song%20Download%20Help&body=I%27m%20having%20trouble%20using%20the%20free%20download%20link%20on%20your%20website.%20Could%20you%20email%20me%20a%20copy%20of%20the%20song%20instead%3F%0A%0AThanks%21';
 
     // Social links
     $scope.facebookUrl = 'http://facebook.com/emptyatlasmusic';
@@ -126,51 +127,20 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         }
     ];
 
-    //    $(document).ready(function () {
-    //        $('.parallax').parallax();
-    //    });
-    //
-    //    $scope.$on('$viewContentLoaded', function () {
-    //        $window.scrollTo(0, 0);
-    //    });
-    //
-    //    $scope.showContactForm = function () {
-    //        _gscq.push(['trackPage', '/contact']);
-    //    };
-    //
-    //    $scope.hideMenu = function () {
-    //        angular.element('#js-navbar-collapse').collapse('hide');
-    //        return true;
-    //    };
-    //
-    //    $scope.openLink = function (link) {
-    //        console.log('attempting to open link [' + link + ']');
-    //        $window.open(link, '_blank');
-    //    };
-
     $scope.getCurrentYear = function () {
         try {
             return new Date().getFullYear();
         } catch (err) {
             console.error(err);
-            return "2017";
+            return "2019";
         }
     };
 
-    //    $scope.elementIsActive = function (element) {
-    //        var el = document.getElementById(element);
-    //        return angular.element(el).hasClass('active');
-    //    };
-
-    $rootScope.$on("$routeChangeSuccess", function () {
-        $log.debug("$routeChangeSuccess is fired");
-        $log.debug("ModuleService.activeModule [" + ModuleService.activeModule + "]")
-        $scope.$on('$viewContentLoaded', function () {
-            $log.debug("$viewContentLoaded is fired");
-            if (ModuleService.activeModule !== '' && ModuleService.activeModule !== undefined) {
-                $scope.scrollTo(ModuleService.activeModule);
-            }
-        });
+    angular.element(document).ready(function () {
+        console.log("Page is finished loading. Try to scroll to element if necessary.");
+        if (ModuleService.activeModule !== '' && ModuleService.activeModule !== undefined) {
+            $scope.scrollTo(ModuleService.activeModule);
+        }
     });
 
     $scope.clearActiveModule = function () {
@@ -180,6 +150,13 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     $scope.scrollTo = function (id, offset) {
         console.log('attempting to scroll to element: ' + id);
         ModuleService.activeModule = id;
+
+        var currentLocation = $location.url();
+        console.log("currentLocation [" + currentLocation + "]");
+        if (currentLocation !== "/") {
+            $location.url("/");
+        }
+
         if (offset === undefined) offset = 0;
         var target = document.getElementById(id);
         var targetPosition = getPosition(target);
@@ -193,15 +170,6 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
                 easing: 'slow'
             }, 1000, function () {
                 // Callback after animation
-                // Must change focus!
-                //                var $target = $(target);
-                //                $target.focus();
-                //                if ($target.is(":focus")) { // Checking if the target was focused
-                //                    return false;
-                //                } else {
-                //                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                //                    $target.focus(); // Set focus again
-                //                }
             });
         }
     };
@@ -221,11 +189,6 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
             y: yPosition
         };
     }
-
-    //    $(document).ready(function () {
-    //        $('.collapsible').collapsible();
-    //        $('#lyrics-display').collapsible();
-    //    });
 
     $scope.activeSong = undefined;
 
@@ -254,5 +217,32 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     $('#lyrics-display').on('shown.bs.collapse', function () {
         $scope.scrollTo('lyrics-display-parent');
     });
+
+    function animateCss(element, animationName, callback) {
+        const node = document.querySelector(element)
+        node.classList.add('animated', animationName)
+
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName)
+            node.removeEventListener('animationend', handleAnimationEnd)
+
+            if (typeof callback === 'function') callback()
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd)
+    }
+    
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+
+    //    $('#music').appear();
+
+    //    $('#music').on('appear', function (event, $all_appeared_elements) {
+    // this element is now inside browser viewport
+    //        console.log('music element appeared');
+    //        animateCss('#music', 'fadeInUp');
+    //        var musicContent = $('#music > div > div');
+    //    });
 
 });

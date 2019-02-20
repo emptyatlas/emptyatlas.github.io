@@ -24,6 +24,11 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
             link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/4CRuxKxCNZM')
         },
         {
+            name: '“Short Fiction” (Tiny Desk Contest)',
+            date: 'Mar 7, 2018',
+            link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/kNSP6VzNwC8')
+        },
+        {
             name: '“All Right”',
             date: 'Sep 22, 2018',
             link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/6ZeLhSeucbg')

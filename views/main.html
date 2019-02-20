@@ -1,13 +1,12 @@
-<div ng-include="'views/nav.html'" class="sticky-top"></div>
+<div ng-include="'views/nav.html'" class="sticky-top animated fadeIn"></div>
 
-<div class="position-relative overflow-hidden p-5 p-md-5 text-center bg-light" id="home">
+<div class="position-relative overflow-hidden p-5 p-md-5 text-center bg-light animated fadeIn" id="home">
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-md-12">
-                <img class="p-2 p-md-5 band-logo" src="/images/ea-logo-vertical-white.svg" />
+                <img class="p-2 p-md-5 band-logo animated fadeInUp delay-1s" src="/images/ea-logo-vertical-white.svg" />
                 <br>
                 <div style="margin-top: 35rem !important;"></div>
-
             </div>
         </div>
     </div>
@@ -15,60 +14,143 @@
 
 <div id="music" class="bg-dark d-md-flex flex-md-equal">
     <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="my-3 py-3">
-            <div class="col-md-6 offset-md-3 col-sm-12 center">
-                <img src="/images/short-fiction.png" class="w-100">
+        <div class="my-3 py-3 row center">
+            <div class="col-lg-6 col-md-12">
+                <img src="/images/Short-Fiction-Cover.png" class="w-100 my-4 b-10 grow">
             </div>
-            <br>
+
+            <div class="col-lg-6 col-md-12">
+
+                <div class="h-100 d-table">
+                    <div class="d-table-cell align-middle">
+
+                        <div class="col-12 my-4">
+                            <img src="/images/short-fiction.png" class="w-100">
+                        </div>
+
+                        <div class="col-12 mt-2 mb-3">
+                            <text>The latest single from Empty Atlas</text>
+                        </div>
+
+                        <div class="col-12 spotify-player">
+                            <iframe src="https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+
+                        <div class="col-12 my-2">
+                            <text>Available on all major platforms</text>
+                        </div>
+
+                        <div class="col-12">
+                            <div id="links" class="links">
+                                <ul class="listen-links p-0">
+                                    <li>
+                                        <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i class="fab fa-apple fa-2x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play fa-2x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon fa-2x"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--
+        <div class="my-3 py-3 row center">
+            <div class="col-md-6 offset-md-3 col-sm-12">
+                                <img src="/images/short-fiction.png" class="w-100">
+                <div class="col-12">
+                    <img src="/images/short-fiction-lines-top.svg" style="width:100%">
+                </div>
+                <div class="col-12">
+                    <h1 class="my-0" style="font-size: 3.5rem;"><i>short fiction</i></h1>
+                </div>
+                <div class="col-12">
+                    <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+                </div>
+            </div>
+        </div>
+
+        <div class="my-3 py-3 row center">
             <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-12">
                 <iframe src="https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY" width="100%" height="80" frameborder="0" allowtransparency="false" allow="encrypted-media"></iframe>
             </div>
-            <br>
-            <h3>Available on all major platforms</h3>
-            <div id="links" class="links">
-                <ul class="listen-links p-0">
-                    <li>
-                        <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i class="fab fa-apple fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon fa-2x"></i></a>
-                    </li>
-                </ul>
+        </div>
+
+        <div class="my-3 py-3 row center">
+            <div class="col-12">
+                <h3>Available on all major platforms</h3>
             </div>
-            <br>
-            <a ng-click="clearActiveModule()" href="#/music"><button type="button" class="btn btn-gold px-5">MORE MUSIC</button></a>
+            <div class="col-12">
+                <div id="links" class="links">
+                    <ul class="listen-links p-0">
+                        <li>
+                            <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i class="fab fa-apple fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+-->
+
+        <div class="my-3 py-3 row center">
+            <div class="col-12">
+                <a ng-click="clearActiveModule()" href="#/music"><button type="button" class="btn btn-gold px-5">MORE MUSIC</button></a>
+            </div>
         </div>
     </div>
 </div>
 
 
 
-<div id="video" class="bg-green d-md-flex flex-md-equal">
+<!--<div id="video" class="bg-green d-md-flex flex-md-equal">-->
+<div id="video" class="parallax-container bg-green d-md-flex flex-md-equal">
     <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
         <div class="row my-3 py-3">
-            <div class="col-12 mb-3 pb-3">
-                <h2 class="display-5">VIDEO</h2>
+            <div class="col-12">
+                <h2 class="display-5 my-0">VIDEO</h2>
+            </div>
+            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
             </div>
             <div class="col-md-6 col-sm-12" style="border-right: 1px solid white;">
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9 video-player">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/6t9Ov9ord18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">“Short Fiction” Music Video</h4>
             </div>
             <div class="col-md-6 col-sm-12">
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9 video-player">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/PMqkFWLdcO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">“Boxing” Lyric Video</h4>
@@ -78,13 +160,17 @@
             </div>
         </div>
     </div>
+    <div class="parallax"><img src="./images/IMG_0521.jpg"></div>
 </div>
 
 <div id="lyrics" class="bg-dark d-md-flex flex-md-equal ng-scope">
-    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="py-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
         <div class="row my-3 py-3">
-            <div class="col-12 mb-3 pb-3">
-                <h2 class="display-5">LYRICS</h2>
+            <div class="col-12">
+                <h2 class="display-5 my-0">LYRICS</h2>
+            </div>
+            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
             </div>
             <div id="anniversary-constellation" class="col-sm-12 col-md-6">
                 <!--                <svg id="Map" style="height: 500px; width: 600px;">-->
@@ -276,16 +362,19 @@
 </div>
 
 <div id="lyrics-display-spacer" class="bg-dark d-md-flex flex-md-equal">
-    <div class="container px-3 px-md-5 text-center text-white overflow-hidden">
+    <div class="container px-3 px-md-5 pt-md-5 text-center text-white overflow-hidden">
         <div id="spacer" class="row my-2 py-2"></div>
     </div>
 </div>
 
-<div id="live" class="bg-green d-md-flex flex-md-equal">
+<div id="live" class="parallax-container bg-green d-md-flex flex-md-equal">
     <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
         <div class="row my-3 py-3">
-            <div class="col-12 mb-3 pb-3">
-                <h2 class="display-5">LIVE</h2>
+            <div class="col-12">
+                <h2 class="display-5 my-0">LIVE</h2>
+            </div>
+            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
             </div>
             <div class="col-12 mb-3 pb-3">
                 <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
@@ -293,13 +382,17 @@
             </div>
         </div>
     </div>
+    <div class="parallax"><img src="./images/IMG_0518.jpg"></div>
 </div>
 
 <div id="about" class="bg-dark d-md-flex flex-md-equal ">
     <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
         <div class="row my-3 py-3">
-            <div class="col-12 mb-3 pb-3">
-                <h2 class="display-5">ABOUT</h2>
+            <div class="col-12">
+                <h2 class="display-5 my-0">ABOUT</h2>
+            </div>
+            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
             </div>
             <div class="col-12 text-white">
                 <p>Mississippi is a state known for its storytellers and a rich history of groundbreaking musicians. Both terms certainly apply to Jackson indie-rockers Empty Atlas.</p>
@@ -321,11 +414,14 @@
     </div>
 </div>
 
-<div id="newsletter" class="bg-green d-md-flex flex-md-equal ">
-    <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
+<div id="newsletter" class="parallax-container bg-green d-md-flex flex-md-equal ">
+    <div class="pt-3 px-3 px-md-5 text-center text-white overflow-hidden container">
         <div class="row my-3 py-3">
-            <div class="col-12 mb-3 pb-3">
-                <h2 class="display-5">NEWSLETTER</h2>
+            <div class="col-12">
+                <h2 class="display-5 my-0">NEWSLETTER</h2>
+            </div>
+            <div class="col-md-6 offset-md-3 col-sm-12">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
             </div>
             <div class="col-xs-12 col-sm-6 offset-sm-3">
                 <!-- Begin Mailchimp Signup Form -->
@@ -372,17 +468,26 @@
                         color: #eccc44 !important;
                     }
 
+                    #mc_embed_signup input.button:hover {
+                        color: #333a41 !important;
+                        background-color: #eccc44 !important;
+                        border: 1px solid #eccc44 !important;
+                    }
+
                     #mc_embed_signup input.email {
                         width: calc(100% - 0.8em);
                         margin-bottom: 10px;
                         width: 100%;
                         background: transparent;
                         color: white !important;
-                        border-top: none;
-                        border-left: none;
-                        border-right: none;
-                        border-bottom: 1px solid white;
+                        border: 1px solid white;
                         padding: 12px;
+                    }
+
+                    ::placeholder {
+                        color: #fff;
+                        opacity: 0.5;
+                        font-family: inherit;
                     }
 
                     /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -417,6 +522,23 @@
                 </div>
 
                 <!--End mc_embed_signup-->
+            </div>
+        </div>
+    </div> 
+    <div class="parallax"><img src="./images/IMG_1808_3.jpeg"></div>
+</div>
+
+<div id="about" class="bg-dark d-md-flex flex-md-equal ">
+    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+        <div class="row my-3 py-3">
+            <div class="col-12">
+                <h2 class="display-5 my-0">INSTAGRAM</h2>
+            </div>
+            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+            </div>
+            <div class="col-12">
+                <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
             </div>
         </div>
     </div>
