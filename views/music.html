@@ -1,0 +1,62 @@
+<div ng-include="'views/nav.html'"></div>
+
+<div id="music" class="bg-dark d-md-flex flex-md-equal ">
+    <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
+        <div class="row my-3 py-3">
+            <div class="col-12">
+                <img src="/images/short-fiction-lines-top.svg" style="width: 100%; height: 10px;">
+            </div>
+            <div class="col-12">
+                <h2 class="display-5 mt-2">MUSIC</h2>
+            </div>
+            <div class="col-12">
+                <img src="/images/short-fiction-lines-bottom.svg" style="width: 100%; height: 10px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="short-fiction" class="bg-dark d-md-flex flex-md-equal">
+    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container bb-1">
+        <div class="row my-3 py-3" ng-repeat="a in albums">
+            <div class="col-12 pb-3" align="left">
+                <h2 class="display-5">{{a.name}}</h2>
+                <h4>{{a.year}}</h4>
+            </div>
+            <div class="col-sm-12 col-md-4 pb-3">
+                <img src="{{a.image}}" style="width: 100%;" class="grow">
+            </div>
+            <div id="spotify-player" class="col-sm-12 col-md-4 pb-3">
+                <iframe src="{{a.spotifyUrl}}" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div id="apple-music-player" class="col-sm-12 col-md-4 pb-3">
+                <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="100%" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="{{a.appleMusicUrl}}"></iframe>
+            </div>
+            <div class="col-12 pt-3" align="left">
+                <h4 class="mb-0" style="margin-left: 10px;">Also available on</h4>
+                <div id="links" class="links">
+                    <ul class="listen-links p-0">
+                        <li ng-show="{{a.iTunesUrl}}">
+                            <a href="{{a.iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note grow-lg"></i></a>
+                        </li>
+                        <li ng-show="{{a.soundCloudUrl}}">
+                            <a href="{{a.soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud grow-lg"></i></a>
+                        </li>
+                        <li ng-show="{{a.googlePlayUrl}}">
+                            <a href="{{a.googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play grow-lg"></i></a>
+                        </li>
+                        <li ng-show="{{a.amazonMusicUrl}}">
+                            <a href="{{a.amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon grow-lg"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 pt-3">
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-include="'views/footer.html'"></div>

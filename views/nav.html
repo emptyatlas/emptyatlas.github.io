@@ -1,0 +1,41 @@
+<!--
+<nav id="nav" class="site-header sticky-top py-1" ng-controller="MainCtrl">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <a class="py-2" href="#" ng-click="scrollTo('home')" align="center">
+            <img src="/images/ea-logo-vertical-white.svg" style="height: 36px"/>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('music')">music</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('about')">about</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('video')">video</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('lyrics')">lyrics</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('live')">live</a>
+        <a class="py-2 d-none d-md-inline-block" href="" ng-click="scrollTo('newsletter')">newsletter</a>
+        <a class="py-2 d-none d-md-inline-block" href="https://squareup.com/store/empty-atlas-music" target="_blank">shop</a>
+        <a class="py-2 d-none d-md-inline-block" href="{{sendMail}}">contact</a>
+    </div>
+</nav>
+-->
+
+<div class="navbar-fixed">
+    <nav id="nav">
+        <div class="nav-wrapper links">
+            <a href="#" ng-click="scrollTo('home')" class="brand-logo center"><img src="/images/ea-logo-vertical-white.svg" style="height: 36px"/></a>
+            <ul id="nav-mobile" class="center-left hide-on-small-and-down">
+                <div style="float: right;">
+                    <li><a href="" ng-click="scrollTo('music')">music</a></li>
+                    <li><a href="" ng-click="scrollTo('about')">about</a></li>
+                    <li><a href="" ng-click="scrollTo('video')">video</a></li>
+                    <li><a href="" ng-click="scrollTo('lyrics')">lyrics</a></li>
+                </div>
+            </ul>
+            <ul id="nav-mobile" class="center-right hide-on-small-and-down">
+                <div style="float: left;">
+                    <li><a href="" ng-click="scrollTo('live')">live</a></li>
+                    <li><a href="" ng-click="scrollTo('newsletter')">newsletter</a></li>
+                    <li><a href="https://squareup.com/store/empty-atlas-music" target="_blank">shop</a></li>
+                    <li><a href="{{sendMail}}">contact</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</div>
