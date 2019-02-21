@@ -31,8 +31,10 @@ a:hover {
 }
 
 .band-logo {
-    height: 17em;
-    max-width: 100%;
+    max-height: 17em !important;
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
 }
 
 .short-fiction {
@@ -119,16 +121,17 @@ button:focus,
 
 .btn-gold:hover {
     color: #333a41 !important;
+    color: #333a41 !important;
     background-color: #eccc44 !important;
     border: 1px solid #eccc44 !important;
 }
 
 .bg-green {
-    background-color: rgb(41, 100, 95, 0.5);
+    background-color: rgb(41, 100, 95, 0.5) !important;
 }
 
 nav {
-    background-color: rgb(41, 100, 95, 1);
+    background-color: #29645f !important;
 }
 
 .links {
