@@ -19,6 +19,11 @@ a:hover {
     background-position: top;
 }
 
+.short-fiction {
+    font-size: 4.5rem;
+    line-height: 4rem;
+}
+
 #download-body {
     background: url('/images/IMG_0518.jpg');
     background-size: cover;
