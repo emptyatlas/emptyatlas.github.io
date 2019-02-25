@@ -19,6 +19,23 @@ a:hover {
     background-position: top;
 }
 
+.band-logo {
+    max-height: 17em !important;
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+@media (max-width: 767px) {
+    #home {
+        height: 28rem;
+    }
+
+    .band-logo {
+        height: 7em !important;
+    }
+}
+
 .short-fiction {
     font-size: 4.5rem;
     line-height: 4rem;
@@ -33,13 +50,6 @@ a:hover {
 
 .no-background {
     background-color: transparent;
-}
-
-.band-logo {
-    max-height: 17em !important;
-    max-width: 100% !important;
-    height: auto !important;
-    width: auto !important;
 }
 
 .short-fiction {
