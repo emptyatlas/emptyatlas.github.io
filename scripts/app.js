@@ -169,7 +169,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         var targetPosition = getPosition(target);
         var navBar = document.getElementById('nav');
         var navBarHeight = navBar.offsetHeight;
-        if (targetPosition.y === navBarHeight) {
+        if (targetPosition.y === navBarHeight && id !== 'home') {
             console.log('target already in frame');
         } else {
             $('html, body').animate({
