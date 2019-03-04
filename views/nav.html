@@ -20,7 +20,8 @@
     <nav id="nav">
         <div class="nav-wrapper links">
             <a href="#" ng-click="scrollTo('home')" class="brand-logo center"><img src="/images/ea_logo_vertical_white.png" style="height: 36px"/></a>
-            <ul id="nav-mobile" class="center-left hide-on-small-and-down">
+            <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+            <ul id="nav-mobile" class="center-left hide-on-med-and-down">
                 <div style="float: right;">
                     <li><a href="" ng-click="scrollTo('music')">music</a></li>
                     <li><a href="" ng-click="scrollTo('about')">about</a></li>
@@ -28,7 +29,7 @@
                     <li><a href="" ng-click="scrollTo('lyrics')">lyrics</a></li>
                 </div>
             </ul>
-            <ul id="nav-mobile" class="center-right hide-on-small-and-down">
+            <ul id="nav-mobile" class="center-right hide-on-med-and-down">
                 <div style="float: left;">
                     <li><a href="" ng-click="scrollTo('live')">live</a></li>
                     <li><a href="" ng-click="scrollTo('newsletter')">newsletter</a></li>
@@ -38,4 +39,30 @@
             </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="btn btn-green btn-sm" href="" ng-click="scrollTo('music')">music</a></li>
+        <li><a class="btn btn-green btn-sm" href="" ng-click="scrollTo('about')">about</a></li>
+        <li><a class="btn btn-green btn-sm" href="" ng-click="scrollTo('video')">video</a></li>
+        <li><a class="btn btn-green btn-sm" href="" ng-click="scrollTo('lyrics')">lyrics</a></li>
+        <li><a class="btn btn-green btn-sm" href="" ng-click="scrollTo('live')">live</a></li>
+        <li><a class="btn btn-green btn-sm" href="" ng-click="scrollTo('newsletter')">newsletter</a></li>
+        <li><a class="btn btn-green btn-sm" href="https://squareup.com/store/empty-atlas-music" target="_blank">shop</a></li>
+        <li><a class="btn btn-green btn-sm" href="{{sendMail}}">contact</a></li>
+    </ul>
+</div>
+
+<div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+    </script>
 </div>

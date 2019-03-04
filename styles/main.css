@@ -141,6 +141,17 @@ button:focus,
     border: 1px solid #eccc44 !important;
 }
 
+.btn-green {
+    color: white !important;
+    background-color: rgba(41, 100, 95, 0.80) !important;
+    border: none !important;
+    border-radius: 0;
+}
+
+.btn-sm {
+    text-transform: lowercase;
+}
+
 .bg-green {
     background-color: rgb(41, 100, 95, 0.5) !important;
 }
@@ -341,6 +352,26 @@ footer > ul > li {
     width: 50%;
     float: right;
     padding-left: 50px !important;
+}
+
+.sidenav > li > a {
+    font-size: 14pt;
+    color: white;
+}
+
+.sidenav > li {
+    /*    background-color: rgba(0, 0, 0, 0.25);*/
+    /*    background-color: #29645f !important;*/
+}
+
+.sidenav-overlay {
+    z-index: 984;
+}
+
+.sidenav {
+    background: url('/images/Credit-Emmi-Sprayberry.jpeg');
+    background-size: cover;
+    width: 200px;
 }
 
 /*

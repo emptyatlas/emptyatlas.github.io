@@ -151,6 +151,13 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         console.log('attempting to scroll to element: ' + id);
         ModuleService.activeModule = id;
 
+        try {
+            console.log('closing sidenav just in case');
+            $('.sidenav').sidenav('close');
+        } catch (error) {
+            console.log('sidenav doesn\'t exist. ignoring error.');
+        }
+
         var currentLocation = $location.url();
         console.log("currentLocation [" + currentLocation + "]");
         if (currentLocation !== "/") {
@@ -231,7 +238,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
         node.addEventListener('animationend', handleAnimationEnd)
     }
-    
+
     $(document).ready(function () {
         $('.parallax').parallax();
     });
