@@ -1,6 +1,16 @@
 body {
     font-family: 'IM Fell English', serif;
     font-size: 1.25rem;
+    background-color: #333a41;
+/*
+    background: url('/images/Credit-Emmi-Sprayberry.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+*/
+}
+
+#footer {
+    background-color: white;
 }
 
 i {
@@ -360,6 +370,8 @@ footer > ul > li {
 }
 
 .sidenav > li {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
     /*    background-color: rgba(0, 0, 0, 0.25);*/
     /*    background-color: #29645f !important;*/
 }
@@ -371,7 +383,7 @@ footer > ul > li {
 .sidenav {
     background: url('/images/Credit-Emmi-Sprayberry.jpeg');
     background-size: cover;
-    width: 200px;
+    width: 250px;
 }
 
 /*
