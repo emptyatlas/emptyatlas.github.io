@@ -3,3 +3,9 @@
 /.tmp
 /.sass-cache
 /.idea
+
+\.DS_Store
+
+emptyatlas\.github\.io\.iml
+
+Gemfile\.lock

@@ -31,6 +31,10 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
             templateUrl: 'views/video.html',
             controller: 'MainCtrl'
         })
+        .when('/presskit', {
+            templateUrl: 'views/press-kit.html',
+            controller: 'MainCtrl'
+        })
         .otherwise({
             redirectTo: '/'
         });
