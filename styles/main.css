@@ -159,8 +159,12 @@ button:focus,
 }
 
 .btn-sm {
-/*    text-transform: lowercase;*/
+    text-transform: lowercase;
+}
+
+.btn-sm-custom {
     padding: 0.05rem 1.5rem;
+    text-transform: uppercase !important;
 }
 
 .bg-green {
