@@ -80,6 +80,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     $scope.emmiSprayberryUrl = 'https://www.emmisprayberry.com/';
     $scope.azhaSandersUrl = 'https://azhatattoos.com/';
     $scope.jbLawrenceUrl = 'https://www.facebook.com/jblawrencemusicvideoandphotography/';
+    $scope.kodyGautierUrl = 'https://www.kodygautier.com/';
     $scope.bestOkDesignsUrl = 'https://bestokdesigns.com/#/';
 
     $scope.songs = LyricService.songs;
