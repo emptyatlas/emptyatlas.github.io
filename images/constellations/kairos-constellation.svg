@@ -4,7 +4,7 @@
                     <!-- Major stars -->
                     <!-- Maximal -->
                     <circle cx="246.2" cy="151.4" r="6" ng-click="showLyrics('Maximal')"></circle>
-                    <text x="250" y="146.4" text-anchor="left" ng-click="showLyrics('Maximal')">Maximal</text>
+                    <text x="250" y="140" text-anchor="left" ng-click="showLyrics('Maximal')">Maximal</text>
                     <!-- Florence -->
                     <circle cx="308" cy="159" r="6" ng-click="showLyrics('Florence')"></circle>
                     <text x="318" y="180" text-anchor="left" ng-click="showLyrics('Florence')">Florence</text>
