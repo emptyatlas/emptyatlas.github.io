@@ -139,16 +139,26 @@ button:focus,
     height: 100%;
 }
 
-.btn-gold {
-    color: #eccc44 !important;
-    border: 1px solid #eccc44 !important;
-}
-
-.btn-gold:hover {
-    color: #333a41 !important;
+.btn-gold,
+.bit-widget .bit-play-my-city-button,
+a.bit-offers.bit-button{
     color: #333a41 !important;
     background-color: #eccc44 !important;
     border: 1px solid #eccc44 !important;
+    transition: all 0.3s linear;
+}
+
+.btn-gold:hover,
+.bit-widget:hover .bit-play-my-city-button:hover,
+a.bit-offers.bit-button:hover {
+    color: #333a41 !important;
+    background-color: #ffe161 !important;
+    border: 1px solid #ffe161 !important;
+    transition: all 0.3s linear;
+}
+
+a.bit-play-my-city-button {
+    color: #333a41 !important;
 }
 
 .btn-green {
