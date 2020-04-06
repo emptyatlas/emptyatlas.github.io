@@ -287,7 +287,344 @@ Put on your winter clothes<br>
 The north winds are calling you home<br>
 But now that I\'m sinking here in the same place that I stood<br>
 I was the one that called you good`
-        }
+        },
+        {
+          title: 'Maximal',
+          id: 'maximal-lyrics',
+          lyrics: `I promise maximal effort from me<br>
+                   There will never be an end to all the blood and sweat I\'ll lend to make it work<br>
+                   When I get where I need, I\'ll send word for you<br>
+                   Wouldn\'t burden you with details you won\'t read<br>
+                   <br>
+                   I promise maximal effort from me<br>
+                   When my options are exhausted<br>
+                   But I still won\'t lay down and give it up<br>
+                   When I get what I need<br>
+                   Still get hungry, bite the hand that feeds<br>
+                   <br>
+                   I will take from you<br>
+                   I will give it to myself<br>
+                   Take from you<br>
+                   Give it to myself<br>
+                   <br>
+                   I promise maximal effort from me<br>
+                   Even in my final days<br>
+                   I\'ll find an outlet that still pays<br>
+                   So cut me loose, stretch me till I can\'t breathe<br>
+                   But I never set the goal, so it\'s always out of reach<br>
+                   <br>
+                   I will take from you<br>
+                   I will give it to myself<br>
+                   Take from you<br>
+                   Give it to myself<br>
+                   <br>
+                   Show me a ladder, I\'ll climb it; hold my breath if you time it<br>
+                   Do your worst to me above a dotted line, and I\'ll sign it<br>
+                   <br>
+                   Write my name down for me; dot the i\'s and cross the s\'s<br>
+                   There\'s somewhere I need to be; I\'ve got no time for second guesses<br>
+                   <br>
+                   I\'m already past 25, some of my best years are behind me<br>
+                   I could use a better hand to break me down, redefine me<br>
+                   <br>
+                   I want answers on my legacy, but the greatest minds in artistry<br>
+                   Their speeches just don\'t speak to me ‘cause all of them are dead already`
+        },
+        {
+          title: 'Florence',
+          id: 'florence-lyrics',
+          lyrics: `Did I end at the start?<br>
+                 Gone deaf at the gunshot from the word “go”<br>
+                 And I can’t read lips, but I know the word “no”<br>
+                 <br>
+                 Just time for a quick recap<br>
+                 Spirit started to lift then a full collapse<br>
+                 Still trust for the best, but it’s traveling slow<br>
+                 <br>
+                 And I think my mind’s enough to make it so<br>
+                 <br>
+                 Clear a path; make a way<br>
+                 Ready myself \'cause the door’s swinging open someday<br>
+                 <br>
+                 Burned out on your star signs<br>
+                 My palms only show all the work I’ve done<br>
+                 Feels like all I achieved last year was once more \'round the sun<br>
+                 <br>
+                 Fortune favors the fortunate, I guess<br>
+                 It’s all a matter of perspective<br>
+                 At best, it’s providence; at worst, it’s music for my friends<br>
+                 <br>
+                 And I think I’m fine no matter how it ends<br>
+                 I think I’ve finally started making sense<br>
+                 <br>
+                 Clear a path; make a way<br>
+                 Ready myself \'cause the door’s swinging open someday<br>
+                 <br>
+                 Clear a path; make a way<br>
+                 Ready myself \'cause the door’s swinging open someday<br>
+                 <br>
+                 Clear a path; make a way<br>
+                 Ready myself \'cause the door’s swinging open someday`
+        },
+        {
+          title: 'Codebreaker',
+          id: 'codebreaker-lyrics',
+          lyrics: `You say you can read me; I want to prove you wrong<br>
+                   But every single pattern I make is one you\'ve already drawn<br>
+                   <br>
+                   I can move left and right, serpentine as much as I want<br>
+                   I\'m running in the same wide circles that end where I started from<br>
+                   <br>
+                   Can\'t go back so I go over, overthinking everything<br>
+                   Is it insane to hope it\'s somehow gonna change?<br>
+                   <br>
+                   There is a code to all of this<br>
+                   And I\'m going to break it<br>
+                   There is a code to all of this<br>
+                   And I\'m going to…<br>
+                   <br>
+                   Keep coming up empty; hours waste away<br>
+                   How many dismissive conversations can I have in one day?<br>
+                   <br>
+                   You say you don\'t understand; I know you can\'t<br>
+                   So why do I wait? I\'m thinking that this sign of mine may arrive too late<br>
+                   <br>
+                   Can\'t go back so I go over, overthinking everything<br>
+                   Is it insane to hope it\'s somehow gonna change?<br>
+                   <br>
+                   There is a code to all of this<br>
+                   And I\'m going to break it<br>
+                   There is a code to all of this<br>
+                   And I\'m going to break it<br>
+                   <br>
+                   There is a code to all of this<br>
+                   And I\'m going to break it<br>
+                   There is a code to all of this<br>
+                   And I\'m going to…`
+        },
+         {
+           title: 'Carcosa',
+           id: 'carcosa-lyrics',
+           lyrics: `Carcosa - you know it\'s my fortress, but you want it<br>
+                    Backdoor to my bedroom, a blind eye to the portents of my doom<br>
+                    <br>
+                    Carcosa, are you falling? You won\'t hold when the rain comes calling<br>
+                    My dark truths get found out; empty ending to the story I wrote down<br>
+                    <br>
+                    It always comes down to this, down to this<br>
+                    It always comes down to this, down to this<br>
+                    <br>
+                    Carcosa, my Graceland - my soul laid low by an old hand<br>
+                    Lift me up, bring me peace, help me forget about the rubble behind me<br>
+                    What I\'ve built, what I\'ve done, all for nothing if it\'s nothing to anyone<br>
+                    Lift me up, bring me peace when I\'m underneath<br>
+                    <br>
+                    Down to this, down to this<br>
+                    It always comes down to this, down to this`
+         },
+         {
+           title: 'Ouroboros',
+           id: 'ouroboros-lyrics',
+           lyrics: `The night is dark; a heavy heart can only weigh you down<br>
+                    The moon is dead; a new one\'s yet to shift the tides and pull you out<br>
+                    In better days, you\'d celebrate by locking all your doors<br>
+                    Yet here you are, a victim of the very fate you tried to ward<br>
+                    <br>
+                    Is this how it starts?<br>
+                    <br>
+                    It\'s coming around<br>
+                    Nothing for it<br>
+                    Ouroboros<br>
+                    The peace that you\'ve found<br>
+                    Could tear you to pieces<br>
+                    Could be just what you needed now<br>
+                    <br>
+                    Let it go; tooth and claw; unhinge your jaw<br>
+                    Swallow your pride and move on<br>
+                    Be done with it, the infinite back and forth between good and then gone<br>
+                    A bait and switch, a fever pitch; thrown by your own false alarms<br>
+                    It weighs you down, coils ‘round; right in that instant, you can\'t see the harm<br>
+                    <br>
+                    Is this how it starts?<br>
+                    <br>
+                    It\'s coming around<br>
+                    Nothing for it<br>
+                    Ouroboros<br>
+                    The peace that you\'ve found<br>
+                    Could tear you to pieces<br>
+                    Could be just what you needed<br>
+                    <br>
+                    Now, when you get what you always wanted to, it starts to go wrong<br>
+                    Well, well, well enough alone isn\'t set in stone<br>
+                    You may learn what it was when it\'s already gone`
+         },
+         {
+           title: 'Birthday',
+           id: 'birthday-lyrics',
+           lyrics: `Subterranean expectations, like a walking hibernation<br>
+                    Learn to make the most out of your age<br>
+                    <br>
+                    25 has arrived; still a few less friends surround you<br>
+                    Tell me nothing can astound you<br>
+                    Where\'s your head? Are you finished yet?<br>
+                    If the world\'s not what you wanted, make a change while you\'re still on it<br>
+                    <br>
+                    Subterranean expectations, like a walking hibernation<br>
+                    Learn to make the most out of your age<br>
+                    <br>
+                    Candles only burn for so long; your party mix is only 20 songs<br>
+                    “First Day of My Life” sounds empty<br>
+                    You just can\'t let all of them see<br>
+                    <br>
+                    Where\'s your head? Did you forget?<br>
+                    This entire Earth\'s before you, and you\'ve barely seen it yet<br>
+                    <br>
+                    Subterranean expectations, like a walking hibernation<br>
+                    Learn to make the most out of your age<br>
+                    <br>
+                    You won\'t escape what\'s haunting you<br>
+                    You never really wanted to<br>
+                    If you wait for it to come, it always does<br>
+                    <br>
+                    You\'re counting on the aftermath<br>
+                    It doesn\'t have to be like that<br>
+                    If you wait for it to come, it always does<br>
+                    If you wait for it to come, it always does<br>
+                    <br>
+                    Subterranean expectations, like a walking hibernation<br>
+                    Learn to make the most out of your age<br>
+                    Take the time to count your blessings<br>
+                    First of all, you\'re second-guessing<br>
+                    Bought the book, refused to turn the page<br>
+                    Happy birthday`
+         },
+         {
+           title: 'Sway',
+           id: 'sway-lyrics',
+           lyrics: `Ellie, call me up on the weekend<br>
+                    It\'d be good to catch up with you<br>
+                    I know you miss Mississippi, and it\'s overdue<br>
+                    <br>
+                    I confess I\'ve got another agenda<br>
+                    Word travels fast when there\'s nothing to say<br>
+                    Bad news still comes ‘round in threes on your best day<br>
+                    <br>
+                    Everyone knows; everyone is talking<br>
+                    Everyone is waiting on reactions to watch you sway<br>
+                    Do you want to get angry? Do you want to get violent?<br>
+                    Do you want to go back to your apartment and sleep for days?<br>
+                    <br>
+                    Ellie, don\'t hang up on me just yet<br>
+                    You\'re gonna need a friend on your side right now<br>
+                    All this would be more dramatic on payphones<br>
+                    Or in hotel rooms outside of town<br>
+                    <br>
+                    I confess my heart is bleeding for you, kid<br>
+                    It\'s like you only sing when the sky turns grey<br>
+                    Bad news still comes ‘round in threes on your best day<br>
+                    <br>
+                    Everyone knows; everyone is talking<br>
+                    Everyone is waiting on reactions to watch you sway<br>
+                    Do you want to get angry? Do you want to get violent?<br>
+                    Do you want to go back to your apartment and sleep for days?<br>
+                    <br>
+                    Go on and have a good cry<br>
+                    Put me on silent<br>
+                    I\'ll be holding on the line for you either way<br>
+                    Either way<br>
+                    <br>
+                    Ellie, call me up on the weekend<br>
+                    Even if you don\'t have much to say<br>
+                    Bad news still comes ‘round in threes`
+         },
+         {
+           title: 'Famous Friends',
+           id: 'famous-friends-lyrics',
+           lyrics: `You stand there talking to your famous friends<br>
+                    I\'ll be a tether to the life you led before<br>
+                    A human image of your humble upbringing<br>
+                    I am statue still and pointed to the door<br>
+                    <br>
+                    Silver spoons eating up your stories<br>
+                    Getting locked in that old attic, hearing ghostly wails<br>
+                    You\'re down to earth; I\'m just ordinary<br>
+                    A hapless stowaway on your upward trail<br>
+                    <br>
+                    But we were brothers once, you and I<br>
+                    Have you finally gone dim from the glorious light<br>
+                    That surrounds you at all times?<br>
+                    I\'d hold up fingers, but you won\'t look me in the eye<br>
+                    <br>
+                    Bronze of skin<br>
+                    White of teeth<br>
+                    Red of wine<br>
+                    Blue of face<br>
+                    Black of heart<br>
+                    Clear of mind<br>
+                    <br>
+                    You stand there talking to your famous friends<br>
+                    I\'ll be imagining their plans get overturned<br>
+                    But it\'s not too late to leave this acting rich and talking cheap<br>
+                    We can just laugh and watch the mansions burn`
+         },
+         {
+           title: 'Valleys',
+           id: 'valleys-lyrics',
+           lyrics: `On the edge of this porch, at a house where you have lived since 10 years old<br>
+                    There\'s a map beside the door, marking where you\'ve been and where you want to go<br>
+                    Leave these lackluster suburbs you\'ve started to think less and less of<br>
+                    What\'s more, it won\'t be enough<br>
+                    <br>
+                    Ambition squares your shoulders; determination straightens up your neck<br>
+                    You snap with every setback; it\'s so much worse if you don\'t course-correct<br>
+                    Live and love your letdowns; learn to take the joy whenever it comes<br>
+                    The little battles won<br>
+                    <br>
+                    At the end of every valley, there\'s a fell for you to climb<br>
+                    Doesn\'t ask all that much of you; just your peace of mind and time<br>
+                    And we could all stand more victories, but you can still be happy in the valleys<br>
+                    <br>
+                    At the base of this cliff, stricken with the constant vertigo of failing<br>
+                    You can find a better path, draw you back to center, stop your wailing<br>
+                    Work for everything you want, but don\'t wear every loss along the way<br>
+                    Be more than your achievements or tarnish over all your golden days<br>
+                    <br>
+                    At the end of every valley, there\'s a fell for you to climb<br>
+                    Doesn\'t ask all that much of you; just your peace of mind and time<br>
+                    And we could all stand more victories, but you can still be happy in the valleys<br>
+                    <br>
+                    And when I cannot see, my strength is failing me, I know You\'re here with me in the valleys<br>
+                    And when I cannot see, my strength is failing me, I know You\'re here with me in the valleys<br>
+                    <br>
+                    At the end of every valley, there\'s a fell for you to climb<br>
+                    Doesn\'t ask all that much of you; just your peace of mind and time<br>
+                    And we could all stand more victories, but you can still be happy<br>
+                    <br>
+                    At the end of every valley, there\'s a fell for you to climb<br>
+                    Doesn\'t ask all that much of you; just your peace of mind and time<br>
+                    And we could all stand more victories, but you can still be happy<br>
+                    We could all stand more victories, but you can still be happy<br>
+                    We could all stand more victories, but you can still be happy in the valleys`
+         },
+         {
+           title: 'Minimal',
+           id: 'minimal-lyrics',
+           lyrics: `We will not move these white fences for you<br>
+                    We will not move these white fences for you<br>
+                    There\'s no window with a view overlooking what you knew<br>
+                    You would not work for it, so it will not work for you<br>
+                    <br>
+                    We will not move these white fences for you<br>
+                    We will not move these white fences for you<br>
+                    There\'s no window with a view overlooking what you knew<br>
+                    You would not work for it, so it will not work for you<br>
+                    <br>
+                    Kairos, I\'ve been running from you, running for you, racing toward you<br>
+                    Kairos, I\'ve been running from you, running for you<br>
+                    <br>
+                    Kairos, I\'ve been running from you, running for you, racing toward you<br>
+                    Kairos, I\'ve been running from you, running for you`
+         }
     ];
 
 });

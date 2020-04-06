@@ -1,8 +1,8 @@
 body {
-    font-family: 'IM Fell English', serif;
+    font-family: 'Didot', serif;
     font-size: 1.25rem;
     background-color: #333a41;
-/*
+    /*
     background: url('/images/Credit-Emmi-Sprayberry.jpeg');
     background-size: cover;
     background-attachment: fixed;
@@ -13,17 +13,13 @@ body {
     background-color: white;
 }
 
-i {
-    font-family: 'IM Fell Double Pica', serif;
-}
-
 a,
 a:hover {
     color: #f1cd00;
 }
 
 #home {
-    background: url('/images/Credit-Kody-Gautier.JPG');
+    background: url('/images/empty-atlas-2020-web-banner.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -168,6 +164,20 @@ a.bit-play-my-city-button {
     border-radius: 0;
 }
 
+.btn-blue {
+    color: white !important;
+    background-color: rgba(26, 62, 100, 0.80) !important;
+    border: none !important;
+    border-radius: 0;
+}
+
+.btn-white-border {
+  color: white !important;
+  background-color: none !important;
+  border: 1px solid white !important;
+  border-radius: 0;
+}
+
 .btn-sm {
     text-transform: lowercase;
 }
@@ -181,12 +191,15 @@ a.bit-play-my-city-button {
     background-color: rgb(41, 100, 95, 0.5) !important;
 }
 
+.bg-blue {
+  background-color: rgb(35, 92, 152, 0.5) !important;
+}
+
 nav {
-    background-color: #29645f !important;
+    background-color: #235C98 !important;
 }
 
 .links {
-    /*    padding: 15px 0;*/
     color: white;
     background-color: transparent;
 }
@@ -297,8 +310,23 @@ circle {
 }
 
 circle:hover {
-    stroke-width: 20px;
+    stroke-width: 16px;
     cursor: pointer;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.flip {
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 
 .lyrics-display {
@@ -388,7 +416,7 @@ footer > ul > li {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
     /*    background-color: rgba(0, 0, 0, 0.25);*/
-    /*    background-color: #29645f !important;*/
+    /*    background-color: #235C98 !important;*/
 }
 
 .sidenav-overlay {
@@ -396,7 +424,7 @@ footer > ul > li {
 }
 
 .sidenav {
-    background: url('/images/Credit-Emmi-Sprayberry.jpeg');
+    background: url('/images/slide-out-menu-bkg.png');
     background-size: cover;
     width: 250px;
 }

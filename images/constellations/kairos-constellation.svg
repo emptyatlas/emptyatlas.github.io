@@ -1,0 +1,85 @@
+<svg id="star-map" class="svg-content-responsive" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 500">
+                    <path d="M 88.191 465.543 L 238.345 342.928 L 462.592 390.794 L 457.347 148.843 L 218.018 23.605 L 128.844 106.222 L 159.662 215.723 L 273.752 258.344 L 307.848 159.334 L 246.213 151.465" fill="none" stroke="white"></path>
+
+                    <!-- Major stars -->
+                    <!-- Maximal -->
+                    <circle cx="246.2" cy="151.4" r="6" ng-click="showLyrics('Maximal')"></circle>
+                    <text x="250" y="140" text-anchor="left" ng-click="showLyrics('Maximal')">Maximal</text>
+                    <!-- Florence -->
+                    <circle cx="308" cy="159" r="6" ng-click="showLyrics('Florence')"></circle>
+                    <text x="318" y="180" text-anchor="left" ng-click="showLyrics('Florence')">Florence</text>
+                    <!-- Codebreaker -->
+                    <circle cx="275" cy="258" r="6" ng-click="showLyrics('Codebreaker')"></circle>
+                    <text x="285" y="275" text-anchor="left" ng-click="showLyrics('Codebreaker')">Codebreaker</text>
+                    <!-- Carcosa -->
+                    <circle cx="160" cy="215" r="6" ng-click="showLyrics('Carcosa')"></circle>
+                    <text x="92" y="230" text-anchor="left" ng-click="showLyrics('Carcosa')">Carcosa</text>
+                    <!-- Ouroboros -->
+                    <circle cx="129" cy="106" r="6" ng-click="showLyrics('Ouroboros')"></circle>
+                    <text x="39" y="95" text-anchor="left" ng-click="showLyrics('Ouroboros')">Ouroboros</text>
+                    <!-- Birthday -->
+                    <circle cx="218" cy="23.6" r="6" ng-click="showLyrics('Birthday')"></circle>
+                    <text x="224" y="18.6" text-anchor="left" ng-click="showLyrics('Birthday')">Birthday</text>
+                    <!-- Sway -->
+                    <circle cx="457" cy="149" r="6" ng-click="showLyrics('Sway')"></circle>
+                    <text x="463" y="140" text-anchor="left" ng-click="showLyrics('Sway')">Sway</text>
+                    <!-- Famous Friends -->
+                    <circle cx="462" cy="391" r="6" ng-click="showLyrics('Famous Friends')"></circle>
+                    <text x="472" y="386" text-anchor="left" ng-click="showLyrics('Famous Friends')">Famous Friends</text>
+                    <!-- Valleys -->
+                    <circle cx="238" cy="343" r="6" ng-click="showLyrics('Valleys')"></circle>
+                    <text x="240" y="332" text-anchor="left" ng-click="showLyrics('Valleys')">Valleys</text>
+                    <!-- Minimal -->
+                    <circle cx="88" cy="465" r="6" ng-click="showLyrics('Minimal')"></circle>
+                    <text x="100" y="482" text-anchor="left" ng-click="showLyrics('Minimal')">Minimal</text>
+    
+                    <!-- Short Fiction -->
+                    <circle cx="300" cy="444" r="6" ng-click="showLyrics('Short Fiction')"></circle>
+                    <text x="314" y="460" text-anchor="left" ng-click="showLyrics('Short Fiction')">Short Fiction</text>
+
+                    <!-- Decorative stars -->
+                    <circle cx="14" cy="14" r="1"></circle>
+                    <circle cx="6" cy="150" r="1"></circle>
+                    <circle cx="37" cy="200" r="1"></circle>
+                    <circle cx="3" cy="353" r="1"></circle>
+                    <circle cx="12" cy="488" r="2"></circle>
+                    <circle cx="173" cy="44" r="1"></circle>
+                    <circle cx="233" cy="102" r="1"></circle>
+                    <circle cx="368" cy="12" r="1"></circle>
+                    <circle cx="378" cy="33" r="1"></circle>
+                    <circle cx="485" cy="56" r="2"></circle>
+                    <circle cx="539" cy="82" r="1"></circle>
+                    <circle cx="544" cy="104" r="1"></circle>
+                    <circle cx="580" cy="24" r="1"></circle>
+                    <circle cx="570" cy="84" r="2"></circle>
+                    <circle cx="584" cy="225" r="1"></circle>
+                    <circle cx="587" cy="450" r="1"></circle>
+                    <circle cx="588" cy="350" r="2"></circle>
+                    <circle cx="546" cy="302" r="2"></circle>
+                    <circle cx="501" cy="222" r="2"></circle>
+                    <circle cx="531" cy="193" r="1"></circle>
+                    <circle cx="407" cy="427" r="1"></circle>
+                    <circle cx="457" cy="477" r="2"></circle>
+                    <circle cx="380" cy="490" r="1"></circle>
+                    <circle cx="207" cy="472" r="1"></circle>
+                    <circle cx="554" cy="475" r="1"></circle>
+                    <circle cx="518" cy="409" r="1"></circle>
+                    <circle cx="525" cy="385" r="1"></circle>
+                    <circle cx="425" cy="300" r="2"></circle>
+                    <circle cx="405" cy="196" r="1"></circle>
+                    <circle cx="340" cy="215" r="1"></circle>
+                    <circle cx="430" cy="102" r="1"></circle>
+                    <circle cx="72" cy="44" r="1"></circle>
+                    <circle cx="52" cy="200" r="2"></circle>
+                    <circle cx="74" cy="274" r="1"></circle>
+                    <circle cx="24" cy="234" r="1"></circle>
+                    <circle cx="52" cy="306" r="1"></circle>
+                    <circle cx="82" cy="404" r="2"></circle>
+                    <circle cx="55" cy="416" r="1"></circle>
+                    <circle cx="150" cy="388" r="1"></circle>
+                    <circle cx="272" cy="392" r="2"></circle>
+                    <circle cx="377" cy="314" r="1"></circle>
+                    <circle cx="250" cy="300" r="1"></circle>
+                    <circle cx="177" cy="277" r="1"></circle>
+
+                </svg>
