@@ -1,0 +1,82 @@
+<svg id="star-map" class="svg-content-responsive" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 500">
+                    <path d="M92 306 L 222 364 L 150 82 L 92 306 L 244 481 L 480 360 L 492 110 L 428 28 L 254 142 L 320 138 L 294 244" fill="transparent" stroke="white"></path>
+
+                    <!-- Major stars -->
+                    <!-- Boxing -->
+                    <circle cx="92" cy="306" r="6" ng-click="showLyrics('Boxing')"></circle>
+                    <text x="100" y="302" text-anchor="left" ng-click="showLyrics('Boxing')">Boxing</text>
+                    <!-- House Fire -->
+                    <circle cx="222" cy="364" r="6" ng-click="showLyrics('House Fire')"></circle>
+                    <text x="232" y="358" text-anchor="left" ng-click="showLyrics('House Fire')">House Fire</text>
+                    <!-- Thousand -->
+                    <circle cx="150" cy="82" r="6" ng-click="showLyrics('Thousand')"></circle>
+                    <text x="156" y="74" text-anchor="left" ng-click="showLyrics('Thousand')">Thousand</text>
+                    <!-- Cold Shoulder -->
+                    <circle cx="244" cy="481" r="6" ng-click="showLyrics('Cold Shoulder')"></circle>
+                    <text x="252" y="496" text-anchor="left" ng-click="showLyrics('Cold Shoulder')">Cold Shoulder</text>
+                    <!-- All Right -->
+                    <circle cx="480" cy="360" r="6" ng-click="showLyrics('All Right')"></circle>
+                    <text x="490" y="360" text-anchor="left" ng-click="showLyrics('All Right')">All Right</text>
+                    <!-- Amen -->
+                    <circle cx="492" cy="110" r="6" ng-click="showLyrics('Amen')"></circle>
+                    <text x="500" y="104" text-anchor="left" ng-click="showLyrics('Amen')">Amen</text>
+                    <!-- Elements -->
+                    <circle cx="428" cy="28" r="6" ng-click="showLyrics('Elements')"></circle>
+                    <text x="434" y="20" text-anchor="left" ng-click="showLyrics('Elements')">Elements</text>
+                    <!-- Palindrome -->
+                    <circle cx="254" cy="142" r="6" ng-click="showLyrics('Palindrome')"></circle>
+                    <text x="176" y="134" text-anchor="left" ng-click="showLyrics('Palindrome')">Palindrome</text>
+                    <!-- Plurals -->
+                    <circle cx="320" cy="138" r="6" ng-click="showLyrics('Plurals')"></circle>
+                    <text x="328" y="130" text-anchor="left" ng-click="showLyrics('Plurals')">Plurals</text>
+                    <!-- Masterpiece -->
+                    <circle cx="294" cy="244" r="6" ng-click="showLyrics('Masterpiece')"></circle>
+                    <text x="304" y="238" text-anchor="left" ng-click="showLyrics('Masterpiece')">Masterpiece</text>
+
+                    <!-- Decorative stars -->
+                    <circle cx="132" cy="13" r="2"></circle>
+                    <circle cx="14" cy="14" r="1"></circle>
+                    <circle cx="6" cy="150" r="1"></circle>
+                    <circle cx="37" cy="289" r="1"></circle>
+                    <circle cx="3" cy="353" r="2"></circle>
+                    <circle cx="12" cy="488" r="2"></circle>
+                    <circle cx="173" cy="44" r="1"></circle>
+                    <circle cx="233" cy="102" r="1"></circle>
+                    <circle cx="284" cy="68" r="2"></circle>
+                    <circle cx="324" cy="12" r="2"></circle>
+                    <circle cx="378" cy="23" r="2"></circle>
+                    <circle cx="485" cy="56" r="2"></circle>
+                    <circle cx="539" cy="82" r="1"></circle>
+                    <circle cx="580" cy="44" r="1"></circle>
+                    <circle cx="570" cy="84" r="2"></circle>
+                    <circle cx="584" cy="225" r="1"></circle>
+                    <circle cx="587" cy="450" r="1"></circle>
+                    <circle cx="588" cy="350" r="2"></circle>
+                    <circle cx="546" cy="302" r="2"></circle>
+                    <circle cx="501" cy="222" r="2"></circle>
+                    <circle cx="531" cy="193" r="1"></circle>
+                    <circle cx="407" cy="427" r="1"></circle>
+                    <circle cx="457" cy="477" r="2"></circle>
+                    <circle cx="488" cy="456" r="1"></circle>
+                    <circle cx="518" cy="409" r="1"></circle>
+                    <circle cx="525" cy="385" r="1"></circle>
+                    <circle cx="540" cy="395" r="2"></circle>
+                    <circle cx="425" cy="300" r="2"></circle>
+                    <circle cx="405" cy="196" r="1"></circle>
+                    <circle cx="368" cy="184" r="2"></circle>
+                    <circle cx="378" cy="102" r="1"></circle>
+                    <circle cx="289" cy="8" r="1"></circle>
+                    <circle cx="52" cy="64" r="2"></circle>
+                    <circle cx="66" cy="72" r="2"></circle>
+                    <circle cx="52" cy="200" r="2"></circle>
+                    <circle cx="74" cy="274" r="1"></circle>
+                    <circle cx="52" cy="306" r="1"></circle>
+                    <circle cx="82" cy="404" r="2"></circle>
+                    <circle cx="150" cy="414" r="1"></circle>
+                    <circle cx="272" cy="392" r="2"></circle>
+                    <circle cx="327" cy="314" r="1"></circle>
+                    <circle cx="250" cy="300" r="1"></circle>
+                    <circle cx="177" cy="277" r="1"></circle>
+                    <circle cx="212" cy="240" r="2"></circle>
+
+                </svg>
