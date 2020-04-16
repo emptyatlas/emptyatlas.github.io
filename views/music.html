@@ -26,17 +26,17 @@
             <div class="col-sm-12 col-md-4 pb-3">
                 <img src="{{a.image}}" style="width: 100%;" class="grow">
             </div>
-            <div id="spotify-player" class="col-sm-12 col-md-4 pb-3">
+            <div id="spotify-player" class="col-sm-12 col-md-4 pb-3" ng-show="{{a.spotifyUrl}}">
                 <iframe src="{{a.spotifyUrl}}" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
-            <div id="apple-music-player" class="col-sm-12 col-md-4 pb-3">
+            <div id="apple-music-player" class="col-sm-12 col-md-4 pb-3" ng-show="{{a.appleMusicUrl}}">
                 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="100%" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="{{a.appleMusicUrl}}"></iframe>
             </div>
-            <div class="col-12 pt-3" align="left">
+            <div class="col-12 pt-3" align="left" ng-hide="a.iTunesUrl === undefined && a.soundCloudUrl === undefined && a.googlePlayUrl === undefined && a.amazonMusicUrl === undefined">
                 <h4 class="mb-0" style="margin-left: 10px;">Also available on</h4>
                 <div id="links" class="links">
                     <ul class="listen-links p-0">
-                        <li ng-show="{{a.iTunesUrl}}">
+                        <li ng-show="a.iTunesUrl">
                             <a href="{{a.iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note grow-lg"></i></a>
                         </li>
                         <li ng-show="{{a.soundCloudUrl}}">

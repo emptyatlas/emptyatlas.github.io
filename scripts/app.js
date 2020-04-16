@@ -87,15 +87,27 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     $scope.videos = VideoService.videos;
     $scope.albums = [
         {
-            name: 'SHORT FICTION (single)',
-            year: '2018',
-            image: '/images/Short-Fiction-Cover.png',
-            spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
-            appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
-            iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
-            soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
-            googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
-            amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
+          name: 'MAXIMAL (single)',
+          year: '2020 - Available everywhere April 24',
+          image: '/images/maximal-single-cover.png'
+          // ,
+          // spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
+          // appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
+          // iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
+          // soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
+          // googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
+          // amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
+        },
+        {
+          name: 'SHORT FICTION (single)',
+          year: '2018',
+          image: '/images/Short-Fiction-Cover.png',
+          spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
+          appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
+          iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
+          soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
+          googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
+          amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
         },
         {
             name: 'HESTIA',
@@ -113,8 +125,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
             year: '2012',
             image: '/images/anniversary.jpg',
             spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7eSkqCk3UG2OUHxrrh0YFc'),
-            appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/anniversary/902603298?app=music'),
-            iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/anniversary/902603298'),
+            // appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/anniversary/902603298?app=music'),
+            // iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/anniversary/902603298'),
             soundCloudUrl: undefined,
             googlePlayUrl: $sce.trustAsResourceUrl('https://play.google.com/store/music/album/Empty_Atlas_Anniversary?id=B27zpkjzpokqbd3rngky5vtptia'),
             amazonMusicUrl: undefined
