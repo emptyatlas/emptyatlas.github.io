@@ -69,12 +69,12 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
     // Music Links
     // Short Fiction
-    $scope.iTunesUrl = 'http://itunes.apple.com/album/id1412982650?ls=1&app=itunes';
-    $scope.appleMusicUrl = 'http://itunes.apple.com/album/id/1412982650';
-    $scope.googlePlayUrl = 'https://play.google.com/store/music/album/Empty_Atlas_Short_Fiction?id=Bb3soszugorqekta7yew4vfbe34';
-    $scope.spotifyUrl = 'https://open.spotify.com/track/10dP2wOiZgRXC7cku6nrpy';
-    $scope.amazonMusicUrl = 'https://www.amazon.com/Short-Fiction-Empty-Atlas/dp/B07FMLJTJF/ref=sr_1_2';
-    $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas/short-fiction-empty-atlas-single';
+    $scope.iTunesUrl = 'https://music.apple.com/us/album/maximal-single/1506115438?ls=1&app=itunes';
+    $scope.appleMusicUrl = 'https://music.apple.com/us/artist/empty-atlas/902603393';
+    $scope.googlePlayUrl = 'https://play.google.com/store/music/album/Empty_Atlas_Maximal?id=Bs4jnnxm7e63fkg7xa5tq2iakqm&hl=en_US';
+    $scope.spotifyUrl = 'https://open.spotify.com/track/6L6INRu2NkZgju7yzOh4D5';
+    $scope.amazonMusicUrl = 'https://www.amazon.com/Maximal-Empty-Atlas/dp/B086QJTF4X/ref=sr_1_1';
+    $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
 
     // Credit
     $scope.emmiSprayberryUrl = 'https://www.emmisprayberry.com/';
@@ -88,15 +88,14 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     $scope.albums = [
         {
           name: 'MAXIMAL (single)',
-          year: '2020 - Available everywhere April 24',
-          image: '/images/maximal-single-cover.png'
-          // ,
-          // spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
-          // appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
-          // iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
-          // soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
-          // googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
-          // amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
+          year: '2020',
+          image: '/images/maximal-single-cover.png',
+          spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7l79vt3E4JzAZyO7K9QVpP'),
+          appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/maximal/1506115438?i=1506115442?app=music'),
+          iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
+          soundCloudUrl: undefined,
+          googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
+          amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
         },
         {
           name: 'SHORT FICTION (single)',
@@ -105,7 +104,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
           spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
           appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
           iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
-          soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
+          soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/short-fiction-empty-atlas-single'),
           googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
           amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
         },

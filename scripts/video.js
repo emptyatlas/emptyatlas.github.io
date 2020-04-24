@@ -9,8 +9,13 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
 
     this.videos = [
         {
+          name: '“Maximal” (Lyric Video)',
+          date: 'Apr 24, 2020',
+          link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/uSARWrWd9fc')
+        },
+        {
             name: 'Empty Atlas | Armory Session',
-            date: 'mar 15, 2019',
+            date: 'Mar 15, 2019',
             link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/wUd-ceGnvII')
         },
         {
