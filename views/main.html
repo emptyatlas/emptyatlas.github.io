@@ -1,339 +1,383 @@
 <div ng-include="'views/nav.html'"></div>
 
 <div id="home" class="position-relative overflow-hidden pt-3 pb-5 px-5 p-md-5 text-center bg-light">
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-md-12">
-                <div style="margin-top: 22rem !important;" class="d-none d-sm-block"></div>
-                <div style="margin-top: 11rem !important;" class="d-block d-sm-none"></div>
-                <img class="p-2 p-md-5 band-logo" src="/images/ea_logo_vertical_white.png" style="opacity: 0;">
-                <div style="margin-top: 11rem !important;"></div>
-            </div>
-        </div>
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col-md-12">
+        <div style="margin-top: 22rem !important;" class="d-none d-sm-block"></div>
+        <div style="margin-top: 11rem !important;" class="d-block d-sm-none"></div>
+        <img class="p-2 p-md-5 band-logo" src="/images/ea_logo_vertical_white.png" style="opacity: 0;">
+        <div style="margin-top: 11rem !important;"></div>
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="music" class="bg-dark d-md-flex flex-md-equal">
-    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="my-3 py-3 row center">
-            <div class="col-lg-4 col-md-12">
-                <img src="/images/maximal-single-cover.png" class="w-100 my-4">
+  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="my-3 py-3 row center">
+      <div class="col-lg-4 col-md-12">
+        <img src="/images/maximal-single-cover.png" class="w-100 my-4">
+      </div>
+
+      <div class="col-lg-8 col-md-12" align="center">
+
+        <div class="h-100 d-table">
+          <div class="d-table-cell align-middle">
+
+            <div class="col-12 mt-2 mb-3 center">
+              <h2>The latest single from Empty Atlas.</h2>
+              <text>Listen now on <a href="{{spotifyUrl}}" target="_blank" title="Spotify">Spotify</a>, <a
+                href="{{appleMusicUrl}}" target="_blank" title="Apple Music">Apple Music</a>, and elsewhere.
+              </text>
             </div>
 
-            <div class="col-lg-8 col-md-12" align="center">
+            <!--                        <div class="col-12 my-4">-->
+            <!--                            <div class="col-12">-->
+            <!--                                <img src="/images/short-fiction-lines-top.svg" style="width: 100%; height: 10px;">-->
+            <!--                            </div>-->
+            <!--                            <div class="col-12">-->
+            <!--                                <h1 class="display-5 mb-0 mt-2 short-fiction center">Maximal</h1>-->
+            <!--                            </div>-->
+            <!--                            <div class="col-12">-->
+            <!--                                <img src="/images/short-fiction-lines-bottom.svg" style="width: 100%; height: 10px;">-->
+            <!--                            </div>-->
+            <!--                        </div>-->
 
-                <div class="h-100 d-table">
-                    <div class="d-table-cell align-middle">
+            <!--                        <div class="col-12 mt-2 mb-3 center">-->
+            <!--                            <text>The latest single from Empty Atlas</text>-->
+            <!--                        </div>-->
 
-                      <div class="col-12 mt-2 mb-3 center">
-                        <h2>The latest single from Empty Atlas.</h2>
-                        <text>Listen now on <a href="{{spotifyUrl}}" target="_blank" title="Spotify">Spotify</a>, <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music">Apple Music</a>, and elsewhere.</text>
-                      </div>
+            <!--                        <div class="col-12 spotify-player center">-->
+            <!--                            <iframe src="https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>-->
+            <!--                        </div>-->
 
-<!--                        <div class="col-12 my-4">-->
-<!--                            <div class="col-12">-->
-<!--                                <img src="/images/short-fiction-lines-top.svg" style="width: 100%; height: 10px;">-->
-<!--                            </div>-->
-<!--                            <div class="col-12">-->
-<!--                                <h1 class="display-5 mb-0 mt-2 short-fiction center">Maximal</h1>-->
-<!--                            </div>-->
-<!--                            <div class="col-12">-->
-<!--                                <img src="/images/short-fiction-lines-bottom.svg" style="width: 100%; height: 10px;">-->
-<!--                            </div>-->
-<!--                        </div>-->
+            <!--                        <div class="col-12 my-2 center">-->
+            <!--                            <text>Available on all major platforms</text>-->
+            <!--                        </div>-->
 
-<!--                        <div class="col-12 mt-2 mb-3 center">-->
-<!--                            <text>The latest single from Empty Atlas</text>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-12 spotify-player center">-->
-<!--                            <iframe src="https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-12 my-2 center">-->
-<!--                            <text>Available on all major platforms</text>-->
-<!--                        </div>-->
-
-                        <div class="col-12 center">
-                            <div id="links" class="links">
-                                <ul class="listen-links p-0">
-                                    <li>
-                                        <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i class="fab fa-apple fa-2x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
-                                    </li>
-<!--                                    <li>-->
-<!--                                        <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>-->
-<!--                                    </li>-->
-                                    <li>
-                                        <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i class="fab fa-google-play fa-2x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i class="fab fa-amazon fa-2x"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="col-12 center">
+              <div id="links" class="links">
+                <ul class="listen-links p-0">
+                  <li>
+                    <a href="{{iTunesUrl}}" target="_blank" title="iTunes"><i class="fab fa-itunes-note fa-2x"></i></a>
+                  </li>
+                  <li>
+                    <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"><i
+                      class="fab fa-apple fa-2x"></i></a>
+                  </li>
+                  <li>
+                    <a href="{{spotifyUrl}}" target="_blank" title="Spotify"><i class="fab fa-spotify fa-2x"></i></a>
+                  </li>
+                  <!--                                    <li>-->
+                  <!--                                        <a href="{{soundCloudUrl}}" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>-->
+                  <!--                                    </li>-->
+                  <li>
+                    <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"><i
+                      class="fab fa-google-play fa-2x"></i></a>
+                  </li>
+                  <li>
+                    <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"><i
+                      class="fab fa-amazon fa-2x"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
+          </div>
         </div>
 
-        <div class="my-3 py-3 row center">
-            <div class="col-12">
-                <a ng-click="clearActiveModule()" href="#/music"><button type="button" class="btn btn-gold px-5">MORE MUSIC</button></a>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
 
+    <div class="my-3 py-3 row center">
+      <div class="col-12">
+        <a ng-click="clearActiveModule()" href="#/music">
+          <button type="button" class="btn btn-gold px-5">MORE MUSIC</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div id="video" class="parallax-container d-md-flex flex-md-equal">
-    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="row my-3 py-3">
-            <div class="col-12">
-                <h2 class="display-5 my-0">VIDEO</h2>
-            </div>
-            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-            </div>
-            <div class="col-md-6 col-sm-12" style="border-right: 1px solid white;">
-                <div class="embed-responsive embed-responsive-16by9 video-player">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uSARWrWd9fc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">“Maximal” (Lyric Video)</h4>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="embed-responsive embed-responsive-16by9 video-player">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wUd-ceGnvII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">Empty Atlas | Armory Session</h4>
-            </div>
-            <div class="col-12 pt-3">
-                <a ng-click="clearActiveModule()" href="#/video"><button type="button" class="btn btn-gold px-5">MORE VIDEO</button></a>
-            </div>
+  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">VIDEO</h2>
+      </div>
+      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+      </div>
+      <div class="col-md-6 col-sm-12" style="border-right: 1px solid white;">
+        <div class="embed-responsive embed-responsive-16by9 video-player">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uSARWrWd9fc" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
         </div>
+        <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">“Maximal” (Lyric Video)</h4>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="embed-responsive embed-responsive-16by9 video-player">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wUd-ceGnvII" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">Empty Atlas | Armory Session</h4>
+      </div>
+      <div class="col-12 pt-3">
+        <a ng-click="clearActiveModule()" href="#/video">
+          <button type="button" class="btn btn-gold px-5">MORE VIDEO</button>
+        </a>
+      </div>
     </div>
-    <div class="parallax"><img src="./images/IMG_0521_blue_overlay.png"></div>
+  </div>
+  <div class="parallax"><img src="./images/IMG_0521_blue_overlay.png"></div>
 </div>
 
 <div id="lyrics" class="bg-dark d-md-flex flex-md-equal ng-scope">
-    <div class="py-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="row my-3 py-3">
-            <div class="col-12">
-                <h2 class="display-5 my-0">LYRICS</h2>
-            </div>
+  <div class="py-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">LYRICS</h2>
+      </div>
 
-            <!--
-            <div id="buffer-constellation" class="d-none d-md-block col-md-3">
-                <div ng-include="'images/constellations/buffer-constellation.svg'"></div>
-            </div>
+      <!--
+      <div id="buffer-constellation" class="d-none d-md-block col-md-3">
+          <div ng-include="'images/constellations/buffer-constellation.svg'"></div>
+      </div>
 -->
-<!--            <div id="kairos-constellation" class="col-sm-12 col-md-6">-->
-<!--                <div ng-include="'images/constellations/kairos-constellation.svg'"></div>-->
-<!--            </div>-->
-            <!--
-            <div id="buffer-constellation" class="d-none d-md-block flip col-md-3">
-                <div ng-include="'images/constellations/buffer-constellation.svg'"></div>
-            </div>
+      <!--            <div id="kairos-constellation" class="col-sm-12 col-md-6">-->
+      <!--                <div ng-include="'images/constellations/kairos-constellation.svg'"></div>-->
+      <!--            </div>-->
+      <!--
+      <div id="buffer-constellation" class="d-none d-md-block flip col-md-3">
+          <div ng-include="'images/constellations/buffer-constellation.svg'"></div>
+      </div>
 -->
-            <div id="hestia-constellation" class="col-sm-12 col-md-6">
-                <div ng-include="'images/constellations/hestia-constellation.svg'"></div>
-            </div>
+      <div id="hestia-constellation" class="col-sm-12 col-md-6">
+        <div ng-include="'images/constellations/hestia-constellation.svg'"></div>
+      </div>
 
-            <div id="anniversary-constellation" class="col-sm-12 col-md-6">
-                <div ng-include="'images/constellations/anniversary-constellation.svg'"></div>
-            </div>
-
-        </div>
+      <div id="anniversary-constellation" class="col-sm-12 col-md-6">
+        <div ng-include="'images/constellations/anniversary-constellation.svg'"></div>
+      </div>
 
     </div>
+
+  </div>
 </div>
 
 <div id="lyrics-display-parent" class="bg-dark d-md-flex flex-md-equal">
-    <div class="px-3 px-md-5 text-center text-white overflow-hidden container">
-        <div id="lyrics-display" class="row my-3 py-3 collapse">
-            <div class="col-12 lyrics-display">
-                <h2>{{activeSong.title}}</h2>
-                <p ng-bind-html="activeSong.lyrics"></p>
-            </div>
-        </div>
+  <div class="px-3 px-md-5 text-center text-white overflow-hidden container">
+    <div id="lyrics-display" class="row my-3 py-3 collapse">
+      <div class="col-12 lyrics-display">
+        <h2>{{activeSong.title}}</h2>
+        <p ng-bind-html="activeSong.lyrics"></p>
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="lyrics-display-spacer" class="bg-dark d-md-flex flex-md-equal">
-    <div class="container px-3 px-md-5 pt-md-5 text-center text-white overflow-hidden">
-        <div id="spacer" class="row my-2 py-2"></div>
-    </div>
+  <div class="container px-3 px-md-5 pt-md-5 text-center text-white overflow-hidden">
+    <div id="spacer" class="row my-2 py-2"></div>
+  </div>
 </div>
 
 <div id="live" class="parallax-container d-md-flex flex-md-equal">
-    <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="row my-3 py-3">
-            <div class="col-12">
-                <h2 class="display-5 my-0">LIVE</h2>
-            </div>
-            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-            </div>
-            <div class="col-12 mb-3 pb-3">
-                <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
-                <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true" data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#eccc44" data-popup-background-color="" data-background-color="" data-display-limit="10" data-link-text-color="#FFFFFF"></a>
-            </div>
-        </div>
+  <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">LIVE</h2>
+      </div>
+      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+      </div>
+      <div class="col-12 mb-3 pb-3">
+        <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+        <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true"
+           data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#eccc44"
+           data-popup-background-color="" data-background-color="" data-display-limit="10"
+           data-link-text-color="#FFFFFF"></a>
+      </div>
     </div>
-    <div class="parallax"><img src="./images/IMG_0518_blue_overlay.png"></div>
+  </div>
+  <div class="parallax"><img src="./images/IMG_0518_blue_overlay.png"></div>
 </div>
 
 <div id="about" class="bg-dark d-md-flex flex-md-equal ">
-    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="row my-3 py-3">
-            <div class="col-12">
-                <h2 class="display-5 my-0">ABOUT</h2>
-            </div>
-            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-            </div>
-            <div class="col-12 text-white">
-                <p>Mississippi is a state known for its storytellers and a rich history of groundbreaking musicians. Both terms certainly apply to Jackson indie-rockers Empty Atlas.</p>
+  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">ABOUT</h2>
+      </div>
+      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+      </div>
+      <div class="col-12 text-white">
+        <p>Mississippi is a state known for its storytellers and a rich history of groundbreaking musicians. Both terms
+          certainly apply to Jackson indie-rockers Empty Atlas.</p>
 
-                <p>Formed in central Mississippi in 2014, Empty Atlas packs poignant narratives of personal growth and life experience into gripping, melodic indie-rock music. Lyricist and vocalist Micah Smith fronts the outfit, which released its debut full-length album, “Hestia,” in December 2016, shortly before bassist Alex Ingram, guitarist Brennan Michael White and drummer Robert Currie Hansford joined, cementing the band’s lineup.</p>
+        <p>Formed in central Mississippi in 2014, Empty Atlas packs poignant narratives of personal growth and life
+          experience into gripping, melodic indie-rock music. Lyricist and vocalist Micah Smith fronts the outfit, which
+          released its debut full-length album, “Hestia,” in December 2016, shortly before bassist Alex Ingram,
+          guitarist Brennan Michael White and drummer Robert Currie Hansford joined, cementing the band’s lineup.</p>
 
-                <p>Empty Atlas will release their latest single, “Maximal,” on April 24, 2020, mixed by Tyler Spratt  (Imagine Dragons, rx Soul, Arkells). They are currently touring regionally while prepairing to release their sophomore studio album, “Kairos.”</p>
+        <p>Empty Atlas will release their latest single, “Maximal,” on April 24, 2020, mixed by Tyler Spratt (Imagine
+          Dragons, rx Soul, Arkells). They are currently touring regionally while prepairing to release their sophomore
+          studio album, “Kairos.”</p>
 
-                <p>In recent years, the band has shared the stage with popular acts such as Jared & the Mill, The Bright Light Social Hour, Broadside, Secret Stuff, The Vegabonds, Hodera and Sweet Crude, and worked with industry professionals such as Mark Needham (Fleetwood Mac, The Killers), Joe Causey (Colony House, Steven Curtis Chapman) and Eric Woolard (For a Season, Courier).</p>
+        <p>In recent years, the band has shared the stage with popular acts such as Jared & the Mill, The Bright Light
+          Social Hour, Broadside, Secret Stuff, The Vegabonds, Hodera and Sweet Crude, and worked with industry
+          professionals such as Mark Needham (Fleetwood Mac, The Killers), Joe Causey (Colony House, Steven Curtis
+          Chapman) and Eric Woolard (For a Season, Courier).</p>
 
-                <p>Listen to Empty Atlas now on <a href="{{spotifyUrl}}" target="_blank">Spotify</a>,
-                    <a href="{{iTunesUrl}}" target="_blank">Apple Music</a>,
-                    <a href="{{googlePlayUrl}}" target="_blank">Google Play</a>,
-                    <a href="{{amazonMusicUrl}}>" target="_blank">Amazon</a> and most digital music retailers.</p>
+        <p>Listen to Empty Atlas now on <a href="{{spotifyUrl}}" target="_blank">Spotify</a>,
+          <a href="{{iTunesUrl}}" target="_blank">Apple Music</a>,
+          <a href="{{googlePlayUrl}}" target="_blank">Google Play</a>,
+          <a href="{{amazonMusicUrl}}>" target="_blank">Amazon</a> and most digital music retailers.</p>
 
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">IN THE NEWS</h2>
+      </div>
+      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+      </div>
+      <div class="col-12 text-white">
+
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="newsletter" class="parallax-container d-md-flex flex-md-equal ">
-    <div class="pt-3 px-3 px-md-5 text-center text-white overflow-hidden container">
-        <div class="row my-3 py-3">
-            <div class="col-12">
-                <h2 class="display-5 my-0">NEWSLETTER</h2>
+  <div class="pt-3 px-3 px-md-5 text-center text-white overflow-hidden container">
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">NEWSLETTER</h2>
+      </div>
+      <div class="col-md-6 offset-md-3 col-sm-12">
+        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+      </div>
+      <div class="col-xs-12 col-sm-6 offset-sm-3">
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          #mc_embed_signup {
+            font-family: inherit;
+            clear: left;
+          }
+
+          #mc_embed_signup form {
+            padding-left: 0 !important;
+          }
+
+          #mc_embed_signup input {
+            border-radius: 0 !important;
+            -webkit-appearance: none;
+          }
+
+          #mc_embed_signup input:focus {
+            border-color: white !important;
+          }
+
+          #mc_embed_signup .button {
+            color: black !important;
+          }
+
+          #mc_embed_signup input.button {
+            display: block;
+            padding: 0 0.4em;
+            margin: 0 4% 10px 0;
+            min-height: 38px;
+            height: 44px;
+            min-width: 148px;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: transparent !important;
+            text-transform: uppercase;
+            text-align: center !important;
+            line-height: 44px !important;
+            font-weight: bold !important;
+            box-shadow: none;
+            border-radius: 0 !important;
+            color: #333a41 !important;
+            background-color: #eccc44 !important;
+          }
+
+          #mc_embed_signup input.button:hover {
+            color: #333a41 !important;
+            background-color: #ffe161 !important;
+            border: 1px solid #ffe161 !important;
+          }
+
+          #mc_embed_signup input.email {
+            width: calc(100% - 26px);
+            margin: 0 0 10px 0;
+            background: transparent;
+            color: white !important;
+            border: 1px solid white;
+            padding: 12px;
+          }
+
+          ::placeholder {
+            color: #fff;
+            opacity: 0.5;
+            font-family: inherit;
+          }
+
+          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+        </style>
+        <div id="mc_embed_signup">
+          <form
+            action="https://emptyatlas.us13.list-manage.com/subscribe/post?u=ab78edd056a1703ec9077b2b0&amp;id=14ff368932"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+            target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+                     required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                        name="b_ab78edd056a1703ec9077b2b0_14ff368932"
+                                                                                        tabindex="-1" value=""></div>
+
+              <div class="clear" align="center" style="display: block;">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                       class="button btn btn-gold px-4">
+              </div>
             </div>
-            <div class="col-md-6 offset-md-3 col-sm-12">
-                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-            </div>
-            <div class="col-xs-12 col-sm-6 offset-sm-3">
-                <!-- Begin Mailchimp Signup Form -->
-                <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-                <style type="text/css">
-                    #mc_embed_signup {
-                        font-family: inherit;
-                        clear: left;
-                    }
-
-                    #mc_embed_signup form {
-                        padding-left: 0 !important;
-                    }
-
-                    #mc_embed_signup input {
-                        border-radius: 0 !important;
-                        -webkit-appearance: none;
-                    }
-
-                    #mc_embed_signup input:focus {
-                        border-color: white !important;
-                    }
-
-                    #mc_embed_signup .button {
-                        color: black !important;
-                    }
-
-                    #mc_embed_signup input.button {
-                        display: block;
-                        padding: 0 0.4em;
-                        margin: 0 4% 10px 0;
-                        min-height: 38px;
-                        height: 44px;
-                        min-width: 148px;
-                        text-decoration: none;
-                        font-size: 16px;
-                        background-color: transparent !important;
-                        text-transform: uppercase;
-                        text-align: center !important;
-                        line-height: 44px !important;
-                        font-weight: bold !important;
-                        box-shadow: none;
-                        border-radius: 0 !important;
-                        color: #333a41 !important;
-                        background-color: #eccc44 !important;
-                    }
-
-                    #mc_embed_signup input.button:hover {
-                        color: #333a41 !important;
-                        background-color: #ffe161 !important;
-                        border: 1px solid #ffe161 !important;
-                    }
-
-                    #mc_embed_signup input.email {
-                        width: calc(100% - 26px);
-                        margin: 0 0 10px 0;
-                        background: transparent;
-                        color: white !important;
-                        border: 1px solid white;
-                        padding: 12px;
-                    }
-
-                    ::placeholder {
-                        color: #fff;
-                        opacity: 0.5;
-                        font-family: inherit;
-                    }
-
-                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-
-                </style>
-                <div id="mc_embed_signup">
-                    <form action="https://emptyatlas.us13.list-manage.com/subscribe/post?u=ab78edd056a1703ec9077b2b0&amp;id=14ff368932" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ab78edd056a1703ec9077b2b0_14ff368932" tabindex="-1" value=""></div>
-
-                            <div class="clear" align="center" style="display: block;">
-                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-gold px-4">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
+          </form>
         </div>
+
+      </div>
     </div>
-    <div class="parallax"><img src="./images/empty-atlas-2020_blue-overlay.png"></div>
+  </div>
+  <div class="parallax"><img src="./images/empty-atlas-2020_blue-overlay.png"></div>
 </div>
 
 <div id="about" class="bg-dark d-md-flex flex-md-equal ">
-    <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-        <div class="row my-3 py-3">
-            <div class="col-12">
-                <h2 class="display-5 my-0">INSTAGRAM</h2>
-            </div>
-            <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-                <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-            </div>
-            <div class="col-12">
-                <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-            </div>
-        </div>
+  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+    <div class="row my-3 py-3">
+      <div class="col-12">
+        <h2 class="display-5 my-0">INSTAGRAM</h2>
+      </div>
+      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
+        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
+      </div>
+      <div class="col-12">
+        <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no"
+                allowtransparency="true" class="lightwidget-widget"
+                style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
     </div>
+  </div>
 </div>
 
 
