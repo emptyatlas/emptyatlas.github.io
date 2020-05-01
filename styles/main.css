@@ -260,6 +260,16 @@ nav {
     display: inline-flex;
 }
 
+.card-blue {
+  background-color: #065b9c !important;
+}
+
+.card-gray {
+  background-color: #333a40 !important;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 .svg-container {
     display: inline-block;
     position: relative;

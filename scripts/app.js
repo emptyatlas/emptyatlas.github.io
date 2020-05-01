@@ -143,6 +143,39 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         }
     ];
 
+    var maxCharLength = 148;
+    $scope.news = [
+      {
+        title: 'All Punked Up',
+        desc: `Ally Rincón interviews Micah Smith of Jackson based alt-rock band Empty Atlas. Watch as they talk about the band's new single "Maximal," their upcoming album, and how the pandemic has affected the music industry!`,
+        img: 'images/news/all-punked-up.jpg',
+        actionText: 'WATCH NOW',
+        link: 'https://www.youtube.com/watch?v=KMQpaIUTdOE&feature=youtu.be&fbclid=IwAR2-MtTTF89r6gjdUVdYiVoAto6CmDx3_lKJouBXkbcFgmdTPY_v4-lOsOk'
+      },
+      {
+        title: 'FBT Entertainment',
+        desc: `Mississippi alternative rock band, Empty Atlas, dropped their new single yesterday titled "Maximal" to tease their upcoming sophomore record Kairos.`,
+        img: 'images/news/fbt-entertainment.png',
+        actionText: 'READ MORE',
+        link: 'https://fbtentertainment.com/blogs/news/new-release-maximal-by-empty-atlas'
+      },
+      {
+        title: 'Underground Music Collective',
+        desc: `It seems like just yesterday that we had Empty Atlas‘ Micah Smith and Brennan Michael White on one of our early Quarantine Jams. That night, they told us about their then-forthcoming single, “Maximal,” set for release on April 24.`,
+        img: 'images/news/underground-music-collective.png',
+        actionText: 'READ MORE',
+        link: 'https://undergroundmusiccollective.com/2020/04/27/the-quinns-daily-spinn-tuesday-april-28/'
+      }
+    ];
+
+    // Trim the description for the news articles to make sure they're evenly distributed.
+    angular.forEach($scope.news, function(n) {
+      if(n.desc.length !== maxCharLength) {
+        var trimmedDesc = n.desc.slice(0, maxCharLength) + '...';
+        n.desc = trimmedDesc;
+      }
+    });
+
     $scope.getCurrentYear = function () {
         try {
             return new Date().getFullYear();
