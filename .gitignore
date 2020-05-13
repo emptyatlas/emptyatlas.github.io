@@ -3,6 +3,7 @@
 /.tmp
 /.sass-cache
 /.idea
+/_site
 
 \.DS_Store
 
