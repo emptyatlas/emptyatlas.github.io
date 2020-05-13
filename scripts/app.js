@@ -76,6 +76,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.amazonMusicUrl = 'https://www.amazon.com/Maximal-Empty-Atlas/dp/B086QJTF4X/ref=sr_1_1';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
   $scope.youTubeMusicUrl = 'https://music.youtube.com/channel/UCvCzcTWweMYsv57bMIz2YMQ';
+  $scope.tidalUrl = 'https://tidal.com/browse/track/136269864';
 
   // Credit
   $scope.emmiSprayberryUrl = 'https://www.emmisprayberry.com/';
@@ -97,7 +98,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=6poLggcs9ww&feature=share'),
       googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
-      amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl)
+      amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
+      tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl)
     },
     {
       name: 'SHORT FICTION (single)',
@@ -109,7 +111,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/short-fiction-empty-atlas-single'),
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=VXz2cdKXXH8&feature=share'),
       googlePlayUrl: $sce.trustAsResourceUrl('https://play.google.com/store/music/album/Empty_Atlas_Short_Fiction?id=Bb3soszugorqekta7yew4vfbe34&hl=en_US'),
-      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B07FMLJTJF/ref=cm_sw_em_r_mt_dp_U_25fVEbBTQMP9Y')
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B07FMLJTJF/ref=cm_sw_em_r_mt_dp_U_25fVEbBTQMP9Y'),
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/92107037?play=true')
     },
     {
       name: 'HESTIA',
@@ -121,7 +124,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/sets/hestia-full-album-stream'),
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_kfaL5Pr94FGRO-jA236UAsfQz5nAa8ThI'),
       googlePlayUrl: $sce.trustAsResourceUrl('https://play.google.com/store/music/album/Empty_Atlas_Hestia?id=Bhygwq7rdqe6sabtmvvescbk4ce'),
-      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B01N1NZFMU/ref=cm_sw_em_r_mt_dp_U_vfGyCbENVXSZJ')
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B01N1NZFMU/ref=cm_sw_em_r_mt_dp_U_vfGyCbENVXSZJ'),
+      tidalUrl: undefined
     },
     {
       name: 'ANNIVERSARY',
@@ -133,7 +137,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_kaIwdpuMJgBQodx_wtpM1FrfBZwyjujSU'),
       googlePlayUrl: $sce.trustAsResourceUrl('https://play.google.com/store/music/album/Empty_Atlas_Anniversary?id=B27zpkjzpokqbd3rngky5vtptia'),
-      amazonMusicUrl: undefined
+      amazonMusicUrl: undefined,
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/50568535?play=true')
     },
     {
       name: 'HOLIDAY PARTIES (single)',
@@ -145,7 +150,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nvc6x42AAEgFiPgerNMIDx0M-Bme3EB6c'),
       googlePlayUrl: $sce.trustAsResourceUrl('https://play.google.com/store/music/album/Empty_Atlas_Holiday_Parties?id=Bukgabgp4m4kxtfhwzdvgp6v4oe'),
-      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B07L45TC6V/ref=cm_sw_em_r_mt_dp_U_VlGyCb7GQXVTQ')
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B07L45TC6V/ref=cm_sw_em_r_mt_dp_U_VlGyCb7GQXVTQ'),
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/100389767?play=true')
     }
   ];
 
