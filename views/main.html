@@ -88,7 +88,7 @@
                    class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
                   class="fab fa-youtube-square fa-2x"></i></a>
               </li>
-              <li>
+              <li ng-show="{{googlePlayUrl}}">
                 <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"
                    class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
                   class="fab fa-google-play fa-2x"></i></a>
@@ -285,7 +285,7 @@
                  class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
                 class="fab fa-youtube-square fa-2x"></i></a>
             </li>
-            <li>
+            <li ng-show="{{googlePlayUrl}}">
               <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"
                  class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
                 class="fab fa-google-play fa-2x"></i></a>
