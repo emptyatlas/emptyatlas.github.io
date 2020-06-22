@@ -71,7 +71,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   // Music Links
   $scope.iTunesUrl = 'https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes';
   $scope.appleMusicUrl = 'https://embed.music.apple.com/us/album/kairos/1512448187';
-  $scope.googlePlayUrl = 'https://play.google.com/store/music/album/Empty_Atlas_Maximal?id=Bs4jnnxm7e63fkg7xa5tq2iakqm&hl=en_US';
+  $scope.googlePlayUrl = undefined; //'https://play.google.com/store/music/album/Empty_Atlas_Maximal?id=Bs4jnnxm7e63fkg7xa5tq2iakqm&hl=en_US';
   $scope.spotifyUrl = 'https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid';
   $scope.amazonMusicUrl = 'https://www.amazon.com/Kairos-Empty-Atlas/dp/B088BH853N/ref=sr_1_1';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
@@ -97,7 +97,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl($scope.youTubeMusicUrl),
-      googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
+      googlePlayUrl: undefined, //$sce.trustAsResourceUrl($scope.googlePlayUrl),
       amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
       tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl)
     },
