@@ -67,6 +67,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.facebookUrl = 'http://facebook.com/emptyatlasmusic';
   $scope.instagramUrl = 'http://instagram.com/emptyatlas';
   $scope.youTubeUrl = 'https://www.youtube.com/user/emptyatlasmusic';
+  $scope.shopUrl = 'https://squareup.com/store/empty-atlas-music';
 
   // Music Links
   $scope.iTunesUrl = 'https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes';
@@ -77,6 +78,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
   $scope.youTubeMusicUrl = 'https://music.youtube.com/playlist?list=OLAK5uy_n2GxDo7LgrkZK5BNZyq_HAGGDrOeQRMPg';
   $scope.tidalUrl = 'https://tidal.com/browse/album/140616400';
+  $scope.bandcampUrl = 'https://emptyatlas.bandcamp.com/';
 
   // Credit
   $scope.emmiSprayberryUrl = 'https://www.emmisprayberry.com/';
