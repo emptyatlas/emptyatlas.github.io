@@ -56,7 +56,7 @@ a:hover {
 }
 
 #download-body {
-    background: url('/images/IMG_0518_green_overlay.jpg');
+    background: url('/images/IMG_0518_blue_overlay.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -431,8 +431,9 @@ footer > ul > li {
 }
 
 .sidenav > li {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding: 0 !important;
+    /*padding-left: 2rem !important;*/
+    /*padding-right: 2rem !important;*/
     /*    background-color: rgba(0, 0, 0, 0.25);*/
     /*    background-color: #235C98 !important;*/
 }
@@ -442,9 +443,16 @@ footer > ul > li {
 }
 
 .sidenav {
-    background: url('/images/slide-out-menu-bkg.png');
-    background-size: cover;
+    /*background: url('/images/slide-out-menu-bkg.png');*/
+    /*background-size: cover;*/
+    background-color: #235C98 !important;
     width: 250px;
+}
+
+.sidenav-btn {
+  padding: 0 !important;
+  /*border-top: 1px solid gray;*/
+  /*border-bottom: 1px solid gray;*/
 }
 
 .upper-roman > li {
