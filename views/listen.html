@@ -1,0 +1,34 @@
+<div ng-controller="MainCtrl">
+  <div ng-include="'views/nav.html'"></div>
+
+  <div class="w-100" id="download-body">
+
+    <div class="container no-background py-5 px-0">
+
+      <div class="jumbotron no-background py-5 px-0 m-0" align="center">
+        <div class="card border-0 p-0 col-md-6 col-md-offset-3 col-sm-12 animated fadeIn"
+             style="background-color: #0000008f;">
+          <div id="video-player" class="card-img-top">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" ng-src="https://www.youtube.com/embed/n9sZXXpJB8A" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title text-white m-0">You're listening to the latest music from Mississippi's own Empty
+              Atlas.</h3>
+          </div>
+        </div>
+
+        <div class="center mt-3">
+          <p class="text-white">Scroll down for more</p>
+          <p class="text-white"><i class="fas fa-chevron-down animate__animated animate__slideInDown animate__slower animate__repeat-10"></i></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="footer" ng-include="'views/footer.html'"></div>

@@ -218,7 +218,7 @@ nav {
 
 .links > ul > li,
 .links > ul > li > a {
-    display: inline-flex;
+    /*display: inline-flex;*/
 }
 
 .links > ul > li > a {
@@ -467,6 +467,13 @@ footer > ul > li {
 .flex-equal > * {
     -ms-flex: 1;
     flex: 1;
+}
+
+.animate__animated.animate__repeat-10 {
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10;
+  -webkit-animation-iteration-count: calc(var(--animate-repeat)*10);
+  animation-iteration-count: calc(var(--animate-repeat)*10);
 }
 
 @media (min-width: 768px) {
