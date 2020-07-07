@@ -35,6 +35,10 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
       templateUrl: 'views/press-kit.html',
       controller: 'MainCtrl'
     })
+    .when('/listen', {
+      templateUrl: 'views/listen.html',
+      controller: 'MainCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
