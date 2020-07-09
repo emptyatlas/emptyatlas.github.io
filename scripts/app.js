@@ -191,6 +191,20 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   var maxCharLength = 148;
   $scope.news = [
     {
+      title: 'Right Chord Music',
+      desc: `Empty Atlas’ new full-length album, Kairos, is the perfect soundtrack for a long drive somewhere new, or for a sleepy afternoon spent watching the ocean.`,
+      img: 'images/news/right-chord-music.png',
+      actionText: 'READ MORE',
+      link: 'https://www.rightchordmusic.co.uk/empty-atlas-maximal/?fbclid=IwAR36VvA-EYFj7D_XL206XgQIMed3GI3DdrDo0JpvNVRVJD2PCzSRe8vihm0'
+    },
+    {
+      title: 'Jesus Freak Hideout',
+      desc: `One of my favorite discoveries last year was Jackson, Mississippi's own Empty Atlas. Their single "Short Fiction" made me an instant fan, and their new album Kairos does not disappoint.`,
+      img: 'images/news/jesus-freak-hideout.png',
+      actionText: 'READ MORE',
+      link: 'https://www.jesusfreakhideout.com/indiemusic/Kairos.asp?fbclid=IwAR2shu4uhkyH4MYWyjUPvcRxnJOBxxI4wJtC2WPiY7gXyWNvzlgVzCts6Q8'
+    },
+    {
       title: 'All Punked Up',
       desc: `Ally Rincón interviews Micah Smith of Jackson based alt-rock band Empty Atlas. Watch as they talk about the band's new single "Maximal," their upcoming album, and how the pandemic has affected the music industry!`,
       img: 'images/news/all-punked-up.jpg',

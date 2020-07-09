@@ -75,9 +75,11 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
   // Music Links
   $scope.iTunesUrl = 'https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes';
-  $scope.appleMusicUrl = 'https://embed.music.apple.com/us/album/kairos/1512448187';
-  $scope.googlePlayUrl = undefined; //'https://play.google.com/store/music/album/Empty_Atlas_Maximal?id=Bs4jnnxm7e63fkg7xa5tq2iakqm&hl=en_US';
-  $scope.spotifyUrl = 'https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid';
+  $scope.appleMusicUrl = 'https://music.apple.com/us/album/kairos/1512448187';
+  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/album/kairos/1512448187';
+  $scope.googlePlayUrl = 'https://play.google.com/store/music/artist/Empty_Atlas?id=Af5xacnwu5cxcedk4myhfbt2pay';
+  $scope.spotifyUrl = 'https://open.spotify.com/album/1R6XM9xoyFz1iRUaRATuid';
+  $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid';
   $scope.amazonMusicUrl = 'https://www.amazon.com/Kairos-Empty-Atlas/dp/B088BH853N/ref=sr_1_1';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
   $scope.youTubeMusicUrl = 'https://music.youtube.com/playlist?list=OLAK5uy_n2GxDo7LgrkZK5BNZyq_HAGGDrOeQRMPg';
@@ -99,11 +101,13 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2020',
       image: '/images/Kairos-as-performed-by-Empty-Atlas.png',
       spotifyUrl: $sce.trustAsResourceUrl($scope.spotifyUrl),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl($scope.spotifyEmbedUrl),
       appleMusicUrl: $sce.trustAsResourceUrl($scope.appleMusicUrl),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl($scope.appleMusicEmbedUrl),
       iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
-      soundCloudUrl: undefined,
+      soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
       youTubeMusicUrl: $sce.trustAsResourceUrl($scope.youTubeMusicUrl),
-      googlePlayUrl: undefined, //$sce.trustAsResourceUrl($scope.googlePlayUrl),
+      googlePlayUrl: $sce.trustAsResourceUrl($scope.googlePlayUrl),
       amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
       tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl)
     },
@@ -111,8 +115,10 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'MAXIMAL (single)',
       year: '2020',
       image: '/images/maximal-single-cover.png',
-      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7l79vt3E4JzAZyO7K9QVpP'),
-      appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/maximal/1506115438?i=1506115442&app=music'),
+      spotifyUrl: undefined,
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7l79vt3E4JzAZyO7K9QVpP'),
+      appleMusicUrl: undefined,
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/maximal/1506115438?i=1506115442&app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/maximal-single/1506115438?ls=1&app=itunes'),
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=6poLggcs9ww&feature=share'),
@@ -124,8 +130,10 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'SHORT FICTION (single)',
       year: '2018',
       image: '/images/Short-Fiction-Cover.png',
-      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
-      appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
+      spotifyUrl: undefined,
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
+      appleMusicUrl: undefined,
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/short-fiction-single/1412982650?ls=1&app=itunes'),
       soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/short-fiction-empty-atlas-single'),
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=VXz2cdKXXH8&feature=share'),
@@ -137,8 +145,10 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'HESTIA',
       year: '2016',
       image: '/images/Hestia_smol.jpg',
-      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/0LiGP71p9bEpbV7cY4DwLd'),
-      appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/hestia/1172021169?app=music'),
+      spotifyUrl: undefined,
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/0LiGP71p9bEpbV7cY4DwLd'),
+      appleMusicUrl: undefined,
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/hestia/1172021169?app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/hestia/1172021169'),
       soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/sets/hestia-full-album-stream'),
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_kfaL5Pr94FGRO-jA236UAsfQz5nAa8ThI'),
@@ -150,9 +160,11 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'ANNIVERSARY',
       year: '2012',
       image: '/images/anniversary.jpg',
-      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7eSkqCk3UG2OUHxrrh0YFc'),
-      // appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/anniversary/902603298?app=music'),
-      // iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/anniversary/902603298'),
+      spotifyUrl: undefined,
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7eSkqCk3UG2OUHxrrh0YFc'),
+      appleMusicUrl: undefined,
+      appleMusicEmbedUrl: undefined, //$sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/anniversary/902603298?app=music'),
+      iTunesUrl: undefined, //$sce.trustAsResourceUrl('https://itunes.apple.com/us/album/anniversary/902603298'),
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_kaIwdpuMJgBQodx_wtpM1FrfBZwyjujSU'),
       googlePlayUrl: $sce.trustAsResourceUrl('https://play.google.com/store/music/album/Empty_Atlas_Anniversary?id=B27zpkjzpokqbd3rngky5vtptia'),
@@ -163,8 +175,10 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'HOLIDAY PARTIES (single)',
       year: '2018',
       image: '/images/holiday-parties.png',
-      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/3zndfu65WOEcM6nhWi4P0e'),
-      appleMusicUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/holiday-parties-single/1445540114?app=music'),
+      spotifyUrl: undefined,
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/3zndfu65WOEcM6nhWi4P0e'),
+      appleMusicUrl: undefined,
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/holiday-parties-single/1445540114?app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/holiday-parties-single/1445540114'),
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nvc6x42AAEgFiPgerNMIDx0M-Bme3EB6c'),
@@ -176,6 +190,20 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
   var maxCharLength = 148;
   $scope.news = [
+    {
+      title: 'Right Chord Music',
+      desc: `Empty Atlas’ new full-length album, Kairos, is the perfect soundtrack for a long drive somewhere new, or for a sleepy afternoon spent watching the ocean.`,
+      img: 'images/news/right-chord-music.png',
+      actionText: 'READ MORE',
+      link: 'https://www.rightchordmusic.co.uk/empty-atlas-maximal/?fbclid=IwAR36VvA-EYFj7D_XL206XgQIMed3GI3DdrDo0JpvNVRVJD2PCzSRe8vihm0'
+    },
+    {
+      title: 'Jesus Freak Hideout',
+      desc: `One of my favorite discoveries last year was Jackson, Mississippi's own Empty Atlas. Their single "Short Fiction" made me an instant fan, and their new album Kairos does not disappoint.`,
+      img: 'images/news/jesus-freak-hideout.png',
+      actionText: 'READ MORE',
+      link: 'https://www.jesusfreakhideout.com/indiemusic/Kairos.asp?fbclid=IwAR2shu4uhkyH4MYWyjUPvcRxnJOBxxI4wJtC2WPiY7gXyWNvzlgVzCts6Q8'
+    },
     {
       title: 'All Punked Up',
       desc: `Ally Rincón interviews Micah Smith of Jackson based alt-rock band Empty Atlas. Watch as they talk about the band's new single "Maximal," their upcoming album, and how the pandemic has affected the music industry!`,
