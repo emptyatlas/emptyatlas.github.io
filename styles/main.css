@@ -203,6 +203,10 @@ a.bit-play-my-city-button {
   background-color: rgb(35, 92, 152, 0.5) !important;
 }
 
+.blockquote {
+  border-left: 5px solid #f1cd01;
+}
+
 nav {
     background-color: #235C98 !important;
 }

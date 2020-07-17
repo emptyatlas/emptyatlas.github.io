@@ -42,7 +42,8 @@
 
             <div class="row spotify-player center">
               <div class="col-12 center">
-                <iframe src="https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid" width="100%" height="200px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid" width="100%" height="200px"
+                        frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               </div>
             </div>
 
@@ -95,11 +96,6 @@
                 <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"
                    class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
                   class="fab fa-youtube-square fa-2x"></i></a>
-              </li>
-              <li ng-show="{{googlePlayUrl}}">
-                <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                  class="fab fa-google-play fa-2x"></i></a>
               </li>
               <li>
                 <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"
@@ -228,7 +224,7 @@
   <div class="parallax"><img src="./images/IMG_0518_blue_overlay.png"></div>
 </div>
 
-<div id="about" class="bg-dark d-md-flex flex-md-equal ">
+<div id="about" class="bg-dark d-md-flex flex-md-equal">
   <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
     <div class="row my-3 py-3">
       <div class="col-12">
@@ -296,11 +292,6 @@
                  class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
                 class="fab fa-youtube-square fa-2x"></i></a>
             </li>
-            <li ng-show="{{googlePlayUrl}}">
-              <a href="{{googlePlayUrl}}" target="_blank" title="Google Play"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                class="fab fa-google-play fa-2x"></i></a>
-            </li>
             <li>
               <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"
                  class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
@@ -310,6 +301,11 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div id="news" class="bg-blue d-md-flex flex-md-equal">
+  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
     <div class="row my-3 py-3">
       <div class="col-12">
         <h2 class="display-5 my-0">NEWS</h2>
@@ -318,24 +314,35 @@
         <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
       </div>
 
-      <div class="row px-3 mx-3">
-        <div class="card-deck">
-          <div class="card card-gray mx-3 border-0" ng-repeat="n in news|limitTo:3">
-            <img class="card-img-top" src="{{n.img}}">
-            <div class="card-body">
-              <h5 class="card-title">{{n.title}}</h5>
-              <p class="card-text">{{n.desc}}</p>
-              <!--              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-              <a href="{{n.link}}" target="_blank" class="card-link">{{n.actionText}}</a>
-            </div>
+    </div>
+
+    <div class="row px-3 mx-3">
+      <div class="card-deck">
+        <div class="card card-gray mx-3 border-0"
+             ng-repeat="n in news | filter:isQuoteDefined | orderBy:'date':true | limitTo:3">
+          <img class="card-img-top" src="{{n.img}}">
+          <div class="card-body">
+            <h5 class="card-title">{{n.title}}</h5>
+            <p class="card-text">{{n.desc}}</p>
+            <!--              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+            <a href="{{n.link}}" target="_blank" class="card-link">{{n.actionText}}</a>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="my-3 py-3 row">
+      <div class="col-12">
+        <a ng-click="clearActiveModule()" href="#/news">
+          <button type="button" class="btn btn-gold px-5">MORE NEWS</button>
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div id="newsletter" class="parallax-container d-md-flex flex-md-equal ">
+<div id="newsletter" class="bg-dark d-md-flex flex-md-equal">
   <div class="pt-3 px-3 px-md-5 text-center text-white overflow-hidden container">
     <div class="row my-3 py-3">
       <div class="col-12">
@@ -439,10 +446,9 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="./images/empty-atlas-2020_blue-overlay.png"></div>
 </div>
 
-<div id="about" class="bg-dark d-md-flex flex-md-equal ">
+<div id="instagram" class="bg-blue d-md-flex flex-md-equal ">
   <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
     <div class="row my-3 py-3">
       <div class="col-12">
