@@ -111,7 +111,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
       youTubeMusicUrl: $sce.trustAsResourceUrl($scope.youTubeMusicUrl),
       amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
-      tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl)
+      tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl),
+      bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/album/kairos')
     },
     {
       name: 'MAXIMAL (single)',
@@ -125,7 +126,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=6poLggcs9ww&feature=share'),
       amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/Maximal-Empty-Atlas/dp/B086QJTF4X/ref=sr_1_1'),
-      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/136269864')
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/136269864'),
+      bandcampUrl: undefined
     },
     {
       name: 'SHORT FICTION (single)',
@@ -139,7 +141,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/short-fiction-empty-atlas-single'),
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=VXz2cdKXXH8&feature=share'),
       amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B07FMLJTJF/ref=cm_sw_em_r_mt_dp_U_25fVEbBTQMP9Y'),
-      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/92107037?play=true')
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/92107037?play=true'),
+      bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/track/short-fiction')
     },
     {
       name: 'HESTIA',
@@ -153,7 +156,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/sets/hestia-full-album-stream'),
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_kfaL5Pr94FGRO-jA236UAsfQz5nAa8ThI'),
       amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B01N1NZFMU/ref=cm_sw_em_r_mt_dp_U_vfGyCbENVXSZJ'),
-      tidalUrl: undefined
+      tidalUrl: undefined,
+      bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/album/hestia')
     },
     {
       name: 'ANNIVERSARY',
@@ -167,7 +171,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_kaIwdpuMJgBQodx_wtpM1FrfBZwyjujSU'),
       amazonMusicUrl: undefined,
-      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/50568535?play=true')
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/50568535?play=true'),
+      bandcampUrl: undefined
     },
     {
       name: 'HOLIDAY PARTIES (single)',
@@ -181,7 +186,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       soundCloudUrl: undefined,
       youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nvc6x42AAEgFiPgerNMIDx0M-Bme3EB6c'),
       amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/dp/B07L45TC6V/ref=cm_sw_em_r_mt_dp_U_VlGyCb7GQXVTQ'),
-      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/100389767?play=true')
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/100389767?play=true'),
+      bandcampUrl: undefined
     }
   ];
 
@@ -327,7 +333,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     }
   ];
 
-  $scope.isQuoteDefined = function(newsItem) {
+  $scope.isQuoteDefined = function (newsItem) {
     return newsItem.quote === undefined;
   }
 
@@ -362,6 +368,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.scrollTo = function (id, offset) {
     console.log('attempting to scroll to element: ' + id);
     ModuleService.activeModule = id;
+
+    recordGoogleAnalyticsEvent('ScrollTo', 'click', id);
 
     try {
       console.log('closing sidenav just in case');
@@ -413,6 +421,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
   $scope.showLyrics = function (song) {
     console.log('Imma show da [' + song + '] lyrics!');
+    recordGoogleAnalyticsEvent('Lyrics', 'show', song);
     var songs = LyricService.songs;
     var index = songs.findIndex(function (obj) {
       return obj.title === song;
@@ -436,6 +445,22 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $('#lyrics-display').on('shown.bs.collapse', function () {
     $scope.scrollTo('lyrics-display-parent');
   });
+
+  $scope.recordLinkClick = function (clickLocation, name) {
+    console.log('opening link to [' + name + ']');
+    recordGoogleAnalyticsEvent('OpenLink', clickLocation, name);
+  };
+
+  function recordGoogleAnalyticsEvent(category, action, label) {
+    console.log('Recording Google Analytics event, category [' + category + '], action [' + action + '], label [' + label + ']');
+    // Record Google Analytics event
+    ga('send', {
+      hitType: 'event',
+      eventCategory: category,
+      eventAction: action,
+      eventLabel: label
+    });
+  }
 
   function animateCss(element, animationName, callback) {
     const node = document.querySelector(element)
