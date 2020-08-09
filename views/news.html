@@ -1,6 +1,6 @@
 <div ng-include="'views/nav.html'"></div>
 
-<div id="news" class="bg-dark d-md-flex flex-md-equal">
+<div id="news" class="bg-gray-dark d-md-flex flex-md-equal">
   <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
     <div class="row mb-3 pb-3">
       <div class="col-12">
@@ -9,16 +9,37 @@
       <div class="col-12">
         <img src="/images/short-fiction-lines-bottom.svg" style="width: 100%; height: 10px;">
       </div>
+      <div class="col-12 mt-3">
+
+        <div class="btn-group btn-group-toggle d-none d-md-inline-flex" data-toggle="buttons">
+          <label id="column-view" class="btn btn-gold active" ng-click="toggleNewsView()">
+            <input type="radio" autocomplete="off" checked><i class="fas fa-columns"></i>
+          </label>
+          <label id="list-view" class="btn btn-gold" ng-click="toggleNewsView()">
+            <input type="radio" autocomplete="off"><i class="fas fa-th-list"></i>
+          </label>
+        </div>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label id="date-sort" class="btn btn-gold" ng-click="toggleDateSort()">
+            <input type="radio" autocomplete="off" checked>
+            <i class="fas fa-sort-numeric-down" ng-show="dateSortReverse"> Date Sort</i>
+            <i class="fas fa-sort-numeric-up" ng-show="!dateSortReverse"> Date Sort</i>
+          </label>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
 
-<div class="bg-dark d-md-flex flex-md-equal mb-5 pb-5">
+<div class="bg-gray-dark d-md-flex flex-md-equal mb-5 pb-5">
   <div class="container">
     <div class="row mx-md-6 px-md-6">
-      <div class="card-columns">
+      <div id="news-list" class="card-columns">
 
-        <div class="card text-center text-white" ng-repeat="n in news | orderBy:'date':true" ng-class="{'bg-blue':n.quote, 'bg-dark':!n.quote}">
+        <div class="card text-center text-white" ng-repeat="n in news | orderBy:'date':dateSortReverse"
+             ng-class="{'bg-blue':n.quote, 'bg-dark':!n.quote}">
           <img class="card-img-top" src="{{n.img}}" ng-show="n.img">
           <div class="card-body">
             <h5 class="card-title" ng-show="n.title">{{n.title}}</h5>
@@ -27,12 +48,13 @@
               <p>"{{n.quote}}"</p>
               <footer class="blockquote-footer">
                 <small>
-                  <a href="{{n.link}}"  ng-show="n.link" target="_blank" class="card-link">{{n.author}}</a>
+                  <a href="{{n.link}}" ng-show="n.link" target="_blank" class="card-link">{{n.author}}</a>
                 </small>
               </footer>
             </blockquote>
             <a href="{{n.link}}" ng-show="n.link && !n.quote" target="_blank" class="card-link">{{n.actionText}}</a>
-            <p class="card-text" ng-show="n.date && !n.quote"><small class="text-muted">{{n.date | date:'longDate'}}</small></p>
+            <p class="card-text" ng-show="n.date && !n.quote"><small
+              class="text-muted">{{n.date | date:'longDate'}}</small></p>
           </div>
         </div>
 

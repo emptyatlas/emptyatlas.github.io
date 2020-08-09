@@ -207,8 +207,33 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     link: ''
   };
 
+  var showColumnView = true;
+  $scope.toggleNewsView = function () {
+    showColumnView = !showColumnView;
+    if (showColumnView) {
+      $('#news-list').addClass('card-columns');
+      $('#news-list').removeClass('col-md-6 offset-md-3');
+    } else {
+      $('#news-list').removeClass('card-columns');
+      $('#news-list').addClass('col-md-6 offset-md-3');
+    }
+  };
+
+  $scope.dateSortReverse = true;
+  $scope.toggleDateSort = function () {
+    $scope.dateSortReverse = !$scope.dateSortReverse;
+  };
+
   var maxCharLength = 148;
   $scope.news = [
+    {
+      title: 'Indie Vision Music',
+      desc: `The Best Albums of 2020 So Far From A to Z`,
+      img: 'images/news/indie-vision-music.png',
+      actionText: 'READ MORE',
+      date: 1593849600000,
+      link: 'https://www.indievisionmusic.com/articles/the-best-albums-of-2020-so-far-from-a-to-z/'
+    },
     {
       title: 'Turtle Tempo',
       desc: `Empty Atlas are personifying the ancient philosophy that ‘the only constant is change’ with their new album Kairos. Taking a refreshed approach to their songwriting, the band note the differences between their debut and sophomore records; where Hestia centred on settling down, Kairos is all about shaking things up and seeking change. “Maximal” is the lead singe of their most recent release, taking a heartfelt approach to the subject of chasing one’s dreams.`,

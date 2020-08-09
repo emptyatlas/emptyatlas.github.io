@@ -161,6 +161,10 @@ a.bit-offers.bit-button:hover {
     transition: all 0.3s linear;
 }
 
+.btn-gold.active {
+  background-color: #b7960a !important;
+}
+
 a.bit-play-my-city-button {
     color: #333a41 !important;
 }
@@ -201,6 +205,10 @@ a.bit-play-my-city-button {
 
 .bg-blue {
   background-color: rgb(35, 92, 152, 0.5) !important;
+}
+
+.bg-gray-dark {
+  background-color: #1e1e1e !important;
 }
 
 .blockquote {
@@ -280,6 +288,18 @@ nav {
   background-color: #333a40 !important;
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+li.media.mb-4.ng-scope.bg-dark {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 
 .svg-container {
