@@ -143,6 +143,15 @@ button:focus,
     height: 100%;
 }
 
+.gold {
+  color: #333a41 !important;
+  background-color: #eccc44 !important;
+}
+
+.text-dark-gray {
+  color: #333a41 !important;
+}
+
 .btn-gold,
 .bit-widget .bit-play-my-city-button,
 a.bit-offers.bit-button{
