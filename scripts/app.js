@@ -194,10 +194,9 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   var maxCharLength = 148;
   $scope.news = NewsService.news;
 
-  var showColumnView = true;
-  $scope.toggleNewsView = function () {
-    showColumnView = !showColumnView;
-    if (showColumnView) {
+  $scope.toggleNewsView = function (viewType) {
+    console.log(viewType);
+    if (viewType === 'column') {
       $('#news-list').addClass('card-columns');
       $('#news-list').removeClass('col-md-6 offset-md-3');
     } else {
@@ -343,20 +342,34 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     $scope.scrollTo('lyrics-display-parent');
   });
 
+  /**
+   * GOOGLE ANALYTICS
+   */
+
   $scope.recordLinkClick = function (clickLocation, name) {
-    console.log('opening link to [' + name + ']');
-    recordGoogleAnalyticsEvent('OpenLink', clickLocation, name);
+    // Skip recording GA events to our account if in development.
+    if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+      console.log('opening link to [' + name + ']');
+      recordGoogleAnalyticsEvent('OpenLink', clickLocation, name);
+    } else {
+      console.log('will not record Google Analytics event due to development hostname');
+    }
   };
 
   function recordGoogleAnalyticsEvent(category, action, label) {
-    console.log('Recording Google Analytics event, category [' + category + '], action [' + action + '], label [' + label + ']');
-    // Record Google Analytics event
-    ga('send', {
-      hitType: 'event',
-      eventCategory: category,
-      eventAction: action,
-      eventLabel: label
-    });
+    // Skip recording GA events to our account if in development.
+    if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+      console.log('Recording Google Analytics event, category [' + category + '], action [' + action + '], label [' + label + ']');
+      // Record Google Analytics event
+      ga('send', {
+        hitType: 'event',
+        eventCategory: category,
+        eventAction: action,
+        eventLabel: label
+      });
+    } else {
+      console.log('will not record Google Analytics event due to development hostname');
+    }
   }
 
   function animateCss(element, animationName, callback) {

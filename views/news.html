@@ -12,10 +12,10 @@
       <div class="col-12 mt-3">
 
         <div class="btn-group btn-group-toggle d-none d-md-inline-flex" data-toggle="buttons">
-          <label id="column-view" class="btn btn-gold active" ng-click="toggleNewsView()">
+          <label id="column-view" class="btn btn-gold active" ng-click="toggleNewsView('column')">
             <input type="radio" autocomplete="off" checked><i class="fas fa-columns"></i>
           </label>
-          <label id="list-view" class="btn btn-gold" ng-click="toggleNewsView()">
+          <label id="list-view" class="btn btn-gold" ng-click="toggleNewsView('list')">
             <input type="radio" autocomplete="off"><i class="fas fa-th-list"></i>
           </label>
         </div>
@@ -23,8 +23,7 @@
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label id="date-sort" class="btn btn-gold" ng-click="toggleDateSort()">
             <input type="radio" autocomplete="off" checked>
-            <i class="fas fa-sort-numeric-down" ng-show="dateSortReverse"> Date Sort</i>
-            <i class="fas fa-sort-numeric-up" ng-show="!dateSortReverse"> Date Sort</i>
+            <i class="far fa-calendar-alt"></i>&nbsp;<i class="fas fa-long-arrow-alt-down" ng-show="dateSortReverse"></i><i class="fas fa-long-arrow-alt-up" ng-show="!dateSortReverse"></i>
           </label>
         </div>
 
@@ -67,6 +66,9 @@
 <div id="footer" ng-include="'views/footer.html'"></div>
 
 <script>
-  ga('set', 'page', '/' + location.hash);
-  ga('send', 'pageview', '/' + location.hash);
+  // Skip recording GA events to our account if in development.
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    ga('set', 'page', '/' + location.hash);
+    ga('send', 'pageview', '/' + location.hash);
+  }
 </script>

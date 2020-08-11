@@ -34,6 +34,9 @@
 <div id="footer" ng-include="'views/footer.html'"></div>
 
 <script>
-  ga('set', 'page', '/' + location.hash);
-  ga('send', 'pageview', '/' + location.hash);
+  // Skip recording GA events to our account if in development.
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    ga('set', 'page', '/' + location.hash);
+    ga('send', 'pageview', '/' + location.hash);
+  }
 </script>
