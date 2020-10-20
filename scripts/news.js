@@ -25,6 +25,14 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
 
   this.news = [
     {
+      title: 'UNDISCOVERED: EMPTY ATLAS – THE NEW WAY\n',
+      desc: `Weaving such nuanced, emotive stories with their poignant lyricism and gripping melodies comes naturally to Empty Atlas’ whose sound is a product of their individual inspirations and their trust in each other as musicians.`,
+      img: 'images/news/discovered-magazine.png',
+      actionText: 'READ MORE',
+      date: 1603108800000,
+      link: 'https://www.discoveredmagazine.com/2020/10/undiscovered-empty-atlas-the-new-way/?fbclid=IwAR2sBFGjoK9GQP788bqS69W_Gkc_mm_lzEJdpzvBlq7tcHbQpAfW97fY4SQ'
+    },
+    {
       title: 'Indie Vision Music',
       desc: `The Best Albums of 2020 So Far From A to Z`,
       img: 'images/news/indie-vision-music.png',
