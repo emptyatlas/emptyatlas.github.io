@@ -273,7 +273,11 @@
 <script>
   // Skip recording GA events to our account if in development.
   if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-    ga('set', 'page', '/' + location.hash);
-    ga('send', 'pageview', '/' + location.hash);
+    // ga('set', 'page', '/' + location.hash);
+    // ga('send', 'pageview', '/' + location.hash);
+    gtag('config', 'UA-51847004-1', {
+      'page_title' : 'Press Kit',
+      'page_path': '/' + location.hash
+    });
   }
 </script>
