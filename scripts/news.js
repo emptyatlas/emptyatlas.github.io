@@ -25,6 +25,20 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
 
   this.news = [
     {
+      title: 'Track By Track: Empty Atlas - Kairos',
+      desc: `Mississippi-based group and Carved from Stone Records artist Empty Atlas, released their most recent album "Kairos" in June 2020. We asked vocalist/guitarist Micah Smith to tell us about each track. Check out his commentary on the album below.`,
+      img: 'images/news/kill-the-music-2021.png',
+      actionText: 'READ MORE',
+      date: 1616572800000,
+      link: 'https://killthemusic.net/blog/track-by-track-empty-atlas-kairos'
+    },
+    {
+      quote: `If you’re looking for an arena rock record that still feels intimate and personal, look no further than Empty Atlas’s new masterpiece Kairos.`,
+      author: 'Jordan Mohler, Kill the Music',
+      date: 1616490000000,
+      link: 'https://killthemusic.net/blog/track-by-track-empty-atlas-kairos'
+    },
+    {
       title: 'UNDISCOVERED: EMPTY ATLAS – THE NEW WAY\n',
       desc: `Weaving such nuanced, emotive stories with their poignant lyricism and gripping melodies comes naturally to Empty Atlas’ whose sound is a product of their individual inspirations and their trust in each other as musicians.`,
       img: 'images/news/discovered-magazine.png',

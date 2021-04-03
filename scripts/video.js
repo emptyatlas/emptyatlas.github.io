@@ -9,6 +9,11 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
 
     this.videos = [
       {
+        name: 'Codebreaker - LIVE at Dipping Vat Studio',
+        date: 'Mar 31, 2021',
+        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/nreAK-0OaAQ')
+      },
+      {
         name: 'Empty Atlas - “Codebreaker” (Official Audio)',
         date: 'May 22, 2020',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/n9sZXXpJB8A')
