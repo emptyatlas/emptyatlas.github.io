@@ -9,14 +9,19 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
 
     this.videos = [
       {
+        name: 'Famous Friends - LIVE at Dipping Vat Studio',
+        date: 'Apr 28, 2021',
+        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/CAj_TdugWeE')
+      },
+      {
+        name: 'Florence - LIVE at Dipping Vat Studio',
+        date: 'Apr 14, 2021',
+        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/sphuUrIRNC4')
+      },
+      {
         name: 'Codebreaker - LIVE at Dipping Vat Studio',
         date: 'Mar 31, 2021',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/nreAK-0OaAQ')
-      },
-      {
-        name: 'Empty Atlas - “Codebreaker” (Official Audio)',
-        date: 'May 22, 2020',
-        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/n9sZXXpJB8A')
       },
       {
         name: '“Maximal” (Lyric Video)',
