@@ -9,6 +9,11 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
 
     this.videos = [
       {
+        name: 'Maximal - LIVE at Dipping Vat Studio',
+        date: 'May 12, 2021',
+        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/ro2a17syNdc')
+      },
+      {
         name: 'Famous Friends - LIVE at Dipping Vat Studio',
         date: 'Apr 28, 2021',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/CAj_TdugWeE')
