@@ -1,3 +1,8 @@
+.sans-serif {
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body {
     font-family: 'Didot', serif;
     font-size: 1.25rem;
@@ -203,6 +208,17 @@ a.bit-play-my-city-button {
     text-transform: lowercase;
 }
 
+.btn-md {
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  padding: 0 28px;
+}
+
+.btn-md i, .btn i, .btn-large i {
+  line-height: inherit;
+}
+
 .btn-sm-custom {
     padding: 0.05rem 1.5rem;
     text-transform: uppercase !important;
@@ -309,6 +325,27 @@ li.media.mb-4.ng-scope.bg-dark {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+
+i.fab.circle, i.fas.circle {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+}
+
+.collection a.collection-item {
+  min-height: 62px;
+  display:flex;/*CSS3*/
+  align-items:center;/*Vertical align*/
+  justify-content:center;/*horizontal align*/
 }
 
 .svg-container {

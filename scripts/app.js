@@ -43,6 +43,10 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
       templateUrl: 'views/news.html',
       controller: 'MainCtrl'
     })
+    .when('/share', {
+      templateUrl: 'views/share.html',
+      controller: 'MainCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
