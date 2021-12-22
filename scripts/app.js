@@ -76,8 +76,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.downloadHelp = $scope.sendMail + '?subject=Song%20Download%20Help&body=I%27m%20having%20trouble%20using%20the%20free%20download%20link%20on%20your%20website.%20Could%20you%20email%20me%20a%20copy%20of%20the%20song%20instead%3F%0A%0AThanks%21';
 
   // Social links
-  $scope.facebookUrl = 'http://facebook.com/emptyatlasmusic';
-  $scope.instagramUrl = 'http://instagram.com/emptyatlas';
+  $scope.facebookUrl = 'https://www.facebook.com/emptyatlasmusic';
+  $scope.instagramUrl = 'https://www.instagram.com/emptyatlas/';
   $scope.youTubeUrl = 'https://www.youtube.com/user/emptyatlasmusic';
   $scope.shopUrl = 'https://squareup.com/store/empty-atlas-music';
 
