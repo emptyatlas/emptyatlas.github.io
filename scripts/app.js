@@ -20,7 +20,7 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
       controller: 'MainCtrl'
     })
     .when('/download', {
-      templateUrl: 'views/download.html',
+      templateUrl: 'views/share.html',
       controller: 'MainCtrl'
     })
     .when('/music', {
@@ -36,7 +36,7 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
       controller: 'MainCtrl'
     })
     .when('/listen', {
-      templateUrl: 'views/listen.html',
+      templateUrl: 'views/share.html',
       controller: 'MainCtrl'
     })
     .when('/news', {
@@ -45,6 +45,18 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
     })
     .when('/share', {
       templateUrl: 'views/share.html',
+      controller: 'MainCtrl'
+    })
+    .when('/lyrics', {
+      templateUrl: 'views/lyrics.html',
+      controller: 'MainCtrl'
+    })
+    .when('/live', {
+      templateUrl: 'views/live.html',
+      controller: 'MainCtrl'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
       controller: 'MainCtrl'
     })
     .otherwise({
@@ -79,7 +91,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.facebookUrl = 'https://www.facebook.com/emptyatlasmusic';
   $scope.instagramUrl = 'https://www.instagram.com/emptyatlas/';
   $scope.youTubeUrl = 'https://www.youtube.com/user/emptyatlasmusic';
-  $scope.shopUrl = 'https://squareup.com/store/empty-atlas-music';
+  $scope.shopUrl = 'https://empty-atlas-music.square.site/';
+  $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
   // Music Links
   $scope.iTunesUrl = 'https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes';
@@ -195,17 +208,27 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     }
   ];
 
+  // Matador release calculations
+  let today = new Date();
+  let announcementDate = new Date('2022-03-04');
+  let availableDate = new Date('2022-03-18');
+  $scope.showTeaser = today < announcementDate;
+  $scope.canListenNow = today >= availableDate;
+
   var maxCharLength = 148;
   $scope.news = NewsService.news;
+  var viewType = 'list';
 
-  $scope.toggleNewsView = function (viewType) {
+  $scope.toggleNewsView = function () {
     console.log(viewType);
     if (viewType === 'column') {
       $('#news-list').addClass('card-columns');
       $('#news-list').removeClass('col-md-6 offset-md-3');
+      viewType = 'list';
     } else {
       $('#news-list').removeClass('card-columns');
       $('#news-list').addClass('col-md-6 offset-md-3');
+      viewType = 'column';
     }
   };
 
@@ -246,6 +269,10 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     ModuleService.activeModule = '';
   };
 
+  $scope.clearSideNavclearSideNav = function () {
+    $('.sidenav').sidenav('close');
+  };
+
   $scope.scrollTo = function (id, offset) {
     console.log('attempting to scroll to element: ' + id);
     ModuleService.activeModule = id;
@@ -261,9 +288,9 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
     var currentLocation = $location.url();
     console.log("currentLocation [" + currentLocation + "]");
-    if (currentLocation !== "/" && id !== 'top') {
-      $location.url("/");
-    }
+    // if (currentLocation !== "/" && id !== 'top') {
+    //   $location.url("/");
+    // }
 
     if (offset === undefined) offset = 0;
     var target = document.getElementById(id);
@@ -285,7 +312,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $(document).on('scroll', function () {
     var t = document.getElementById('scroll-to-top');
     var position = $(document).scrollTop();
-    if(position <= 500) {
+    if (position <= 500) {
       t.style.display = 'none';
     } else {
       t.style.display = '';

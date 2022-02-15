@@ -62,7 +62,12 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
         name: '“Short Fiction” (Tiny Desk Contest)',
         date: 'Mar 7, 2018',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/kNSP6VzNwC8')
-      },
+      }
+    ];
+
+    /*
+    * OLD VIDEOS
+    * ,
       {
         name: '“All Right”',
         date: 'Sep 22, 2018',
@@ -93,6 +98,6 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
         date: 'Sep 21, 2018',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/3ZF7JCxAlC4')
       }
-    ];
+    * */
 
 });

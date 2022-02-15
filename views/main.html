@@ -1,401 +1,80 @@
 <div ng-include="'views/nav.html'"></div>
 
-<div id="home" class="position-relative overflow-hidden pt-3 pb-5 px-5 p-md-5 text-center bg-light">
-  <div class="container h-100">
-    <div class="row align-items-center h-100">
-      <div class="col-md-12">
-        <div style="margin-top: 22rem !important;" class="d-none d-sm-block"></div>
-        <div style="margin-top: 11rem !important;" class="d-block d-sm-none"></div>
-        <img class="p-2 p-md-5 band-logo" src="/images/ea_logo_vertical_white.png" style="opacity: 0;">
-        <div style="margin-top: 11rem !important;"></div>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div id="home" class="position-relative overflow-hidden pt-3 pb-5 px-5 p-md-5 text-center bg-light">-->
+<!--  <div class="container h-100">-->
+<!--    <div class="row align-items-center h-100">-->
+<!--      <div class="col-md-12">-->
+<!--        <div style="margin-top: 22rem !important;" class="d-none d-sm-block"></div>-->
+<!--        <div style="margin-top: 11rem !important;" class="d-block d-sm-none"></div>-->
+<!--        <img class="p-2 p-md-5 band-logo" src="/images/ea_logo_vertical_white.png" style="opacity: 0;">-->
+<!--        <div style="margin-top: 11rem !important;"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
-<div id="music" class="bg-dark d-md-flex flex-md-equal">
-  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="my-3 py-3 row center">
+<div id="music" class="d-md-flex flex-md-equal">
+  <div class="text-center text-white container">
+    <div class="my-3 p-5 row center">
+
+      <div class="col-md-6 col-sm-12" align="center">
+        <div class="h-100 d-table">
+          <div class="d-table-cell align-middle">
+            <img ng-hide="{{showTeaser}}" src="/images/Matador-by-Empty-Atlas.jpg" class="w-100">
+            <img ng-show="{{showTeaser}}" src="/images/Matador-by-Empty-Atlas_obscured.jpg" class="w-100">
+          </div>
+        </div>
+      </div>
 
       <div class="col-md-6 col-sm-12" align="center">
 
         <div class="h-100 d-table">
           <div class="d-table-cell align-middle">
 
-            <div class="row mb-4 p-0">
-              <div class="col-12">
-                <img src="/images/short-fiction-lines-top.svg" style="width: 100%; height: 10px;">
+            <div name="spacer" class="row py-1 show-on-small hide-on-med-and-up"></div>
+
+            <div class="row mb-4">
+              <div class="col-12" ng-hide="{{showTeaser}}">
+                <h1>MATADOR</h1>
+                <h3>the new single</h3>
+                <span ng-hide="{{canListenNow}}">Available on March 18th</span>
               </div>
-              <div class="col-12">
-                <h2 class="display-5 mb-0 mt-2 center">K&nbsp;A&nbsp;I&nbsp;R&nbsp;O&nbsp;S</h2>
-              </div>
-              <div class="col-12">
-                <img src="/images/short-fiction-lines-bottom.svg" style="width: 100%; height: 10px;">
+              <div class="col-12" ng-show="{{showTeaser}}">
+                <h3>ANNOUNCEMENT</h3>
+                <span>Follow us on social and learn more 3/4</span>
               </div>
             </div>
 
-            <div class="row mt-2 mb-3">
+            <div class="row spotify-player center" ng-show="{{canListenNow}}">
               <div class="col-12 center">
-                <h3>The new album from Empty Atlas</h3>
-              </div>
-            </div>
-
-            <div class="row spotify-player center">
-              <div class="col-12 center">
-                <iframe src="https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid" width="100%" height="200px"
+                <iframe src="https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid" width="100%" height="80"
                         frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               </div>
             </div>
 
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-md-6 col-sm-12" align="center">
-        <div class="h-100 d-table">
-          <div class="d-table-cell align-middle">
-            <img src="/images/Kairos-as-performed-by-Empty-Atlas.png" class="w-100 my-4">
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-12 col-sm-12">
-
-        <div class="col-12 my-2 center">
-          <h3>Listen now on all major platforms</h3>
-        </div>
-
-        <div class="col-12 center">
-          <div id="links" class="links">
-            <ul class="listen-links p-0">
-              <li>
-                <a href="{{iTunesUrl}}" target="_blank" title="iTunes"
-                   ng-click="recordLinkClick('click-album-banner', 'iTunes')"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                  class="fab fa-itunes-note fa-2x"></i></a>
-              </li>
-              <li>
-                <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4"
-                   ng-click="recordLinkClick('click-album-banner', 'Apple Music')"><i
-                  class="fab fa-apple fa-2x"></i></a>
-              </li>
-              <li>
-                <a href="{{spotifyUrl}}" target="_blank" title="Spotify"
-                   ng-click="recordLinkClick('click-album-banner', 'Spotify')"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                  class="fab fa-spotify fa-2x"></i></a>
-              </li>
-              <li>
-                <a href="{{tidalUrl}}" target="_blank" title="Tidal"
-                   ng-click="recordLinkClick('click-album-banner', 'Tidal')"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4">
-                  <i class="fab fa-2x">
-                    <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">
-                  </i>
+            <div class="row center">
+              <div class="col-12 center">
+                <a ng-click="clearActiveModule(); recordLinkClick('click', 'Listen');" href="#/share">
+                  <button type="button" class="btn btn-red btn-sm">Listen</button>
                 </a>
-              </li>
-              <li>
-                <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"
-                   ng-click="recordLinkClick('click-album-banner', 'YouTube Music')"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                  class="fab fa-youtube-square fa-2x"></i></a>
-              </li>
-              <li>
-                <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"
-                   ng-click="recordLinkClick('click-album-banner', 'Amazon Music')"
-                   class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                  class="fab fa-amazon fa-2x"></i></a>
-              </li>
-            </ul>
+                <div name="spacer" class="row py-1 show-on-small hide-on-med-and-up"></div>
+                <a ng-click="clearActiveModule(); recordLinkClick('click', 'Follow');" href="#/share">
+                  <button type="button" class="btn btn-red btn-sm">Follow</button>
+                </a>
+                <div name="spacer" class="row py-1 show-on-small hide-on-med-and-up"></div>
+                <a ng-click="recordLinkClick('click', 'Merch')" href="{{shopUrl}}" target="_blank">
+                  <button type="button" class="btn btn-red btn-sm">Shop</button>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="my-3 py-3 row center">
-      <div class="col-12">
-        <a ng-click="clearActiveModule(); recordLinkClick('click', 'More Music');" href="#/music">
-          <button type="button" class="btn btn-gold px-5">MORE MUSIC</button>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="video" class="parallax-container d-md-flex flex-md-equal">
-  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">VIDEO</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-      </div>
-      <div class="col-md-6 col-sm-12" style="border-right: 1px solid white;">
-        <div class="embed-responsive embed-responsive-16by9 video-player">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/nVDgqUrGCRA" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-        </div>
-        <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">Valleys - LIVE at Dipping Vat Studio</h4>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="embed-responsive embed-responsive-16by9 video-player">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uSARWrWd9fc" frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-        </div>
-        <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">“Maximal” (Lyric Video)</h4>
-      </div>
-      <div class="col-12 pt-3">
-        <a ng-click="clearActiveModule(); recordLinkClick('click', 'More Video');" href="#/video">
-          <button type="button" class="btn btn-gold px-5">MORE VIDEO</button>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="parallax"><img src="./images/IMG_0521_blue_overlay.png"></div>
-</div>
-
-<div id="lyrics" class="bg-dark d-md-flex flex-md-equal ng-scope">
-  <div class="py-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">LYRICS</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
       </div>
 
-      <!--      <div id="buffer-constellation" class="d-none d-md-block col-md-3">-->
-      <!--        <div ng-include="'images/constellations/buffer-constellation.svg'"></div>-->
-      <!--      </div>-->
-      <div id="kairos-constellation" class="col-sm-12 col-md-6">
-        <div ng-include="'images/constellations/kairos-constellation.svg'"></div>
-      </div>
-      <!--      <div id="buffer-constellation" class="d-none d-md-block flip col-md-3">-->
-      <!--        <div ng-include="'images/constellations/buffer-constellation.svg'"></div>-->
-      <!--      </div>-->
-      <div id="hestia-constellation" class="col-sm-12 col-md-6">
-        <div ng-include="'images/constellations/hestia-constellation.svg'"></div>
-      </div>
+      <div class="col-sm-12 col-md-6 offset-md-3 pt-5">
 
-      <!--      <div id="anniversary-constellation" class="col-sm-12 col-md-6">-->
-      <!--        <div ng-include="'images/constellations/anniversary-constellation.svg'"></div>-->
-      <!--      </div>-->
-
-    </div>
-
-  </div>
-</div>
-
-<div id="lyrics-display-parent" class="bg-dark d-md-flex flex-md-equal">
-  <div class="px-3 px-md-5 text-center text-white overflow-hidden container">
-    <div id="lyrics-display" class="row my-3 py-3 collapse">
-      <div class="col-12 lyrics-display">
-        <h2>{{activeSong.title}}</h2>
-        <p ng-bind-html="activeSong.lyrics"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="lyrics-display-spacer" class="bg-dark d-md-flex flex-md-equal">
-  <div class="container px-3 px-md-5 pt-md-5 text-center text-white overflow-hidden">
-    <div id="spacer" class="row my-2 py-2"></div>
-  </div>
-</div>
-
-<div id="live" class="parallax-container d-md-flex flex-md-equal">
-  <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">LIVE</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-      </div>
-      <div class="col-12 mb-3 pb-3">
-        <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
-        <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true"
-           data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#eccc44"
-           data-popup-background-color="" data-background-color="" data-display-limit="10"
-           data-link-text-color="#FFFFFF"></a>
-      </div>
-    </div>
-  </div>
-  <div class="parallax"><img src="./images/IMG_0518_blue_overlay.png"></div>
-</div>
-
-<div id="about" class="bg-dark d-md-flex flex-md-equal">
-  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">ABOUT</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-      </div>
-      <div class="col-12 text-white">
-
-        <p>Since forming in 2014, Mississippi indie-rock act Empty Atlas has become known for dynamic and melodically
-          gripping songs about people and the way we connect. The band’s first full-length album, 2016’s Hestia, dealt
-          with the idea of home and what it can mean, from acceptance and comfort to solitude and loneliness.</p>
-
-        <p>Now, Empty Atlas - featuring vocalist and rhythm guitarist Micah Smith, lead guitarist
-          Brennan Michael White, bassist Alex Ingram and drummer Robert Currie Hansford - returns with their
-          sophomore full-length album, Kairos, available June 12, 2020, in partnership with Carved From Stone Records.
-          Smith calls the album “the other side of the coin” from the band’s previous full-length. Where Hestia centered
-          on settling down, Kairos examines the choice to leave everything behind and chase success.</p>
-
-        <p>“We all know people who put goals over everything else - that idea of, ‘If I sacrifice enough, I’ll get to X,
-          and then, it’ll be worth it,’” Smith says. “Not bashing anyone for that, but me and the guys had these really
-          honest conversations about what success looks like for us and just finding the balance between the work and
-          joy in playing music together.”</p>
-
-        <p>An ambitious concept needed an ambitious team behind it. For that, Empty Atlas reteamed with recording
-          engineer Nick Smith at Dipping Vat Studio in Monticello, Mississippi, and Los Angeles mixing engineer Tyler
-          Spratt (Imagine Dragons, Arkells, Moby), who worked on the band’s 2018 single “Short Fiction.”</p>
-
-        <p>Already, a wide range of publications, podcasts and tastemakers have praised Kairos and its leadoff
-          single “Maximal,” including Discovered Magazine, Kill the Music, All Punked Up, Stitched Sound, Indie Vision
-          Music, Jesus Freak Hideout, FBT Entertainment, Underground Music Collective and more.</p>
-
-        <p>Listen to Empty Atlas now on all major music platforms.</p>
-        <div id="links" class="links">
-          <ul class="listen-links p-0">
-            <li>
-              <a href="{{iTunesUrl}}" target="_blank" title="iTunes" ng-click="recordLinkClick('click-about', 'iTunes')"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                class="fab fa-itunes-note fa-2x"></i></a>
-            </li>
-            <li>
-              <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"
-                 ng-click="recordLinkClick('click-about', 'Apple Music')"><i
-                class="fab fa-apple fa-2x"></i></a>
-            </li>
-            <li>
-              <a href="{{spotifyUrl}}" target="_blank" title="Spotify"
-                 ng-click="recordLinkClick('click-about', 'Spotify')"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                class="fab fa-spotify fa-2x"></i></a>
-            </li>
-            <li>
-              <a href="{{tidalUrl}}" target="_blank" title="Tidal" ng-click="recordLinkClick('click-about', 'Tidal')"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4">
-                <i class="fab fa-2x">
-                  <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"
-                 ng-click="recordLinkClick('click-about', 'YouTube Music')"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                class="fab fa-youtube-square fa-2x"></i></a>
-            </li>
-            <li>
-              <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"
-                 ng-click="recordLinkClick('click-about', 'Amazon Music')"
-                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i
-                class="fab fa-amazon fa-2x"></i></a>
-            </li>
-          </ul>
-        </div>
-        <!--        <div id="links" class="links">-->
-        <!--          <ul class="listen-links p-0">-->
-        <!--            <li>-->
-        <!--              <a href="{{iTunesUrl}}" target="_blank" title="iTunes"-->
-        <!--                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i-->
-        <!--                class="fab fa-itunes-note fa-2x"></i></a>-->
-        <!--            </li>-->
-        <!--            <li>-->
-        <!--              <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"-->
-        <!--                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i-->
-        <!--                class="fab fa-apple fa-2x"></i></a>-->
-        <!--            </li>-->
-        <!--            <li>-->
-        <!--              <a href="{{spotifyUrl}}" target="_blank" title="Spotify"-->
-        <!--                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i-->
-        <!--                class="fab fa-spotify fa-2x"></i></a>-->
-        <!--            </li>-->
-        <!--            <li>-->
-        <!--              <a href="{{tidalUrl}}" target="_blank" title="Tidal"-->
-        <!--                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4">-->
-        <!--                <i class="fab fa-2x">-->
-        <!--                  <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">-->
-        <!--                </i>-->
-        <!--              </a>-->
-        <!--            </li>-->
-        <!--            <li>-->
-        <!--              <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"-->
-        <!--                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i-->
-        <!--                class="fab fa-youtube-square fa-2x"></i></a>-->
-        <!--            </li>-->
-        <!--            <li>-->
-        <!--              <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"-->
-        <!--                 class="btn-floating btn-large waves-effect waves-light light-blue darken-4"><i-->
-        <!--                class="fab fa-amazon fa-2x"></i></a>-->
-        <!--            </li>-->
-        <!--          </ul>-->
-        <!--        </div>-->
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="news" class="bg-blue d-md-flex flex-md-equal">
-  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">NEWS</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-      </div>
-
-    </div>
-
-    <div class="row px-3 mx-3">
-      <div class="card-deck">
-        <div class="card card-gray mx-3 border-0"
-             ng-repeat="n in news | filter:isQuoteDefined | orderBy:'date':true | limitTo:3">
-          <img class="card-img-top" src="{{n.img}}">
-          <div class="card-body">
-            <h5 class="card-title">{{n.title}}</h5>
-            <p class="card-text">{{n.desc}}</p>
-            <!--              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-            <a href="{{n.link}}" target="_blank" class="card-link">{{n.actionText}}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="my-3 py-3 row">
-      <div class="col-12">
-        <a ng-click="clearActiveModule(); recordLinkClick('click', 'More News');" href="#/news">
-          <button type="button" class="btn btn-gold px-5">MORE NEWS</button>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div id="newsletter" class="bg-dark d-md-flex flex-md-equal">
-  <div class="pt-3 px-3 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">NEWSLETTER</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-      </div>
-      <div class="col-xs-12 col-sm-6 offset-sm-3">
         <!-- Begin Mailchimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
         <style type="text/css">
@@ -409,7 +88,7 @@
           }
 
           #mc_embed_signup input {
-            border-radius: 0 !important;
+            /*border-radius: 0 !important;*/
             -webkit-appearance: none;
           }
 
@@ -423,37 +102,45 @@
 
           #mc_embed_signup input.button {
             display: block;
-            padding: 0 0.4em;
-            margin: 0 4% 10px 0;
+            /*padding: 0 0.4em;*/
+            /*margin: 0 4% 10px 0;*/
             min-height: 38px;
-            height: 44px;
+            /*height: 44px;*/
             min-width: 148px;
             text-decoration: none;
             font-size: 16px;
             background-color: transparent !important;
             text-transform: uppercase;
             text-align: center !important;
-            line-height: 44px !important;
+            /*line-height: 44px !important;*/
             font-weight: bold !important;
             box-shadow: none;
-            border-radius: 0 !important;
-            color: #333a41 !important;
-            background-color: #eccc44 !important;
+            /*border-radius: 0 !important;*/
+            color: whitesmoke !important;
+            background-color: #8a1715 !important;
           }
 
           #mc_embed_signup input.button:hover {
-            color: #333a41 !important;
-            background-color: #ffe161 !important;
-            border: 1px solid #ffe161 !important;
+            color: whitesmoke !important;
+            background-color: #8a1715 !important;
+            border-top: none;
+            border-bottom: 1px solid #8a1715 !important;
+            border-left: none;
+            border-right: none;
           }
 
           #mc_embed_signup input.email {
-            width: calc(100% - 26px);
-            margin: 0 0 10px 0;
+            width: 100%;
+            margin-right: 0;
+            /*width: calc(100% - 26px);*/
+            /*margin: 0 0 10px 0;*/
             background: transparent;
             color: white !important;
-            border: 1px solid white;
-            padding: 12px;
+            border-top: none;
+            border-bottom: 1px solid whitesmoke !important;
+            border-left: none;
+            border-right: none;
+            padding: 0;
           }
 
           ::placeholder {
@@ -463,7 +150,7 @@
           }
 
           /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 
         </style>
         <div id="mc_embed_signup">
@@ -477,38 +164,468 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                                                                         name="b_ab78edd056a1703ec9077b2b0_14ff368932"
-                                                                                        tabindex="-1" value=""></div>
+                                                                                        tabindex="-1" value="">
+              </div>
 
               <div class="clear" align="center" style="display: block;">
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                       class="button btn btn-gold px-4">
+                       class="button btn btn-red btn-sm">
               </div>
             </div>
           </form>
         </div>
 
       </div>
+
+      <!--      <div class="col-md-12 col-sm-12">-->
+
+      <!--        <div class="col-12 center">-->
+      <!--          <div id="links" class="links">-->
+      <!--            <ul class="listen-links p-0">-->
+      <!--              <li>-->
+      <!--                <a href="{{iTunesUrl}}" target="_blank" title="iTunes"-->
+      <!--                   ng-click="recordLinkClick('click-album-banner', 'iTunes')"-->
+      <!--                   class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+      <!--                  class="fab fa-itunes-note fa-2x"></i></a>-->
+      <!--              </li>-->
+      <!--              <li>-->
+      <!--                <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"-->
+      <!--                   class="btn-floating btn-large waves-effect waves-light matador-red"-->
+      <!--                   ng-click="recordLinkClick('click-album-banner', 'Apple Music')"><i-->
+      <!--                  class="fab fa-apple fa-2x"></i></a>-->
+      <!--              </li>-->
+      <!--              <li>-->
+      <!--                <a href="{{spotifyUrl}}" target="_blank" title="Spotify"-->
+      <!--                   ng-click="recordLinkClick('click-album-banner', 'Spotify')"-->
+      <!--                   class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+      <!--                  class="fab fa-spotify fa-2x"></i></a>-->
+      <!--              </li>-->
+      <!--              <li>-->
+      <!--                <a href="{{tidalUrl}}" target="_blank" title="Tidal"-->
+      <!--                   ng-click="recordLinkClick('click-album-banner', 'Tidal')"-->
+      <!--                   class="btn-floating btn-large waves-effect waves-light matador-red">-->
+      <!--                  <i class="fab fa-2x">-->
+      <!--                    <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">-->
+      <!--                  </i>-->
+      <!--                </a>-->
+      <!--              </li>-->
+      <!--              <li>-->
+      <!--                <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"-->
+      <!--                   ng-click="recordLinkClick('click-album-banner', 'YouTube Music')"-->
+      <!--                   class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+      <!--                  class="fab fa-youtube-square fa-2x"></i></a>-->
+      <!--              </li>-->
+      <!--              <li>-->
+      <!--                <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"-->
+      <!--                   ng-click="recordLinkClick('click-album-banner', 'Amazon Music')"-->
+      <!--                   class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+      <!--                  class="fab fa-amazon fa-2x"></i></a>-->
+      <!--              </li>-->
+      <!--            </ul>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
     </div>
+
+    <!--    <div class="my-3 py-3 row center">-->
+    <!--      <div class="col-12">-->
+    <!--        <a ng-click="clearActiveModule(); recordLinkClick('click', 'More Music');" href="#/music">-->
+    <!--          <button type="button" class="btn btn-gold px-5">MORE MUSIC</button>-->
+    <!--        </a>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </div>
 
-<div id="instagram" class="bg-blue d-md-flex flex-md-equal ">
-  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
-    <div class="row my-3 py-3">
-      <div class="col-12">
-        <h2 class="display-5 my-0">INSTAGRAM</h2>
-      </div>
-      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">
-      </div>
-      <div class="col-12">
-        <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no"
-                allowtransparency="true" class="lightwidget-widget"
-                style="width: 100%; border: 0; overflow: hidden;"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
+<video playsinline autoplay muted loop poster="/images/Maximal%20-%20Live%20Poster%20BW.png" id="bgvid">
+  <source src="/images/Maximal%20-%20LIVE%20Trimmed%20BW.mp4" type="video/mp4">
+  <source src="/images/Maximal%20-%20LIVE%20Trimmed%20BW.webm" type="video/webm">
+</video>
+
+<!--<div id="video" class="parallax-container d-md-flex flex-md-equal">-->
+<!--  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">VIDEO</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+<!--      <div class="col-md-6 col-sm-12" style="border-right: 1px solid white;">-->
+<!--        <div class="embed-responsive embed-responsive-16by9 video-player">-->
+<!--          <iframe width="560" height="315" src="https://www.youtube.com/embed/nVDgqUrGCRA" frameborder="0"-->
+<!--                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                  allowfullscreen></iframe>-->
+<!--        </div>-->
+<!--        <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">Valleys - LIVE at Dipping Vat Studio</h4>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 col-sm-12">-->
+<!--        <div class="embed-responsive embed-responsive-16by9 video-player">-->
+<!--          <iframe width="560" height="315" src="https://www.youtube.com/embed/uSARWrWd9fc" frameborder="0"-->
+<!--                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                  allowfullscreen></iframe>-->
+<!--        </div>-->
+<!--        <h4 class="mt-2 mb-3 pt-2 pb-3" align="left">“Maximal” (Lyric Video)</h4>-->
+<!--      </div>-->
+<!--      <div class="col-12 pt-3">-->
+<!--        <a ng-click="clearActiveModule(); recordLinkClick('click', 'More Video');" href="#/video">-->
+<!--          <button type="button" class="btn btn-gold px-5">MORE VIDEO</button>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="parallax"><img src="./images/IMG_0521_blue_overlay.png"></div>-->
+<!--</div>-->
+
+<!--<div id="lyrics" class="bg-dark d-md-flex flex-md-equal ng-scope">-->
+<!--  <div class="py-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">LYRICS</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash;      <div id="buffer-constellation" class="d-none d-md-block col-md-3">&ndash;&gt;-->
+<!--      &lt;!&ndash;        <div ng-include="'images/constellations/buffer-constellation.svg'"></div>&ndash;&gt;-->
+<!--      &lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <div id="kairos-constellation" class="col-sm-12 col-md-6">-->
+<!--        <div ng-include="'images/constellations/kairos-constellation.svg'"></div>-->
+<!--      </div>-->
+<!--      &lt;!&ndash;      <div id="buffer-constellation" class="d-none d-md-block flip col-md-3">&ndash;&gt;-->
+<!--      &lt;!&ndash;        <div ng-include="'images/constellations/buffer-constellation.svg'"></div>&ndash;&gt;-->
+<!--      &lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <div id="hestia-constellation" class="col-sm-12 col-md-6">-->
+<!--        <div ng-include="'images/constellations/hestia-constellation.svg'"></div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash;      <div id="anniversary-constellation" class="col-sm-12 col-md-6">&ndash;&gt;-->
+<!--      &lt;!&ndash;        <div ng-include="'images/constellations/anniversary-constellation.svg'"></div>&ndash;&gt;-->
+<!--      &lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div id="lyrics-display-parent" class="bg-dark d-md-flex flex-md-equal">-->
+<!--  <div class="px-3 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div id="lyrics-display" class="row my-3 py-3 collapse">-->
+<!--      <div class="col-12 lyrics-display">-->
+<!--        <h2>{{activeSong.title}}</h2>-->
+<!--        <p ng-bind-html="activeSong.lyrics"></p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div id="lyrics-display-spacer" class="bg-dark d-md-flex flex-md-equal">-->
+<!--  <div class="container px-3 px-md-5 pt-md-5 text-center text-white overflow-hidden">-->
+<!--    <div id="spacer" class="row my-2 py-2"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div id="live" class="parallax-container d-md-flex flex-md-equal">-->
+<!--  <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">LIVE</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+<!--      <div class="col-12 mb-3 pb-3">-->
+<!--        <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>-->
+<!--        <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true"-->
+<!--           data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#eccc44"-->
+<!--           data-popup-background-color="" data-background-color="" data-display-limit="10"-->
+<!--           data-link-text-color="#FFFFFF"></a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="parallax"><img src="./images/IMG_0518_blue_overlay.png"></div>-->
+<!--</div>-->
+
+<!--<div id="about" class="bg-dark d-md-flex flex-md-equal">-->
+<!--  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">ABOUT</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+<!--      <div class="col-12 text-white">-->
+
+<!--        <p>Since forming in 2014, Mississippi indie-rock act Empty Atlas has become known for dynamic and melodically-->
+<!--          gripping songs about people and the way we connect. The band’s first full-length album, 2016’s Hestia, dealt-->
+<!--          with the idea of home and what it can mean, from acceptance and comfort to solitude and loneliness.</p>-->
+
+<!--        <p>Now, Empty Atlas - featuring vocalist and rhythm guitarist Micah Smith, lead guitarist-->
+<!--          Brennan Michael White, bassist Alex Ingram and drummer Robert Currie Hansford - returns with their-->
+<!--          sophomore full-length album, Kairos, available June 12, 2020, in partnership with Carved From Stone Records.-->
+<!--          Smith calls the album “the other side of the coin” from the band’s previous full-length. Where Hestia centered-->
+<!--          on settling down, Kairos examines the choice to leave everything behind and chase success.</p>-->
+
+<!--        <p>“We all know people who put goals over everything else - that idea of, ‘If I sacrifice enough, I’ll get to X,-->
+<!--          and then, it’ll be worth it,’” Smith says. “Not bashing anyone for that, but me and the guys had these really-->
+<!--          honest conversations about what success looks like for us and just finding the balance between the work and-->
+<!--          joy in playing music together.”</p>-->
+
+<!--        <p>An ambitious concept needed an ambitious team behind it. For that, Empty Atlas reteamed with recording-->
+<!--          engineer Nick Smith at Dipping Vat Studio in Monticello, Mississippi, and Los Angeles mixing engineer Tyler-->
+<!--          Spratt (Imagine Dragons, Arkells, Moby), who worked on the band’s 2018 single “Short Fiction.”</p>-->
+
+<!--        <p>Already, a wide range of publications, podcasts and tastemakers have praised Kairos and its leadoff-->
+<!--          single “Maximal,” including Discovered Magazine, Kill the Music, All Punked Up, Stitched Sound, Indie Vision-->
+<!--          Music, Jesus Freak Hideout, FBT Entertainment, Underground Music Collective and more.</p>-->
+
+<!--        <p>Listen to Empty Atlas now on all major music platforms.</p>-->
+<!--        <div id="links" class="links">-->
+<!--          <ul class="listen-links p-0">-->
+<!--            <li>-->
+<!--              <a href="{{iTunesUrl}}" target="_blank" title="iTunes" ng-click="recordLinkClick('click-about', 'iTunes')"-->
+<!--                 class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+<!--                class="fab fa-itunes-note fa-2x"></i></a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"-->
+<!--                 class="btn-floating btn-large waves-effect waves-light matador-red"-->
+<!--                 ng-click="recordLinkClick('click-about', 'Apple Music')"><i-->
+<!--                class="fab fa-apple fa-2x"></i></a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{spotifyUrl}}" target="_blank" title="Spotify"-->
+<!--                 ng-click="recordLinkClick('click-about', 'Spotify')"-->
+<!--                 class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+<!--                class="fab fa-spotify fa-2x"></i></a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{tidalUrl}}" target="_blank" title="Tidal" ng-click="recordLinkClick('click-about', 'Tidal')"-->
+<!--                 class="btn-floating btn-large waves-effect waves-light matador-red">-->
+<!--                <i class="fab fa-2x">-->
+<!--                  <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">-->
+<!--                </i>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"-->
+<!--                 ng-click="recordLinkClick('click-about', 'YouTube Music')"-->
+<!--                 class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+<!--                class="fab fa-youtube-square fa-2x"></i></a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"-->
+<!--                 ng-click="recordLinkClick('click-about', 'Amazon Music')"-->
+<!--                 class="btn-floating btn-large waves-effect waves-light matador-red"><i-->
+<!--                class="fab fa-amazon fa-2x"></i></a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        <div id="links" class="links">&ndash;&gt;-->
+<!--        &lt;!&ndash;          <ul class="listen-links p-0">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;              <a href="{{iTunesUrl}}" target="_blank" title="iTunes"&ndash;&gt;-->
+<!--        &lt;!&ndash;                 class="btn-floating btn-large waves-effect waves-light matador-red"><i&ndash;&gt;-->
+<!--        &lt;!&ndash;                class="fab fa-itunes-note fa-2x"></i></a>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;              <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"&ndash;&gt;-->
+<!--        &lt;!&ndash;                 class="btn-floating btn-large waves-effect waves-light matador-red"><i&ndash;&gt;-->
+<!--        &lt;!&ndash;                class="fab fa-apple fa-2x"></i></a>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;              <a href="{{spotifyUrl}}" target="_blank" title="Spotify"&ndash;&gt;-->
+<!--        &lt;!&ndash;                 class="btn-floating btn-large waves-effect waves-light matador-red"><i&ndash;&gt;-->
+<!--        &lt;!&ndash;                class="fab fa-spotify fa-2x"></i></a>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;              <a href="{{tidalUrl}}" target="_blank" title="Tidal"&ndash;&gt;-->
+<!--        &lt;!&ndash;                 class="btn-floating btn-large waves-effect waves-light matador-red">&ndash;&gt;-->
+<!--        &lt;!&ndash;                <i class="fab fa-2x">&ndash;&gt;-->
+<!--        &lt;!&ndash;                  <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">&ndash;&gt;-->
+<!--        &lt;!&ndash;                </i>&ndash;&gt;-->
+<!--        &lt;!&ndash;              </a>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;              <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"&ndash;&gt;-->
+<!--        &lt;!&ndash;                 class="btn-floating btn-large waves-effect waves-light matador-red"><i&ndash;&gt;-->
+<!--        &lt;!&ndash;                class="fab fa-youtube-square fa-2x"></i></a>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--        &lt;!&ndash;              <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"&ndash;&gt;-->
+<!--        &lt;!&ndash;                 class="btn-floating btn-large waves-effect waves-light matador-red"><i&ndash;&gt;-->
+<!--        &lt;!&ndash;                class="fab fa-amazon fa-2x"></i></a>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--        &lt;!&ndash;          </ul>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div id="news" class="bg-blue d-md-flex flex-md-equal">-->
+<!--  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">NEWS</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--    <div class="row px-3 mx-3">-->
+<!--      <div class="card-deck">-->
+<!--        <div class="card card-gray mx-3 border-0"-->
+<!--             ng-repeat="n in news | filter:isQuoteDefined | orderBy:'date':true | limitTo:3">-->
+<!--          <img class="card-img-top" src="{{n.img}}">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">{{n.title}}</h5>-->
+<!--            <p class="card-text">{{n.desc}}</p>-->
+<!--            &lt;!&ndash;              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>&ndash;&gt;-->
+<!--            <a href="{{n.link}}" target="_blank" class="card-link">{{n.actionText}}</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="my-3 py-3 row">-->
+<!--      <div class="col-12">-->
+<!--        <a ng-click="clearActiveModule(); recordLinkClick('click', 'More News');" href="#/news">-->
+<!--          <button type="button" class="btn btn-gold px-5">MORE NEWS</button>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div id="newsletter" class="bg-dark d-md-flex flex-md-equal">-->
+<!--  <div class="pt-3 px-3 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">NEWSLETTER</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+<!--      <div class="col-xs-12 col-sm-6 offset-sm-3">-->
+<!--        &lt;!&ndash; Begin Mailchimp Signup Form &ndash;&gt;-->
+<!--        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">-->
+<!--        <style type="text/css">-->
+<!--          #mc_embed_signup {-->
+<!--            font-family: inherit;-->
+<!--            clear: left;-->
+<!--          }-->
+
+<!--          #mc_embed_signup form {-->
+<!--            padding-left: 0 !important;-->
+<!--          }-->
+
+<!--          #mc_embed_signup input {-->
+<!--            border-radius: 0 !important;-->
+<!--            -webkit-appearance: none;-->
+<!--          }-->
+
+<!--          #mc_embed_signup input:focus {-->
+<!--            border-color: white !important;-->
+<!--          }-->
+
+<!--          #mc_embed_signup .button {-->
+<!--            color: black !important;-->
+<!--          }-->
+
+<!--          #mc_embed_signup input.button {-->
+<!--            display: block;-->
+<!--            padding: 0 0.4em;-->
+<!--            margin: 0 4% 10px 0;-->
+<!--            min-height: 38px;-->
+<!--            height: 44px;-->
+<!--            min-width: 148px;-->
+<!--            text-decoration: none;-->
+<!--            font-size: 16px;-->
+<!--            background-color: transparent !important;-->
+<!--            text-transform: uppercase;-->
+<!--            text-align: center !important;-->
+<!--            line-height: 44px !important;-->
+<!--            font-weight: bold !important;-->
+<!--            box-shadow: none;-->
+<!--            border-radius: 0 !important;-->
+<!--            color: #333a41 !important;-->
+<!--            background-color: #eccc44 !important;-->
+<!--          }-->
+
+<!--          #mc_embed_signup input.button:hover {-->
+<!--            color: #333a41 !important;-->
+<!--            background-color: #ffe161 !important;-->
+<!--            border: 1px solid #ffe161 !important;-->
+<!--          }-->
+
+<!--          #mc_embed_signup input.email {-->
+<!--            width: calc(100% - 26px);-->
+<!--            margin: 0 0 10px 0;-->
+<!--            background: transparent;-->
+<!--            color: white !important;-->
+<!--            border: 1px solid white;-->
+<!--            padding: 12px;-->
+<!--          }-->
+
+<!--          ::placeholder {-->
+<!--            color: #fff;-->
+<!--            opacity: 0.5;-->
+<!--            font-family: inherit;-->
+<!--          }-->
+
+<!--          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.-->
+<!--We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */-->
+
+<!--        </style>-->
+<!--        <div id="mc_embed_signup">-->
+<!--          <form-->
+<!--            action="https://emptyatlas.us13.list-manage.com/subscribe/post?u=ab78edd056a1703ec9077b2b0&amp;id=14ff368932"-->
+<!--            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"-->
+<!--            target="_blank" novalidate>-->
+<!--            <div id="mc_embed_signup_scroll">-->
+<!--              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"-->
+<!--                     required>-->
+<!--              &lt;!&ndash; real people should not fill this in and expect good things - do not remove this or risk form bot signups&ndash;&gt;-->
+<!--              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"-->
+<!--                                                                                        name="b_ab78edd056a1703ec9077b2b0_14ff368932"-->
+<!--                                                                                        tabindex="-1" value=""></div>-->
+
+<!--              <div class="clear" align="center" style="display: block;">-->
+<!--                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"-->
+<!--                       class="button btn btn-gold px-4">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </form>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div id="instagram" class="bg-blue d-md-flex flex-md-equal ">-->
+<!--  <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">-->
+<!--    <div class="row my-3 py-3">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="display-5 my-0">INSTAGRAM</h2>-->
+<!--      </div>-->
+<!--      <div class="col-md-6 offset-md-3 col-sm-12 mb-3 pb-3">-->
+<!--        <img src="/images/short-fiction-lines-bottom.svg" style="width:100%">-->
+<!--      </div>-->
+<!--      <div class="col-12">-->
+<!--        <iframe src="//lightwidget.com/widgets/347c930c652c5558960efb80f335c893.html" scrolling="no"-->
+<!--                allowtransparency="true" class="lightwidget-widget"-->
+<!--                style="width: 100%; border: 0; overflow: hidden;"></iframe>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 
 <div id="footer" ng-include="'views/footer.html'"></div>

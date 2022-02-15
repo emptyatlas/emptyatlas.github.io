@@ -1,61 +1,65 @@
 <div class="navbar-fixed">
-    <nav id="nav">
-        <div class="nav-wrapper links">
-            <a href="#" ng-click="scrollTo('home')" class="brand-logo center"><img src="/images/ea_logo_vertical_white.png" style="height: 36px"/></a>
-            <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-            <ul id="nav-mobile" class="center-left hide-on-med-and-down">
-                <div style="float: right;">
-                    <li><a href="" ng-click="scrollTo('music'); recordLinkClick('click-nav', 'Music');">music</a></li>
-                    <li><a href="" ng-click="scrollTo('about'); recordLinkClick('click-nav', 'About');">about</a></li>
-                    <li><a href="" ng-click="scrollTo('video'); recordLinkClick('click-nav', 'Video');">video</a></li>
-                    <li><a href="" ng-click="scrollTo('lyrics'); recordLinkClick('click-nav', 'Lyrics');">lyrics</a></li>
-                </div>
-            </ul>
-            <ul id="nav-mobile" class="center-right hide-on-med-and-down">
-                <div style="float: left;">
-                    <li><a href="" ng-click="scrollTo('live'); recordLinkClick('click-nav', 'Live');">live</a></li>
-                    <li><a href="" ng-click="scrollTo('news'); recordLinkClick('click-nav', 'News');">news</a></li>
-                    <li><a href="https://empty-atlas-music.square.site/" target="_blank" ng-click="recordLinkClick('click-nav', 'Shop')">shop</a></li>
-                    <li><a href="{{sendMail}}" ng-click="recordLinkClick('click-nav', 'Contact')">contact</a></li>
-                </div>
-            </ul>
+  <nav id="nav" class="mt-3">
+    <div class="nav-wrapper links">
+      <a href="#" ng-click="scrollTo('home')" class="hide-on-small-and-down brand-logo center"><img
+        src="/images/ea_logo_vertical_white.png" style="height: 36px"/></a>
+      <a href="#" ng-click="scrollTo('home')" class="show-on-small hide-on-med-and-up brand-logo left mx-3"><img
+        src="/images/ea_logo_vertical_white.png" style="height: 36px"/></a>
+      <a href="" data-target="mobile-demo"
+         class="sidenav-trigger btn-floating btn-large waves-effect waves-light matador-red"><i class="fas fa-bars"></i></a>
+      <ul id="nav-mobile" class="center-left hide-on-med-and-down">
+        <div style="float: right;">
+          <li><a href="#/" ng-click="recordLinkClick('click-nav', 'Music');">home</a></li>
+          <li><a href="#/about" ng-click="recordLinkClick('click-nav', 'About');">about</a></li>
+          <li><a href="#/video" ng-click="recordLinkClick('click-nav', 'Video');">video</a></li>
+          <li><a href="#/lyrics" ng-click="recordLinkClick('click-nav', 'Lyrics');">lyrics</a></li>
         </div>
-    </nav>
+      </ul>
+      <ul id="nav-mobile" class="center-right hide-on-med-and-down">
+        <div style="float: left;">
+          <li><a href="#/live" ng-click="recordLinkClick('click-nav', 'Live');">live</a></li>
+          <li><a href="#/news" ng-click="recordLinkClick('click-nav', 'News');">news</a></li>
+          <li><a href="{{shopUrl}}" target="_blank" ng-click="recordLinkClick('click-nav', 'Shop')">shop</a></li>
+          <li><a href="{{sendMail}}" ng-click="recordLinkClick('click-nav', 'Contact')">contact</a></li>
+        </div>
+      </ul>
+    </div>
+  </nav>
 
-    <ul class="sidenav pt-3" id="mobile-demo" align="center">
-        <li><a class="m-0" href="" ng-click="scrollTo('home')">home</a></li>
-        <li><a class="m-0" href="" ng-click="scrollTo('music'); recordLinkClick('click-nav', 'Music');">music</a></li>
-        <li><a class="m-0" href="" ng-click="scrollTo('about'); recordLinkClick('click-nav', 'About');">about</a></li>
-        <li><a class="m-0" href="" ng-click="scrollTo('video'); recordLinkClick('click-nav', 'Video');">video</a></li>
-        <li><a class="m-0" href="" ng-click="scrollTo('lyrics'); recordLinkClick('click-nav', 'Lyrics');">lyrics</a></li>
-        <li><a class="m-0" href="" ng-click="scrollTo('live'); recordLinkClick('click-nav', 'Live');">live</a></li>
-        <li><a class="m-0" href="" ng-click="scrollTo('news'); recordLinkClick('click-nav', 'News');">news</a></li>
-        <li><a class="m-0" href="{{shopUrl}}" target="_blank" ng-click="recordLinkClick('click-nav', 'Shop')">shop</a></li>
-        <li><a class="m-0" href="{{sendMail}}" ng-click="recordLinkClick('click-nav', 'Contact')">contact</a></li>
-        <li class="mt-3"><img src="/images/ea_logo_vertical_white.png" style="height: 36px;"/></li>
-    </ul>
+  <ul class="sidenav pt-3" id="mobile-demo" align="center">
+    <!--        <li><a class="m-0" href="" ng-click="scrollTo('home')">home</a></li>-->
+    <li><a class="m-0" href="#/" ng-click="recordLinkClick('click-nav', 'Music'); clearSideNav();">home</a></li>
+    <li><a class="m-0" href="#/about" ng-click="recordLinkClick('click-nav', 'About'); clearSideNav();">about</a></li>
+    <li><a class="m-0" href="#/video" ng-click="recordLinkClick('click-nav', 'Video'); clearSideNav();">video</a></li>
+    <li><a class="m-0" href="#/lyrics" ng-click="recordLinkClick('click-nav', 'Lyrics'); clearSideNav();">lyrics</a></li>
+    <li><a class="m-0" href="#/live" ng-click="recordLinkClick('click-nav', 'Live'); clearSideNav();">live</a></li>
+    <li><a class="m-0" href="#/news" ng-click="recordLinkClick('click-nav', 'News'); clearSideNav();">news</a></li>
+    <li><a class="m-0" href="{{shopUrl}}" target="_blank" ng-click="recordLinkClick('click-nav', 'Shop'); clearSideNav();">shop</a></li>
+    <li><a class="m-0" href="{{sendMail}}" ng-click="recordLinkClick('click-nav', 'Contact'); clearSideNav();">contact</a></li>
+    <li class="mt-3"><img src="/images/ea_logo_vertical_white.png" style="height: 36px;"/></li>
+  </ul>
 </div>
 
 <div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var options = {
-                'preventScrolling': true
-            };
-            var instances = M.Sidenav.init(elems, options);
-        });
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var options = {
+        'preventScrolling': true
+      };
+      var instances = M.Sidenav.init(elems, options);
+    });
 
-        // Or with jQuery
+    // Or with jQuery
 
-        $(document).ready(function() {
-            $('.sidenav').sidenav();
-        });
-    </script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+  </script>
 </div>
 
 <div id="scroll-to-top" class="fixed-action-btn">
-  <a class="btn-floating btn-large gold" ng-click="scrollToTop()">
-    <i class="fas fa-angle-double-up text-dark-gray"></i>
+  <a class="btn-floating btn-large btn-red" ng-click="scrollToTop()">
+    <i class="fas fa-angle-double-up text-white"></i>
   </a>
 </div>

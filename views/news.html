@@ -1,44 +1,45 @@
 <div ng-include="'views/nav.html'"></div>
 
-<div id="news" class="bg-gray-dark d-md-flex flex-md-equal">
+<div id="news" class="d-md-flex flex-md-equal">
   <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
     <div class="row mb-3 pb-3">
       <div class="col-12">
-        <h2 class="display-5 mt-2">NEWS</h2>
+        <h2 class="display-5">NEWS</h2>
       </div>
-      <div class="col-12">
-        <img src="/images/short-fiction-lines-bottom.svg" style="width: 100%; height: 10px;">
-      </div>
-      <div class="col-12 mt-3">
+      <div class="col-12 hide-on-small-only">
 
-        <div class="btn-group btn-group-toggle d-none d-md-inline-flex" data-toggle="buttons">
-          <label id="column-view" class="btn btn-gold active" ng-click="toggleNewsView('column')">
-            <input type="radio" autocomplete="off" checked><i class="fas fa-columns"></i>
-          </label>
-          <label id="list-view" class="btn btn-gold" ng-click="toggleNewsView('list')">
-            <input type="radio" autocomplete="off"><i class="fas fa-th-list"></i>
-          </label>
-        </div>
+        <a ng-click="toggleNewsView()" href="">
+          <button type="button" class="btn btn-red btn-sm">Toggle Layout</button>
+        </a>
 
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label id="date-sort" class="btn btn-gold" ng-click="toggleDateSort()">
-            <input type="radio" autocomplete="off" checked>
-            <i class="far fa-calendar-alt"></i>&nbsp;<i class="fas fa-long-arrow-alt-down" ng-show="dateSortReverse"></i><i class="fas fa-long-arrow-alt-up" ng-show="!dateSortReverse"></i>
-          </label>
-        </div>
+        <!--        <div class="btn-group btn-group-toggle d-none d-md-inline-flex" data-toggle="buttons">-->
+        <!--          <label id="column-view" class="btn btn-gold active" ng-click="toggleNewsView('column')">-->
+        <!--            <input type="radio" autocomplete="off" checked><i class="fas fa-columns"></i>-->
+        <!--          </label>-->
+        <!--          <label id="list-view" class="btn btn-gold" ng-click="toggleNewsView('list')">-->
+        <!--            <input type="radio" autocomplete="off"><i class="fas fa-th-list"></i>-->
+        <!--          </label>-->
+        <!--        </div>-->
+
+        <!--        <div class="btn-group btn-group-toggle" data-toggle="buttons">-->
+        <!--          <label id="date-sort" class="btn btn-gold" ng-click="toggleDateSort()">-->
+        <!--            <input type="radio" autocomplete="off" checked>-->
+        <!--            <i class="far fa-calendar-alt"></i>&nbsp;<i class="fas fa-long-arrow-alt-down" ng-show="dateSortReverse"></i><i class="fas fa-long-arrow-alt-up" ng-show="!dateSortReverse"></i>-->
+        <!--          </label>-->
+        <!--        </div>-->
 
       </div>
     </div>
   </div>
 </div>
 
-<div class="bg-gray-dark d-md-flex flex-md-equal mb-5 pb-5">
+<div class="d-md-flex flex-md-equal mb-5 pb-5">
   <div class="container">
     <div class="row mx-md-6 px-md-6">
       <div id="news-list" class="card-columns">
 
         <div class="card text-center text-white" ng-repeat="n in news | orderBy:'date':dateSortReverse"
-             ng-class="{'bg-blue':n.quote, 'bg-dark':!n.quote}">
+             ng-class="{'bg-red':n.quote, 'bg-dark':!n.quote}">
           <img class="card-img-top" src="{{n.img}}" ng-show="n.img">
           <div class="card-body">
             <h5 class="card-title" ng-show="n.title">{{n.title}}</h5>
@@ -51,7 +52,10 @@
                 </small>
               </footer>
             </blockquote>
-            <a href="{{n.link}}" ng-show="n.link && !n.quote" target="_blank" class="card-link">{{n.actionText}}</a>
+            <a href="{{n.link}}" ng-show="n.link && !n.quote" target="_blank">
+              <button type="button" class="btn btn-red btn-sm">{{n.actionText}}</button>
+            </a>
+            <!--            <a href="{{n.link}}" ng-show="n.link && !n.quote" target="_blank" class="card-link">{{n.actionText}}</a>-->
             <p class="card-text" ng-show="n.date && !n.quote"><small
               class="text-muted">{{n.date | date:'longDate'}}</small></p>
           </div>
@@ -63,6 +67,8 @@
 
 </div>
 
+<img src="/images/photo-1629194898512-b6b8697063ac.jpeg" class="bg">
+
 <div id="footer" ng-include="'views/footer.html'"></div>
 
 <script>
@@ -71,7 +77,7 @@
     // ga('set', 'page', '/' + location.hash);
     // ga('send', 'pageview', '/' + location.hash);
     gtag('config', 'UA-51847004-1', {
-      'page_title' : 'News',
+      'page_title': 'News',
       'page_path': '/' + location.hash
     });
   }
