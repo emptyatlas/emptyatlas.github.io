@@ -269,7 +269,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     ModuleService.activeModule = '';
   };
 
-  $scope.clearSideNavclearSideNav = function () {
+  $scope.clearSideNav = function () {
     $('.sidenav').sidenav('close');
   };
 
