@@ -1,0 +1,40 @@
+<div ng-include="'views/nav.html'"></div>
+
+<div class="d-md-flex flex-md-equal">
+  <div class="container no-background px-0">
+
+    <div id="live" class="d-md-flex flex-md-equal">
+      <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden container">
+        <div class="row my-3 py-3">
+          <div class="col-12">
+            <h2 class="display-5">LIVE</h2>
+          </div>
+          <div class="col-12 mb-3 pb-3">
+            <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+            <a class="bit-widget-initializer" data-artist-name="Empty Atlas" data-display-local-dates="true"
+               data-display-past-dates="true" data-auto-style="true" data-text-color="#FFFFFF" data-link-color="#ffffff"
+               data-popup-background-color="" data-background-color="" data-display-limit="10"
+               data-link-text-color="#FFFFFF"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<img src="/images/photo-1629194898512-b6b8697063ac.jpeg" class="bg">
+
+<div id="footer" ng-include="'views/footer.html'"></div>
+
+<script>
+  // Skip recording GA events to our account if in development.
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    // ga('set', 'page', '/' + location.hash);
+    // ga('send', 'pageview', '/' + location.hash);
+    gtag('config', 'UA-51847004-1', {
+      'page_title': 'Live',
+      'page_path': '/' + location.hash
+    });
+  }
+</script>

@@ -1,54 +1,127 @@
-<div ng-controller="MainCtrl">
-  <div ng-include="'views/nav.html'"></div>
+<div ng-include="'views/nav.html'"></div>
 
-  <div class="w-100" id="download-body">
+<div class="d-md-flex flex-md-equal" id="download-body">
 
-    <div class="container no-background px-0">
+  <div class="container no-background px-0">
 
-      <div class="jumbotron no-background px-0 m-0" align="center">
-        <div class="card no-background border-0 p-0 col-md-6 col-md-offset-3 col-sm-12 animated fadeIn"
-             style="box-shadow: none;">
-          <div class="card-body">
-            <h3 class="card-title text-white m-0">Listen</h3>
-            <div class="collection">
-              <a class="collection-item text-dark sans-serif" href="{{spotifyUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'Spotify')"><i class="fab fa-spotify circle green"></i>Spotify</a>
-              <a class="collection-item text-dark sans-serif" href="{{appleMusicUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'Apple Music')"><i class="fab fa-apple circle red"></i>Apple
-                Music</a>
-              <a class="collection-item text-dark sans-serif" href="{{tidalUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'Tidal')"><i class="fab circle black"><img
-                src="/images/tidal-icon_white.svg" style="width: 16px; height: 100%;"/></i>Tidal</a>
-              <a class="collection-item text-dark sans-serif" href="{{youTubeMusicUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'YouTube Music')"><i class="fab fa-youtube circle red"></i>YouTube
-                Music</a>
-            </div>
+    <div class="jumbotron no-background px-0 m-0" align="center">
+      <div class="card no-background border-0 p-0 col-md-6 col-md-offset-3 col-sm-12"
+           style="box-shadow: none;">
+        <div class="card-body">
+          <h2 class="card-title text-white">Listen</h2>
+          <div name="spacer" class="row py-1"></div>
 
-            <br>
-
-            <h3 class="card-title text-white m-0">Follow & Support</h3>
-            <div class="collection">
-              <a class="collection-item text-dark sans-serif" href="{{facebookUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'Facebook')"><i class="fab fa-facebook-f circle blue"></i>Facebook</a>
-              <a class="collection-item text-dark sans-serif" href="{{instagramUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'Instagram')"><i class="fab fa-instagram circle pink"></i>Instagram</a>
-              <a class="collection-item text-dark sans-serif" href="{{shopUrl}}" target="_blank"
-                 ng-click="recordLinkClick('click-share', 'Merch')"><i class="fas fa-shopping-bag circle black"></i>Shop</a>
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click-share', 'Spotify')" href="{{spotifyUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fab fa-spotify"></i>&nbsp;&nbsp;Spotify
+                </button>
+              </a>
             </div>
           </div>
-        </div>
 
-        <div class="center mt-3">
-          <p class="text-white">Scroll down for more</p>
-          <p class="text-white"><i
-            class="fas fa-chevron-down animate__animated animate__slideInDown animate__slower animate__repeat-10"></i>
-          </p>
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click-share', 'Apple Music')" href="{{appleMusicUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fab fa-apple"></i>&nbsp;&nbsp;Apple
+                  Music
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click-share', 'Tidal')" href="{{tidalUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fab"><img
+                  src="/images/tidal-icon_white.svg" style="width: 22px; height: 100%;"/></i>&nbsp;&nbsp;Tidal
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click-share', 'YouTube Music')" href="{{youTubeMusicUrl}}"
+                 target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fab fa-youtube"></i>&nbsp;&nbsp;YouTube
+                  Music
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!--            <div class="collection">-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{spotifyUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'Spotify')"><i class="fab fa-spotify circle green"></i>Spotify</a>-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{appleMusicUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'Apple Music')"><i class="fab fa-apple circle red"></i>Apple-->
+          <!--                Music</a>-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{tidalUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'Tidal')"><i class="fab circle black"><img-->
+          <!--                src="/images/tidal-icon_white.svg" style="width: 16px; height: 100%;"/></i>Tidal</a>-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{youTubeMusicUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'YouTube Music')"><i class="fab fa-youtube circle red"></i>YouTube-->
+          <!--                Music</a>-->
+          <!--            </div>-->
+
+          <br>
+
+          <h2 class="card-title text-white">Follow & Support</h2>
+          <span class="text-white" ng-hide="{{showTeaser}}">Announcement coming on 3/4</span>
+          <div name="spacer" class="row py-1"></div>
+
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click', 'Facebook')" href="{{facebookUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;Facebook
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click', 'Instagram')" href="{{instagramUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fab fa-instagram"></i>&nbsp;&nbsp;Instagram
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col-12 center">
+              <a ng-click="recordLinkClick('click', 'Merch')" href="{{shopUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md"><i class="fas fa-shopping-bag"></i>&nbsp;&nbsp;Shop
+                  merch
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!--            <div class="collection">-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{facebookUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'Facebook')"><i class="fab fa-facebook-f circle blue"></i>Facebook</a>-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{instagramUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'Instagram')"><i class="fab fa-instagram circle pink"></i>Instagram</a>-->
+          <!--              <a class="collection-item text-dark sans-serif" href="{{shopUrl}}" target="_blank"-->
+          <!--                 ng-click="recordLinkClick('click-share', 'Merch')"><i class="fas fa-shopping-bag circle black"></i>Shop</a>-->
+          <!--            </div>-->
         </div>
       </div>
 
+      <div class="center mt-3">
+        <p class="text-white">Scroll down for more</p>
+        <p class="text-white"><i
+          class="fas fa-chevron-down animate__animated animate__slideInDown animate__slower animate__repeat-10"></i>
+        </p>
+      </div>
     </div>
+
   </div>
 </div>
+
+<img src="/images/IMG_0518.jpg" class="bg">
 
 <div id="footer" ng-include="'views/footer.html'"></div>
 

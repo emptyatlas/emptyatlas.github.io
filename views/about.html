@@ -1,0 +1,101 @@
+<div ng-include="'views/nav.html'"></div>
+
+<div class="d-md-flex flex-md-equal">
+  <div class="container no-background px-0">
+
+    <div id="about" class="d-md-flex flex-md-equal">
+      <div class="py-3 px-3 py-md-5 px-md-5 text-center text-white overflow-hidden container">
+        <div class="row my-3 py-3">
+          <div class="col-12">
+            <h2 class="display-5">ABOUT</h2>
+          </div>
+          <div class="col-12 text-white">
+
+            <p>Since forming in 2014, Mississippi indie-rock act Empty Atlas has become known for dynamic and melodically
+              gripping songs about people and the way we connect. The band’s first full-length album, 2016’s Hestia, dealt
+              with the idea of home and what it can mean, from acceptance and comfort to solitude and loneliness.</p>
+
+            <p>Now, Empty Atlas - featuring vocalist and rhythm guitarist Micah Smith, lead guitarist
+              Brennan Michael White, bassist Alex Ingram and drummer Robert Currie Hansford - returns with their
+              sophomore full-length album, Kairos, available June 12, 2020, in partnership with Carved From Stone Records.
+              Smith calls the album “the other side of the coin” from the band’s previous full-length. Where Hestia centered
+              on settling down, Kairos examines the choice to leave everything behind and chase success.</p>
+
+            <p>“We all know people who put goals over everything else - that idea of, ‘If I sacrifice enough, I’ll get to X,
+              and then, it’ll be worth it,’” Smith says. “Not bashing anyone for that, but me and the guys had these really
+              honest conversations about what success looks like for us and just finding the balance between the work and
+              joy in playing music together.”</p>
+
+            <p>An ambitious concept needed an ambitious team behind it. For that, Empty Atlas reteamed with recording
+              engineer Nick Smith at Dipping Vat Studio in Monticello, Mississippi, and Los Angeles mixing engineer Tyler
+              Spratt (Imagine Dragons, Arkells, Moby), who worked on the band’s 2018 single “Short Fiction.”</p>
+
+            <p>Already, a wide range of publications, podcasts and tastemakers have praised Kairos and its leadoff
+              single “Maximal,” including Discovered Magazine, Kill the Music, All Punked Up, Stitched Sound, Indie Vision
+              Music, Jesus Freak Hideout, FBT Entertainment, Underground Music Collective and more.</p>
+
+            <p>Listen to Empty Atlas now on all major music platforms.</p>
+            <div id="links" class="links">
+              <ul class="listen-links p-0">
+                <li>
+                  <a href="{{iTunesUrl}}" target="_blank" title="iTunes" ng-click="recordLinkClick('click-about', 'iTunes')"
+                     class="btn-floating btn-large waves-effect waves-light btn-red"><i
+                    class="fab fa-itunes-note fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"
+                     class="btn-floating btn-large waves-effect waves-light btn-red"
+                     ng-click="recordLinkClick('click-about', 'Apple Music')"><i
+                    class="fab fa-apple fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="{{spotifyUrl}}" target="_blank" title="Spotify"
+                     ng-click="recordLinkClick('click-about', 'Spotify')"
+                     class="btn-floating btn-large waves-effect waves-light btn-red"><i
+                    class="fab fa-spotify fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="{{tidalUrl}}" target="_blank" title="Tidal" ng-click="recordLinkClick('click-about', 'Tidal')"
+                     class="btn-floating btn-large waves-effect waves-light btn-red">
+                    <i class="fab fa-2x">
+                      <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"
+                     ng-click="recordLinkClick('click-about', 'YouTube Music')"
+                     class="btn-floating btn-large waves-effect waves-light btn-red"><i
+                    class="fab fa-youtube-square fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"
+                     ng-click="recordLinkClick('click-about', 'Amazon Music')"
+                     class="btn-floating btn-large waves-effect waves-light btn-red"><i
+                    class="fab fa-amazon fa-2x"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<img src="/images/photo-1629194898512-b6b8697063ac.jpeg" class="bg">
+
+<div id="footer" ng-include="'views/footer.html'"></div>
+
+<script>
+  // Skip recording GA events to our account if in development.
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    // ga('set', 'page', '/' + location.hash);
+    // ga('send', 'pageview', '/' + location.hash);
+    gtag('config', 'UA-51847004-1', {
+      'page_title': 'About',
+      'page_path': '/' + location.hash
+    });
+  }
+</script>

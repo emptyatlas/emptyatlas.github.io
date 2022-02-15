@@ -46,6 +46,8 @@
         </li>
         <li><a class="text-muted" href="{{youTubeUrl}}" target="_blank" ng-click="recordLinkClick('click-footer', 'YouTube')"><i class="fab fa-youtube-square"></i>&nbsp;&nbsp;YouTube</a>
         </li>
+        <li><a class="text-muted" href="{{tikTokUrl}}" target="_blank" ng-click="recordLinkClick('click-footer', 'TikTok')"><i class="fab fa-tiktok"></i>&nbsp;&nbsp;TikTok</a>
+        </li>
         <li><a class="text-muted" href="{{shopUrl}}" target="_blank" ng-click="recordLinkClick('click-footer', 'Merch')"><i class="fas fa-shopping-bag"></i>&nbsp;&nbsp;Merch</a>
         </li>
         <li><a class="text-muted" href="mailto:hello@emptyatlas.com" target="_blank" ng-click="recordLinkClick('click-footer', 'Contact')"><i class="far fa-envelope"></i>&nbsp;&nbsp;Contact</a>
@@ -57,7 +59,8 @@
     <div class="col-12 col-md mb-4">
       <h5>Credit</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="" target="_blank" ng-click="recordLinkClick('click-footer', 'Best Ok Designs')">Website and “Kairos” artwork by Jeana Smith</a>
+        <li ng-show="{{showTeaser}}"><a class="text-muted" href="" target="_blank" ng-click="recordLinkClick('click-footer', 'Best Ok Designs')">Website and “Kairos” artwork by Jeana Smith</a>
+        <li ng-hide="{{showTeaser}}"><a class="text-muted" href="" target="_blank" ng-click="recordLinkClick('click-footer', 'Best Ok Designs')">Website, "Matador" artwork, and “Kairos” artwork by Jeana Smith</a>
         <li><a class="text-muted" href="{{emmiSprayberryUrl}}" target="_blank" ng-click="recordLinkClick('click-footer', 'Emmi Sprayberry')">“Short Fiction” artwork by Emmi
           Sprayberry</a></li>
         <li><a class="text-muted" href="{{azhaSandersUrl}}" target="_blank" ng-click="recordLinkClick('click-footer', 'Azha Sanders')">“Hestia” artwork by Azha Sanders</a></li>
