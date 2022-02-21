@@ -366,12 +366,13 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       $timeout(function () {
         $('#lyrics-display').collapse('show');
       }, 250);
+      $scope.scrollTo('lyrics-display-parent');
     }
   };
 
-  $('#lyrics-display').on('shown.bs.collapse', function () {
-    $scope.scrollTo('lyrics-display-parent');
-  });
+  // $('#lyrics-display').on('shown.bs.collapse', function () {
+  //   $scope.scrollTo('lyrics-display-parent');
+  // });
 
   /**
    * GOOGLE ANALYTICS
