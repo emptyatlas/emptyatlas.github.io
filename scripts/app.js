@@ -117,7 +117,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
   $scope.albums = [
     {
-      name: 'DIPPING VAT SESSIONS',
+      name: 'DIPPING VAT SESSIONS - LIVE',
       year: '2021',
       image: '/images/dipping-vat-sessions.jpg',
       spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/7q117hZ7SDeFOXFv96qAwf?si=usXiuBaxQRqNjlVfUl-zyg'),
