@@ -94,7 +94,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.shopUrl = 'https://empty-atlas-music.square.site/';
   $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
-  // Music Links
+  // Featured Music Links
   $scope.iTunesUrl = 'https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes';
   $scope.appleMusicUrl = 'https://music.apple.com/us/album/kairos/1512448187';
   $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/album/kairos/1512448187';
