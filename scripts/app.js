@@ -117,6 +117,21 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
   $scope.albums = [
     {
+      name: 'DIPPING VAT SESSIONS',
+      year: '2021',
+      image: '/images/dipping-vat-sessions.jpg',
+      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/7q117hZ7SDeFOXFv96qAwf?si=usXiuBaxQRqNjlVfUl-zyg'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7q117hZ7SDeFOXFv96qAwf'),
+      appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/dipping-vat-sessions-live-at-dipping-vat-studio-ep/1567266981'),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/dipping-vat-sessions-live-at-dipping-vat-studio-ep/1567266981'),
+      iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/dipping-vat-sessions-live-at-dipping-vat-studio-ep/1567266981'),
+      soundCloudUrl: undefined,
+      youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_mmG0VSHrOC41Hs76ddRLBGiVwRNSNh10w&feature=share'),
+      amazonMusicUrl: undefined,
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/183915772'),
+      bandcampUrl: undefined
+    },
+    {
       name: 'KAIROS',
       year: '2020',
       image: '/images/Kairos-as-performed-by-Empty-Atlas.png',
@@ -131,21 +146,21 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl),
       bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/album/kairos')
     },
-    {
-      name: 'MAXIMAL (single)',
-      year: '2020',
-      image: '/images/maximal-single-cover.png',
-      spotifyUrl: undefined,
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7l79vt3E4JzAZyO7K9QVpP'),
-      appleMusicUrl: undefined,
-      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/maximal/1506115438?i=1506115442&app=music'),
-      iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/maximal-single/1506115438?ls=1&app=itunes'),
-      soundCloudUrl: undefined,
-      youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=6poLggcs9ww&feature=share'),
-      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/Maximal-Empty-Atlas/dp/B086QJTF4X/ref=sr_1_1'),
-      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/136269864'),
-      bandcampUrl: undefined
-    },
+    // {
+    //   name: 'MAXIMAL (single)',
+    //   year: '2020',
+    //   image: '/images/maximal-single-cover.png',
+    //   spotifyUrl: undefined,
+    //   spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7l79vt3E4JzAZyO7K9QVpP'),
+    //   appleMusicUrl: undefined,
+    //   appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/maximal/1506115438?i=1506115442&app=music'),
+    //   iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/maximal-single/1506115438?ls=1&app=itunes'),
+    //   soundCloudUrl: undefined,
+    //   youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=6poLggcs9ww&feature=share'),
+    //   amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/Maximal-Empty-Atlas/dp/B086QJTF4X/ref=sr_1_1'),
+    //   tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/136269864'),
+    //   bandcampUrl: undefined
+    // },
     {
       name: 'SHORT FICTION (single)',
       year: '2018',
