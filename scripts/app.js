@@ -385,6 +385,14 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     }
   };
 
+  $scope.showAdditionalInfo = function () {
+    console.log("Showing additional info");
+    $('#show-additional-info')[0].style.display = 'none';
+    $timeout(function () {
+      $('#additional-info').collapse('show');
+    }, 250);
+  };
+
   // $('#lyrics-display').on('shown.bs.collapse', function () {
   //   $scope.scrollTo('lyrics-display-parent');
   // });

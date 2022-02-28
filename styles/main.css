@@ -376,6 +376,15 @@ nav {
   display: inline-flex;
 }
 
+.bullet-list {
+  list-style-type: circle !important;
+  padding-left: 30px !important;
+}
+
+.bullet-list > li {
+  list-style-type: circle !important;
+}
+
 .card-blue {
   background-color: #065b9c !important;
 }
