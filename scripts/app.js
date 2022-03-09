@@ -117,6 +117,21 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
   $scope.albums = [
     {
+      name: 'Matador (single)',
+      year: 'Coming March 18, 2022',
+      image: '/images/Matador-by-Empty-Atlas.jpg',
+      spotifyUrl: undefined,
+      spotifyEmbedUrl: undefined,
+      appleMusicUrl: undefined,
+      appleMusicEmbedUrl: undefined,
+      iTunesUrl: undefined,
+      soundCloudUrl: undefined,
+      youTubeMusicUrl: undefined,
+      amazonMusicUrl: undefined,
+      tidalUrl: undefined,
+      bandcampUrl: undefined
+    },
+    {
       name: 'DIPPING VAT SESSIONS - LIVE',
       year: '2021',
       image: '/images/dipping-vat-sessions.jpg',
