@@ -117,7 +117,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
   $scope.albums = [
     {
-      name: 'Matador (single)',
+      name: 'MATADOR (single)',
       year: 'Coming March 18, 2022',
       image: '/images/Matador-by-Empty-Atlas.jpg',
       spotifyUrl: undefined,
