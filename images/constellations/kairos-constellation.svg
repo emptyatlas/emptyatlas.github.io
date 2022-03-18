@@ -37,6 +37,10 @@
                     <circle cx="300" cy="444" r="6" ng-click="showLyrics('Short Fiction')"></circle>
                     <text x="314" y="460" text-anchor="left" ng-click="showLyrics('Short Fiction')">Short Fiction</text>
 
+                    <!-- Matador -->
+                    <circle cx="400" cy="60" r="6" ng-click="showLyrics('Matador')"></circle>
+                    <text x="410" y="55" text-anchor="left" ng-click="showLyrics('Matador')">Matador</text>
+
                     <!-- Decorative stars -->
                     <circle cx="14" cy="14" r="1"></circle>
                     <circle cx="6" cy="150" r="1"></circle>
@@ -47,7 +51,7 @@
                     <circle cx="233" cy="102" r="1"></circle>
                     <circle cx="368" cy="12" r="1"></circle>
                     <circle cx="378" cy="33" r="1"></circle>
-                    <circle cx="485" cy="56" r="2"></circle>
+                    <!-- <circle cx="485" cy="56" r="2"></circle> -->
                     <circle cx="539" cy="82" r="1"></circle>
                     <circle cx="544" cy="104" r="1"></circle>
                     <circle cx="580" cy="24" r="1"></circle>

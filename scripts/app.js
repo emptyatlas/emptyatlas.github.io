@@ -95,15 +95,15 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
   // Featured Music Links
-  $scope.iTunesUrl = 'https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes';
-  $scope.appleMusicUrl = 'https://music.apple.com/us/album/kairos/1512448187';
-  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/album/kairos/1512448187';
-  $scope.spotifyUrl = 'https://open.spotify.com/album/1R6XM9xoyFz1iRUaRATuid';
-  $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid';
-  $scope.amazonMusicUrl = 'https://www.amazon.com/Kairos-Empty-Atlas/dp/B088BH853N/ref=sr_1_1';
+  $scope.iTunesUrl = 'https://music.apple.com/us/album/matador-single/1609745159?ls=1&app=itunes';
+  $scope.appleMusicUrl = 'https://music.apple.com/us/album/matador-single/1609745159';
+  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/album/matador-single/1609745159';
+  $scope.spotifyUrl = 'https://open.spotify.com/album/2mP5bHSqCnrrWYXdUpk1e7?si=eSmQycA8SWuVG-LuqtnFcg';
+  $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/album/2mP5bHSqCnrrWYXdUpk1e7';
+  $scope.amazonMusicUrl = 'https://amazon.com/music/player/albums/B09SBZYKJ5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_upPWHrhQD1htmZGGEb3nM48id';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
-  $scope.youTubeMusicUrl = 'https://music.youtube.com/playlist?list=OLAK5uy_n2GxDo7LgrkZK5BNZyq_HAGGDrOeQRMPg';
-  $scope.tidalUrl = 'https://tidal.com/browse/album/140616400';
+  $scope.youTubeMusicUrl = 'https://music.youtube.com/playlist?list=OLAK5uy_lvCMKSOYe7MI9h79Vsv9IJUjAknLUX_rE';
+  $scope.tidalUrl = 'https://tidal.com/browse/album/216405710';
   $scope.bandcampUrl = 'https://emptyatlas.bandcamp.com/';
 
   // Credit
@@ -118,17 +118,17 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.albums = [
     {
       name: 'MATADOR (single)',
-      year: 'Coming March 18, 2022',
+      year: '2022',
       image: '/images/Matador-by-Empty-Atlas.jpg',
-      spotifyUrl: undefined,
-      spotifyEmbedUrl: undefined,
-      appleMusicUrl: undefined,
-      appleMusicEmbedUrl: undefined,
-      iTunesUrl: undefined,
+      spotifyUrl: $sce.trustAsResourceUrl($scope.spotifyUrl),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl($scope.spotifyEmbedUrl),
+      appleMusicUrl: $sce.trustAsResourceUrl($scope.appleMusicUrl),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl($scope.appleMusicEmbedUrl),
+      iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
       soundCloudUrl: undefined,
-      youTubeMusicUrl: undefined,
-      amazonMusicUrl: undefined,
-      tidalUrl: undefined,
+      youTubeMusicUrl: $sce.trustAsResourceUrl($scope.youTubeMusicUrl),
+      amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
+      tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl),
       bandcampUrl: undefined
     },
     {
@@ -150,15 +150,15 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'KAIROS',
       year: '2020',
       image: '/images/Kairos-as-performed-by-Empty-Atlas.png',
-      spotifyUrl: $sce.trustAsResourceUrl($scope.spotifyUrl),
-      spotifyEmbedUrl: $sce.trustAsResourceUrl($scope.spotifyEmbedUrl),
-      appleMusicUrl: $sce.trustAsResourceUrl($scope.appleMusicUrl),
-      appleMusicEmbedUrl: $sce.trustAsResourceUrl($scope.appleMusicEmbedUrl),
-      iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
-      soundCloudUrl: $sce.trustAsResourceUrl($scope.soundCloudUrl),
-      youTubeMusicUrl: $sce.trustAsResourceUrl($scope.youTubeMusicUrl),
-      amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
-      tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl),
+      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/1R6XM9xoyFz1iRUaRATuid'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid'),
+      appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/kairos/1512448187'),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/kairos/1512448187'),
+      iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes'),
+      soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas'),
+      youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_n2GxDo7LgrkZK5BNZyq_HAGGDrOeQRMPg'),
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://www.amazon.com/Kairos-Empty-Atlas/dp/B088BH853N/ref=sr_1_1'),
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/140616400'),
       bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/album/kairos')
     },
     // {
@@ -380,9 +380,12 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     console.log('Imma show da [' + song + '] lyrics!');
     recordGoogleAnalyticsEvent('Lyrics', 'show', song);
     var songs = LyricService.songs;
+    console.debug(LyricService.songs);
     var index = songs.findIndex(function (obj) {
+      console.log('Finding index of song title ['+song+']');
       return obj.title === song;
     });
+    console.debug('Index of ['+song+'] is ['+index+']');
     var song = angular.copy(songs[index]);
     if ($scope.activeSong !== undefined && song.title === $scope.activeSong.title) {
       console.log('closing lyric box');
