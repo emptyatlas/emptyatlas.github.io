@@ -238,13 +238,6 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     }
   ];
 
-  // Matador release calculations
-  let today = new Date();
-  let announcementDate = new Date('2022-03-04');
-  let availableDate = new Date('2022-03-18');
-  $scope.showTeaser = today < announcementDate;
-  $scope.canListenNow = today >= availableDate;
-
   var maxCharLength = 148;
   $scope.news = NewsService.news;
   var viewType = 'list';
