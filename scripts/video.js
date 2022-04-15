@@ -9,6 +9,11 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
 
     this.videos = [
       {
+        name: 'MATADOR (Official Music Video)',
+        date: 'Apr 15, 2022',
+        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/1vSJALEITMA')
+      },
+      {
         name: 'Valleys - LIVE at Dipping Vat Studio',
         date: 'May 12, 2021',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/nVDgqUrGCRA')
