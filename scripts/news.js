@@ -25,6 +25,14 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
 
   this.news = [
     {
+      title: '30 of The Greatest Indie Bands Of 2022',
+      desc: `Following up last year’s grand list with one built around this year, is our new “Indie” band list for 2022! Check out “30 Of The Greatest Indie Bands of 2022” below and make sure to follow it up with the 2 prior lists from 2020 and 2021 respectively.`,
+      img: 'images/news/indie-vision-music_2022.png',
+      actionText: 'READ MORE',
+      date: 1651305600000,
+      link: 'https://www.indievisionmusic.com/articles/30-of-the-greatest-indie-bands-of-2022/'
+    },
+    {
       title: 'Track By Track: Empty Atlas - Kairos',
       desc: `Mississippi-based group and Carved from Stone Records artist Empty Atlas, released their most recent album "Kairos" in June 2020. We asked vocalist/guitarist Micah Smith to tell us about each track. Check out his commentary on the album below.`,
       img: 'images/news/kill-the-music-2021.png',
