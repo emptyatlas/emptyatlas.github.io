@@ -117,6 +117,21 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
   $scope.albums = [
     {
+      name: 'HALF MAGIC (single)',
+      year: '2022',
+      image: '/images/Half-Magic-by-Empty-Atlas.jpg',
+      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/1Q2or21qEBVFMA7J5czbee?si=ayGnZAG-R2mHADTZhH0xWg'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/1Q2or21qEBVFMA7J5czbee'),
+      appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/half-magic-single/1627843726'),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/half-magic-single/1627843726'),
+      iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/half-magic-single/1627843726'),
+      soundCloudUrl: undefined,
+      youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=Y4tzs-qAYTA&feature=share'),
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B0B35KBWRM?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_TCDUjm9Hqnup6IFQxFL8PgauV'),
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/232158138'),
+      bandcampUrl: undefined
+    },
+    {
       name: 'MATADOR (single)',
       year: '2022',
       image: '/images/Matador-by-Empty-Atlas.jpg',
