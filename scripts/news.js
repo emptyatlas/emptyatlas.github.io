@@ -25,6 +25,14 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
 
   this.news = [
     {
+      title: 'Bring Your Baggage and Don’t Pack Light!',
+      desc: `Recorded at Hal & Mal’s in Jackson, MS as the concluding event of the 2022 Mississippi Book Festival in Jackson, MS, this show has it all: laughs, funky music and, best of all for our crew, air-conditioning!`,
+      img: 'images/news/thacker-mountain-radio-2022.png',
+      actionText: 'READ MORE',
+      date: 1661454000000,
+      link: 'https://thackermountain.com/upcoming-shows/bring-your-baggage-and-dont-pack-light/'
+    },
+    {
       title: '30 of The Greatest Indie Bands Of 2022',
       desc: `Following up last year’s grand list with one built around this year, is our new “Indie” band list for 2022! Check out “30 Of The Greatest Indie Bands of 2022” below and make sure to follow it up with the 2 prior lists from 2020 and 2021 respectively.`,
       img: 'images/news/indie-vision-music_2022.png',
