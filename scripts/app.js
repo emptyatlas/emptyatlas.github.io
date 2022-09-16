@@ -117,6 +117,21 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
   $scope.albums = [
     {
+      name: 'I CAN\'T MAKE YOU LOVE ME (single)',
+      year: '2022',
+      image: '/images/I-Can\'t-Make-You-Love-Me-by-Empty-Atlas.png',
+      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/2WgmYEDI0Oo3avqBptHzQN?si=bAQYfUmdTWyiMguK2y9RJA'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/2WgmYEDI0Oo3avqBptHzQN'),
+      appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/i-cant-make-you-love-me-single/1642993366'),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/i-cant-make-you-love-me-single/1642993366'),
+      iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/i-cant-make-you-love-me-single/1642993366'),
+      soundCloudUrl: undefined,
+      youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/watch?v=aL1l_1iDd4c&feature=share'),
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B0BCSWXW4X?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_BRA5nDTDwz4oh6sBCOIOKPdBo'),
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/246155419'),
+      bandcampUrl: undefined
+    },
+    {
       name: 'HALF MAGIC (single)',
       year: '2022',
       image: '/images/Half-Magic-by-Empty-Atlas.jpg',
