@@ -462,12 +462,12 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
       console.log('Recording Google Analytics event, category [' + category + '], action [' + action + '], label [' + label + ']');
       // Record Google Analytics event
-      ga('send', {
-        hitType: 'event',
-        eventCategory: category,
-        eventAction: action,
-        eventLabel: label
-      });
+      // ga('send', {
+      //   hitType: 'event',
+      //   eventCategory: category,
+      //   eventAction: action,
+      //   eventLabel: label
+      // });
     } else {
       console.log('will not record Google Analytics event due to development hostname');
     }
