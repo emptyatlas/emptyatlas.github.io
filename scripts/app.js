@@ -59,6 +59,10 @@ var app = angular.module('emptyatlasgithubioApp', ['ngRoute', 'ngSanitize']).con
       templateUrl: 'views/about.html',
       controller: 'MainCtrl'
     })
+    .when('/shop', {
+      templateUrl: 'views/shop.html',
+      controller: 'MainCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
@@ -91,7 +95,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.facebookUrl = 'https://www.facebook.com/emptyatlasmusic';
   $scope.instagramUrl = 'https://www.instagram.com/emptyatlas/';
   $scope.youTubeUrl = 'https://www.youtube.com/user/emptyatlasmusic';
-  $scope.shopUrl = 'https://empty-atlas-music.square.site/';
+  $scope.shopSquareUrl = 'https://empty-atlas-music.square.site/';
+  $scope.shopAmazonUrl = 'https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3AEmpty+Atlas&ref=bl_sl_s_ap_web_7141123011';
   $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
   // Featured Music Links

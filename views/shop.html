@@ -1,0 +1,65 @@
+<div ng-include="'views/nav.html'"></div>
+
+<div class="d-md-flex flex-md-equal" id="download-body">
+
+  <div class="container no-background px-0">
+
+    <div class="jumbotron no-background px-0 m-0" align="center">
+      <div class="card no-background border-0 p-0 col-12"
+           style="box-shadow: none;">
+        <div class="card-body">
+          <h2 class="text-white">2 WAYS TO SHOP</h2>
+          <!--          <div name="spacer" class="row py-1"></div>-->
+
+          <div class="row center">
+
+            <div class="col-md-6 col-sm-12 center py-5">
+              <a href="{{shopAmazonUrl}}" target="_blank">
+                <img class="w-100" src="../images/Shop-Amazon.png">
+              </a>
+              <div name="spacer" class="row"></div>
+              <a href="{{shopAmazonUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md">Shop Amazon</button>
+              </a>
+              <div name="spacer" class="row"></div>
+              <span class="w-100 center white-text pt-2">T-Shirts, tank tops, sweaters, hoodies, pop sockets, & tote bags.</span>
+            </div>
+
+            <div class="col-md-6 col-sm-12 center py-5">
+              <a href="{{shopSquareUrl}}" target="_blank">
+                <img class="w-100" src="../images/Shop-Square.png">
+              </a>
+              <div name="spacer" class="row"></div>
+              <a href="{{shopSquareUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-md">Shop Square</button>
+              </a>
+              <div name="spacer" class="row"></div>
+              <span
+                class="w-100 center white-text pt-2">Limited edition T-Shirts & CDs. Personally packed and shipped.</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<img src="/images/photo-1629194898512-b6b8697063ac.jpeg" class="bg">
+
+<div id="footer" ng-include="'views/footer.html'"></div>
+
+<script>
+  // Skip recording GA events to our account if in development.
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    // ga('set', 'page', '/' + location.hash);
+    // ga('send', 'pageview', '/' + location.hash);
+    gtag('config', 'UA-51847004-1', {
+      'page_title': 'Listen',
+      'page_path': '/' + location.hash
+    });
+  }
+</script>
