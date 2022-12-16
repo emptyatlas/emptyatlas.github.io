@@ -347,24 +347,24 @@ nav {
 
 .links:hover > ul > li > a,
 .links:hover > ul > div > li > a {
-    color: white;
-    opacity: 1;
-    transition: all 0.3s linear;
-    background-color: transparent;
+  color: white;
+  opacity: 1;
+  transition: all 0.3s linear;
+  background-color: transparent;
 }
 
 .links:hover > ul > li > a:not(:hover),
 .links:hover > ul > div > li > a:not(:hover) {
-    color: #0e1b2b;
-    opacity: 0.5;
-    transition: all 0.3s linear;
+  color: #0e1b2b;
+  opacity: 0.5;
+  transition: all 0.3s linear;
 }
 
 .links > .active > a,
 .links > .active > a:hover,
 .links > .active > a:focus {
-    color: #0e1b2b;
-    background: none;
+  color: #0e1b2b;
+  background: none;
 }
 
 .listen-links {
@@ -400,20 +400,46 @@ nav {
 }
 
 .bg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  /* Preserve aspect ratio */
   min-width: 100%;
   min-height: 100%;
+
+  /* Set up proportionate scaling */
   width: auto;
-  height: auto;
+  height: 100%;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
   z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
   background-size: cover;
+  background-position: center;
 }
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+/*.bg {*/
+/*  position: fixed;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  min-width: 100%;*/
+/*  min-height: 100%;*/
+/*  width: auto;*/
+/*  height: auto;*/
+/*  z-index: -100;*/
+/*  -ms-transform: translateX(-50%) translateY(-50%);*/
+/*  -moz-transform: translateX(-50%) translateY(-50%);*/
+/*  -webkit-transform: translateX(-50%) translateY(-50%);*/
+/*  transform: translateX(-50%) translateY(-50%);*/
+/*  background-size: cover;*/
+/*}*/
 
 video#bgvid {
   position: fixed;

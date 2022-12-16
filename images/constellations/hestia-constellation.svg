@@ -32,9 +32,11 @@
                     <!-- Masterpiece -->
                     <circle cx="294" cy="244" r="6" ng-click="showLyrics('Masterpiece')"></circle>
                     <text x="304" y="238" text-anchor="left" ng-click="showLyrics('Masterpiece')">Masterpiece</text>
+                    <!-- Half Magic -->
+                    <circle cx="92" cy="13" r="6" ng-click="showLyrics('Half Magic')"></circle>
+                    <text x="102" y="30" text-anchor="left" ng-click="showLyrics('Half Magic')">Half Magic</text>
 
                     <!-- Decorative stars -->
-                    <circle cx="132" cy="13" r="2"></circle>
                     <circle cx="14" cy="14" r="1"></circle>
                     <circle cx="6" cy="150" r="1"></circle>
                     <circle cx="37" cy="289" r="1"></circle>

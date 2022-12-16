@@ -9,6 +9,35 @@ angular.module('emptyatlasgithubioApp').service('LyricService', function () {
 
   this.songs = [
     {
+      title: 'Half Magic',
+      id: 'half-magic-lyrics',
+      lyrics: `It's half the magic<br>
+                The first part of a parlor trick<br>
+                You make it disappear, but you can't get it back<br>
+                But you love the beginning<br>
+                When they're laughing and grinning<br>
+                Everyone is so in love with what you have<br>
+                <br>
+                So you fumble 'round and reach into the darkness<br>
+                Hoping to find it, whatever it is<br>
+                When at one time you had wanted yellow roses<br>
+                The show is over, everyone is going home<br>
+                The show is over, everyone is going home<br>
+                <br>
+                Maybe we're half thе magic<br>
+                The end of a parlor a trick<br>
+                We madе it disappear and we can't get it back<br>
+                But we loved the first part<br>
+                Before it ended in broken hearts<br>
+                When we were both so in love with what we had<br>
+                <br>
+                So we fumble 'round and reach into the darkness<br>
+                Trying to define it, whatever it is<br>
+                When at one time we had wanted yellow roses<br>
+                The show is over, everyone is going home<br>
+                The show is over, maybe we should just go`
+    },
+    {
       title: 'Matador',
       id: 'matador-lyrics',
       lyrics: `I thought I was close again<br>
