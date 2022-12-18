@@ -100,15 +100,15 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
   // Featured Music Links
-  $scope.iTunesUrl = 'https://music.apple.com/us/album/matador-single/1609745159?ls=1&app=itunes';
-  $scope.appleMusicUrl = 'https://music.apple.com/us/album/matador-single/1609745159';
-  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/album/matador-single/1609745159';
-  $scope.spotifyUrl = 'https://open.spotify.com/album/2mP5bHSqCnrrWYXdUpk1e7?si=eSmQycA8SWuVG-LuqtnFcg';
-  $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/album/2mP5bHSqCnrrWYXdUpk1e7';
-  $scope.amazonMusicUrl = 'https://amazon.com/music/player/albums/B09SBZYKJ5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_upPWHrhQD1htmZGGEb3nM48id';
+  $scope.iTunesUrl = 'https://music.apple.com/us/artist/empty-atlas/902603393?ls=1&app=itunes';
+  $scope.appleMusicUrl = 'https://music.apple.com/us/artist/empty-atlas/902603393';
+  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/artist/empty-atlas/902603393';
+  $scope.spotifyUrl = 'https://open.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
+  $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/artist/3DB64zL8J0ALL9l7Op2YTn?utm_source=generator';
+  $scope.amazonMusicUrl = 'https://www.amazon.com/music/player/artists/B01MSUTBIR/empty-atlas';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
-  $scope.youTubeMusicUrl = 'https://music.youtube.com/playlist?list=OLAK5uy_lvCMKSOYe7MI9h79Vsv9IJUjAknLUX_rE';
-  $scope.tidalUrl = 'https://tidal.com/browse/album/216405710';
+  $scope.youTubeMusicUrl = 'https://music.youtube.com/channel/UCvCzcTWweMYsv57bMIz2YMQ';
+  $scope.tidalUrl = 'https://tidal.com/browse/artist/7186698';
   $scope.bandcampUrl = 'https://emptyatlas.bandcamp.com/';
 
   // Credit
@@ -126,7 +126,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2022',
       image: '/images/I-Can\'t-Make-You-Love-Me-by-Empty-Atlas.png',
       spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/2WgmYEDI0Oo3avqBptHzQN?si=bAQYfUmdTWyiMguK2y9RJA'),
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/2WgmYEDI0Oo3avqBptHzQN'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/2WgmYEDI0Oo3avqBptHzQN?utm_source=generator'),
       appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/i-cant-make-you-love-me-single/1642993366'),
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/i-cant-make-you-love-me-single/1642993366'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/i-cant-make-you-love-me-single/1642993366'),
@@ -141,7 +141,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2022',
       image: '/images/Half-Magic-by-Empty-Atlas.jpg',
       spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/1Q2or21qEBVFMA7J5czbee?si=ayGnZAG-R2mHADTZhH0xWg'),
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/1Q2or21qEBVFMA7J5czbee'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/1Q2or21qEBVFMA7J5czbee?utm_source=generator'),
       appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/half-magic-single/1627843726'),
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/half-magic-single/1627843726'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/half-magic-single/1627843726'),
@@ -155,15 +155,15 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       name: 'MATADOR (single)',
       year: '2022',
       image: '/images/Matador-by-Empty-Atlas.jpg',
-      spotifyUrl: $sce.trustAsResourceUrl($scope.spotifyUrl),
-      spotifyEmbedUrl: $sce.trustAsResourceUrl($scope.spotifyEmbedUrl),
-      appleMusicUrl: $sce.trustAsResourceUrl($scope.appleMusicUrl),
-      appleMusicEmbedUrl: $sce.trustAsResourceUrl($scope.appleMusicEmbedUrl),
-      iTunesUrl: $sce.trustAsResourceUrl($scope.iTunesUrl),
+      spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/2mP5bHSqCnrrWYXdUpk1e7?si=eSmQycA8SWuVG-LuqtnFcg'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/2mP5bHSqCnrrWYXdUpk1e7?utm_source=generator'),
+      appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/matador-single/1609745159'),
+      appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/matador-single/1609745159'),
+      iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/matador-single/1609745159?ls=1&app=itunes'),
       soundCloudUrl: undefined,
-      youTubeMusicUrl: $sce.trustAsResourceUrl($scope.youTubeMusicUrl),
-      amazonMusicUrl: $sce.trustAsResourceUrl($scope.amazonMusicUrl),
-      tidalUrl: $sce.trustAsResourceUrl($scope.tidalUrl),
+      youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_lvCMKSOYe7MI9h79Vsv9IJUjAknLUX_rE'),
+      amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B09SBZYKJ5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_upPWHrhQD1htmZGGEb3nM48id'),
+      tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/216405710'),
       bandcampUrl: undefined
     },
     {
@@ -171,7 +171,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2021',
       image: '/images/dipping-vat-sessions.jpg',
       spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/7q117hZ7SDeFOXFv96qAwf?si=usXiuBaxQRqNjlVfUl-zyg'),
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7q117hZ7SDeFOXFv96qAwf'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7q117hZ7SDeFOXFv96qAwf?utm_source=generator'),
       appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/dipping-vat-sessions-live-at-dipping-vat-studio-ep/1567266981'),
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/dipping-vat-sessions-live-at-dipping-vat-studio-ep/1567266981'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/dipping-vat-sessions-live-at-dipping-vat-studio-ep/1567266981'),
@@ -186,7 +186,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2020',
       image: '/images/Kairos-as-performed-by-Empty-Atlas.png',
       spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/1R6XM9xoyFz1iRUaRATuid'),
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/1R6XM9xoyFz1iRUaRATuid?utm_source=generator'),
       appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/kairos/1512448187'),
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/kairos/1512448187'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/kairos/1512448187?ls=1&app=itunes'),
@@ -216,7 +216,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2018',
       image: '/images/Short-Fiction-Cover.png',
       spotifyUrl: undefined,
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/5C3dwDvD8Tx70K8T8EpdKY?utm_source=generator'),
       appleMusicUrl: undefined,
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/short-fiction-single/1412982650?app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/short-fiction-single/1412982650?ls=1&app=itunes'),
@@ -231,7 +231,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2016',
       image: '/images/Hestia_smol.jpg',
       spotifyUrl: undefined,
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/0LiGP71p9bEpbV7cY4DwLd'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/0LiGP71p9bEpbV7cY4DwLd?utm_source=generator'),
       appleMusicUrl: undefined,
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/hestia/1172021169?app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/hestia/1172021169'),
@@ -246,7 +246,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2012',
       image: '/images/anniversary.jpg',
       spotifyUrl: undefined,
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7eSkqCk3UG2OUHxrrh0YFc'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/7eSkqCk3UG2OUHxrrh0YFc?utm_source=generator'),
       appleMusicUrl: undefined,
       appleMusicEmbedUrl: undefined, //$sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/anniversary/902603298?app=music'),
       iTunesUrl: undefined, //$sce.trustAsResourceUrl('https://itunes.apple.com/us/album/anniversary/902603298'),
@@ -261,7 +261,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       year: '2018',
       image: '/images/holiday-parties.png',
       spotifyUrl: undefined,
-      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/3zndfu65WOEcM6nhWi4P0e'),
+      spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/3zndfu65WOEcM6nhWi4P0e?utm_source=generator'),
       appleMusicUrl: undefined,
       appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/holiday-parties-single/1445540114?app=music'),
       iTunesUrl: $sce.trustAsResourceUrl('https://itunes.apple.com/us/album/holiday-parties-single/1445540114'),

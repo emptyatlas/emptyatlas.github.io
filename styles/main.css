@@ -582,9 +582,9 @@ flip {
   border: 10px solid white;
 }
 
-#spotify-player,
-.spotify-player,
-#apple-music-player,
+/*#spotify-player,*/
+/*.spotify-player,*/
+/*#apple-music-player,*/
 #video-player,
 .video-player {
   background: url('/images/loading.gif');
