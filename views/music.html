@@ -24,12 +24,11 @@
         <iframe style="border-radius:12px"
                 src="{{a.spotifyEmbedUrl}}" width="100%"
                 height="100%" frameBorder="0" allowfullscreen=""
-                allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
+                allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
       <div id="apple-music-player" class="col-sm-12 col-md-4 pb-3" ng-show="{{a.appleMusicEmbedUrl}}">
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="100%"
-                width="100%" style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+                height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                 src="{{a.appleMusicEmbedUrl}}"></iframe>
       </div>
