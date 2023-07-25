@@ -9,6 +9,69 @@ angular.module('emptyatlasgithubioApp').service('LyricService', function () {
 
   this.songs = [
     {
+      title: 'Belong',
+      id: 'belong-lyrics',
+      lyrics: `Shut down when I heard the news<br>
+                Wasn't sure how to get to you<br>
+                But I tried<br>
+                <br>
+                Closed in on the interstate<br>
+                Nothing left but to sit and wait<br>
+                And talk to God<br>
+                <br>
+                And he's still talking<br>
+                And I'm still listening<br>
+                And the Earth's still here<br>
+                In one piece and everything<br>
+                <br>
+                We don't belong<br>
+                And so we all belong<br>
+                We don't belong<br>
+                And so we all belong<br>
+                <br>
+                Stood there while you felt it all<br>
+                All spirit and animal<br>
+                Let it out<br>
+                <br>
+                Then a quiet I won't forget<br>
+                You said the work isn't finished yet<br>
+                I'm not home<br>
+                <br>
+                And he's still talking<br>
+                And I'm still listening<br>
+                And the Earth's still here<br>
+                In one piece and everything<br>
+                <br>
+                We don't belong<br>
+                And so we all belong<br>
+                We don't belong<br>
+                And so we all belong<br>
+                <br>
+                And he's still talking<br>
+                And I'm still listening<br>
+                And the Earth's still here<br>
+                In one piece and everything<br>
+                <br>
+                Time's not promised<br>
+                We'll take what we get<br>
+                And we choose to give back light<br>
+                While there is light still left to give<br>
+                <br>
+                We don't belong<br>
+                And so we all belong<br>
+                We don't belong<br>
+                And so we all belong<br>
+                We don't belong<br>
+                And so we all belong<br>
+                <br>
+                We all belong<br>
+                We all belong<br>
+                We all belong<br>
+                We all belong<br>
+                We all belong<br>
+                We all belong<br>`
+    },
+    {
       title: 'Half Magic',
       id: 'half-magic-lyrics',
       lyrics: `It's half the magic<br>
@@ -173,206 +236,205 @@ angular.module('emptyatlasgithubioApp').service('LyricService', function () {
       title: 'A Great Cloud',
       id: 'a-great-cloud-lyrics',
       lyrics: `I\'d like to learn how to walk without this crutch<br>
-Every great man has his vices, but I feel that mine is too much<br>
-I hardly noticed that she kept my foolish hands tied<br>
-She cut my hair like Delilah, while I saw the sweeter side<br>
-<br>
-But I notice right now, that she was the easy way out<br>
-Overhead stands a great cloud of witnesses stating their doubts<br>
-I don\'t owe them anything, but all that disdain makes my ears ring<br>
-I\'m starting to think that somehow, most of me can\'t keep from wondering<br>
-<br>
-I\'d like to learn how to speak without honesty<br>
-If I form the words in my throat, then they keep marching on without me<br>
-I\'ll be honest, if I chose to compare this girl to a summer\'s day<br>
-You\'d see she\'s colder than winter, so sunlight won\'t stand in her way<br>
-<br>
-But I notice right now, that she was the easy way out<br>
-Overhead stands a great cloud, of witnesses stating their doubts<br>
-I don\'t owe them anything, but all that disdain makes my ears ring<br>
-I\'m starting to think that somehow, most of me can\'t keep from wondering<br>
-<br>
-I\'ll keep a light on and make sure you drive home safely<br>
-After all that we\'ve been through, I won\'t be so shocked if you hate me<br>
-If I could just borrow a minute, I could make you see<br>
-That maybe I did you a favor, made room for good company<br>
-`
+                Every great man has his vices, but I feel that mine is too much<br>
+                I hardly noticed that she kept my foolish hands tied<br>
+                She cut my hair like Delilah, while I saw the sweeter side<br>
+                <br>
+                But I notice right now, that she was the easy way out<br>
+                Overhead stands a great cloud of witnesses stating their doubts<br>
+                I don\'t owe them anything, but all that disdain makes my ears ring<br>
+                I\'m starting to think that somehow, most of me can\'t keep from wondering<br>
+                <br>
+                I\'d like to learn how to speak without honesty<br>
+                If I form the words in my throat, then they keep marching on without me<br>
+                I\'ll be honest, if I chose to compare this girl to a summer\'s day<br>
+                You\'d see she\'s colder than winter, so sunlight won\'t stand in her way<br>
+                <br>
+                But I notice right now, that she was the easy way out<br>
+                Overhead stands a great cloud, of witnesses stating their doubts<br>
+                I don\'t owe them anything, but all that disdain makes my ears ring<br>
+                I\'m starting to think that somehow, most of me can\'t keep from wondering<br>
+                <br>
+                I\'ll keep a light on and make sure you drive home safely<br>
+                After all that we\'ve been through, I won\'t be so shocked if you hate me<br>
+                If I could just borrow a minute, I could make you see<br>
+                That maybe I did you a favor, made room for good company`
     },
     {
       title: 'Catch & Release',
       id: 'catch-and-release-lyrics',
       lyrics: `The state line looked a bit lonely without me there<br>
-So I jumped your picket fence; it got caught in my hair<br>
-Carolina, what more could you ask of me?<br>
-Have you finally grown tired of this catch and release?<br>
-<br>
-Suddenly I see the answer I don\'t want<br>
-Feel the sweep of southern comfort just vacate my lungs<br>
-Motionless but the cogs in my head are a whir<br>
-Have to compensate for something, but at least it\'s not her<br>
-<br>
-I\'d never want you to feel obligated<br>
-But if you\'d just stop by, we\'d get better acquainted<br>
-I\'m sure we\'ve both changed as we so often do<br>
-At least southern comfort\'s still impressive on you<br>
-<br>
-Natural disaster without leaving home<br>
-Up from the ground come the leaves that you\'d sewn<br>
-Lost you in gardens of columbines<br>
-A year's worth of work tangled up in those vines<br>
-<br>
-There\'s always a right and a wrong time to fight<br>
-And it\'s wrong that it ended that way<br>
-If you\'d kept your temper in check<br>
-If I weren\'t such a wreck, we just might be okay<br>
-<br>
-I\'d never want you to feel obligated<br>
-But if you\'d just stop by we\'d get better acquainted<br>
-I\'m sure we\'ve both changed as we so often do<br>
-At least southern comfort\'s still impressive on you`
+                So I jumped your picket fence; it got caught in my hair<br>
+                Carolina, what more could you ask of me?<br>
+                Have you finally grown tired of this catch and release?<br>
+                <br>
+                Suddenly I see the answer I don\'t want<br>
+                Feel the sweep of southern comfort just vacate my lungs<br>
+                Motionless but the cogs in my head are a whir<br>
+                Have to compensate for something, but at least it\'s not her<br>
+                <br>
+                I\'d never want you to feel obligated<br>
+                But if you\'d just stop by, we\'d get better acquainted<br>
+                I\'m sure we\'ve both changed as we so often do<br>
+                At least southern comfort\'s still impressive on you<br>
+                <br>
+                Natural disaster without leaving home<br>
+                Up from the ground come the leaves that you\'d sewn<br>
+                Lost you in gardens of columbines<br>
+                A year's worth of work tangled up in those vines<br>
+                <br>
+                There\'s always a right and a wrong time to fight<br>
+                And it\'s wrong that it ended that way<br>
+                If you\'d kept your temper in check<br>
+                If I weren\'t such a wreck, we just might be okay<br>
+                <br>
+                I\'d never want you to feel obligated<br>
+                But if you\'d just stop by we\'d get better acquainted<br>
+                I\'m sure we\'ve both changed as we so often do<br>
+                At least southern comfort\'s still impressive on you`
     },
     {
       title: 'Small House',
       id: 'small-house-lyrics',
       lyrics: `Let\'s play a game that gives you good reason to shout<br>
-You carefully inspect my mouth to find the words I can\'t get out<br>
-You\'ll know you\'ve won when I slowly walk away<br>
-You live to fight another day ‘til someone else treats you the same<br>
-<br>
-I\'m hanging from a short string; I\'m a puppet, a plaything<br>
-But I can think for myself when I'm left on the top shelf<br>
-<br>
-And I pull the cord to hear you say the words I choose<br>
-“I love you so; you know I do.” I\'m sure at one time that was true<br>
-I\'m at the point that I can\'t figure which is worse<br>
-To hear you prove how well you curse, or to recite what you\'ve rehearsed<br>
-<br>
-I\'m hanging from a short string; I\'m a puppet, a plaything<br>
-But I can think for myself when I'm left on the top shelf<br>
-<br>
-Of all your deeds, the most wicked one may be<br>
-The day you left and you broke what I believed<br>
-<br>
-I\'m hanging from a short string; I\'m a puppet, a plaything<br>
-But I can think for myself when I'm left on the top shelf<br>
-<br>
-I\'m here with my own thoughts, and I realize that I\'m not<br>
-Meant to be left out; it gets lonely in this small house<br>`
+                You carefully inspect my mouth to find the words I can\'t get out<br>
+                You\'ll know you\'ve won when I slowly walk away<br>
+                You live to fight another day ‘til someone else treats you the same<br>
+                <br>
+                I\'m hanging from a short string; I\'m a puppet, a plaything<br>
+                But I can think for myself when I'm left on the top shelf<br>
+                <br>
+                And I pull the cord to hear you say the words I choose<br>
+                “I love you so; you know I do.” I\'m sure at one time that was true<br>
+                I\'m at the point that I can\'t figure which is worse<br>
+                To hear you prove how well you curse, or to recite what you\'ve rehearsed<br>
+                <br>
+                I\'m hanging from a short string; I\'m a puppet, a plaything<br>
+                But I can think for myself when I'm left on the top shelf<br>
+                <br>
+                Of all your deeds, the most wicked one may be<br>
+                The day you left and you broke what I believed<br>
+                <br>
+                I\'m hanging from a short string; I\'m a puppet, a plaything<br>
+                But I can think for myself when I'm left on the top shelf<br>
+                <br>
+                I\'m here with my own thoughts, and I realize that I\'m not<br>
+                Meant to be left out; it gets lonely in this small house<br>`
     },
     {
       title: 'Short Fiction',
       id: 'short-fiction-lyrics',
       lyrics: `At a house on College Street<br>
-There\'s a name on a willow tree<br>
-That you carved when I wasn\'t there<br>
-You were always on a mission<br>
-In the shade reading short fiction<br>
-When you turned to me and said<br>
-<br>
-“If you wanted to run from me<br>
-I couldn\'t stop you now<br>
-If you wanted to run from me<br>
-I couldn\'t stop you”<br>
-<br>
-Five years have passed since I last touched down<br>
-I see no point in starting now<br>
-But often, I think of turning up unannounced<br>
-“Hey Ellie, how did your old book turn out?”<br>
-<br>
-If you wanted to run from me<br>
-I couldn\'t stop you now<br>
-If you wanted to run from me<br>
-I couldn\'t stop you<br>
-<br>
-I didn\'t see it till it passed me by<br>
-I didn\'t notice till it wasn\'t there<br>
-Just this vague sense that the story didn\'t turn out right<br>
-Hit the cover again - can we give it another try?<br>
-<br>
-If you wanted to love me<br>
-I couldn\'t stop you now<br>
-If you wanted to love me<br>
-I couldn\'t stop you<br>
-<br>
-If you wanted to love me<br>
-(The story didn\'t turn out right)`
+                There\'s a name on a willow tree<br>
+                That you carved when I wasn\'t there<br>
+                You were always on a mission<br>
+                In the shade reading short fiction<br>
+                When you turned to me and said<br>
+                <br>
+                “If you wanted to run from me<br>
+                I couldn\'t stop you now<br>
+                If you wanted to run from me<br>
+                I couldn\'t stop you”<br>
+                <br>
+                Five years have passed since I last touched down<br>
+                I see no point in starting now<br>
+                But often, I think of turning up unannounced<br>
+                “Hey Ellie, how did your old book turn out?”<br>
+                <br>
+                If you wanted to run from me<br>
+                I couldn\'t stop you now<br>
+                If you wanted to run from me<br>
+                I couldn\'t stop you<br>
+                <br>
+                I didn\'t see it till it passed me by<br>
+                I didn\'t notice till it wasn\'t there<br>
+                Just this vague sense that the story didn\'t turn out right<br>
+                Hit the cover again - can we give it another try?<br>
+                <br>
+                If you wanted to love me<br>
+                I couldn\'t stop you now<br>
+                If you wanted to love me<br>
+                I couldn\'t stop you<br>
+                <br>
+                If you wanted to love me<br>
+                (The story didn\'t turn out right)`
     },
     {
       title: 'Merit',
       id: 'merit-lyrics',
       lyrics: `I see the value living on your own<br>
-No incentive to compromise<br>
-When I was young and yearning for a clone<br>
-With softer skin and eyes<br>
-<br>
-And she would always say the perfect thing<br>
-Ignore all my misgivings<br>
-She\'d play an instrument and learn to sing<br>
-Slightly worse than me<br>
-<br>
-Take it for just what it is and what it\'s worth to you<br>
-Merit may be devastating for what you thought you knew<br>
-What you thought you knew<br>
-<br>
-I see the worth inside suppressing doubt<br>
-Until the point that I believe<br>
-There\'s someone sterilized and waiting about<br>
-To cling to my sleeve<br>
-<br>
-And she would think that I deserve her praise<br>
-That we\'re both spotless<br>
-And she would deem it so for all her days<br>
-And we\'d die out thoughtless<br>
-<br>
-Take it for just what it is and what it\'s worth to you<br>
-Merit may be devastating for what you thought you knew<br>
-What you thought you knew<br>
-<br>
-Take it for just what it is and what it\'s worth to you<br>
-Merit may be devastating for what you thought you knew<br>
-<br>
-Take it for just what it is and what it\'s worth to you<br>
-Merit may be devastating for what you thought you knew<br>
-What you thought you knew`
+                No incentive to compromise<br>
+                When I was young and yearning for a clone<br>
+                With softer skin and eyes<br>
+                <br>
+                And she would always say the perfect thing<br>
+                Ignore all my misgivings<br>
+                She\'d play an instrument and learn to sing<br>
+                Slightly worse than me<br>
+                <br>
+                Take it for just what it is and what it\'s worth to you<br>
+                Merit may be devastating for what you thought you knew<br>
+                What you thought you knew<br>
+                <br>
+                I see the worth inside suppressing doubt<br>
+                Until the point that I believe<br>
+                There\'s someone sterilized and waiting about<br>
+                To cling to my sleeve<br>
+                <br>
+                And she would think that I deserve her praise<br>
+                That we\'re both spotless<br>
+                And she would deem it so for all her days<br>
+                And we\'d die out thoughtless<br>
+                <br>
+                Take it for just what it is and what it\'s worth to you<br>
+                Merit may be devastating for what you thought you knew<br>
+                What you thought you knew<br>
+                <br>
+                Take it for just what it is and what it\'s worth to you<br>
+                Merit may be devastating for what you thought you knew<br>
+                <br>
+                Take it for just what it is and what it\'s worth to you<br>
+                Merit may be devastating for what you thought you knew<br>
+                What you thought you knew`
     },
     {
       title: 'Good Angels',
       id: 'good-angels-lyrics',
       lyrics: `When you dream of halos among other things<br>
-Like brand-new families<br>
-I turn green, but envy fits so perfectly<br>
-That I get tempted<br>
-<br>
-I was told you moved away<br>
-And yet you\'re here in the same dress<br>
-That you wore that fateful day<br>
-When I needed more, you wanted less<br>
-<br>
-Any good angel knows<br>
-To fly the direction the wind blows<br>
-But now that I\'m thinking, I was the one that called you good<br>
-Put on your winter clothes<br>
-The north winds are calling you home<br>
-But now that I\'m sinking here in the same place that I stood<br>
-I was the one that called you good<br>
-<br>
-When you dream, continents sink below the flooding streams<br>
-Forming oceans<br>
-Thankfully, a complex entreats that you intervene<br>
-But you don\'t fool me<br>
-<br>
-And I won\'t be satisfied<br>
-‘Til lightning rocks you like a tree<br>
-And all those feelings you denied<br>
-Come rushing out to vanquish me<br>
-<br>
-Any good angel knows<br>
-To fly the direction the wind blows<br>
-But now that I\'m thinking, I was the one that called you good<br>
-Put on your winter clothes<br>
-The north winds are calling you home<br>
-But now that I\'m sinking here in the same place that I stood<br>
-I was the one that called you good`
+                Like brand-new families<br>
+                I turn green, but envy fits so perfectly<br>
+                That I get tempted<br>
+                <br>
+                I was told you moved away<br>
+                And yet you\'re here in the same dress<br>
+                That you wore that fateful day<br>
+                When I needed more, you wanted less<br>
+                <br>
+                Any good angel knows<br>
+                To fly the direction the wind blows<br>
+                But now that I\'m thinking, I was the one that called you good<br>
+                Put on your winter clothes<br>
+                The north winds are calling you home<br>
+                But now that I\'m sinking here in the same place that I stood<br>
+                I was the one that called you good<br>
+                <br>
+                When you dream, continents sink below the flooding streams<br>
+                Forming oceans<br>
+                Thankfully, a complex entreats that you intervene<br>
+                But you don\'t fool me<br>
+                <br>
+                And I won\'t be satisfied<br>
+                ‘Til lightning rocks you like a tree<br>
+                And all those feelings you denied<br>
+                Come rushing out to vanquish me<br>
+                <br>
+                Any good angel knows<br>
+                To fly the direction the wind blows<br>
+                But now that I\'m thinking, I was the one that called you good<br>
+                Put on your winter clothes<br>
+                The north winds are calling you home<br>
+                But now that I\'m sinking here in the same place that I stood<br>
+                I was the one that called you good`
     },
     {
       title: 'Maximal',
@@ -710,6 +772,64 @@ I was the one that called you good`
                     <br>
                     Kairos, I\'ve been running from you, running for you, racing toward you<br>
                     Kairos, I\'ve been running from you, running for you`
+    },
+    {
+      title: 'I Can\'t Make You Love Me',
+      id: 'i-can\'t-make-you-love-me-lyrics',
+      lyrics: `Turn down the lights<br>
+                Turn down the bed<br>
+                Turn down these voices<br>
+                Inside my head<br>
+                <br>
+                Lay down with me<br>
+                Tell me no lies<br>
+                Just hold me close<br>
+                Don't patronize<br>
+                <br>
+                I'll close my eyes<br>
+                Then I won't see<br>
+                The love you don't feel<br>
+                When you're holding me<br>
+                <br>
+                Morning will come<br>
+                And I'll do what's right<br>
+                Just give me till then<br>
+                To give up this fight<br>
+                And I will give up this fight<br>
+                <br>
+                'Cause I can't make you love me if you don't<br>
+                You can't make your heart feel something it won't<br>
+                Here in the dark, in these final hours<br>
+                I will lay down my heart, and I'll feel the power<br>
+                But you won't<br>
+                No, you won't<br>
+                'Cause I can't make you love me if you don't<br>
+                <br>
+                I'll close my eyes...<br>
+                <br>
+                'Cause I can't make you love me if you don't<br>
+                You can't make your heart feel something it won't<br>
+                Here in the dark, in these final hours<br>
+                I will lay down my heart, and I'll feel the power<br>
+                But you won't<br>
+                No, you won't<br>
+                'Cause I can't make you love me if you don't<br>
+                <br>
+                Can't make you love me if you don't<br>
+                Can't make you<br>
+                Can't make you<br>
+                <br>
+                Just when I thought I was on the right side of things<br>
+                You left me another sting, I was moving until the wings gave out<br>
+                Maybe I was meant to be the one who'd stay<br>
+                'Cause I can't make you, I can't make you<br>
+                <br>
+                Yeah, I'm hurting<br>
+                And I don't hate you<br>
+                But I'm learning<br>
+                And I don't mean to<br>
+                'Cause I can't make you<br>
+                I can't make you`
     }
   ];
 

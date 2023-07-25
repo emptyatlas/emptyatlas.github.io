@@ -20,13 +20,13 @@
       <div class="col-sm-12 col-md-4 pb-3">
         <img src="{{a.image}}" style="width: 100%;" class="grow">
       </div>
-      <div id="spotify-player" class="col-sm-12 col-md-4 pb-3" ng-show="{{a.spotifyEmbedUrl}}">
+      <div id="spotify-player" class="col-sm-12 col-md-4 pb-3" ng-show="a.spotifyEmbedUrl">
         <iframe style="border-radius:12px"
                 src="{{a.spotifyEmbedUrl}}" width="100%"
                 height="100%" frameBorder="0" allowfullscreen=""
                 allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
-      <div id="apple-music-player" class="col-sm-12 col-md-4 pb-3" ng-show="{{a.appleMusicEmbedUrl}}">
+      <div id="apple-music-player" class="col-sm-12 col-md-4 pb-3" ng-show="a.appleMusicEmbedUrl">
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="100%"
                 height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
@@ -50,23 +50,23 @@
                 <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">
               </i></a>
             </li>
-            <li ng-show="{{a.youTubeMusicUrl}}">
+            <li ng-show="a.youTubeMusicUrl">
               <a href="{{a.youTubeMusicUrl}}" target="_blank" title="YouTube Music"
                  ng-click="recordLinkClick('click-music-page', 'YouTube Music')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-youtube-square"></i></a></li>
-            <li ng-show="{{a.amazonMusicUrl}}">
+            <li ng-show="a.amazonMusicUrl">
               <a href="{{a.amazonMusicUrl}}" target="_blank" title="Amazon Music"
                  ng-click="recordLinkClick('click-music-page', 'Amazon Music')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-amazon"></i></a></li>
-            <li ng-show="{{a.soundCloudUrl}}">
+            <li ng-show="a.soundCloudUrl">
               <a href="{{a.soundCloudUrl}}" target="_blank" title="SoundCloud"
                  ng-click="recordLinkClick('click-music-page', 'SoundCloud')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-soundcloud"></i></a>
             </li>
-            <li ng-show="{{a.bandcampUrl}}">
+            <li ng-show="a.bandcampUrl">
               <a href="{{a.bandcampUrl}}" target="_blank" title="Bandcamp"
                  ng-click="recordLinkClick('click-music-page', 'Bandcamp')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
@@ -83,7 +83,7 @@
   </div>
 </div>
 
-<img src="/images/photo-1629194898512-b6b8697063ac.jpeg" class="bg">
+<img src="/images/maria-orlova-bU8TeXhsPcY-unsplash.jpg" class="bg">
 
 <div id="footer" ng-include="'views/footer.html'"></div>
 

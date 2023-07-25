@@ -25,6 +25,14 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
 
   this.news = [
     {
+      title: '15 Best Songs About Being 25',
+      desc: `Have you turned 25 and looking for some musical inspiration? The quarter-life has its ups and downs, but the music never fails to make our journey a little bit worthwhile. At this point, songs about being 25 years old are`,
+      img: 'images/news/15-best-songs-about-being-25-2023.png',
+      actionText: 'READ MORE',
+      date: 1658878869000,
+      link: 'https://www.midnightmagicsounds.com/best-songs-about-being-25/'
+    },
+    {
       title: 'Bring Your Baggage and Don’t Pack Light!',
       desc: `Recorded at Hal & Mal’s in Jackson, MS as the concluding event of the 2022 Mississippi Book Festival in Jackson, MS, this show has it all: laughs, funky music and, best of all for our crew, air-conditioning!`,
       img: 'images/news/thacker-mountain-radio-2022.png',

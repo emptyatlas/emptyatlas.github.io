@@ -41,6 +41,10 @@
                     <circle cx="400" cy="60" r="6" ng-click="showLyrics('Matador')"></circle>
                     <text x="410" y="55" text-anchor="left" ng-click="showLyrics('Matador')">Matador</text>
 
+                    <!-- Belong -->
+                    <circle cx="60" cy="350" r="6" ng-click="showLyrics('Belong')"></circle>
+                    <text x="70" y="338" text-anchor="left" ng-click="showLyrics('Belong')">Belong</text>
+
                     <!-- Decorative stars -->
                     <circle cx="14" cy="14" r="1"></circle>
                     <circle cx="6" cy="150" r="1"></circle>

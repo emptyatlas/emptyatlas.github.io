@@ -1,4 +1,5 @@
 :root {
+  --belong-purple: #3f307a;
   --matador-red: #8a1715;
   --dark-grey: #242222;
   --white: #ffffff;
@@ -93,7 +94,7 @@ a:hover {
 }
 
 .matador-red {
-  background-color: var(--matador-red);
+  background-color: var(--belong-purple);
 }
 
 .short-fiction {
@@ -186,7 +187,7 @@ button:focus,
 .bit-widget .bit-play-my-city-button,
 a.bit-offers.bit-button {
   color: #413837 !important;
-  background-color: var(--matador-red) !important;
+  background-color: var(--belong-purple) !important;
   border: none !important;
   transition: all 0.3s linear;
 }
@@ -195,7 +196,7 @@ a.bit-offers.bit-button {
 .bit-widget:hover .bit-play-my-city-button:hover,
 a.bit-offers.bit-button:hover {
   color: #413837 !important;
-  background-color: var(--matador-red) !important;
+  background-color: var(--belong-purple) !important;
   border: none !important;
   transition: all 0.3s linear;
 }
@@ -204,11 +205,15 @@ a.bit-offers.bit-button:hover {
   background-color: #b7960a !important;
 }
 
+.btn-floating:hover {
+  background-color: var(--belong-purple);
+}
+
 .btn-red,
 .bit-widget .bit-play-my-city-button,
 a.bit-offers.bit-button {
   color: whitesmoke !important;
-  background-color: var(--matador-red) !important;
+  background-color: var(--belong-purple) !important;
   border: none;
   transition: all 0.3s linear;
 }
@@ -217,13 +222,13 @@ a.bit-offers.bit-button {
 .bit-widget:hover .bit-play-my-city-button:hover,
 a.bit-offers.bit-button:hover {
   color: whitesmoke !important;
-  background-color: var(--matador-red) !important;
+  background-color: var(--belong-purple) !important;
   border: none;
   transition: all 0.3s linear;
 }
 
 .btn-red.active {
-  background-color: var(--matador-red) !important;
+  background-color: var(--belong-purple) !important;
 }
 
 a.bit-play-my-city-button {
@@ -296,7 +301,7 @@ a.bit-play-my-city-button {
 }
 
 .bg-red {
-  background-color: var(--matador-red) !important;
+  background-color: var(--belong-purple) !important;
 }
 
 .bg-gray-dark {
@@ -310,7 +315,7 @@ a.bit-play-my-city-button {
 nav {
   background-color: transparent;
   box-shadow: none;
-  /*background-color: var(--matador-red) !important;*/
+  /*background-color: var(--belong-purple) !important;*/
   /*blue bkg*/
   /*background-color: #235C98 !important;*/
 }
@@ -418,10 +423,11 @@ nav {
   background-position: center;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
   .bg {
     left: 50%;
-    margin-left: -512px;   /* 50% */
+    margin-left: -512px; /* 50% */
   }
 }
 
@@ -676,7 +682,7 @@ nav .sidenav-trigger {
 .sidenav {
   /*background: url('/images/slide-out-menu-bkg.png');*/
   /*background-size: cover;*/
-  background-color: #8a1715 !important;
+  background-color: var(--belong-purple) !important;
   /*blue bkg*/
   /*background-color: #235C98 !important;*/
   width: 250px;
@@ -729,4 +735,39 @@ nav .sidenav-trigger {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+.collapsible {
+  border-top: 1px solid #ddd;
+  border-right: none; /*1px solid #ddd;*/
+  border-left: none; /*1px solid #ddd;*/
+  margin: 0.5rem 0 1rem 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.collapsible-header {
+  font-family: 'Spartan', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+}
+
+.member-card {
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+}
+
+tr {
+  border: none !important;
 }

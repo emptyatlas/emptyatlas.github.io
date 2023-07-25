@@ -44,11 +44,6 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/uSARWrWd9fc')
       },
       {
-        name: 'Empty Atlas | Armory Session',
-        date: 'Mar 15, 2019',
-        link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/wUd-ceGnvII')
-      },
-      {
         name: '“Short Fiction” (Music Video)',
         date: 'Oct 12, 2018',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/6t9Ov9ord18')
