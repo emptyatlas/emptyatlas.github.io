@@ -460,7 +460,7 @@ video#bgvid {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(/images/Maximal%20-%20Live%20Poster.png) no-repeat;
+  background: url(/images/Maximal-Live-Poster.png-BW.png) no-repeat;
   background-size: cover;
 }
 
