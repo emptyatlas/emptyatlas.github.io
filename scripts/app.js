@@ -110,23 +110,22 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.songs = LyricService.songs;
   $scope.videos = VideoService.videos;
 
-  // {
-  //   name: 'BELONG (single)',
-  //     year: '2023',
-  //   image: '/images/Belong-by-Empty-Atlas.jpeg',
-  //   spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/2WgmYEDI0Oo3avqBptHzQN?si=bAQYfUmdTWyiMguK2y9RJA'),
-  //   spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/2WgmYEDI0Oo3avqBptHzQN?utm_source=generator'),
-  //   appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/i-cant-make-you-love-me-single/1698282759'),
-  //   appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/i-cant-make-you-love-me-single/1698282759'),
-  //   iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/i-cant-make-you-love-me-single/1698282759'),
-  //   soundCloudUrl: undefined,
-  //   youTubeMusicUrl: $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nSFTd_WN0soXTTlWEM4aRqOij4F5fxMbU&feature=share'),
-  //   amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B0CC928244?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_6v1NzPTcLM6CkqBKecVIGQM7m'),
-  //   tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/305634587'),
-  //   bandcampUrl: undefined,
-  //   songs: [retrieveSong('Belong')]
-  // },
   $scope.albums = [{
+    name: 'BELONG (single)',
+    year: '2023',
+    image: '/images/Belong-by-Empty-Atlas.jpeg',
+    spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/album/6hLNjR2PFGjT1rXFQbEfdi?si=ntBVqqg0S0KXIRnRNe44ig'),
+    spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/album/6hLNjR2PFGjT1rXFQbEfdi?utm_source=generator'),
+    appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/belong-single/1692123174'),
+    appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/belong-single/1692123174'),
+    iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/belong-single/1692123174'),
+    soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/belong-new-single-out-72823/s-y5JXsT8qx9f?utm_source=mobi&utm_campaign=social_sharing&si=8e7420ec4b7f439b9dc241dbfb31c2c7'),
+    youTubeMusicUrl: undefined, // $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nSFTd_WN0soXTTlWEM4aRqOij4F5fxMbU&feature=share'),
+    amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B0C7Q2SCSF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_4TsAEGjvZaZd85fgW65PZebqN'),
+    tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/299395849'),
+    bandcampUrl: undefined,
+    songs: [retrieveSong('Belong')]
+  }, {
     name: 'I CAN\'T MAKE YOU LOVE ME (single)',
     year: '2022',
     image: '/images/I-Can\'t-Make-You-Love-Me-by-Empty-Atlas.png',
@@ -171,7 +170,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/305660541'),
     bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/track/matador'),
     songs: [retrieveSong('Matador')]
-  }, //   {
+  },
+    //   {
     //   name: 'DIPPING VAT SESSIONS - LIVE',
     //   year: '2021',
     //   image: '/images/dipping-vat-sessions.jpg',
@@ -209,7 +209,8 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
       tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/305659944'),
       bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/album/kairos'),
       songs: [retrieveSong('Maximal'), retrieveSong('Codebreaker'), retrieveSong('Florence'), retrieveSong('Carcosa'), retrieveSong('Ouroboros'), retrieveSong('Birthday'), retrieveSong('Famous Friends'), retrieveSong('Sway'), retrieveSong('Valleys'), retrieveSong('Minimal')]
-    }, // {
+    },
+    // {
     //   name: 'MAXIMAL (single)',
     //   year: '2020',
     //   image: '/images/maximal-single-cover.png',
