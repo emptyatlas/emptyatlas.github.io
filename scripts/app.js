@@ -123,7 +123,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
     youTubeMusicUrl: undefined, // $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nSFTd_WN0soXTTlWEM4aRqOij4F5fxMbU&feature=share'),
     amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B0C7Q2SCSF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_4TsAEGjvZaZd85fgW65PZebqN'),
     tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/album/299395849'),
-    bandcampUrl: undefined,
+    bandcampUrl: $sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/track/belong'),
     songs: [retrieveSong('Belong')]
   }, {
     name: 'I CAN\'T MAKE YOU LOVE ME (single)',
