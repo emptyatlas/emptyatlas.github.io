@@ -154,25 +154,15 @@
 <div id="footer" ng-include="'views/footer.html'"></div>
 
 <script>
-  // // Skip recording GA events to our account if in development.
-  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-  //   // ga('set', 'page', '/' + location.hash);
-  //   // ga('send', 'pageview', '/' + location.hash);
-  //   gtag('config', 'UA-51847004-1', {
-  //     'page_title': 'About',
-  //     'page_path': '/' + location.hash
-  //   });
-  // }
-
   // Skip recording GA events to our account if in development.
-  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-  console.debug('Recording Google page view');
-  gtag('config', 'UA-51847004-1', {
-    send_page_view: false
-  });
-  gtag('event', 'page_view', {
-    'page_title': 'About',
-    'page_path': '/' + location.hash
-  });
-  // }
+  if ((document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1')) {
+    console.debug('Recording Google page view');
+    gtag('config', 'UA-51847004-1', {
+      send_page_view: false
+    });
+    gtag('event', 'page_view', {
+      'page_title': 'About',
+      'page_path': '/' + location.hash
+    });
+  }
 </script>

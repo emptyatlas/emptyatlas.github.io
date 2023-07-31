@@ -57,14 +57,16 @@
           <div class="card-body">
             <h3 class="card-title text-white m-0">“Maximal”</h3>
             <a href="./music/Maximal-by-Empty-Atlas.mp3" class="button btn btn-gold my-4 px-5 animated fadeIn delay-1s"
-               download="Maximal by Empty Atlas" ng-click="recordLinkClick('Download', 'Free Download')">Free Download</a>
+               download="Maximal by Empty Atlas" ng-click="recordLinkClick('Download', 'Free Download')">Free
+              Download</a>
             <p class="card-text"><a class="text-white" href="http://www.emptyatlas.com">For more music and information
               visit <u>emptyatlas.com</u></a></p>
           </div>
         </div>
 
         <div class="center mt-3">
-          <a href="{{downloadHelp}}" style="font-size: 14px;" ng-click="recordLinkClick('Download', 'Need Help')">Need help?</a>
+          <a href="{{downloadHelp}}" style="font-size: 14px;" ng-click="recordLinkClick('Download', 'Need Help')">Need
+            help?</a>
         </div>
       </div>
 
@@ -76,14 +78,14 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-  console.debug('Recording Google page view');
-  gtag('config', 'UA-51847004-1', {
-    send_page_view: false
-  });
-  gtag('event', 'page_view', {
-      'page_title' : 'Download',
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    console.debug('Recording Google page view');
+    gtag('config', 'UA-51847004-1', {
+      send_page_view: false
+    });
+    gtag('event', 'page_view', {
+      'page_title': 'Download',
       'page_path': '/' + location.hash
     });
-  // }
+  }
 </script>

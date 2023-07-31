@@ -75,6 +75,9 @@ app.service("ModuleService", function () {
  */
 app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $window, $document, $timeout, $sce, $location, $filter, $interval, LyricService, ModuleService, VideoService, NewsService) {
 
+  // Toggle for allowing Google Analytics to record while in development
+  $scope.enableLocalAnalytics = true;
+
   // This link is separated to fool spam bots
   $scope.sendMail = 'mai' + 'lto' + ':' + 'hello' + '@emptyatlas.com';
   $scope.downloadHelp = $scope.sendMail + '?subject=Song%20Download%20Help&body=I%27m%20having%20trouble%20using%20the%20free%20download%20link%20on%20your%20website.%20Could%20you%20email%20me%20a%20copy%20of%20the%20song%20instead%3F%0A%0AThanks%21';
@@ -513,8 +516,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
    */
 
   $scope.recordLinkClick = function (pageName, linkName) {
-    // Skip recording GA events to our account if in development.
-    if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    if ((document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') || $scope.enableLocalAnalytics) {
       console.log('Recording Google Analytics event, category [click], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
       // Record Google Analytics event
       gtag('event', 'click', {
@@ -523,9 +525,9 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         'page_location': '/' + location.hash
       });
     } else {
-      console.log('will not record Google Analytics event due to development hostname');
+      console.log('Will NOT record Google Analytics event due to development hostname and toggle being false');
     }
-  };
+  }
 
   function recordGoogleAnalyticsEvent(eventType, pageName, linkName) {
     // Skip recording GA events to our account if in development.

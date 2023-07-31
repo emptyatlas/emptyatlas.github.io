@@ -13,7 +13,9 @@
       <div class="col-sm-12 col-md-8 pb-3">
         <ul class="collapsible expandable">
           <li ng-repeat="song in a.songs">
-            <div class="collapsible-header" ng-click="recordLinkClick('Lyrics', song.title)">{{song.title}}<i id="arrow" class="fas fa-chevron-down right"></i></div>
+            <div class="collapsible-header" ng-click="recordLinkClick('Lyrics', song.title)">{{song.title}}<i id="arrow"
+                                                                                                              class="fas fa-chevron-down right"></i>
+            </div>
             <div class="collapsible-body">
               <p class="font-rock-salt" ng-bind-html="song.lyrics"></p>
             </div>
@@ -139,8 +141,8 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-  console.debug('Recording Google page view');
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    console.debug('Recording Google page view');
     gtag('config', 'UA-51847004-1', {
       send_page_view: false
     });
@@ -148,5 +150,5 @@
       'page_title': 'Lyrics',
       'page_path': '/' + location.hash
     });
-  // }
+  }
 </script>

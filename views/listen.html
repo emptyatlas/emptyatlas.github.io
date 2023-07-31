@@ -23,7 +23,9 @@
 
         <div class="center mt-3">
           <p class="text-white">Scroll down for more</p>
-          <p class="text-white"><i class="fas fa-chevron-down animate__animated animate__slideInDown animate__slower animate__repeat-10"></i></p>
+          <p class="text-white"><i
+            class="fas fa-chevron-down animate__animated animate__slideInDown animate__slower animate__repeat-10"></i>
+          </p>
         </div>
       </div>
 
@@ -35,14 +37,14 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-  console.debug('Recording Google page view');
-  gtag('config', 'UA-51847004-1', {
-    send_page_view: false
-  });
-  gtag('event', 'page_view', {
-      'page_title' : 'Listen',
+  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    console.debug('Recording Google page view');
+    gtag('config', 'UA-51847004-1', {
+      send_page_view: false
+    });
+    gtag('event', 'page_view', {
+      'page_title': 'Listen',
       'page_path': '/' + location.hash
     });
-  // }
+  }
 </script>
