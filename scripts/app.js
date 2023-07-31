@@ -76,7 +76,7 @@ app.service("ModuleService", function () {
 app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $window, $document, $timeout, $sce, $location, $filter, $interval, LyricService, ModuleService, VideoService, NewsService) {
 
   // Toggle for allowing Google Analytics to record while in development
-  $scope.enableLocalAnalytics = true;
+  $scope.enableLocalAnalytics = false;
 
   // This link is separated to fool spam bots
   $scope.sendMail = 'mai' + 'lto' + ':' + 'hello' + '@emptyatlas.com';
