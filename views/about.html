@@ -102,25 +102,25 @@
               <ul class="listen-links p-0">
                 <li>
                   <a href="{{iTunesUrl}}" target="_blank" title="iTunes"
-                     ng-click="recordLinkClick('click-about', 'iTunes')"
+                     ng-click="recordLinkClick('About', 'iTunes')"
                      class="btn-floating btn-large waves-effect waves-light btn-red"><i
                     class="fab fa-itunes-note fa-2x"></i></a>
                 </li>
                 <li>
                   <a href="{{appleMusicUrl}}" target="_blank" title="Apple Music"
                      class="btn-floating btn-large waves-effect waves-light btn-red"
-                     ng-click="recordLinkClick('click-about', 'Apple Music')"><i
+                     ng-click="recordLinkClick('About', 'Apple Music')"><i
                     class="fab fa-apple fa-2x"></i></a>
                 </li>
                 <li>
                   <a href="{{spotifyUrl}}" target="_blank" title="Spotify"
-                     ng-click="recordLinkClick('click-about', 'Spotify')"
+                     ng-click="recordLinkClick('About', 'Spotify')"
                      class="btn-floating btn-large waves-effect waves-light btn-red"><i
                     class="fab fa-spotify fa-2x"></i></a>
                 </li>
                 <li>
                   <a href="{{tidalUrl}}" target="_blank" title="Tidal"
-                     ng-click="recordLinkClick('click-about', 'Tidal')"
+                     ng-click="recordLinkClick('About', 'Tidal')"
                      class="btn-floating btn-large waves-effect waves-light btn-red">
                     <i class="fab fa-2x">
                       <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">
@@ -129,13 +129,13 @@
                 </li>
                 <li>
                   <a href="{{youTubeMusicUrl}}" target="_blank" title="YouTube Music"
-                     ng-click="recordLinkClick('click-about', 'YouTube Music')"
+                     ng-click="recordLinkClick('About', 'YouTube Music')"
                      class="btn-floating btn-large waves-effect waves-light btn-red"><i
                     class="fab fa-youtube-square fa-2x"></i></a>
                 </li>
                 <li>
                   <a href="{{amazonMusicUrl}}" target="_blank" title="Amazon Music"
-                     ng-click="recordLinkClick('click-about', 'Amazon Music')"
+                     ng-click="recordLinkClick('About', 'Amazon Music')"
                      class="btn-floating btn-large waves-effect waves-light btn-red"><i
                     class="fab fa-amazon fa-2x"></i></a>
                 </li>
@@ -154,13 +154,25 @@
 <div id="footer" ng-include="'views/footer.html'"></div>
 
 <script>
+  // // Skip recording GA events to our account if in development.
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  //   // ga('set', 'page', '/' + location.hash);
+  //   // ga('send', 'pageview', '/' + location.hash);
+  //   gtag('config', 'UA-51847004-1', {
+  //     'page_title': 'About',
+  //     'page_path': '/' + location.hash
+  //   });
+  // }
+
   // Skip recording GA events to our account if in development.
-  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-    // ga('set', 'page', '/' + location.hash);
-    // ga('send', 'pageview', '/' + location.hash);
-    gtag('config', 'UA-51847004-1', {
-      'page_title': 'About',
-      'page_path': '/' + location.hash
-    });
-  }
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  console.debug('Recording Google page view');
+  gtag('config', 'UA-51847004-1', {
+    send_page_view: false
+  });
+  gtag('event', 'page_view', {
+    'page_title': 'About',
+    'page_path': '/' + location.hash
+  });
+  // }
 </script>

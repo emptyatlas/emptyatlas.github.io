@@ -459,13 +459,13 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
 
   function retrieveSong(songName) {
     let songs = LyricService.songs;
-    console.debug(LyricService.songs);
+    // console.debug(LyricService.songs);
     let index = songs.findIndex(function (obj) {
-      console.log('Finding index of song title [' + songName + ']');
+      // console.log('Finding index of song title [' + songName + ']');
       return obj.title === songName;
     });
     let song = angular.copy(songs[index]);
-    console.debug('Index of [' + song + '] is [' + index + ']');
+    // console.debug('Index of [' + song + '] is [' + index + ']');
     return song;
   };
 
@@ -512,27 +512,31 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
    * GOOGLE ANALYTICS
    */
 
-  $scope.recordLinkClick = function (clickLocation, name) {
+  $scope.recordLinkClick = function (pageName, linkName) {
     // Skip recording GA events to our account if in development.
     if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-      console.log('opening link to [' + name + ']');
-      recordGoogleAnalyticsEvent('OpenLink', clickLocation, name);
+      console.log('Recording Google Analytics event, category [click], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
+      // Record Google Analytics event
+      gtag('event', 'click', {
+        'link_text': linkName,
+        'page_title': pageName,
+        'page_location': '/' + location.hash
+      });
     } else {
       console.log('will not record Google Analytics event due to development hostname');
     }
   };
 
-  function recordGoogleAnalyticsEvent(category, action, label) {
+  function recordGoogleAnalyticsEvent(eventType, pageName, linkName) {
     // Skip recording GA events to our account if in development.
     if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-      console.log('Recording Google Analytics event, category [' + category + '], action [' + action + '], label [' + label + ']');
+      console.log('Recording Google Analytics event, category [' + eventType + '], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
       // Record Google Analytics event
-      // ga('send', {
-      //   hitType: 'event',
-      //   eventCategory: category,
-      //   eventAction: action,
-      //   eventLabel: label
-      // });
+      gtag('event', eventType, {
+        'link_text': linkName,
+        'page_title': pageName,
+        'page_path': '/' + location.hash
+      });
     } else {
       console.log('will not record Google Analytics event due to development hostname');
     }

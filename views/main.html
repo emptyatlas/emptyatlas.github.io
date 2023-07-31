@@ -57,15 +57,15 @@
 
             <div class="row center">
               <div class="col-12 center">
-                <a ng-click="clearActiveModule(); recordLinkClick('click', 'Listen');" href="#/share">
+                <a ng-click="clearActiveModule(); recordLinkClick('Home', 'Listen');" href="#/share">
                   <button type="button" class="btn btn-red btn-sm">Listen</button>
                 </a>
                 <div name="spacer" class="row py-1 show-on-small hide-on-med-and-up"></div>
-                <a ng-click="clearActiveModule(); recordLinkClick('click', 'Follow');" href="#/share">
+                <a ng-click="clearActiveModule(); recordLinkClick('Home', 'Follow');" href="#/share">
                   <button type="button" class="btn btn-red btn-sm">Follow</button>
                 </a>
                 <div name="spacer" class="row py-1 show-on-small hide-on-med-and-up"></div>
-                <a ng-click="recordLinkClick('click', 'Merch')" href="#/shop">
+                <a ng-click="recordLinkClick('Home', 'Shop')" href="#/shop">
                   <button type="button" class="btn btn-red btn-sm">Shop</button>
                 </a>
               </div>
@@ -172,7 +172,7 @@
 
               <div class="clear" align="center" style="display: block;">
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                       class="button btn btn-red btn-sm">
+                       class="button btn btn-red btn-sm" ng-click="recordLinkClick('Home', 'Subscribe')">
               </div>
             </div>
           </form>
@@ -209,13 +209,25 @@
 <div id="footer" ng-include="'views/footer.html'"></div>
 
 <script>
+  // // Skip recording GA events to our account if in development.
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  //   // ga('set', 'page', '/' + location.hash);
+  //   // ga('send', 'pageview', '/' + location.hash);
+  //   gtag('config', 'UA-51847004-1', {
+  //     'page_title': 'Home',
+  //     'page_path': '/' + location.hash
+  //   });
+  // }
+
   // Skip recording GA events to our account if in development.
-  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-    // ga('set', 'page', '/' + location.hash);
-    // ga('send', 'pageview', '/' + location.hash);
-    gtag('config', 'UA-51847004-1', {
-      'page_title': 'Home',
-      'page_path': '/' + location.hash
-    });
-  }
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  console.debug('Recording Google page view');
+  gtag('config', 'UA-51847004-1', {
+    send_page_view: false
+  });
+  gtag('event', 'page_view', {
+    'page_title': 'Home',
+    'page_path': '/' + location.hash
+  });
+  // }
 </script>

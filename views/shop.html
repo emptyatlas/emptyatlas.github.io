@@ -14,11 +14,11 @@
           <div class="row center">
 
             <div class="col-md-6 col-sm-12 center py-5 px-5">
-              <a href="{{shopAmazonUrl}}" target="_blank">
+              <a href="{{shopAmazonUrl}}" ng-click="recordLinkClick('Shop', 'Amazon')" target="_blank">
                 <img class="w-100" src="../images/Shop-Amazon.png">
               </a>
               <div name="spacer" class="row"></div>
-              <a href="{{shopAmazonUrl}}" target="_blank">
+              <a href="{{shopAmazonUrl}}" ng-click="recordLinkClick('Shop', 'Amazon')" target="_blank">
                 <button type="button" class="btn btn-red btn-md">Shop Amazon</button>
               </a>
               <div name="spacer" class="row"></div>
@@ -26,11 +26,11 @@
             </div>
 
             <div class="col-md-6 col-sm-12 center py-5 px-5">
-              <a href="{{shopSquareUrl}}" target="_blank">
+              <a href="{{shopSquareUrl}}" ng-click="recordLinkClick('Shop', 'Square')" target="_blank">
                 <img class="w-100" src="../images/Shop-Square.png">
               </a>
               <div name="spacer" class="row"></div>
-              <a href="{{shopSquareUrl}}" target="_blank">
+              <a href="{{shopSquareUrl}}" ng-click="recordLinkClick('Shop', 'Square')" target="_blank">
                 <button type="button" class="btn btn-red btn-md">Shop Square</button>
               </a>
               <div name="spacer" class="row"></div>
@@ -54,12 +54,14 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-    // ga('set', 'page', '/' + location.hash);
-    // ga('send', 'pageview', '/' + location.hash);
-    gtag('config', 'UA-51847004-1', {
-      'page_title': 'Listen',
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  console.debug('Recording Google page view');
+  gtag('config', 'UA-51847004-1', {
+    send_page_view: false
+  });
+  gtag('event', 'page_view', {
+      'page_title': 'Shop',
       'page_path': '/' + location.hash
     });
-  }
+  // }
 </script>

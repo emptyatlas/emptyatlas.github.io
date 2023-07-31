@@ -39,36 +39,36 @@
           <ul class="listen-links p-0">
             <li ng-show="a.iTunesUrl">
               <a href="{{a.iTunesUrl}}" target="_blank" title="iTunes"
-                 ng-click="recordLinkClick('click-music-page', 'iTunes')"
+                 ng-click="recordLinkClick('Music - ' + a.name, 'iTunes')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-itunes-note"></i></a>
             </li>
             <li ng-show="a.tidalUrl">
               <a href="{{a.tidalUrl}}" target="_blank" title="Tidal"
-                 ng-click="recordLinkClick('click-music-page', 'Tidal')"
+                 ng-click="recordLinkClick('Music - ' + a.name, 'Tidal')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i class="fab fa-2x">
                 <img src="/images/tidal-icon_white.svg" style="height: 1.3rem; width: 100%;">
               </i></a>
             </li>
             <li ng-show="a.youTubeMusicUrl">
               <a href="{{a.youTubeMusicUrl}}" target="_blank" title="YouTube Music"
-                 ng-click="recordLinkClick('click-music-page', 'YouTube Music')"
+                 ng-click="recordLinkClick('Music - ' + a.name, 'YouTube Music')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-youtube-square"></i></a></li>
             <li ng-show="a.amazonMusicUrl">
               <a href="{{a.amazonMusicUrl}}" target="_blank" title="Amazon Music"
-                 ng-click="recordLinkClick('click-music-page', 'Amazon Music')"
+                 ng-click="recordLinkClick('Music - ' + a.name, 'Amazon Music')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-amazon"></i></a></li>
             <li ng-show="a.soundCloudUrl">
               <a href="{{a.soundCloudUrl}}" target="_blank" title="SoundCloud"
-                 ng-click="recordLinkClick('click-music-page', 'SoundCloud')"
+                 ng-click="recordLinkClick('Music - ' + a.name, 'SoundCloud')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-soundcloud"></i></a>
             </li>
             <li ng-show="a.bandcampUrl">
               <a href="{{a.bandcampUrl}}" target="_blank" title="Bandcamp"
-                 ng-click="recordLinkClick('click-music-page', 'Bandcamp')"
+                 ng-click="recordLinkClick('Music - ' + a.name, 'Bandcamp')"
                  class="btn-floating btn-large waves-effect waves-light btn-red"><i
                 class="fab fa-bandcamp"></i></a>
             </li>
@@ -89,12 +89,14 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-    // ga('set', 'page', '/' + location.hash);
-    // ga('send', 'pageview', '/' + location.hash);
-    gtag('config', 'UA-51847004-1', {
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  console.debug('Recording Google page view');
+  gtag('config', 'UA-51847004-1', {
+    send_page_view: false
+  });
+  gtag('event', 'page_view', {
       'page_title': 'Music',
       'page_path': '/' + location.hash
     });
-  }
+  // }
 </script>

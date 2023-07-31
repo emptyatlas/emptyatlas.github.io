@@ -30,7 +30,7 @@
 
     <div class="row my-3 py-3">
       <div class="col-12 center">
-        <a href="{{youTubeUrl}}" target="_blank">
+        <a href="{{youTubeUrl}}" ng-click="recordLinkClick('Video', 'YouTube')" target="_blank">
           <button type="button" class="btn btn-red btn-md">More on YouTube</button>
         </a>
       </div>
@@ -45,12 +45,14 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-    // ga('set', 'page', '/' + location.hash);
-    // ga('send', 'pageview', '/' + location.hash);
-    gtag('config', 'UA-51847004-1', {
-      'page_title': 'Video',
-      'page_path': '/' + location.hash
-    });
-  }
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  console.debug('Recording Google page view');
+  gtag('config', 'UA-51847004-1', {
+    send_page_view: false
+  });
+  gtag('event', 'page_view', {
+    'page_title': 'Video',
+    'page_path': '/' + location.hash
+  });
+  // }
 </script>
