@@ -8,13 +8,23 @@
       <div class="card no-background border-0 p-0 col-md-6 col-md-offset-3 col-sm-12"
            style="box-shadow: none;">
         <div class="card-body">
+          <div class="media">
+            <img src="./images/Belong-by-Empty-Atlas.jpeg" class="align-self-center mr-3 w-25"
+                 alt="Belong Album Cover by Empty Atlas">
+            <div class="media-body text-white">
+              <h4 class="mt-0"><b>B E L O N G</b></h4>
+              <p>The new single from Empty Atlas. Available now on all streaming platforms.</p>
+            </div>
+          </div>
+          <div name="spacer" class="row py-1"></div>
+
           <h2 class="card-title text-white">LISTEN</h2>
           <div name="spacer" class="row py-1"></div>
 
           <div class="row center">
             <div class="col-12 center">
-              <a ng-click="recordLinkClick('click-share', 'Spotify')" href="{{spotifyUrl}}" target="_blank">
-                <button type="button" class="btn btn-red btn-md"><i class="fab fa-spotify"></i>&nbsp;&nbsp;Spotify
+              <a ng-click="recordLinkClick('Share', 'Spotify')" href="{{spotifyUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-lg w-100"><i class="fab fa-spotify"></i>&nbsp;&nbsp;Spotify
                 </button>
               </a>
             </div>
@@ -22,8 +32,8 @@
 
           <div class="row center">
             <div class="col-12 center">
-              <a ng-click="recordLinkClick('click-share', 'Apple Music')" href="{{appleMusicUrl}}" target="_blank">
-                <button type="button" class="btn btn-red btn-md"><i class="fab fa-apple"></i>&nbsp;&nbsp;Apple
+              <a ng-click="recordLinkClick('Share', 'Apple Music')" href="{{appleMusicUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-lg w-100"><i class="fab fa-apple"></i>&nbsp;&nbsp;Apple
                   Music
                 </button>
               </a>
@@ -32,24 +42,24 @@
 
           <div class="row center">
             <div class="col-12 center">
-              <a ng-click="recordLinkClick('click-share', 'Tidal')" href="{{tidalUrl}}" target="_blank">
-                <button type="button" class="btn btn-red btn-md"><i class="fab"><img
+              <a ng-click="recordLinkClick('Share', 'Tidal')" href="{{tidalUrl}}" target="_blank">
+                <button type="button" class="btn btn-red btn-lg w-100"><i class="fab"><img
                   src="/images/tidal-icon_white.svg" style="width: 22px; height: 100%;"/></i>&nbsp;&nbsp;Tidal
                 </button>
               </a>
             </div>
           </div>
 
-          <div class="row center">
-            <div class="col-12 center">
-              <a ng-click="recordLinkClick('click-share', 'YouTube Music')" href="{{youTubeMusicUrl}}"
-                 target="_blank">
-                <button type="button" class="btn btn-red btn-md"><i class="fab fa-youtube"></i>&nbsp;&nbsp;YouTube
-                  Music
-                </button>
-              </a>
-            </div>
-          </div>
+<!--          <div class="row center">-->
+<!--            <div class="col-12 center">-->
+<!--              <a ng-click="recordLinkClick('Share', 'YouTube Music')" href="{{youTubeMusicUrl}}"-->
+<!--                 target="_blank">-->
+<!--                <button type="button" class="btn btn-red btn-md w-100"><i class="fab fa-youtube"></i>&nbsp;&nbsp;YouTube-->
+<!--                  Music-->
+<!--                </button>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
 
           <!--            <div class="collection">-->
           <!--              <a class="collection-item text-dark sans-serif" href="{{spotifyUrl}}" target="_blank"-->
@@ -73,7 +83,7 @@
           <div class="row center">
             <div class="col-12 center">
               <a ng-click="recordLinkClick('Share', 'Facebook')" href="{{facebookUrl}}" target="_blank">
-                <button type="button" class="btn btn-red btn-md"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;Facebook
+                <button type="button" class="btn btn-red btn-md w-100"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;Facebook
                 </button>
               </a>
             </div>
@@ -82,7 +92,7 @@
           <div class="row center">
             <div class="col-12 center">
               <a ng-click="recordLinkClick('Share', 'Instagram')" href="{{instagramUrl}}" target="_blank">
-                <button type="button" class="btn btn-red btn-md"><i class="fab fa-instagram"></i>&nbsp;&nbsp;Instagram
+                <button type="button" class="btn btn-red btn-md w-100"><i class="fab fa-instagram"></i>&nbsp;&nbsp;Instagram
                 </button>
               </a>
             </div>
@@ -91,8 +101,7 @@
           <div class="row center">
             <div class="col-12 center">
               <a ng-click="recordLinkClick('Share', 'Merch')" href="#/shop">
-                <button type="button" class="btn btn-red btn-md"><i class="fas fa-shopping-bag"></i>&nbsp;&nbsp;Shop
-                  merch
+                <button type="button" class="btn btn-red btn-md w-100"><i class="fas fa-shopping-bag"></i>&nbsp;&nbsp;Shop
                 </button>
               </a>
             </div>
@@ -120,7 +129,7 @@
   </div>
 </div>
 
-<img src="/images/Belong-bts-photo-by-Jake-Slinkard.JPG" class="bg">
+<!--<img src="/images/Belong-bts-photo-by-Jake-Slinkard.JPG" class="bg d-sm-none d-md-block" style="display: none;">-->
 
 <div id="footer" ng-include="'views/footer.html'"></div>
 

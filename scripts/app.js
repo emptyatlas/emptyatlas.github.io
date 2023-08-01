@@ -91,15 +91,15 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
   // Featured Music Links
-  $scope.iTunesUrl = 'https://music.apple.com/us/artist/empty-atlas/902603393?ls=1&app=itunes';
-  $scope.appleMusicUrl = 'https://music.apple.com/us/artist/empty-atlas/902603393';
+  $scope.iTunesUrl = $sce.trustAsResourceUrl('https://music.apple.com/us/album/belong-single/1692123174'); //'https://music.apple.com/us/artist/empty-atlas/902603393?ls=1&app=itunes';
+  $scope.appleMusicUrl = $sce.trustAsResourceUrl('https://music.apple.com/us/album/belong-single/1692123174'); //'https://music.apple.com/us/artist/empty-atlas/902603393';
   $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/artist/empty-atlas/902603393';
-  $scope.spotifyUrl = 'https://open.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
+  $scope.spotifyUrl = $sce.trustAsResourceUrl('https://open.spotify.com/album/6hLNjR2PFGjT1rXFQbEfdi?si=ntBVqqg0S0KXIRnRNe44ig'); //'https://open.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
   $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/artist/3DB64zL8J0ALL9l7Op2YTn?utm_source=generator';
   $scope.amazonMusicUrl = 'https://www.amazon.com/music/player/artists/B01MSUTBIR/empty-atlas';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
   $scope.youTubeMusicUrl = 'https://music.youtube.com/channel/UCvCzcTWweMYsv57bMIz2YMQ';
-  $scope.tidalUrl = 'https://tidal.com/browse/artist/7186698';
+  $scope.tidalUrl = $sce.trustAsResourceUrl('https://tidal.com/browse/album/299395849'); //'https://tidal.com/browse/artist/7186698';
   $scope.bandcampUrl = 'https://emptyatlas.bandcamp.com/';
 
   // Credit
