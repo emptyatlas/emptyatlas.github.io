@@ -524,6 +524,12 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         'page_title': pageName,
         'page_location': '/' + location.hash
       });
+
+      fbq('track', 'Click', {
+        'link_text': linkName,
+        'page_title': pageName,
+        'page_location': '/' + location.hash
+      });
     } else {
       console.log('Will NOT record Google Analytics event due to development hostname and toggle being false');
     }
@@ -538,6 +544,12 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         'link_text': linkName,
         'page_title': pageName,
         'page_path': '/' + location.hash
+      });
+
+      fbq('track', eventType, {
+        'link_text': linkName,
+        'page_title': pageName,
+        'page_location': '/' + location.hash
       });
     } else {
       console.log('will not record Google Analytics event due to development hostname');
