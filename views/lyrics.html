@@ -141,7 +141,7 @@
 
 <script>
   // Skip recording GA events to our account if in development.
-  if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+  // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
     console.debug('Recording Google page view');
     gtag('config', 'UA-51847004-1', {
       send_page_view: false
@@ -150,5 +150,5 @@
       'page_title': 'Lyrics',
       'page_path': '/' + location.hash
     });
-  }
+  // }
 </script>

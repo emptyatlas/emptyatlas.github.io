@@ -516,44 +516,44 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
    */
 
   $scope.recordLinkClick = function (pageName, linkName) {
-    if ((document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') || $scope.enableLocalAnalytics) {
-      console.log('Recording Google Analytics event, category [click], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
-      // Record Google Analytics event
-      gtag('event', 'click', {
-        'link_text': linkName,
-        'page_title': pageName,
-        'page_location': '/' + location.hash
-      });
+    // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    console.log('Recording Google Analytics event, category [click], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
+    // Record Google Analytics event
+    gtag('event', 'click', {
+      'link_text': linkName,
+      'page_title': pageName,
+      'page_location': '/' + location.hash
+    });
 
-      fbq('track', 'ViewContent', {
-        'content_name': linkName,
-        'content_category': pageName,
-        'content_type': '/' + location.hash
-      });
-    } else {
-      console.log('Will NOT record Google Analytics event due to development hostname and toggle being false');
-    }
+    fbq('track', 'ViewContent', {
+      'content_name': linkName,
+      'content_category': pageName,
+      'content_type': '/' + location.hash
+    });
+    // } else {
+    //   console.log('Will NOT record Google Analytics event due to development hostname and toggle being false');
+    // }
   }
 
   function recordGoogleAnalyticsEvent(eventType, pageName, linkName) {
     // Skip recording GA events to our account if in development.
-    if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
-      console.log('Recording Google Analytics event, category [' + eventType + '], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
-      // Record Google Analytics event
-      gtag('event', eventType, {
-        'link_text': linkName,
-        'page_title': pageName,
-        'page_path': '/' + location.hash
-      });
+    // if (document.location.hostname != 'localhost' && document.location.hostname != '127.0.0.1') {
+    console.log('Recording Google Analytics event, category [' + eventType + '], link_text [' + linkName + '], page_title [' + pageName + '] page_path [' + location.hash + ']');
+    // Record Google Analytics event
+    gtag('event', eventType, {
+      'link_text': linkName,
+      'page_title': pageName,
+      'page_path': '/' + location.hash
+    });
 
-      fbq('track', eventType, {
-        'link_text': linkName,
-        'page_title': pageName,
-        'page_location': '/' + location.hash
-      });
-    } else {
-      console.log('will not record Google Analytics event due to development hostname');
-    }
+    fbq('track', eventType, {
+      'link_text': linkName,
+      'page_title': pageName,
+      'page_location': '/' + location.hash
+    });
+    // } else {
+    //   console.log('will not record Google Analytics event due to development hostname');
+    // }
   }
 
   function animateCss(element, animationName, callback) {
