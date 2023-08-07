@@ -525,10 +525,10 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
         'page_location': '/' + location.hash
       });
 
-      fbq('track', 'Click', {
-        'link_text': linkName,
-        'page_title': pageName,
-        'page_location': '/' + location.hash
+      fbq('track', 'ViewContent', {
+        'content_name': linkName,
+        'content_category': pageName,
+        'content_type': '/' + location.hash
       });
     } else {
       console.log('Will NOT record Google Analytics event due to development hostname and toggle being false');
