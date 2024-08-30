@@ -88,18 +88,19 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.youTubeUrl = 'https://www.youtube.com/user/emptyatlasmusic';
   $scope.shopSquareUrl = 'https://empty-atlas-music.square.site/';
   $scope.shopAmazonUrl = 'https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3AEmpty+Atlas&ref=bl_sl_s_ap_web_7141123011';
+  $scope.shopFourthWallUrl = 'https://emptyatlas-shop.fourthwall.com';
   $scope.tikTokUrl = 'https://www.tiktok.com/@emptyatlas';
 
   // Featured Music Links
-  $scope.iTunesUrl = $sce.trustAsResourceUrl('https://music.apple.com/us/album/belong-single/1692123174'); //'https://music.apple.com/us/artist/empty-atlas/902603393?ls=1&app=itunes';
-  $scope.appleMusicUrl = $sce.trustAsResourceUrl('https://music.apple.com/us/album/belong-single/1692123174'); //'https://music.apple.com/us/artist/empty-atlas/902603393';
-  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/artist/empty-atlas/902603393';
-  $scope.spotifyUrl = $sce.trustAsResourceUrl('https://open.spotify.com/album/6hLNjR2PFGjT1rXFQbEfdi?si=ntBVqqg0S0KXIRnRNe44ig'); //'https://open.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
-  $scope.spotifyEmbedUrl = 'https://open.spotify.com/embed/artist/3DB64zL8J0ALL9l7Op2YTn?utm_source=generator';
+  $scope.iTunesUrl = $sce.trustAsResourceUrl('https://music.apple.com/us/album/little-voices-single/1760900780'); //'https://music.apple.com/us/artist/empty-atlas/902603393?ls=1&app=itunes';
+  $scope.appleMusicUrl = $sce.trustAsResourceUrl('https://music.apple.com/us/album/little-voices-single/1760900780'); //'https://music.apple.com/us/artist/empty-atlas/902603393';
+  $scope.appleMusicEmbedUrl = 'https://embed.music.apple.com/us/album/little-voices-single/1760900780';
+  $scope.spotifyUrl = $sce.trustAsResourceUrl('https://open.spotify.com/track/3gtZvgjnBl46unsIpD6qRx?si=268b1c7eb41244bf'); //'https://open.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn';
+  $scope.spotifyEmbedUrl = $sce.trustAsResourceUrl('https://open.spotify.com/embed/track/3gtZvgjnBl46unsIpD6qRx?utm_source=generator');
   $scope.amazonMusicUrl = 'https://www.amazon.com/music/player/artists/B01MSUTBIR/empty-atlas';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
   $scope.youTubeMusicUrl = 'https://music.youtube.com/channel/UCvCzcTWweMYsv57bMIz2YMQ';
-  $scope.tidalUrl = $sce.trustAsResourceUrl('https://tidal.com/browse/album/299395849'); //'https://tidal.com/browse/artist/7186698';
+  $scope.tidalUrl = 'https://tidal.com/browse/track/379137224'; //'https://tidal.com/browse/artist/7186698';
   $scope.bandcampUrl = 'https://emptyatlas.bandcamp.com/';
 
   // Credit
@@ -114,6 +115,21 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.videos = VideoService.videos;
 
   $scope.albums = [{
+    name: 'LITTLE VOICES (single)',
+    year: '2024',
+    image: '/images/Little-Voices-by-Empty-Atlas.jpeg',
+    spotifyUrl: $sce.trustAsResourceUrl('https://open.spotify.com/track/3gtZvgjnBl46unsIpD6qRx?si=268b1c7eb41244bf'),
+    spotifyEmbedUrl: $sce.trustAsResourceUrl('https://open.spotify.com/embed/track/3gtZvgjnBl46unsIpD6qRx?utm_source=generator'),
+    appleMusicUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/little-voices-single/1760900780'),
+    appleMusicEmbedUrl: $sce.trustAsResourceUrl('https://embed.music.apple.com/us/album/little-voices-single/1760900780'),
+    iTunesUrl: $sce.trustAsResourceUrl('https://music.apple.com/us/album/little-voices-single/1760900780'),
+    soundCloudUrl: $sce.trustAsResourceUrl('https://soundcloud.com/empty-atlas/little-voices-new-single-out-83024?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'),
+    youTubeMusicUrl: undefined, // $sce.trustAsResourceUrl('https://music.youtube.com/playlist?list=OLAK5uy_nSFTd_WN0soXTTlWEM4aRqOij4F5fxMbU&feature=share'),
+    amazonMusicUrl: $sce.trustAsResourceUrl('https://amazon.com/music/player/albums/B0DC3Y91X2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_z48bjRhb52GmfcnmnOioI62hJ'),
+    tidalUrl: $sce.trustAsResourceUrl('https://tidal.com/browse/track/379137224'),
+    bandcampUrl: undefined, //$sce.trustAsResourceUrl('https://emptyatlas.bandcamp.com/track/belong'),
+    songs: [retrieveSong('Little Voices')]
+  },{
     name: 'BELONG (single)',
     year: '2023',
     image: '/images/Belong-by-Empty-Atlas.jpeg',

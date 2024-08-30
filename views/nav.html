@@ -19,7 +19,7 @@
         <div style="float: left;">
           <li><a href="#/live" ng-click="recordLinkClick('Navigation', 'Live');">live</a></li>
           <li><a href="#/news" ng-click="recordLinkClick('Navigation', 'News');">news</a></li>
-          <li><a href="#/shop" ng-click="recordLinkClick('Navigation', 'Shop')">shop</a></li>
+          <li><a href="{{shopFourthWallUrl}}" target="_blank" ng-click="recordLinkClick('Navigation', 'Shop')">shop</a></li>
           <li><a href="{{sendMail}}" ng-click="recordLinkClick('Navigation', 'Contact')">contact</a></li>
         </div>
       </ul>
@@ -34,7 +34,7 @@
     <li><a class="m-0" href="#/lyrics" ng-click="recordLinkClick('Navigation', 'Lyrics'); clearSideNav();">lyrics</a></li>
     <li><a class="m-0" href="#/live" ng-click="recordLinkClick('Navigation', 'Live'); clearSideNav();">live</a></li>
     <li><a class="m-0" href="#/news" ng-click="recordLinkClick('Navigation', 'News'); clearSideNav();">news</a></li>
-    <li><a class="m-0" href="#/shop" ng-click="recordLinkClick('Navigation', 'Shop'); clearSideNav();">shop</a></li>
+    <li><a class="m-0" href="{{shopFourthWallUrl}}" target="_blank" ng-click="recordLinkClick('Navigation', 'Shop'); clearSideNav();">shop</a></li>
     <li><a class="m-0" href="{{sendMail}}" ng-click="recordLinkClick('Navigation', 'Contact'); clearSideNav();">contact</a></li>
     <li class="mt-3"><img src="/images/ea_logo_vertical_white.png" style="height: 36px;"/></li>
   </ul>

@@ -9,6 +9,67 @@ angular.module('emptyatlasgithubioApp').service('LyricService', function () {
 
   this.songs = [
     {
+      title: 'Little Voices',
+      id: 'little-voices-lyrics',
+      lyrics: `Talk sweet but you grind your teeth<br>
+              Just to keep from the curse coming out<br>
+              It goes south when you open your mouth<br>
+              All half truths and wholesale doubt<br>
+               <br>
+              Oh poor me<br>
+              When the hammer comes down<br>
+              Man, it comes down hard<br>
+              I concede<br>
+              Right now I can feel it all<br>
+               <br>
+              Try to shut it out<br>
+              I hear it<br>
+              Little voices still break spirit<br>
+              On my good days<br>
+              I don't feel it<br>
+              Oh you said enough<br>
+               <br>
+              Speak dumb, bound to hurt someone<br>
+              It's an old song with a new dance to it<br>
+              A simple beat you could play in your sleep<br>
+              Still hits like my first time through it<br>
+               <br>
+              Oh poor me<br>
+              When the hammer comes down<br>
+              Man, it comes down hard<br>
+              I concede<br>
+              Right now I can feel it all<br>
+               <br>
+              Try to shut it out<br>
+              I hear it<br>
+              Little voices still break spirit<br>
+              On my good days<br>
+              I don't feel it<br>
+              Oh you said enough<br>
+               <br>
+              Now and again, you leave the details out<br>
+              Like when you feel the need to tear me down<br>
+              Still I've got sense enough to know myself<br>
+              And oh you said enough<br>
+              Oh you said enough<br>
+              Oh you said enough<br>
+              Oh you said enough<br>
+               <br>
+              Try to shut it out<br>
+              I hear it<br>
+              Little voices still break spirit<br>
+              On my good days<br>
+              I don't feel it<br>
+              Oh you said enough<br>
+               <br>
+              Try to shut it out<br>
+              I hear it<br>
+              Little voices still break spirit<br>
+              On my good days<br>
+              I don't feel it<br>
+              Oh you said enough`
+    },
+    {
       title: 'Belong',
       id: 'belong-lyrics',
       lyrics: `Shut down when I heard the news<br>
