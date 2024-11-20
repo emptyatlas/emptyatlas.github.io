@@ -25,6 +25,14 @@ angular.module('emptyatlasgithubioApp').service('NewsService', function () {
 
   this.news = [
     {
+      title: 'Rock First Place Winner - American Songwriter',
+      desc: `American Songwriter is proud to announce the Overall Winners for the 2023 Song Contest.`,
+      img: 'images/news/american-songwriter-2023-winners.png',
+      actionText: 'READ MORE',
+      date: 1712852053000,
+      link: 'https://americansongwriter.com/american-songwriter-2023-song-contest-winners-announced/'
+    },
+    {
       title: '15 Best Songs About Being 25',
       desc: `Have you turned 25 and looking for some musical inspiration? The quarter-life has its ups and downs, but the music never fails to make our journey a little bit worthwhile. At this point, songs about being 25 years old are`,
       img: 'images/news/15-best-songs-about-being-25-2023.png',
