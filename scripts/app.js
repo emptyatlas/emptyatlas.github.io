@@ -100,7 +100,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $log, $templateCache, $
   $scope.amazonMusicUrl = 'https://www.amazon.com/music/player/artists/B01MSUTBIR/empty-atlas';
   $scope.soundCloudUrl = 'https://soundcloud.com/empty-atlas';
   $scope.youTubeMusicUrl = 'https://music.youtube.com/channel/UCvCzcTWweMYsv57bMIz2YMQ';
-  $scope.tidalUrl = 'https://tidal.com/browse/track/379137224'; //'https://tidal.com/browse/artist/7186698';
+  $scope.tidalUrl = 'https://tidal.com/album/506110939/u'; //'https://tidal.com/browse/artist/7186698';
   $scope.bandcampUrl = 'https://emptyatlas.bandcamp.com/';
 
   // Credit
