@@ -9,6 +9,51 @@ angular.module('emptyatlasgithubioApp').service('LyricService', function () {
 
   this.songs = [
     {
+      title: 'Godspeed',
+      id: 'godspeed-lyrics',
+      lyrics: `Blame it on my tunnel vision<br>
+Focused on the miles ahead<br>
+Now I see what I was missing<br>
+How you were pulling away<br>
+A little bit more each day<br>
+So what can I say?<br>
+<br>
+Godspeed<br>
+If you're gone, you're gone, you're gone<br>
+Godspeed<br>
+If you're gone, you're gone, you're gone<br>
+<br>
+Blame it on my savior complex<br>
+Doesn't sound so bad to me<br>
+Just cause I want something for you<br>
+I know you can't see it now<br>
+When all the good will's run out<br>
+<br>
+Godspeed<br>
+If you're gone, you're gone, you're gone<br>
+Godspeed<br>
+If you're gone, you're gone, you're gone<br>
+Get what you need<br>
+You'll never see comfort if you won't stay long<br>
+Godspeed<br>
+If you're gone, you're gone<br>
+<br>
+Godspeed<br>
+If you're gone, you're gone<br>
+Godspeed<br>
+If you're gone, you're gone<br>
+<br>
+Godspeed<br>
+If you're gone, you're gone, you're gone<br>
+Godspeed<br>
+If you're gone, you're gone, you're gone<br>
+Get what you need<br>
+You'll never see comfort if you won't stay long<br>
+Godspeed<br>
+If you're gone, you're gone<br>
+<br>`
+    },
+    {
       title: 'Little Voices',
       id: 'little-voices-lyrics',
       lyrics: `Talk sweet but you grind your teeth<br>

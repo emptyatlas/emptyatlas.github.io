@@ -9,6 +9,16 @@ angular.module('emptyatlasgithubioApp').service('VideoService', function ($sce) 
 
     this.videos = [
       {
+        name: 'LITTLE VOICES (Lyric Video)',
+        date: '',
+        link: $sce.trustAsResourceUrl('https://youtube.com/embed/Mnkjplk6ytE')
+      },
+      {
+        name: 'BELONG (Official Music Video)',
+        date: '',
+        link: $sce.trustAsResourceUrl('https://youtube.com/embed/QKKZP2oZhPM')
+      },
+      {
         name: 'MATADOR (Official Music Video)',
         date: 'Apr 15, 2022',
         link: $sce.trustAsResourceUrl('https://www.youtube.com/embed/1vSJALEITMA')

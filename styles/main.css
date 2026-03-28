@@ -2,6 +2,7 @@
   --lv-blue: #0f587a;
   --belong-purple: #3f307a;
   --matador-red: #8a1715;
+  --godspeed-green: #306910;
   --dark-grey: #242222;
   --white: #ffffff;
 }
@@ -95,7 +96,7 @@ a:hover {
 }
 
 .matador-red {
-  background-color: var(--lv-blue);
+  background-color: var(--godspeed-green);
 }
 
 .short-fiction {
@@ -188,7 +189,7 @@ button:focus,
 .bit-widget .bit-play-my-city-button,
 a.bit-offers.bit-button {
   color: #413837 !important;
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
   border: none !important;
   transition: all 0.3s linear;
 }
@@ -197,7 +198,7 @@ a.bit-offers.bit-button {
 .bit-widget:hover .bit-play-my-city-button:hover,
 a.bit-offers.bit-button:hover {
   color: #413837 !important;
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
   border: none !important;
   transition: all 0.3s linear;
 }
@@ -207,14 +208,14 @@ a.bit-offers.bit-button:hover {
 }
 
 .btn-floating:hover {
-  background-color: var(--lv-blue);
+  background-color: var(--godspeed-green);
 }
 
 .btn-red,
 .bit-widget .bit-play-my-city-button,
 a.bit-offers.bit-button {
   color: whitesmoke !important;
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
   border: none;
   transition: all 0.3s linear;
 }
@@ -223,13 +224,13 @@ a.bit-offers.bit-button {
 .bit-widget:hover .bit-play-my-city-button:hover,
 a.bit-offers.bit-button:hover {
   color: whitesmoke !important;
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
   border: none;
   transition: all 0.3s linear;
 }
 
 .btn-red.active {
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
 }
 
 a.bit-play-my-city-button {
@@ -302,7 +303,7 @@ a.bit-play-my-city-button {
 }
 
 .bg-red {
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
 }
 
 .bg-gray-dark {
@@ -316,7 +317,7 @@ a.bit-play-my-city-button {
 nav {
   background-color: transparent;
   box-shadow: none;
-  /*background-color: var(--lv-blue) !important;*/
+  /*background-color: var(--godspeed-green) !important;*/
   /*blue bkg*/
   /*background-color: #235C98 !important;*/
 }
@@ -683,7 +684,7 @@ nav .sidenav-trigger {
 .sidenav {
   /*background: url('/images/slide-out-menu-bkg.png');*/
   /*background-size: cover;*/
-  background-color: var(--lv-blue) !important;
+  background-color: var(--godspeed-green) !important;
   /*blue bkg*/
   /*background-color: #235C98 !important;*/
   width: 250px;
