@@ -7,16 +7,28 @@ Empty Atlas is a melodic indie rock band with music for fans of Manchester Orche
 ## Development
 
 ```bash
-npm start        # Dev server at http://localhost:4200 (auto-reload)
-npm run build    # Production build → dist/
-npm run watch    # Watch mode build
-npm test         # Unit tests (Vitest)
+npm start              # Dev server at http://localhost:4200 (auto-reload)
+npm run build          # Production build → dist/
+npm run watch          # Watch mode build
+npm test               # Unit tests (Vitest)
+npm run lint           # ESLint
+npm run format         # Prettier
+npm run github-deploy  # Deploy to GitHub Pages (sets emptyatlas.com CNAME)
 ```
 
 Scaffold a new component:
+
 ```bash
 ng generate component components/<name>   # shared component
 ng generate component pages/<name>        # page
+```
+
+## Deploy
+
+The following command uses the `angular-cli-ghpages` package to deploy the site to GitHub Pages. It sets the `emptyatlas.com` CNAME.
+
+```bash
+ng deploy         # Deploy to GitHub Pages (sets emptyatlas.com CNAME)
 ```
 
 ## Tech Stack
@@ -31,24 +43,23 @@ ng generate component pages/<name>        # page
 ## Project Structure
 
 ```
-src/
-  app/
-    components/
-      footer/          # Global footer
-      nav/             # Sticky nav with mobile hamburger
-      social-icons/    # Reusable streaming/social icon row
-    data/
-      releases.ts      # All release metadata (shared by music and lyrics pages)
-      lyrics/          # Per-release lyrics files + barrel index
-    pages/
-      about/           # Bio, awards & achievements, band members, press
-      contact/         # Contact form
-      home/            # Hero, tour dates, social CTA
-      lyrics/          # Song/album lyrics at /music/:slug
-      music/           # Full discography
-    globals.ts         # Centralized external URLs and contact info
-  styles.css           # Global design tokens and utility classes
-  index.html           # Base HTML, SEO meta tags, JSON-LD structured data
+app/                   # Angular source (sourceRoot is project root)
+  components/
+    footer/            # Global footer
+    nav/               # Sticky nav with mobile hamburger
+    social-icons/      # Reusable streaming/social icon row
+  data/
+    releases.ts        # All release metadata (shared by music and lyrics pages)
+    lyrics/            # Per-release lyrics files + barrel index
+  pages/
+    about/             # Bio, awards & achievements, band members, press
+    contact/           # Contact form
+    home/              # Hero, tour dates, social CTA
+    lyrics/            # Song/album lyrics at /music/:slug
+    music/             # Full discography
+  globals.ts           # Centralized external URLs and contact info
+styles.css             # Global design tokens and utility classes
+index.html             # Base HTML, SEO meta tags, JSON-LD structured data
 ```
 
 ## Content
@@ -65,6 +76,7 @@ src/
 **Single:** open `src/app/data/lyrics/<slug>.ts` and replace the placeholder with the full lyrics string.
 
 **Album track:** open `src/app/data/lyrics/<album>.ts` and add to the `tracks` array:
+
 ```ts
 { title: 'Track Name', lyrics: `...` }
 ```
