@@ -134,7 +134,7 @@ button {
   padding: 5rem;
 }
 
-@media (max-width: 768px) {
+@zmedia (max-width: 768px) {
 
   .page-section {
     padding: 3rem;
