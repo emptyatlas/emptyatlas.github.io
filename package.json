@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "format": "prettier --write .",
     "github-build": "ng build --configuration production --base-href 'https://emptyatlas.github.io/'",
-    "github-deploy": "ng deploy --cname=emptyatlas.com"
+    "github-deploy": "ng deploy --cname=emptyatlas.com --no-nojekyll"
   },
   "private": true,
   "packageManager": "npm@11.12.1",
