@@ -29,25 +29,6 @@
   </div>
 </section>
 
-<!-- Awards & Achievements -->
-<section class="page-section" style="padding-top: 1rem">
-  <div class="container">
-    <p class="section-subtitle">Recognition</p>
-    <h2 class="section-title">Awards &amp; Achievements</h2>
-    <ul class="awards-list">
-      @for (award of awards; track award.competition + award.year) {
-        <li class="award-item">
-          <span class="award-year">{{ award.year }}</span>
-          <span class="award-details">
-            <span class="award-competition">{{ award.competition }}</span>
-            <span class="award-achievement">{{ award.achievement }}</span>
-          </span>
-        </li>
-      }
-    </ul>
-  </div>
-</section>
-
 <!-- Band Members -->
 <section class="page-section members-section">
   <div class="container">
@@ -63,5 +44,24 @@
         </div>
       }
     </div>
+  </div>
+</section>
+
+<!-- Awards & Achievements -->
+<section class="page-section">
+  <div class="container">
+    <p class="section-subtitle">Recognition</p>
+    <h2 class="section-title">Awards &amp; Achievements</h2>
+    <ul class="awards-list">
+      @for (award of awards; track award.competition + award.year) {
+        <li class="award-item">
+          <span class="award-year">{{ award.year }}</span>
+          <span class="award-details">
+            <span class="award-competition">{{ award.competition }}</span>
+            <span class="award-achievement">{{ award.achievement }}</span>
+          </span>
+        </li>
+      }
+    </ul>
   </div>
 </section>
