@@ -1,0 +1,67 @@
+<section class="page-section" style="margin-top: 5rem;">
+  <div class="container bio-layout">
+    <div class="bio-text">
+      <p class="section-subtitle">Our Story</p>
+      <h2>Empty Atlas</h2>
+      <div class="bio-body">
+        <p>“How have I not heard this band before now?” Famous first words of every Empty Atlas fan. For the past
+          decade, the Mississippi melodic indie rock act has assembled a trove of uncommon songs about common ground,
+          reflecting on loss and worry, hope and persistence.</p>
+        <p>Heavy concepts, to be sure, but coated in Empty Atlas’s unmistakable blend of dynamic rock, hooky melodies
+          and thoughtful lyrics. It’s what has earned them a swath of international accolades, including finalist spots
+          in the John Lennon Songwriting Contest and American Songwriter Song Contest. Empty Atlas is currently working
+          on their third full-length album.</p>
+        <p>For fans of Manchester Orchestra, Thrice, Death Cab for Cutie and The Killers.</p>
+      </div>
+      <div class="bio-actions">
+        <p><i>Listen and follow Empty Atlas on all major platforms.</i></p>
+        <div class="center-flex container">
+          <app-social-icons fontSize="1.5rem"/>
+        </div>
+        <p><i>Get your exclusive merch at <a href="{{globals.SHOP_FOURTHWALL}}" target="_blank"
+                                             style="text-decoration: underline">FourthWall</a>.</i></p>
+      </div>
+    </div>
+    <div class="bio-image">
+      <img src="assets/img/Empty-Atlas_credit-Brent-McQuillin.jpeg" alt="Empty Atlas" loading="lazy"/>
+      <p class="photo-credit">Photo: Brent McQuillin</p>
+    </div>
+  </div>
+</section>
+
+<!-- Awards & Achievements -->
+<section class="page-section" style="padding-top: 1rem">
+  <div class="container">
+    <p class="section-subtitle">Recognition</p>
+    <h2 class="section-title">Awards &amp; Achievements</h2>
+    <ul class="awards-list">
+      @for (award of awards; track award.competition + award.year) {
+        <li class="award-item">
+          <span class="award-year">{{ award.year }}</span>
+          <span class="award-details">
+            <span class="award-competition">{{ award.competition }}</span>
+            <span class="award-achievement">{{ award.achievement }}</span>
+          </span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- Band Members -->
+<section class="page-section members-section">
+  <div class="container">
+    <p class="section-subtitle">Members</p>
+    <div class="members-grid">
+      @for (member of members; track member.name) {
+        <div class="member-card">
+          <div class="member-photo">
+            <img [src]="member.img" [alt]="member.name" loading="lazy"/>
+          </div>
+          <p class="member-name">{{ member.name }}</p>
+          <p class="member-credit">{{ member.role }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

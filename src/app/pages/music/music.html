@@ -1,0 +1,85 @@
+<div class="page-hero">
+  <div class="container">
+    <p class="section-subtitle">Discography</p>
+    <h2 class="section-title">Music</h2>
+  </div>
+</div>
+
+<!-- Streaming Links -->
+<section class="streaming-section">
+  <div class="container">
+    <p class="section-subtitle">Stream on</p>
+    <div class="streaming-links">
+      @for (link of streamingLinks; track link.name) {
+        <a [href]="link.url" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+          {{ link.name }}
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Releases Grid -->
+<section class="page-section">
+  <div class="container">
+    <p class="section-subtitle">All Releases</p>
+    <div class="releases-grid">
+      @for (release of releases; track release.title) {
+        <div class="release-card">
+          <div class="release-art">
+            <img [src]="release.img" [alt]="release.title" loading="lazy"/>
+            <div class="release-links">
+              @if (release.spotify) {
+                <a [href]="release.spotify" target="_blank" rel="noopener" class="release-link-btn">Spotify</a>
+              }
+              @if (release.appleMusic) {
+                <a [href]="release.appleMusic" target="_blank" rel="noopener" class="release-link-btn">Apple</a>
+              }
+              @if (release.bandcamp) {
+                <a [href]="release.bandcamp" target="_blank" rel="noopener" class="release-link-btn">Bandcamp</a>
+              }
+            </div>
+          </div>
+          <div class="release-info">
+            <p class="release-title">{{ release.title }}</p>
+            <p class="release-meta">{{ release.type }} &middot; {{ release.year }}</p>
+            @if (release.slug) {
+              <a [routerLink]="['/music', release.slug]" class="lyrics-link"
+                 style="text-decoration: underline">Lyrics</a>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="page-section" style="padding-top: 0">
+  <div class="container">
+    <p class="section-subtitle">Featured on</p>
+    <div class="releases-grid">
+      @for (release of features; track release.title) {
+        <div class="release-card">
+          <div class="release-art">
+            <img [src]="release.img" [alt]="release.title" loading="lazy"/>
+            <div class="release-links">
+              @if (release.spotify) {
+                <a [href]="release.spotify" target="_blank" rel="noopener" class="release-link-btn">Spotify</a>
+              }
+              @if (release.appleMusic) {
+                <a [href]="release.appleMusic" target="_blank" rel="noopener" class="release-link-btn">Apple</a>
+              }
+              @if (release.bandcamp) {
+                <a [href]="release.bandcamp" target="_blank" rel="noopener" class="release-link-btn">Bandcamp</a>
+              }
+            </div>
+          </div>
+          <div class="release-info">
+            <p class="release-title">{{ release.title }}</p>
+            <p class="release-meta">{{ release.type }} &middot; {{ release.year }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

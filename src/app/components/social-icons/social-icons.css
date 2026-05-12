@@ -1,0 +1,17 @@
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: var(--text);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}

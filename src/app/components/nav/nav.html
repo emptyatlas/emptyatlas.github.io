@@ -1,0 +1,21 @@
+<nav class="nav" [class.scrolled]="scrolled()">
+  <div class="nav-inner">
+    <a routerLink="/" class="nav-logo" (click)="closeMenu()">
+      <img src="assets/img/ea_logo_vertical_white.png" alt="Empty Atlas"/>
+    </a>
+
+    <ul class="nav-links" [class.open]="menuOpen()">
+      <li><a routerLink="/music" routerLinkActive="active" (click)="closeMenu()">Music</a></li>
+      <li><a routerLink="/" fragment="tour" (click)="closeMenu()">Tour</a></li>
+      <li><a href="{{ globals.SHOP_FOURTHWALL }}" target="_blank" (click)="closeMenu()">Merch</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+      <span [class.open]="menuOpen()"></span>
+      <span [class.open]="menuOpen()"></span>
+      <span [class.open]="menuOpen()"></span>
+    </button>
+  </div>
+</nav>

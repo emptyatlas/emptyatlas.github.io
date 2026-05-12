@@ -1,0 +1,41 @@
+.footer {
+  background: #1a1a1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3rem 0 2rem;
+}
+
+.center-flex {
+  gap: 2rem;
+}
+
+.footer-logo img {
+  height: 56px;
+  width: auto;
+  opacity: 0.85;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--primary);
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  opacity: 0.6;
+}

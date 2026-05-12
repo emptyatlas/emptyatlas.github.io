@@ -1,0 +1,150 @@
+.lyrics-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .lyrics-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .lyrics-sidebar {
+    position: static !important;
+  }
+}
+
+/* Sidebar */
+.lyrics-sidebar {
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lyrics-cover {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.streaming-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Lyrics */
+.lyrics-title {
+  font-family: 'Mansalva', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.lyrics-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  color: var(--text);
+  margin: 0;
+}
+
+.lyrics-empty {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+/* Album accordion */
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.track-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.track-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.track-header:hover {
+  color: var(--primary);
+}
+
+.track-number {
+  color: var(--secondary);
+  font-size: 0.875rem;
+  min-width: 1.5rem;
+}
+
+.track-name {
+  flex: 1;
+}
+
+.track-chevron {
+  color: var(--secondary);
+  font-size: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.track-item.open .track-chevron {
+  transform: rotate(180deg);
+}
+
+.track-lyrics {
+  padding: 0.5rem 0 1.5rem 2.5rem;
+}
+
+/* Scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  background: var(--subtle);
+}

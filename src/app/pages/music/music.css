@@ -1,0 +1,132 @@
+.page-hero {
+  padding: calc(var(--nav-height) + 4rem) 0 3rem;
+  background: linear-gradient(to bottom, #1a1a1a, var(--background));
+}
+
+.featured-section {
+  padding-top: 0;
+}
+
+.featured-embeds {
+  max-width: 660px;
+}
+
+.streaming-section {
+  padding: 3rem 0;
+  background: var(--background-light);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.streaming-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.streaming-link {
+  padding: 0.6rem 1.4rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.streaming-link:hover {
+  border-color: var(--primary);
+  background: rgba(5, 157, 108, 0.1);
+  color: var(--primary);
+}
+
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.release-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.release-art {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.release-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.release-card:hover .release-art img {
+  transform: scale(1.04);
+}
+
+.release-links {
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 25, 25, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.release-card:hover .release-links {
+  opacity: 1;
+}
+
+.release-link-btn {
+  padding: 0.45rem 1.2rem;
+  background: var(--primary);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 120px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.release-link-btn:hover {
+  background: var(--subtle);
+}
+
+.release-title {
+  font-family: "Mansalva", sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.release-meta {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  letter-spacing: 0.05em;
+}
+
+.lyrics-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  transition: color 0.2s;
+}
+
+.lyrics-link:hover {
+  color: var(--primary);
+}

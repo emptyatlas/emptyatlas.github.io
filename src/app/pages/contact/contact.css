@@ -1,0 +1,129 @@
+.page-hero {
+  padding: calc(var(--nav-height) + 4rem) 0 3rem;
+  background: linear-gradient(to bottom, #1a1a1a, var(--background));
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-desc {
+  color: var(--secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-links h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+}
+
+.social-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.social-link:hover {
+  border-color: var(--primary);
+  background: rgba(5, 157, 108, 0.07);
+}
+
+.social-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.social-handle {
+  font-size: 0.8rem;
+  color: var(--secondary);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--background-light);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text);
+  padding: 0.85rem 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(108, 117, 125, 0.7);
+}
+
+.submitted-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  background: var(--background-light);
+  border: 1px solid rgba(5, 157, 108, 0.3);
+}
+
+.submitted-msg h2 {
+  font-size: 1.5rem;
+}
+
+.submitted-msg p {
+  color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

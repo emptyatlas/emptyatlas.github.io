@@ -1,0 +1,17 @@
+export const GLOBALS = {
+  EMAIL: 'hello@emptyatlas.com',
+  SHOP_FOURTHWALL: 'https://emptyatlas-shop.fourthwall.com',
+  SHOP_SQUARE: 'https://empty-atlas-music.square.site',
+  SOCIAL_FACEBOOK: 'https://www.facebook.com/emptyatlasmusic',
+  SOCIAL_INSTAGRAM: 'https://www.instagram.com/emptyatlas/',
+  SOCIAL_YOUTUBE: 'https://www.youtube.com/user/emptyatlasmusic',
+  MUSIC_AMAZON: 'https://www.amazon.com/music/player/artists/B01MSUTBIR/empty-atlas',
+  MUSIC_APPLE: 'https://music.apple.com/us/artist/empty-atlas/902603393',
+  MUSIC_BANDCAMP: 'https://emptyatlas.bandcamp.com',
+  MUSIC_SOUNDCLOUD: 'https://soundcloud.com/empty-atlas',
+  MUSIC_SPOTIFY: 'https://open.spotify.com/artist/3DB64zL8J0ALL9l7Op2YTn?si=qmb8R0YMRa6VyJlZ5aQAUw',
+  MUSIC_TIDAL: 'https://tidal.com/artist/7186698',
+  MUSIC_YOUTUBE: 'https://music.youtube.com/channel/UCvCzcTWweMYsv57bMIz2YMQ',
+  CREDIT_BRENT_MCQUILLIN: 'https://brent.photo/',
+  CREDIT_EMMI_SPRAYBERRY: 'https://www.emmisprayberry.com/'
+};

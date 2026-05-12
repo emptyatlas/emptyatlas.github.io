@@ -1,0 +1,79 @@
+@if (entry && release) {
+  <div class="page-hero">
+    <div class="container" style="margin-top: 3rem;">
+    </div>
+  </div>
+
+  <section class="lyrics-section page-section">
+    <div class="container lyrics-layout">
+
+      <!-- Sidebar -->
+      <aside class="lyrics-sidebar">
+        <img [src]="release.img" [alt]="release.title" class="lyrics-cover"/>
+        <p class="release-title">{{ release.title }}</p>
+        <p class="release-meta">{{ release.type }} &middot; {{ release.year }}</p>
+
+        <div class="streaming-btns">
+          @if (release.spotify) {
+            <a [href]="release.spotify" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-spotify"></i> Spotify
+            </a>
+          }
+          @if (release.appleMusic) {
+            <a [href]="release.appleMusic" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-itunes-note"></i> Apple Music
+            </a>
+          }
+          @if (release.bandcamp) {
+            <a [href]="release.bandcamp" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-bandcamp"></i> Bandcamp
+            </a>
+          }
+        </div>
+      </aside>
+
+      <!-- Lyrics content -->
+      <div class="lyrics-content">
+        @if (entry.lyrics) {
+          <!-- Single song -->
+          <h1 class="lyrics-title">{{ entry.title }}</h1>
+          <pre class="lyrics-text">{{ entry.lyrics }}</pre>
+        } @else if (entry.tracks && entry.tracks.length > 0) {
+          <!-- Album track list -->
+          <h1 class="lyrics-title">{{ entry.title }}</h1>
+          <p class="section-subtitle">Track Listing</p>
+          <div class="track-list">
+            @for (track of entry.tracks; track track.title; let i = $index) {
+              <div class="track-item" [class.open]="isOpen(i)">
+                <button class="track-header" (click)="toggleTrack(i)" [attr.aria-expanded]="isOpen(i)">
+                  <span class="track-number">{{ i + 1 }}</span>
+                  <span class="track-name">{{ track.title }}</span>
+                  <i class="fa-solid fa-chevron-down track-chevron"></i>
+                </button>
+                @if (isOpen(i)) {
+                  <pre class="lyrics-text track-lyrics">{{ track.lyrics }}</pre>
+                }
+              </div>
+            }
+          </div>
+        } @else {
+          <!-- Album with no tracks added yet -->
+          <h1 class="lyrics-title">{{ entry.title }}</h1>
+          <p class="lyrics-empty">Track lyrics coming soon.</p>
+        }
+      </div>
+
+    </div>
+  </section>
+} @else {
+  <section class="page-section">
+    <div class="container">
+      <p class="lyrics-empty">Lyrics not found.</p>
+      <a routerLink="/music" class="btn btn-primary" style="margin-top:1.5rem">Back to Music</a>
+    </div>
+  </section>
+}
+
+<button class="scroll-top-btn" [class.visible]="showScrollTop()" (click)="scrollToTop()" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
